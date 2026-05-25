@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crianza y pantallas — Wireframe B (matriz + selector)</title>
+
+<style>
+  /* ─────────────────────────────────────────────────────────────
+     Wireframe B — sistema visual
+     · Paleta navy: #042f4d / #5c728e / #d6dfe8
+     · Sans del sistema, sentence case
+     · Sin handwritten fonts, sin skeumorfismos
+     ───────────────────────────────────────────────────────────── */
+  :root {
+    --bg:           #ffffff;
+    --bg-soft:      #f0f2f5;
+    --bg-cell:      #f9fafc;
+    --ink:          #1a1d24;
+    --ink-soft:     #4a5260;
+    --pencil:       #6a7280;
+    --pencil-soft:  #b3bac4;
+    --border:       #d4dce4;
+
+    --c-high:       #042f4d;
+    --c-medium:     #5c728e;
+    --c-low:        #d6dfe8;
+
+    --accent:       #042f4d;
+    --accent-soft:  #eaf0f6;
+    --highlight:    #f4dd8a;
+    --chile-mark:   #1f5b3d;
+    --chile-soft:   #e8efe9;
+  }
+
+  html, body { margin: 0; padding: 0; height: 100%; background: var(--bg); }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    font-size: 13px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .ab {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .eyebrow {
+    font-size: 11.5px;
+    color: var(--pencil);
+    font-weight: 600;
+  }
+
+  .cdot {
+    display: inline-block;
+    width: 12px; height: 12px;
+    vertical-align: -1px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  .cdot.high   { background: var(--c-high); }
+  .cdot.medium { background: linear-gradient(90deg, var(--c-medium) 50%, transparent 50%); border: 1.5px solid var(--c-medium); }
+  .cdot.low    { background: var(--c-low); border: 1px solid var(--c-medium); }
+
+  .ul-soft {
+    border-bottom: 1px dotted var(--pencil);
+    padding-bottom: 1px;
+  }
+
+  .ref {
+    display: inline-block;
+    border: 1px solid var(--c-high);
+    border-radius: 50%;
+    width: 17px; height: 17px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10.5px;
+    color: var(--c-high);
+    cursor: pointer;
+    vertical-align: 1px;
+    margin: 0 1px;
+    background: var(--accent-soft);
+  }
+
+  .select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--c-high);
+    background: var(--bg);
+    padding: 7px 32px 7px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--ink);
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23042f4d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-position: right 11px center;
+    background-repeat: no-repeat;
+    background-size: 10px 6px;
+    line-height: 1.2;
+  }
+  .select:hover { border-color: var(--accent); background-color: var(--accent-soft); }
+
+  .grid-cell {
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 6px 7px;
+    min-height: 48px;
+    font-size: 10.5px;
+    line-height: 1.25;
+    position: relative;
+    cursor: pointer;
+    background: var(--bg);
+  }
+  .grid-cell:hover { background: var(--accent-soft); }
+  .grid-cell.row-head, .grid-cell.col-head {
+    background: var(--bg-soft);
+    font-weight: 600;
+  }
+  .grid-cell.row-head:hover, .grid-cell.col-head:hover { background: var(--bg-soft); cursor: default; }
+  .grid-cell.active {
+    background: var(--highlight);
+    box-shadow: inset 0 0 0 2px var(--c-high);
+  }
+  .grid-cell .mini-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    display: inline-block; vertical-align: middle;
+    box-sizing: border-box;
+  }
+  .grid-cell .mini-dot.h { background: var(--c-high); }
+  .grid-cell .mini-dot.m { background: linear-gradient(90deg, var(--c-medium) 50%, transparent 50%); border:1px solid var(--c-medium); }
+  .grid-cell .mini-dot.l { background: var(--c-low); border: 1px solid var(--c-medium); }
+
+  .cl-mark {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 16px; height: 14px;
+    border: 1px solid var(--chile-mark);
+    border-radius: 2px;
+    color: var(--chile-mark);
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    background: var(--bg);
+  }
+
+  .popover {
+    position: absolute;
+    background: var(--bg);
+    padding: 10px 12px;
+    font-size: 11px;
+    line-height: 1.45;
+    max-width: 240px;
+    z-index: 5;
+    border: 1px solid var(--c-high);
+    box-shadow: 4px 4px 0 var(--c-high);
+    border-radius: 2px;
+  }
+
+  .age-chip {
+    display: inline-block;
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 11px;
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    background: var(--bg);
+  }
+
+  .ghost {
+    border: 1px solid var(--c-high);
+    background: transparent;
+    padding: 5px 11px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--c-high);
+    font-family: inherit;
+  }
+
+  .chile-block {
+    position: relative;
+    border-left: 3px solid var(--chile-mark);
+    background: var(--chile-soft);
+    padding: 12px 16px 12px 18px;
+  }
+  .chile-block .chile-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--chile-mark);
+    margin-bottom: 6px;
+  }
+  .chile-block .chile-label::before {
+    content: "";
+    width: 8px; height: 8px;
+    background: var(--chile-mark);
+    border-radius: 50%;
+  }
+
+  .box.thin { border: 1px solid var(--border); border-radius: 2px; padding: 12px 14px; }
+  .box.fill-cell { background: var(--bg-cell); }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#d6dfe8"/>
+    <g transform="translate(30,30)">
+      <rect x="0" y="0" width="10" height="10" fill="#042f4d"/>
+      <rect x="14" y="0" width="10" height="10" fill="#5c728e"/>
+      <rect x="28" y="0" width="10" height="10" fill="#042f4d"/>
+      <rect x="0" y="14" width="10" height="10" fill="#5c728e"/>
+      <rect x="14" y="14" width="10" height="10" fill="#042f4d"/>
+      <rect x="28" y="14" width="10" height="10" fill="#ffffff" stroke="#5c728e"/>
+      <rect x="0" y="28" width="10" height="10" fill="#042f4d"/>
+      <rect x="14" y="28" width="10" height="10" fill="#ffffff" stroke="#5c728e"/>
+      <rect x="28" y="28" width="10" height="10" fill="#5c728e"/>
+    </g>
+  </svg>
+</template>
+
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  const { useState } = React;
+
+  function WireframeB() {
+    const [selectedAge, setSelectedAge] = useState('all');
+
+    const dims = [
+      'Lenguaje','Cognición','Socio-emocional','Sueño',
+      'Actividad física','Visión','Salud mental','Comportamiento',
+      'Vínculo','Creatividad'
+    ];
+    const ages = ['Lactante\n0–12 m','Primera inf.\n1–3 a','Preescolar\n3–5 a','Niñez media\n6–8 a','Preado\n9–12 a'];
+    const ageOptions = [
+      { value: 'all', label: 'Todos los tramos' },
+      { value: '0',   label: 'Lactante · 0–12 meses' },
+      { value: '1',   label: 'Primera infancia · 1–3 años' },
+      { value: '2',   label: 'Preescolar · 3–5 años' },
+      { value: '3',   label: 'Niñez media · 6–8 años' },
+      { value: '4',   label: 'Preadolescencia · 9–12 años' },
+    ];
+
+    // h=high, m=medium, l=low. * = celda con marca Chile
+    const grid = [
+      ['h','h*','h','m','l'],   // Lenguaje
+      ['m','m','m','h','h'],    // Cognición
+      ['m','h*','m','m','h'],   // Socio-emocional
+      ['m','h','h','h','h'],    // Sueño
+      ['l','m','m','h*','h'],   // Actividad física
+      ['m','m','m','h','h'],    // Visión
+      ['l','m','m','m','h'],    // Salud mental
+      ['m','m','m','h','h'],    // Comportamiento
+      ['m','h','m','m','m'],    // Vínculo
+      ['m','m','m','l','l'],    // Creatividad
+    ];
+
+    return (
+      <div className="ab">
+
+        {/* TOP BAR — título + selector de tramo + meta */}
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap: 16,
+                      borderBottom:'1px solid var(--border)', padding:'10px 16px', background:'var(--bg-soft)' }}>
+          <div style={{ display:'flex', alignItems:'center', gap: 16 }}>
+            <div style={{ fontSize: 13, fontWeight: 600 }}>
+              Crianza y pantallas <span style={{ color:'var(--pencil)', fontWeight: 400, fontSize: 12 }}>· matriz de evidencia</span>
+            </div>
+            <span style={{ width: 1, height: 18, background:'var(--border)' }}></span>
+            <label className="eyebrow" htmlFor="age-sel-b" style={{ whiteSpace:'nowrap' }}>Elegir tramo etario</label>
+            <select id="age-sel-b" className="select"
+                    value={selectedAge}
+                    onChange={(e)=> setSelectedAge(e.target.value)}>
+              {ageOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+          </div>
+          <div style={{ display:'flex', gap: 10, alignItems:'center', fontSize: 11.5, color:'var(--pencil)' }}>
+            <span>Certeza ≥ <u>media</u></span>
+            <span>·</span>
+            <span>⎄ Buscar</span>
+            <span>·</span>
+            <span style={{ display:'inline-flex', gap: 6, alignItems:'center' }}>
+              <span className="cdot high"></span>alta
+              <span className="cdot medium" style={{marginLeft:4}}></span>media
+              <span className="cdot low" style={{marginLeft:4}}></span>baja
+            </span>
+          </div>
+        </div>
+
+        {/* CUERPO: matriz + panel */}
+        <div style={{ display:'grid', gridTemplateColumns: '1fr 360px', flex: 1, minHeight: 0 }}>
+
+          {/* MATRIZ */}
+          <div style={{ padding: '14px 0 14px 18px', display:'flex', flexDirection:'column', position:'relative' }}>
+
+            <div style={{ fontSize: 12, color:'var(--pencil)', marginBottom: 6 }}>
+              10 dimensiones × 5 tramos etarios — clic en cualquier celda carga su ficha a la derecha.
+              {selectedAge !== 'all' && (
+                <span> Mostrando <b style={{color:'var(--ink)'}}>{ageOptions.find(o=>o.value===selectedAge).label}</b>; otras edades atenuadas como contexto.</span>
+              )}
+            </div>
+
+            <div style={{ display:'grid',
+                          gridTemplateColumns: '120px repeat(5, 1fr)',
+                          border: '1px solid var(--border)',
+                          background:'var(--bg)' }}>
+              <div className="grid-cell col-head" style={{ minHeight: 46, background:'var(--bg-soft)' }}></div>
+              {ages.map((a,i)=> {
+                const dimmed = selectedAge !== 'all' && String(i) !== selectedAge;
+                const focused = String(i) === selectedAge;
+                return (
+                  <div key={i} className="grid-cell col-head"
+                       style={{ whiteSpace:'pre-line', textAlign:'center', minHeight:46,
+                                opacity: dimmed ? 0.4 : 1,
+                                background: focused ? 'var(--accent-soft)' : undefined,
+                                boxShadow: focused ? 'inset 0 -2px 0 var(--c-high)' : undefined,
+                                transition:'opacity .15s, background .15s' }}>
+                    {a}
+                  </div>
+                );
+              })}
+
+              {dims.map((d, r)=> [
+                <div key={`r${r}`} className="grid-cell row-head" style={{ display:'flex', alignItems:'center' }}>{d}</div>,
+                ...ages.map((_, c) => {
+                  const cell = grid[r][c];
+                  const isActive = r === 0 && c === 1;
+                  const cert = cell.replace('*','');
+                  const hasChile = cell.includes('*');
+                  const dimmed = selectedAge !== 'all' && String(c) !== selectedAge;
+                  return (
+                    <div key={`${r}-${c}`} className={`grid-cell${isActive ? ' active' : ''}`}
+                         style={{ opacity: dimmed ? 0.3 : 1, transition:'opacity .15s' }}>
+                      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start' }}>
+                        <span className={`mini-dot ${cert}`}></span>
+                        {hasChile && (
+                          <span title="Tiene nota de contexto chileno" className="cl-mark">
+                            CL
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ fontSize: 10, color:'var(--ink-soft)', marginTop: 4, lineHeight:1.2 }}>
+                        {isActive ? 'TV fondo desplaza habla' : (cert==='h' ? '—' : cert==='m' ? 'mixto' : 'incipiente')}
+                      </div>
+                    </div>
+                  );
+                })
+              ])}
+            </div>
+
+            <div style={{ fontSize:11.5, color:'var(--pencil)', marginTop: 10 }}>
+              Celda activa = resaltada en amarillo. Hover sobre una cita <span className="ref">n</span> abre la previsualización bibliográfica.
+            </div>
+
+            {/* POP-OVER de cita — demuestra el hover sobre referencias */}
+            <div className="popover" style={{ top: 360, right: -42, width: 240 }}>
+              <div className="eyebrow" style={{ marginBottom: 4 }}>Referencia inline</div>
+              <div style={{ fontWeight:600, fontSize:12 }}>Madigan et al. 2020</div>
+              <div style={{ fontSize:11, color:'var(--ink-soft)', marginTop:2, lineHeight:1.4 }}>
+                <i>JAMA Pediatrics</i>. Meta-análisis: pantalla ↔ habilidades lingüísticas.
+              </div>
+              <div style={{ fontSize:11, marginTop: 6, color:'var(--c-high)' }}>↗ Ver en bibliografía</div>
+              <div style={{ position:'absolute', left: -10, top: 18, fontSize: 18, color:'var(--c-high)' }}>◀</div>
+            </div>
+
+          </div>
+
+          {/* PANEL DERECHO — ficha de la celda activa */}
+          <div style={{ borderLeft:'1px solid var(--border)', background:'var(--bg)',
+                         padding:'14px 16px', overflow:'auto' }}>
+
+            <div className="eyebrow" style={{ marginBottom: 8 }}>Ficha activa</div>
+
+            <div style={{ display:'flex', gap:6, alignItems:'center', fontSize: 10.5, color:'var(--pencil)' }}>
+              <span className="age-chip">Lenguaje</span>
+              <span className="age-chip">1–3 años</span>
+              <span style={{ display:'inline-flex', alignItems:'center', gap:4, marginLeft:'auto' }}>
+                <span className="cdot high"></span>certeza alta
+              </span>
+            </div>
+
+            <h2 style={{ fontSize: 17, lineHeight: 1.2, margin:'10px 0 6px', fontWeight: 600 }}>
+              TV de fondo desplaza el habla dirigida
+            </h2>
+
+            <p style={{ fontSize: 12.5, lineHeight: 1.5, margin: '0 0 10px' }}>
+              Entre 1 y 3 años, el lenguaje depende sobre todo del habla dirigida al niño.
+              La pantalla actúa por desplazamiento: con TV o smartphone en uso, el adulto habla menos
+              y de manera menos contingente <span className="ref">1</span>.
+            </p>
+
+            <div className="eyebrow" style={{ marginTop: 10 }}>▾ Evidencia (4)</div>
+
+            <div style={{ display:'flex', flexDirection:'column', gap: 8, marginTop: 6 }}>
+              {[
+                ['high','Meta-análisis Madigan 2020 (JAMA Pediatrics): pantalla ↔ menores habilidades lingüísticas.', '2'],
+                ['high','Children of the 2020s: problemas de lenguaje a los 2a sobre todo > 86 min/día.'],
+                ['medium','Algunas revisiones (Jing 2023) — beneficios pequeños si contenido bien diseñado + adulto media.', '3'],
+                ['high','Co-visionado contingente neutraliza buena parte del efecto (Sundqvist 2021).'],
+              ].map(([c, txt, ref],i)=>(
+                <div key={i} style={{ display:'flex', gap: 6, fontSize: 11.5, lineHeight: 1.45 }}>
+                  <span className={`cdot ${c}`} style={{ marginTop: 4, flexShrink:0 }}></span>
+                  <span>{txt}{ref && <span className="ref">{ref}</span>}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="chile-block" style={{ marginTop: 14 }}>
+              <div className="chile-label">
+                <span className="cl-mark" style={{ marginRight: 2 }}>CL</span>
+                Contexto chileno
+              </div>
+              <div style={{ fontSize: 11.5, lineHeight: 1.5 }}>
+                <i>Mil Primeros Días</i> (UC) observa TV permanentemente encendida en hogares con cuidado por abuelos.
+                Intervención más simple a esta edad: apagarla cuando nadie está viendo.
+              </div>
+            </div>
+
+            <div style={{ marginTop: 14 }}>
+              <div className="eyebrow">↑↓ Andamiaje del desarrollo</div>
+              <div style={{ fontSize:11.5, marginTop:6, color:'var(--ink-soft)' }}>
+                ↑ <u>Vínculo · lactante</u><br/>
+                ↓ <u>Lenguaje · preescolar</u> · <u>Cognición · preescolar</u>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* MICRODECISIONES DISTINTIVAS */}
+        <div style={{ padding: '12px 16px', background:'var(--bg-soft)',
+                      borderTop: '1px solid var(--border)' }}>
+          <div className="eyebrow" style={{ marginBottom: 6 }}>
+            Cuatro microdecisiones de esta dirección
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr 1fr', gap: 16, fontSize: 12.5, lineHeight: 1.45 }}>
+            <div><b>① Matriz como pantalla, no como tabla.</b> Ocupa todo el viewport y se queda fija al hacer scroll. Clic en cualquier celda carga la ficha en el panel sin cambiar de página.</div>
+            <div><b>② Pop-overs de bibliografía.</b> Cualquier cita se previsualiza al hover/tap sin moverse de la matriz. La página ⁄bibliografía sigue existiendo como índice navegable.</div>
+            <div><b>③ Chile marcado en la grilla.</b> Las celdas con nota de contexto chileno llevan una marca <span className="cl-mark" style={{verticalAlign:-2, margin:'0 1px'}}>CL</span> visible desde la matriz; permite filtrar “solo con evidencia local”.</div>
+            <div><b>④ Selector con “todos los tramos”.</b> Por defecto se ve la matriz completa. Al elegir un tramo, las otras edades se atenúan en lugar de ocultarse: se conserva el contexto vecino.</div>
+          </div>
+        </div>
+
+      </div>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<WireframeB />);
+</script>
+
+</body>
+</html>

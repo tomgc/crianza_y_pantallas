@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crianza y pantallas — Matriz de evidencia</title>
-<style>
   /* ─────────────────────────────────────────────────────────────
      Wireframe B — sistema visual
      · Paleta navy: #042f4d / #5c728e / #d6dfe8
@@ -208,20 +201,3 @@
 
   .box.thin { border: 1px solid var(--border); border-radius: 2px; padding: 12px 14px; }
   .box.fill-cell { background: var(--bg-cell); }
-
-</style>
-</head>
-<body>
-
-<div id="app" class="ab"></div>
-
-<script>
-
-</script>
-
-<script>
-
-</script>
-
-</body>
-</html>
