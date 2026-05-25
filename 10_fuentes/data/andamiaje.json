@@ -1,0 +1,149 @@
+{
+  "cascadas": [
+    {
+      "id": "lenguaje",
+      "title": "Cascada del lenguaje",
+      "description": "Una de las cascadas mejor establecidas en pediatría del desarrollo.",
+      "chain": [
+        { "cellId": "lenguaje-lactante",         "label": "Habla recibida en lactancia" },
+        { "cellId": "lenguaje-primera-infancia", "label": "Vocabulario receptivo" },
+        { "cellId": "lenguaje-preescolar",       "label": "Narrativa preescolar" },
+        { "cellId": "lenguaje-ninez-media",      "label": "Comprensión lectora" }
+      ],
+      "claims": [
+        {
+          "certainty": "high",
+          "text": "Cada eslabón predice al siguiente con magnitudes moderadas a grandes. Es una de las cascadas más robustas en pediatría del desarrollo.",
+          "refs": []
+        }
+      ]
+    },
+    {
+      "id": "regulacion-emocional",
+      "title": "Cascada de la regulación emocional",
+      "description": "Vínculo → corregulación → autorregulación → autocontrol escolar.",
+      "chain": [
+        { "cellId": "vinculo-lactante",              "label": "Sincronía facial" },
+        { "cellId": "socioemocional-primera-infancia", "label": "Corregulación" },
+        { "cellId": "comportamiento-preescolar",     "label": "Autorregulación" },
+        { "cellId": "comportamiento-ninez-media",    "label": "Autocontrol escolar" }
+      ],
+      "claims": [
+        {
+          "certainty": "high",
+          "text": "Bien respaldada teóricamente y por estudios longitudinales (Eisenberg, Spinrad y colegas).",
+          "refs": []
+        },
+        {
+          "certainty": "medium",
+          "text": "El uso de pantalla como regulador externo puede comprometer esta cascada al desplazar la corregulación con un adulto (Fitzpatrick et al., 2024).",
+          "refs": ["Fitzpatrick2024"]
+        },
+        {
+          "certainty": "medium",
+          "text": "Específicamente, el uso parental de pantallas para regular las emociones del niño (constructo PDER) predice mayor ira y menor control esforzado un año después, con el fenómeno asociado de \"screen time tantrums\" (Jusienė et al., 2024).",
+          "refs": ["Jusiene2024"]
+        }
+      ]
+    },
+    {
+      "id": "sueno",
+      "title": "Cascada del sueño",
+      "description": "Sueño consolidado alimenta capacidades cognitivas y regulación.",
+      "chain": [
+        { "cellId": "sueno-lactante",         "label": "Ritmo circadiano" },
+        { "cellId": "sueno-primera-infancia", "label": "Sueño consolidado" },
+        { "cellId": "cognicion-preescolar",   "label": "Función ejecutiva" }
+      ],
+      "claims": [
+        {
+          "certainty": "high",
+          "text": "Sueño suficiente es condición necesaria para consolidación de aprendizaje y regulación emocional. Una de las cascadas más sólidas en neurociencia del desarrollo.",
+          "refs": []
+        }
+      ]
+    },
+    {
+      "id": "juego-simbolico",
+      "title": "Cascada del juego simbólico y creatividad",
+      "description": "Juego sensoriomotor → simbólico → pensamiento divergente. Más débil que las anteriores.",
+      "chain": [
+        { "cellId": "creatividad-lactante",         "label": "Juego sensoriomotor" },
+        { "cellId": "creatividad-primera-infancia", "label": "Juego simbólico" },
+        { "cellId": "creatividad-preescolar",       "label": "Pensamiento divergente" }
+      ],
+      "claims": [
+        {
+          "certainty": "medium",
+          "text": "Asociaciones consistentes en estudios correlacionales (Smits-van der Nat et al., 2024, meta-análisis). Causalidad cuestionada por Lillard et al. (2013).",
+          "refs": []
+        },
+        {
+          "certainty": "low",
+          "text": "La hipótesis \"pantalla → menos creatividad\" en preescolares es plausible por encadenamiento pero no demostrada directamente.",
+          "refs": []
+        }
+      ]
+    },
+    {
+      "id": "socioemocional-salud-mental",
+      "title": "Cascada socioemocional → salud mental",
+      "description": "Regulación emocional temprana → habilidades sociales → salud mental en preadolescencia.",
+      "chain": [
+        { "cellId": "socioemocional-primera-infancia",  "label": "Regulación emocional" },
+        { "cellId": "socioemocional-preescolar",        "label": "Habilidades sociales" },
+        { "cellId": "salud-mental-preadolescencia",     "label": "Salud mental" }
+      ],
+      "claims": [
+        {
+          "certainty": "high",
+          "text": "Bien respaldada por estudios longitudinales (cohortes Dunedin, ALSPAC).",
+          "refs": []
+        },
+        {
+          "certainty": "medium",
+          "text": "Habilidades sociales tempranas son factor protector contra problemas de salud mental en preadolescencia y adolescencia.",
+          "refs": []
+        },
+        {
+          "certainty": "high",
+          "text": "El meta-análisis longitudinal más amplio disponible (117 estudios, ~292.000 niños 0–10 años) confirma una asociación bidireccional entre tiempo de pantalla y problemas socioemocionales que opera sobre esta cascada (Vasconcellos et al., 2025).",
+          "refs": ["Vasconcellos2025"]
+        }
+      ]
+    },
+    {
+      "id": "conectoras",
+      "title": "Cascadas conectoras entre dimensiones",
+      "description": "Conexiones transversales (no solo en línea temporal) que vale la pena destacar.",
+      "chain": [],
+      "claims": [
+        {
+          "certainty": "high",
+          "text": "**Sueño → cognición.** El sueño insuficiente afecta función ejecutiva en cualquier edad.",
+          "refs": []
+        },
+        {
+          "certainty": "high",
+          "text": "**Lenguaje → función ejecutiva.** El lenguaje interno es vehículo del control inhibitorio (Vygotsky; Diamond, 2013).",
+          "refs": []
+        },
+        {
+          "certainty": "high",
+          "text": "**Vínculo → regulación emocional.** El apego seguro es base para el desarrollo de la regulación.",
+          "refs": []
+        },
+        {
+          "certainty": "medium",
+          "text": "**Juego simbólico → función ejecutiva.** Asociación robusta en estudios correlacionales.",
+          "refs": []
+        },
+        {
+          "certainty": "low",
+          "text": "**Actividad física → salud mental.** Plausible y respaldada en escolares y adolescentes; menos clara en menores de 5.",
+          "refs": []
+        }
+      ]
+    }
+  ]
+}
