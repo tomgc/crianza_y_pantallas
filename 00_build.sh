@@ -36,13 +36,12 @@ with open(os.path.join(fuentes, "styles.css"), "r", encoding="utf-8") as f:
 # Construir bloque DATA si hay archivos JSON
 data_files = sorted(glob.glob(os.path.join(data_dir, "*.json")))
 if data_files:
-    parts = []
+    data_obj = {}
     for path in data_files:
         key = os.path.splitext(os.path.basename(path))[0]
         with open(path, "r", encoding="utf-8") as f:
-            content = f.read().strip()
-        parts.append(f'  "{key}": {content}')
-    data_block = "window.__DATA__ = {\n" + ",\n".join(parts) + "\n};"
+            data_obj[key] = json.load(f)
+    data_block = "window.__DATA__ = " + json.dumps(data_obj, indent=2, ensure_ascii=False) + ";"
 else:
     data_block = ""
 
