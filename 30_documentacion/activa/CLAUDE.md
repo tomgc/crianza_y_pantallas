@@ -47,3 +47,12 @@ El sitio se ensambla con `./00_build.sh`. Este script lee fuentes desde `10_fuen
 Razón: GitHub Pages sirve `index.html` directamente. Si las fuentes y el output se desincronizan en un commit, el sitio público queda inconsistente con su fuente. Mantenerlos juntos garantiza que `git checkout <commit>` siempre dé un estado coherente.
 
 `index.html` NO se edita a mano nunca. Cualquier cambio se hace en las fuentes y se regenera con el build.
+
+## Flujo de incorporación de evidencia
+
+El proceso para incorporar papers, meta-análisis o cualquier evidencia bibliográfica al proyecto está documentado en:
+
+- `30_documentacion/activa/flujo_incorporacion_evidencia.md` — describe los 5 pasos del flujo, las convenciones de IDs y campos, y los casos especiales.
+- `30_documentacion/activa/prompt_busqueda_bibliografia.md` — prompt listo para usar con agentes IA de búsqueda (Perplexity, ChatGPT con browsing, etc.) que devuelve resultados en el formato esperado por el flujo.
+
+Roles: Tomás detecta y aprueba; Claude analiza y entrega código; Claude Code ejecuta cambios.
