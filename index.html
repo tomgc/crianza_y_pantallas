@@ -5,209 +5,572 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crianza y pantallas — Matriz de evidencia</title>
 <style>
-  /* ─────────────────────────────────────────────────────────────
-     Wireframe B — sistema visual
-     · Paleta navy: #042f4d / #5c728e / #d6dfe8
-     · Sans del sistema, sentence case
-     · Sin handwritten fonts, sin skeumorfismos
-     ───────────────────────────────────────────────────────────── */
-  :root {
-    --bg:           #ffffff;
-    --bg-soft:      #f0f2f5;
-    --bg-cell:      #f9fafc;
-    --ink:          #1a1d24;
-    --ink-soft:     #4a5260;
-    --pencil:       #6a7280;
-    --pencil-soft:  #b3bac4;
-    --border:       #d4dce4;
+/* ─────────────────────────────────────────────────────────────
+   Crianza y pantallas — sistema visual
+   Base heredada de wireframe B (paleta navy, sans del sistema)
+   + ampliación: top bar con tabs, layout matriz+ficha,
+   vistas de página (biblio/metodología/limitaciones),
+   controles, popovers, responsive.
+   ───────────────────────────────────────────────────────────── */
 
-    --c-high:       #042f4d;
-    --c-medium:     #5c728e;
-    --c-low:        #d6dfe8;
+:root {
+  --bg:           #ffffff;
+  --bg-soft:      #f0f2f5;
+  --bg-cell:      #f9fafc;
+  --ink:          #1a1d24;
+  --ink-soft:     #4a5260;
+  --pencil:       #6a7280;
+  --pencil-soft:  #b3bac4;
+  --border:       #d4dce4;
 
-    --accent:       #042f4d;
-    --accent-soft:  #eaf0f6;
-    --highlight:    #f4dd8a;
-    --chile-mark:   #1f5b3d;
-    --chile-soft:   #e8efe9;
-  }
+  --c-high:       #042f4d;
+  --c-medium:     #5c728e;
+  --c-low:        #d6dfe8;
 
-  html, body { margin: 0; padding: 0; height: 100%; background: var(--bg); }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: var(--ink);
-    font-size: 13px;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
+  --accent:       #042f4d;
+  --accent-soft:  #eaf0f6;
+  --highlight:    #f4dd8a;
+  --chile-mark:   #1f5b3d;
+  --chile-soft:   #e8efe9;
+}
 
-  .ab {
-    width: 100%;
-    min-height: 100vh;
-    background: var(--bg);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
+html, body { margin: 0; padding: 0; height: 100%; background: var(--bg); }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
 
-  .eyebrow {
-    font-size: 11.5px;
-    color: var(--pencil);
-    font-weight: 600;
-  }
+.ab {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-  .cdot {
-    display: inline-block;
-    width: 12px; height: 12px;
-    vertical-align: -1px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    box-sizing: border-box;
-  }
-  .cdot.high   { background: var(--c-high); }
-  .cdot.medium { background: linear-gradient(90deg, var(--c-medium) 50%, transparent 50%); border: 1.5px solid var(--c-medium); }
-  .cdot.low    { background: var(--c-low); border: 1px solid var(--c-medium); }
+/* ── Tipografía utilitaria ──────────────────────────────────── */
+.eyebrow {
+  font-size: 11.5px;
+  color: var(--pencil);
+  font-weight: 600;
+}
 
-  .ul-soft {
-    border-bottom: 1px dotted var(--pencil);
-    padding-bottom: 1px;
-  }
+/* ── Dots de certeza ────────────────────────────────────────── */
+.cdot {
+  display: inline-block;
+  width: 12px; height: 12px;
+  vertical-align: -1px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.cdot.high   { background: var(--c-high); }
+.cdot.medium { background: linear-gradient(90deg, var(--c-medium) 50%, transparent 50%); border: 1.5px solid var(--c-medium); }
+.cdot.low    { background: var(--c-low); border: 1px solid var(--c-medium); }
 
-  .ref {
-    display: inline-block;
-    border: 1px solid var(--c-high);
-    border-radius: 50%;
-    width: 17px; height: 17px;
-    text-align: center;
-    line-height: 15px;
-    font-size: 10.5px;
-    color: var(--c-high);
-    cursor: pointer;
-    vertical-align: 1px;
-    margin: 0 1px;
-    background: var(--accent-soft);
-  }
+.ul-soft { border-bottom: 1px dotted var(--pencil); padding-bottom: 1px; }
 
-  .select {
-    appearance: none;
-    -webkit-appearance: none;
-    border: 1px solid var(--c-high);
-    background: var(--bg);
-    padding: 7px 32px 7px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-family: inherit;
-    color: var(--ink);
-    cursor: pointer;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23042f4d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-    background-position: right 11px center;
-    background-repeat: no-repeat;
-    background-size: 10px 6px;
-    line-height: 1.2;
-  }
-  .select:hover { border-color: var(--accent); background-color: var(--accent-soft); }
+/* ── Ref chips ──────────────────────────────────────────────── */
+.ref {
+  display: inline-block;
+  border: 1px solid var(--c-high);
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-size: 10.5px;
+  color: var(--c-high);
+  cursor: pointer;
+  vertical-align: 1px;
+  margin: 0 2px;
+  background: var(--accent-soft);
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.ref:hover { background: var(--c-high); color: var(--bg); }
+.ref-missing {
+  background: var(--bg-soft);
+  border-color: var(--pencil-soft);
+  color: var(--pencil);
+  cursor: help;
+}
 
-  .grid-cell {
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 6px 7px;
-    min-height: 48px;
-    font-size: 10.5px;
-    line-height: 1.25;
-    position: relative;
-    cursor: pointer;
-    background: var(--bg);
-  }
-  .grid-cell:hover { background: var(--accent-soft); }
-  .grid-cell.row-head, .grid-cell.col-head {
-    background: var(--bg-soft);
-    font-weight: 600;
-  }
-  .grid-cell.row-head:hover, .grid-cell.col-head:hover { background: var(--bg-soft); cursor: default; }
-  .grid-cell.active {
-    background: var(--highlight);
-    box-shadow: inset 0 0 0 2px var(--c-high);
-  }
-  .grid-cell .mini-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    display: inline-block; vertical-align: middle;
-    box-sizing: border-box;
-  }
-  .grid-cell .mini-dot.h { background: var(--c-high); }
-  .grid-cell .mini-dot.m { background: linear-gradient(90deg, var(--c-medium) 50%, transparent 50%); border:1px solid var(--c-medium); }
-  .grid-cell .mini-dot.l { background: var(--c-low); border: 1px solid var(--c-medium); }
+/* ── Select ─────────────────────────────────────────────────── */
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--c-high);
+  background: var(--bg);
+  padding: 6px 28px 6px 10px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-family: inherit;
+  color: var(--ink);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23042f4d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+  line-height: 1.2;
+}
+.select:hover { border-color: var(--accent); background-color: var(--accent-soft); }
 
-  .cl-mark {
-    display: inline-flex;
-    align-items: center; justify-content: center;
-    width: 16px; height: 14px;
-    border: 1px solid var(--chile-mark);
-    border-radius: 2px;
-    color: var(--chile-mark);
-    font-size: 9px;
-    font-weight: 700;
-    line-height: 1;
-    background: var(--bg);
-  }
+/* ── TOP BAR ────────────────────────────────────────────────── */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-soft);
+  flex-wrap: wrap;
+}
+.topbar-left { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.brand { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.brand-sub { color: var(--pencil); font-weight: 400; font-size: 12.5px; }
+.tabs { display: flex; gap: 2px; }
+.tab {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 5px 12px;
+  font-size: 12.5px;
+  font-family: inherit;
+  color: var(--ink-soft);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.tab:hover { background: var(--bg); color: var(--ink); }
+.tab.active {
+  background: var(--bg);
+  color: var(--c-high);
+  border-color: var(--c-high);
+  font-weight: 600;
+}
+.topbar-right {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 11.5px; color: var(--pencil);
+}
+.topbar-right .legend { display: inline-flex; align-items: center; gap: 6px; }
+.topbar-right .legend .cdot { margin-left: 4px; }
 
-  .popover {
-    position: absolute;
-    background: var(--bg);
-    padding: 10px 12px;
-    font-size: 11px;
-    line-height: 1.45;
-    max-width: 240px;
-    z-index: 5;
-    border: 1px solid var(--c-high);
-    box-shadow: 4px 4px 0 var(--c-high);
-    border-radius: 2px;
-  }
+/* ── LAYOUT MATRIZ + FICHA ──────────────────────────────────── */
+.matriz-body {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  flex: 1;
+  min-height: 0;
+  background: var(--bg);
+}
+.matriz-pane {
+  padding: 14px 0 16px 18px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  overflow: auto;
+}
+.matriz-help { font-size: 12px; color: var(--pencil); margin: 0 18px 8px 0; line-height: 1.45; }
+.ficha-pane {
+  border-left: 1px solid var(--border);
+  background: var(--bg);
+  padding: 14px 16px 18px;
+  overflow: auto;
+  max-height: calc(100vh - 56px);
+}
 
-  .age-chip {
-    display: inline-block;
-    border: 1px solid var(--border);
-    padding: 2px 8px;
-    border-radius: 11px;
-    font-size: 10.5px;
-    color: var(--ink-soft);
-    background: var(--bg);
-  }
+/* ── MATRIZ ─────────────────────────────────────────────────── */
+.matriz-grid {
+  display: grid;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  margin-right: 18px;
+}
+.grid-cell {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 6px 7px;
+  min-height: 52px;
+  font-size: 10.5px;
+  line-height: 1.25;
+  position: relative;
+  cursor: pointer;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity .15s, background .15s;
+  box-sizing: border-box;
+}
+.grid-cell:hover { background: var(--accent-soft); }
 
-  .ghost {
-    border: 1px solid var(--c-high);
-    background: transparent;
-    padding: 5px 11px;
-    border-radius: 3px;
-    font-size: 12px;
-    cursor: pointer;
-    color: var(--c-high);
-    font-family: inherit;
-  }
+.grid-cell.row-head, .grid-cell.col-head {
+  background: var(--bg-soft);
+  font-weight: 600;
+  cursor: default;
+}
+.grid-cell.row-head { align-items: flex-start; justify-content: center; }
+.grid-cell.row-head:hover, .grid-cell.col-head:hover { background: var(--bg-soft); }
 
-  .chile-block {
-    position: relative;
-    border-left: 3px solid var(--chile-mark);
-    background: var(--chile-soft);
-    padding: 12px 16px 12px 18px;
-  }
-  .chile-block .chile-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 11.5px;
-    font-weight: 700;
-    color: var(--chile-mark);
-    margin-bottom: 6px;
-  }
-  .chile-block .chile-label::before {
-    content: "";
-    width: 8px; height: 8px;
-    background: var(--chile-mark);
-    border-radius: 50%;
-  }
+.grid-cell.col-head {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.grid-cell.col-head .head-label { font-size: 11.5px; }
+.grid-cell.col-head .head-range { font-size: 10px; color: var(--pencil); font-weight: 400; margin-top: 2px; }
 
-  .box.thin { border: 1px solid var(--border); border-radius: 2px; padding: 12px 14px; }
-  .box.fill-cell { background: var(--bg-cell); }
+.grid-cell.dimmed { opacity: 0.32; }
+.grid-cell.focused {
+  background: var(--accent-soft);
+  box-shadow: inset 0 -2px 0 var(--c-high);
+}
+
+.grid-cell.active {
+  background: var(--highlight);
+  box-shadow: inset 0 0 0 2px var(--c-high);
+}
+.grid-cell.active:hover { background: var(--highlight); }
+
+.cell-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.cell-summary {
+  font-size: 10.2px;
+  color: var(--ink-soft);
+  line-height: 1.25;
+  margin-top: 4px;
+}
+.cell-empty { color: var(--pencil-soft); font-size: 11px; }
+
+/* ── Mini-dots ──────────────────────────────────────────────── */
+.mini-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  display: inline-block; vertical-align: middle;
+  box-sizing: border-box; flex-shrink: 0;
+}
+.mini-dot.h { background: var(--c-high); }
+.mini-dot.m { background: linear-gradient(90deg, var(--c-medium) 50%, transparent 50%); border: 1px solid var(--c-medium); }
+.mini-dot.l { background: var(--c-low); border: 1px solid var(--c-medium); }
+
+/* ── Marca CL ───────────────────────────────────────────────── */
+.cl-mark {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 17px; height: 14px;
+  border: 1px solid var(--chile-mark);
+  border-radius: 2px;
+  color: var(--chile-mark);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--bg);
+  letter-spacing: 0.5px;
+}
+
+/* ── Bloque Chile ───────────────────────────────────────────── */
+.chile-block {
+  position: relative;
+  border-left: 3px solid var(--chile-mark);
+  background: var(--chile-soft);
+  padding: 10px 14px;
+  margin-top: 14px;
+  border-radius: 2px;
+}
+.chile-block .chile-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--chile-mark);
+  margin-bottom: 6px;
+}
+.chile-block .chile-body { font-size: 11.8px; line-height: 1.5; }
+
+/* ── FICHA ──────────────────────────────────────────────────── */
+.ficha { display: flex; flex-direction: column; }
+.ficha-empty { color: var(--pencil); font-size: 12px; padding: 20px 4px; }
+.ficha-chips {
+  display: flex; gap: 6px;
+  align-items: center; flex-wrap: wrap;
+  margin: 8px 0 0;
+  font-size: 10.5px; color: var(--pencil);
+}
+.age-chip {
+  display: inline-block;
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 11px;
+  font-size: 10.5px;
+  color: var(--ink-soft);
+  background: var(--bg);
+}
+.ficha-cert {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  font-size: 10.5px;
+}
+.ficha-title {
+  font-size: 16.5px;
+  line-height: 1.25;
+  margin: 10px 0 6px;
+  font-weight: 600;
+}
+.ficha-intro { font-size: 12.5px; line-height: 1.55; margin: 0 0 12px; }
+.ficha-evidence { margin-top: 10px; }
+.evidence-list { display: flex; flex-direction: column; gap: 9px; margin-top: 6px; }
+.evidence-item {
+  display: flex; gap: 7px;
+  font-size: 11.8px; line-height: 1.5;
+  align-items: flex-start;
+}
+.evidence-item .cdot { margin-top: 4px; flex-shrink: 0; }
+.evidence-text { flex: 1; }
+
+.ficha-defs { margin-top: 14px; }
+.ficha-defs dl { margin: 6px 0 0; }
+.ficha-defs dt { font-weight: 600; font-size: 12px; margin-top: 8px; }
+.ficha-defs dt:first-child { margin-top: 0; }
+.ficha-defs dd { margin: 2px 0 0; font-size: 11.8px; line-height: 1.5; color: var(--ink-soft); }
+
+.ficha-and { margin-top: 14px; }
+.and-body { font-size: 11.5px; margin-top: 6px; color: var(--ink-soft); line-height: 1.7; }
+.and-direction { margin-top: 8px; }
+.and-direction:first-of-type { margin-top: 6px; }
+.and-direction-label {
+  font-size: 11px;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.and-arrow { color: var(--c-high); font-weight: 700; margin-right: 2px; }
+.and-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.and-item {
+  font-size: 11.5px;
+  line-height: 1.45;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  color: var(--ink-soft);
+}
+.and-item .cdot { margin-top: 4px; flex-shrink: 0; }
+.and-text { color: var(--pencil); }
+.cell-link {
+  color: var(--c-high);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--c-high);
+}
+.cell-link:hover { background: var(--accent-soft); }
+
+/* ── POPOVER ────────────────────────────────────────────────── */
+.popover {
+  background: var(--bg);
+  padding: 10px 12px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  z-index: 50;
+  border: 1px solid var(--c-high);
+  box-shadow: 4px 4px 0 var(--c-high);
+  border-radius: 2px;
+}
+.ref-popover .ref-authors { font-weight: 600; font-size: 12px; margin-top: 4px; }
+.ref-popover .ref-title { font-size: 11.5px; margin-top: 4px; }
+.ref-popover .ref-journal { font-size: 11px; color: var(--ink-soft); margin-top: 2px; font-style: italic; }
+.ref-popover .ref-jump {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11.5px;
+  color: var(--c-high);
+  text-decoration: none;
+}
+.ref-popover .ref-jump:hover { text-decoration: underline; }
+
+/* ── BOTONES ────────────────────────────────────────────────── */
+.ghost {
+  border: 1px solid var(--c-high);
+  background: transparent;
+  padding: 5px 11px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--c-high);
+  font-family: inherit;
+}
+.ghost:hover { background: var(--accent-soft); }
+
+/* ── VISTAS DE PÁGINA ───────────────────────────────────────── */
+.page-pane {
+  flex: 1;
+  padding: 22px 32px 40px;
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.page-head { margin-bottom: 20px; }
+.page-title { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
+.page-sub { font-size: 12.5px; color: var(--pencil); }
+
+/* ── BIBLIOGRAFÍA ───────────────────────────────────────────── */
+.biblio-controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+.biblio-filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-filter {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-family: inherit;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+.chip-filter:hover { border-color: var(--c-high); color: var(--c-high); }
+.chip-filter.active {
+  background: var(--c-high);
+  color: var(--bg);
+  border-color: var(--c-high);
+  font-weight: 600;
+}
+.search-input {
+  width: 100%;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background: var(--bg);
+  color: var(--ink);
+}
+.search-input:focus { outline: none; border-color: var(--c-high); }
+
+.biblio-body { display: flex; flex-direction: column; gap: 28px; }
+.biblio-group-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-high);
+  margin: 0 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border);
+}
+.biblio-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.biblio-entry {
+  border-left: 2px solid var(--border);
+  padding: 6px 0 6px 12px;
+  transition: border-color .2s, background .2s;
+}
+.biblio-entry.biblio-highlight {
+  border-color: var(--highlight);
+  background: var(--highlight);
+}
+.biblio-meta { display: flex; gap: 8px; align-items: center; margin-bottom: 3px; }
+.biblio-type {
+  display: inline-block;
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 9px;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  border: 1px solid var(--border);
+  font-weight: 600;
+}
+.biblio-type.type-review        { background: #e8f0e8; color: #2d5a2d; border-color: #c5d8c5; }
+.biblio-type.type-meta          { background: #e8edf5; color: #1d3a6e; border-color: #c0cde2; }
+.biblio-type.type-longitudinal  { background: #f5ecdb; color: #6b4a1e; border-color: #d8c290; }
+.biblio-type.type-guideline     { background: #f0e8f0; color: #5c2d5c; border-color: #d4bdd4; }
+.biblio-type.type-law           { background: #f5e8e8; color: #6e2d2d; border-color: #d8b8b8; }
+.biblio-type.type-chilean       { background: var(--chile-soft); color: var(--chile-mark); border-color: var(--chile-mark); }
+.biblio-featured { font-size: 10px; color: var(--ink-soft); }
+.biblio-authors { font-size: 12px; font-weight: 600; margin-top: 2px; }
+.biblio-title { font-size: 12.5px; margin-top: 2px; line-height: 1.4; }
+.biblio-journal { font-size: 11.5px; color: var(--ink-soft); margin-top: 2px; font-style: italic; }
+.biblio-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--c-high);
+  text-decoration: none;
+}
+.biblio-link:hover { text-decoration: underline; }
+
+.empty-state {
+  padding: 20px;
+  text-align: center;
+  color: var(--pencil);
+  font-size: 12.5px;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+}
+
+/* ── METODOLOGÍA Y LIMITACIONES ─────────────────────────────── */
+.text-body { display: flex; flex-direction: column; gap: 28px; }
+.text-section-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--c-high);
+  margin: 0 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border);
+}
+.text-section-content { font-size: 13px; line-height: 1.65; }
+.text-section-content p { margin: 0 0 10px; }
+.text-section-bullets {
+  margin: 10px 0 0;
+  padding-left: 22px;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.text-section-bullets li { margin-bottom: 6px; }
+
+/* ── Boxes auxiliares ───────────────────────────────────────── */
+.box.thin { border: 1px solid var(--border); border-radius: 2px; padding: 12px 14px; }
+.box.fill-cell { background: var(--bg-cell); }
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .matriz-body { grid-template-columns: 1fr; }
+  .ficha-pane {
+    border-left: none;
+    border-top: 1px solid var(--border);
+    max-height: none;
+  }
+  .matriz-pane { padding: 12px; }
+  .matriz-grid { margin-right: 0; grid-template-columns: 90px repeat(5, 1fr) !important; }
+  .grid-cell { min-height: 44px; padding: 5px 6px; font-size: 10px; }
+  .grid-cell.col-head .head-label { font-size: 10.5px; }
+  .grid-cell.col-head .head-range { font-size: 9.5px; }
+  .cell-summary { font-size: 9.8px; }
+  .topbar { padding: 8px 12px; gap: 8px; }
+  .topbar-left { gap: 10px; }
+  .brand-sub { display: none; }
+  .topbar-right .legend { display: none; }
+  .page-pane { padding: 18px 16px 32px; }
+  .page-title { font-size: 19px; }
+}
+
+@media (max-width: 560px) {
+  .tabs { gap: 0; }
+  .tab { padding: 4px 8px; font-size: 11.5px; }
+  .matriz-grid { grid-template-columns: 76px repeat(5, 1fr) !important; }
+  .grid-cell { min-height: 40px; padding: 4px; }
+  .cell-summary { display: none; }
+}
 
 </style>
 </head>
@@ -3048,6 +3411,717 @@ window.__DATA__ = {
 </script>
 
 <script>
+/* ─────────────────────────────────────────────────────────────
+   Crianza y pantallas — Motor de la app
+   Render desde window.__DATA__ (claims, metadata, bibliografia,
+   andamiaje). Sin dependencias. Estilo: módulo IIFE con render
+   por strings y delegación de eventos.
+   ───────────────────────────────────────────────────────────── */
+(() => {
+  "use strict";
+
+  // ── DATA ────────────────────────────────────────────────────
+  const D = window.__DATA__ || {};
+  const claims     = D.claims     || {};
+  const metadata   = D.metadata   || {};
+  const biblio     = D.bibliografia || [];
+  const andamiaje  = (D.andamiaje && D.andamiaje.cascadas) || [];
+
+  const ages = metadata.ageGroups || [];
+  const dims = metadata.dimensions || [];
+  const certaintyLabels = metadata.certaintyLabels || { high: "Alta", medium: "Media", low: "Baja" };
+  const biblioTypes  = metadata.biblioTypes  || {};
+  const biblioGroups = metadata.biblioGroups || [];
+  const filterTypes  = metadata.filterTypes  || [{ id: "all", label: "Todas" }];
+  const methodology  = metadata.methodology  || { title: "Método", sections: [] };
+  const limitations  = metadata.limitations  || { title: "Limitaciones", sections: [] };
+
+  // Index rápido de bibliografía por id
+  const biblioById = Object.fromEntries(biblio.map(b => [b.id, b]));
+
+  // ── STATE ───────────────────────────────────────────────────
+  const state = {
+    view: "matriz",              // matriz | bibliografia | metodologia | limitaciones
+    activeCell: defaultCell(),   // cellId actual mostrado en ficha
+    selectedAge: "all",          // ageId | "all"
+    biblioFilter: "all",         // filterTypes id
+    biblioSearch: ""
+  };
+
+  function defaultCell() {
+    // Primera celda con claims: lenguaje-primera-infancia o la que esté
+    const preferred = "lenguaje-primera-infancia";
+    if (claims[preferred]) return preferred;
+    const keys = Object.keys(claims);
+    return keys.length ? keys[0] : null;
+  }
+
+  // ── UTILS ───────────────────────────────────────────────────
+  const escapeHtml = (s) => String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+
+  // Formato simple para texto de claims: **negrita** y *itálica*
+  function fmt(text) {
+    if (text == null) return "";
+    let s = escapeHtml(text);
+    s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/(^|[\s(])\*([^*\n]+)\*(?=[\s.,;:)!?]|$)/g, "$1<em>$2</em>");
+    s = s.replace(/\n/g, "<br>");
+    return s;
+  }
+
+  const certLetter = (c) => c === "high" ? "h" : c === "medium" ? "m" : "l";
+
+  // ── MOUNT ───────────────────────────────────────────────────
+  const root = document.getElementById("app");
+  if (!root) return;
+
+  function mount() {
+    root.innerHTML = `
+      ${renderTopBar()}
+      <div id="view-container" style="flex:1; min-height:0; display:flex; flex-direction:column;">
+        ${renderCurrentView()}
+      </div>
+    `;
+    bindGlobalEvents();
+  }
+
+  function rerenderView() {
+    const container = document.getElementById("view-container");
+    if (container) container.innerHTML = renderCurrentView();
+    syncTopBarActive();
+  }
+
+  function renderCurrentView() {
+    switch (state.view) {
+      case "bibliografia": return renderBibliografia();
+      case "metodologia":  return renderMetodologia();
+      case "limitaciones": return renderLimitaciones();
+      case "matriz":
+      default:             return renderMatrizView();
+    }
+  }
+
+  // ── TOP BAR ─────────────────────────────────────────────────
+  function renderTopBar() {
+    const tabs = [
+      { id: "matriz",       label: "Matriz" },
+      { id: "bibliografia", label: "Bibliografía" },
+      { id: "metodologia",  label: "Metodología" },
+      { id: "limitaciones", label: "Limitaciones" }
+    ];
+
+    const ageOptions = [
+      `<option value="all">Todos los tramos</option>`,
+      ...ages.map(a => `<option value="${a.id}">${escapeHtml(a.label)} · ${escapeHtml(a.range)}</option>`)
+    ].join("");
+
+    return `
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="brand">
+            Crianza y pantallas <span class="brand-sub">· matriz de evidencia</span>
+          </div>
+          <nav class="tabs" id="tabs">
+            ${tabs.map(t => `
+              <button class="tab ${t.id === state.view ? "active" : ""}" data-tab="${t.id}">${t.label}</button>
+            `).join("")}
+          </nav>
+        </div>
+        <div class="topbar-right">
+          ${state.view === "matriz" ? `
+            <label class="eyebrow" for="age-sel">Tramo</label>
+            <select id="age-sel" class="select">${ageOptions}</select>
+          ` : ""}
+          <span class="legend">
+            <span class="cdot high"></span>alta
+            <span class="cdot medium"></span>media
+            <span class="cdot low"></span>baja
+          </span>
+        </div>
+      </div>
+    `;
+  }
+
+  function syncTopBarActive() {
+    // Re-render del topbar entero para refrescar tabs + visibilidad de selector
+    const topbar = root.querySelector(".topbar");
+    if (!topbar) return;
+    topbar.outerHTML = renderTopBar();
+    // El selector se recrea: restaurar valor
+    const sel = document.getElementById("age-sel");
+    if (sel) sel.value = state.selectedAge;
+  }
+
+  // ── VISTA: MATRIZ ───────────────────────────────────────────
+  function renderMatrizView() {
+    return `
+      <div class="matriz-body">
+        <div class="matriz-pane">
+          ${renderMatrizHelp()}
+          ${renderMatriz()}
+        </div>
+        <aside class="ficha-pane" id="ficha-pane">
+          ${renderFicha(state.activeCell)}
+        </aside>
+      </div>
+    `;
+  }
+
+  function renderMatrizHelp() {
+    const ageSel = state.selectedAge;
+    const ageLabel = ageSel === "all" ? null : (ages.find(a => a.id === ageSel) || {}).label;
+    return `
+      <div class="matriz-help">
+        10 dimensiones × 5 tramos etarios — clic en cualquier celda carga su ficha a la derecha.
+        ${ageLabel ? `Mostrando <b>${escapeHtml(ageLabel)}</b>; otras edades atenuadas como contexto.` : ""}
+      </div>
+    `;
+  }
+
+  function renderMatriz() {
+    const ageSel = state.selectedAge;
+    const cols = ["120px", ...ages.map(() => "1fr")].join(" ");
+
+    let html = `<div class="matriz-grid" style="grid-template-columns:${cols};">`;
+    // Esquina superior izquierda
+    html += `<div class="grid-cell col-head"></div>`;
+    // Headers de tramos
+    ages.forEach(a => {
+      const dimmed = ageSel !== "all" && ageSel !== a.id;
+      const focused = ageSel === a.id;
+      const cls = ["grid-cell", "col-head", dimmed ? "dimmed" : "", focused ? "focused" : ""].filter(Boolean).join(" ");
+      html += `
+        <div class="${cls}">
+          <div class="head-label">${escapeHtml(a.label)}</div>
+          <div class="head-range">${escapeHtml(a.range)}</div>
+        </div>`;
+    });
+
+    // Filas: dimension + 5 celdas
+    dims.forEach(d => {
+      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span></div>`;
+      ages.forEach(a => {
+        const cid = `${d.id}-${a.id}`;
+        const cell = claims[cid];
+        const dimmed = ageSel !== "all" && ageSel !== a.id;
+        const isActive = cid === state.activeCell;
+        const cls = ["grid-cell", "data-cell", dimmed ? "dimmed" : "", isActive ? "active" : ""].filter(Boolean).join(" ");
+
+        if (!cell) {
+          html += `<div class="${cls}" data-cellid="${cid}"><div class="cell-empty">—</div></div>`;
+          return;
+        }
+
+        const dot = certLetter(cell.certainty);
+        const hasChile = !!cell.chile_note;
+        const summary = cell.summary || "";
+
+        html += `
+          <div class="${cls}" data-cellid="${cid}">
+            <div class="cell-head">
+              <span class="mini-dot ${dot}"></span>
+              ${hasChile ? `<span class="cl-mark" title="Tiene nota de contexto chileno">CL</span>` : ""}
+            </div>
+            <div class="cell-summary">${escapeHtml(summary)}</div>
+          </div>`;
+      });
+    });
+
+    html += `</div>`;
+    return html;
+  }
+
+  // ── FICHA DE CELDA ──────────────────────────────────────────
+  function renderFicha(cellId) {
+    if (!cellId || !claims[cellId]) {
+      return `<div class="ficha-empty">Selecciona una celda de la matriz para ver su ficha.</div>`;
+    }
+    const cell = claims[cellId];
+    const { dimId, ageId } = splitCellId(cellId);
+    const dim = dims.find(d => d.id === dimId) || { label: dimId };
+    const age = ages.find(a => a.id === ageId) || { label: ageId, range: "" };
+    const cert = cell.certainty || "low";
+    const certLab = certaintyLabels[cert] || cert;
+
+    return `
+      <div class="ficha">
+        <div class="eyebrow">Ficha activa</div>
+
+        <div class="ficha-chips">
+          <span class="age-chip">${escapeHtml(dim.label)}</span>
+          <span class="age-chip">${escapeHtml(age.label)} · ${escapeHtml(age.range)}</span>
+          <span class="ficha-cert">
+            <span class="cdot ${cert}"></span>certeza ${escapeHtml(certLab.toLowerCase())}
+          </span>
+        </div>
+
+        <h2 class="ficha-title">${escapeHtml(cell.summary || "")}</h2>
+
+        ${cell.intro ? `<p class="ficha-intro">${fmt(cell.intro)}</p>` : ""}
+
+        ${renderFichaClaims(cell.claims || [])}
+
+        ${cell.definitions ? renderFichaDefinitions(cell.definitions) : ""}
+
+        ${cell.chile_note ? `
+          <div class="chile-block">
+            <div class="chile-label"><span class="cl-mark">CL</span>Contexto chileno</div>
+            <div class="chile-body">${fmt(cell.chile_note)}</div>
+          </div>
+        ` : ""}
+
+        ${cell.andamiaje ? renderFichaAndamiaje(cell.andamiaje) : ""}
+      </div>
+    `;
+  }
+
+  function renderFichaClaims(arr) {
+    if (!arr.length) return "";
+    return `
+      <div class="ficha-evidence">
+        <div class="eyebrow">Evidencia (${arr.length})</div>
+        <div class="evidence-list">
+          ${arr.map(c => {
+            const cert = c.certainty || "low";
+            const refs = (c.refs || []).map(r => renderRefChip(r)).join("");
+            return `
+              <div class="evidence-item">
+                <span class="cdot ${cert}"></span>
+                <span class="evidence-text">${fmt(c.text)}${refs}</span>
+              </div>`;
+          }).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderFichaDefinitions(defs) {
+    // defs es array de {term, body} (estructura real en claims.json)
+    let items = [];
+    if (Array.isArray(defs)) {
+      items = defs.map(d => ({
+        term: d.term,
+        body: d.body || d.definition || d.text || ""
+      }));
+    } else if (defs && typeof defs === "object") {
+      items = Object.entries(defs).map(([term, body]) => ({ term, body }));
+    }
+    if (!items.length) return "";
+    return `
+      <div class="ficha-defs">
+        <div class="eyebrow">Definiciones</div>
+        <dl>
+          ${items.map(d => `
+            <dt>${escapeHtml(d.term)}</dt>
+            <dd>${fmt(d.body)}</dd>
+          `).join("")}
+        </dl>
+      </div>
+    `;
+  }
+
+  function renderFichaAndamiaje(and) {
+    // Estructura real: {upstream: [{to, certainty, text}], downstream: [{to, certainty, text}]}
+    if (!and || typeof and !== "object") return "";
+    const up = Array.isArray(and.upstream)   ? and.upstream   : [];
+    const down = Array.isArray(and.downstream) ? and.downstream : [];
+    if (!up.length && !down.length) return "";
+
+    const renderArrow = (items, arrow, label) => {
+      if (!items.length) return "";
+      return `
+        <div class="and-direction">
+          <div class="and-direction-label"><span class="and-arrow">${arrow}</span> ${escapeHtml(label)}</div>
+          <ul class="and-list">
+            ${items.map(it => `
+              <li class="and-item">
+                <span class="cdot ${it.certainty || "low"}"></span>
+                ${linkToCell(it.to)}
+                ${it.text ? `<span class="and-text">— ${escapeHtml(it.text)}</span>` : ""}
+              </li>
+            `).join("")}
+          </ul>
+        </div>
+      `;
+    };
+
+    return `
+      <div class="ficha-and">
+        <div class="eyebrow">Andamiaje del desarrollo</div>
+        ${renderArrow(up,   "↑", "Se apoya en")}
+        ${renderArrow(down, "↓", "Alimenta a")}
+      </div>
+    `;
+  }
+
+  function linkToCell(cid) {
+    if (typeof cid !== "string") return "";
+    const { dimId, ageId } = splitCellId(cid);
+    const dim = dims.find(d => d.id === dimId);
+    const age = ages.find(a => a.id === ageId);
+    if (!dim || !age) return escapeHtml(cid);
+    return `<a href="#" class="cell-link" data-cellid="${cid}">${escapeHtml(dim.label)} · ${escapeHtml(age.label)}</a>`;
+  }
+
+  function renderRefChip(refId) {
+    const b = biblioById[refId];
+    if (!b) return `<span class="ref ref-missing" title="Referencia no encontrada: ${escapeHtml(refId)}">?</span>`;
+    // Etiqueta corta: primer autor + año
+    const label = shortLabel(b);
+    return `<span class="ref" data-refid="${escapeHtml(refId)}" title="${escapeHtml(label)}">${escapeHtml(label)}</span>`;
+  }
+
+  function shortLabel(b) {
+    if (!b) return "?";
+    const authors = b.authors || "";
+    // Año: último match de 4 dígitos en authors o journal
+    const yearMatches = (authors.match(/\b(19|20)\d{2}\b/g) || []);
+    const year = yearMatches.length
+      ? yearMatches[yearMatches.length - 1]
+      : ((b.journal || "").match(/\b(19|20)\d{2}\b/) || [""])[0];
+
+    // Primer apellido: tomar lo anterior a la primera inicial o coma
+    // Patrones típicos: "Apellido X.Y., Otro...", "Apellido X. y col. 2024",
+    // "Early Years Screen Time Advisory Group (EYSTAG). 2026"
+    let primary = authors.split(/\s\d{4}\b/)[0]; // descartar año al final
+    // Cortar en el primer ", " (coautor) o en " y col" o en " et al"
+    primary = primary.split(/, | y col| et al/i)[0].trim();
+    // Si tiene inicial al final como "Apellido X." o "Apellido X.Y.", dejarla
+    primary = primary.replace(/\s*$/, "");
+    if (!primary) primary = b.id;
+
+    // Si hay más de un autor, agregar "et al."
+    const multipleAuthors = /,| y col| et al/i.test(authors);
+    const etAl = multipleAuthors ? " et al." : "";
+
+    return year ? `${primary}${etAl} ${year}` : `${primary}${etAl}`;
+  }
+
+  function splitCellId(cid) {
+    // Soporta ages compuestos (primera-infancia, ninez-media, salud-mental, etc.)
+    for (const a of ages) {
+      const suffix = "-" + a.id;
+      if (cid.endsWith(suffix)) {
+        return { dimId: cid.slice(0, -suffix.length), ageId: a.id };
+      }
+    }
+    const i = cid.lastIndexOf("-");
+    return { dimId: cid.slice(0, i), ageId: cid.slice(i + 1) };
+  }
+
+  // ── VISTA: BIBLIOGRAFÍA ─────────────────────────────────────
+  function renderBibliografia() {
+    const q = state.biblioSearch.toLowerCase().trim();
+    const f = state.biblioFilter;
+
+    // Filtrado
+    const filtered = biblio.filter(b => {
+      if (f !== "all") {
+        if (f === "featured" && !b.featured) return false;
+        if (f !== "featured" && b.type !== f) return false;
+      }
+      if (q) {
+        const hay = `${b.authors || ""} ${b.title || ""} ${b.journal || ""} ${b.id || ""}`.toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+
+    // Agrupar por biblioGroups (en orden declarado)
+    const byGroup = {};
+    filtered.forEach(b => {
+      const g = b.group || "other";
+      (byGroup[g] = byGroup[g] || []).push(b);
+    });
+    const orderedGroups = biblioGroups.filter(g => byGroup[g.id] && byGroup[g.id].length);
+
+    return `
+      <div class="page-pane">
+        <div class="page-head">
+          <h1 class="page-title">Bibliografía</h1>
+          <div class="page-sub">${filtered.length} de ${biblio.length} entradas</div>
+        </div>
+
+        <div class="biblio-controls">
+          <div class="biblio-filters">
+            ${filterTypes.map(f => `
+              <button class="chip-filter ${f.id === state.biblioFilter ? "active" : ""}" data-filter="${f.id}">
+                ${escapeHtml(f.label)}
+              </button>
+            `).join("")}
+          </div>
+          <input type="search" id="biblio-search" class="search-input"
+                 placeholder="Buscar por autor, título o revista…"
+                 value="${escapeHtml(state.biblioSearch)}">
+        </div>
+
+        <div class="biblio-body">
+          ${orderedGroups.length === 0
+            ? `<div class="empty-state">No hay entradas que coincidan con el filtro.</div>`
+            : orderedGroups.map(g => renderBiblioGroup(g, byGroup[g.id])).join("")
+          }
+        </div>
+      </div>
+    `;
+  }
+
+  function renderBiblioGroup(group, entries) {
+    return `
+      <section class="biblio-group">
+        <h2 class="biblio-group-title">${escapeHtml(group.label)}</h2>
+        <ul class="biblio-list">
+          ${entries.map(renderBiblioEntry).join("")}
+        </ul>
+      </section>
+    `;
+  }
+
+  function renderBiblioEntry(b) {
+    const t = biblioTypes[b.type] || { label: b.type || "", cls: "" };
+    const featured = b.featured ? `<span class="biblio-featured">★ destacada</span>` : "";
+    const url = b.url ? `<a class="biblio-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">↗ enlace</a>` : "";
+    return `
+      <li class="biblio-entry" id="ref-${escapeHtml(b.id)}">
+        <div class="biblio-meta">
+          <span class="biblio-type ${t.cls}">${escapeHtml(t.label)}</span>
+          ${featured}
+        </div>
+        <div class="biblio-authors">${escapeHtml(b.authors || "")}</div>
+        <div class="biblio-title">${escapeHtml(b.title || "")}</div>
+        ${b.journal ? `<div class="biblio-journal">${escapeHtml(b.journal)}</div>` : ""}
+        ${url}
+      </li>
+    `;
+  }
+
+  // ── VISTA: METODOLOGÍA Y LIMITACIONES ───────────────────────
+  function renderMetodologia() { return renderTextPage(methodology); }
+  function renderLimitaciones() { return renderTextPage(limitations); }
+
+  function renderTextPage(page) {
+    return `
+      <div class="page-pane">
+        <div class="page-head">
+          <h1 class="page-title">${escapeHtml(page.title || "")}</h1>
+          ${page.subtitle ? `<div class="page-sub">${escapeHtml(page.subtitle)}</div>` : ""}
+        </div>
+        <div class="text-body">
+          ${(page.sections || []).map(renderTextSection).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTextSection(sec) {
+    return `
+      <section class="text-section">
+        <h2 class="text-section-title">${escapeHtml(sec.heading || "")}</h2>
+        ${sec.content ? `<div class="text-section-content">${fmt(sec.content)}</div>` : ""}
+        ${(sec.bullets && sec.bullets.length)
+          ? `<ul class="text-section-bullets">${sec.bullets.map(b => `<li>${fmt(b)}</li>`).join("")}</ul>`
+          : ""
+        }
+      </section>
+    `;
+  }
+
+  // ── POPOVER DE REFERENCIA ───────────────────────────────────
+  function showRefPopover(refId, anchorEl) {
+    closePopover();
+    const b = biblioById[refId];
+    if (!b) return;
+    const pop = document.createElement("div");
+    pop.className = "popover ref-popover";
+    pop.innerHTML = `
+      <div class="eyebrow">Referencia</div>
+      <div class="ref-authors">${escapeHtml(b.authors || "")}</div>
+      <div class="ref-title">${escapeHtml(b.title || "")}</div>
+      ${b.journal ? `<div class="ref-journal">${escapeHtml(b.journal)}</div>` : ""}
+      <a href="#" class="ref-jump" data-jump="${escapeHtml(b.id)}">↗ Ver en bibliografía</a>
+    `;
+    document.body.appendChild(pop);
+    positionPopover(pop, anchorEl);
+    pop.dataset.opened = "1";
+  }
+
+  function positionPopover(pop, anchor) {
+    const r = anchor.getBoundingClientRect();
+    const popW = 260;
+    const pad = 8;
+    let left = r.right + pad;
+    if (left + popW > window.innerWidth - 8) {
+      left = r.left - popW - pad;
+    }
+    if (left < 8) left = 8;
+    let top = r.top + window.scrollY;
+    pop.style.position = "absolute";
+    pop.style.left = left + "px";
+    pop.style.top = top + "px";
+    pop.style.width = popW + "px";
+  }
+
+  function closePopover() {
+    document.querySelectorAll(".ref-popover").forEach(el => el.remove());
+  }
+
+  // ── EVENTOS ─────────────────────────────────────────────────
+  function bindGlobalEvents() {
+    root.addEventListener("click", onRootClick);
+    root.addEventListener("change", onRootChange);
+    document.addEventListener("click", onDocClick, true);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closePopover();
+    });
+    // Search input se enlaza por delegación con "input" event
+    root.addEventListener("input", onRootInput);
+  }
+
+  function onRootClick(e) {
+    // Tab
+    const tab = e.target.closest("[data-tab]");
+    if (tab) {
+      state.view = tab.dataset.tab;
+      closePopover();
+      rerenderView();
+      return;
+    }
+
+    // Celda de matriz
+    const cellEl = e.target.closest(".data-cell[data-cellid]");
+    if (cellEl) {
+      const cid = cellEl.dataset.cellid;
+      if (claims[cid]) {
+        state.activeCell = cid;
+        // Re-render solo de la matriz (para active class) y de la ficha
+        const matrizPane = root.querySelector(".matriz-pane");
+        const fichaPane  = root.querySelector("#ficha-pane");
+        if (matrizPane) matrizPane.innerHTML = renderMatrizHelp() + renderMatriz();
+        if (fichaPane)  fichaPane.innerHTML  = renderFicha(state.activeCell);
+      }
+      return;
+    }
+
+    // Link a celda (desde andamiaje en ficha)
+    const cellLink = e.target.closest(".cell-link[data-cellid]");
+    if (cellLink) {
+      e.preventDefault();
+      const cid = cellLink.dataset.cellid;
+      if (claims[cid]) {
+        state.activeCell = cid;
+        if (state.view !== "matriz") {
+          state.view = "matriz";
+          rerenderView();
+        } else {
+          const matrizPane = root.querySelector(".matriz-pane");
+          const fichaPane  = root.querySelector("#ficha-pane");
+          if (matrizPane) matrizPane.innerHTML = renderMatrizHelp() + renderMatriz();
+          if (fichaPane)  fichaPane.innerHTML  = renderFicha(state.activeCell);
+        }
+      }
+      return;
+    }
+
+    // Ref chip
+    const refEl = e.target.closest(".ref[data-refid]");
+    if (refEl) {
+      e.preventDefault();
+      e.stopPropagation();
+      const id = refEl.dataset.refid;
+      // Si ya hay popover abierto para esta ref, cerrar
+      const open = document.querySelector(".ref-popover");
+      if (open && open.dataset.refid === id) {
+        closePopover();
+      } else {
+        showRefPopover(id, refEl);
+        const pop = document.querySelector(".ref-popover");
+        if (pop) pop.dataset.refid = id;
+      }
+      return;
+    }
+
+    // Filtro de bibliografía
+    const filterBtn = e.target.closest("[data-filter]");
+    if (filterBtn) {
+      state.biblioFilter = filterBtn.dataset.filter;
+      rerenderView();
+      return;
+    }
+
+    // Salto desde popover a entrada de biblio
+    const jumpEl = e.target.closest("[data-jump]");
+    if (jumpEl) {
+      e.preventDefault();
+      const id = jumpEl.dataset.jump;
+      closePopover();
+      state.view = "bibliografia";
+      state.biblioFilter = "all";
+      state.biblioSearch = "";
+      rerenderView();
+      setTimeout(() => {
+        const target = document.getElementById(`ref-${id}`);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+          target.classList.add("biblio-highlight");
+          setTimeout(() => target.classList.remove("biblio-highlight"), 1800);
+        }
+      }, 30);
+    }
+  }
+
+  function onRootChange(e) {
+    if (e.target.id === "age-sel") {
+      state.selectedAge = e.target.value;
+      const matrizPane = root.querySelector(".matriz-pane");
+      if (matrizPane) matrizPane.innerHTML = renderMatrizHelp() + renderMatriz();
+    }
+  }
+
+  function onRootInput(e) {
+    if (e.target.id === "biblio-search") {
+      state.biblioSearch = e.target.value;
+      // Re-render solo del cuerpo de bibliografía (no del input para no perder foco)
+      const body = root.querySelector(".biblio-body");
+      if (!body) return;
+      const q = state.biblioSearch.toLowerCase().trim();
+      const f = state.biblioFilter;
+      const filtered = biblio.filter(b => {
+        if (f !== "all") {
+          if (f === "featured" && !b.featured) return false;
+          if (f !== "featured" && b.type !== f) return false;
+        }
+        if (q) {
+          const hay = `${b.authors || ""} ${b.title || ""} ${b.journal || ""} ${b.id || ""}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+      const byGroup = {};
+      filtered.forEach(b => { (byGroup[b.group] = byGroup[b.group] || []).push(b); });
+      const ordered = biblioGroups.filter(g => byGroup[g.id] && byGroup[g.id].length);
+      body.innerHTML = ordered.length === 0
+        ? `<div class="empty-state">No hay entradas que coincidan con la búsqueda.</div>`
+        : ordered.map(g => renderBiblioGroup(g, byGroup[g.id])).join("");
+      // Actualizar contador
+      const sub = root.querySelector(".page-sub");
+      if (sub) sub.textContent = `${filtered.length} de ${biblio.length} entradas`;
+    }
+  }
+
+  function onDocClick(e) {
+    // Cerrar popover si se hace click fuera
+    if (e.target.closest(".ref-popover")) return;
+    if (e.target.closest(".ref[data-refid]")) return;
+    closePopover();
+  }
+
+  // ── INIT ────────────────────────────────────────────────────
+  mount();
+  // Restaurar valor del selector de tramo si la vista inicial es matriz
+  const sel = document.getElementById("age-sel");
+  if (sel) sel.value = state.selectedAge;
+})();
 
 </script>
 
