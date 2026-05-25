@@ -12,3 +12,6 @@
 # Temporales
 *.log
 *.tmp
+
+# Snapshots locales (versionado vía git log, no duplicados)
+50_documentacion/versiones/
