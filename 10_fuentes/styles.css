@@ -288,7 +288,21 @@ body {
 
 /* ── FICHA ──────────────────────────────────────────────────── */
 .ficha { display: flex; flex-direction: column; }
-.ficha-empty { color: var(--pencil); font-size: 12px; padding: 20px 4px; }
+.ficha-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 4px 0;
+}
+.ficha-empty-msg {
+  color: var(--pencil);
+  font-size: 12.5px;
+  line-height: 1.5;
+  padding: 18px 14px;
+  border: 1px dashed var(--border);
+  border-radius: 3px;
+  background: var(--bg-cell);
+}
 .ficha-chips {
   display: flex; gap: 6px;
   align-items: center; flex-wrap: wrap;

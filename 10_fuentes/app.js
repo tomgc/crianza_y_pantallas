@@ -29,19 +29,11 @@
   // ── STATE ───────────────────────────────────────────────────
   const state = {
     view: "matriz",              // matriz | bibliografia | metodologia | limitaciones
-    activeCell: defaultCell(),   // cellId actual mostrado en ficha
+    activeCell: null,            // cellId actual mostrado en ficha (null = sin selección)
     selectedAge: "all",          // ageId | "all"
     biblioFilter: "all",         // filterTypes id
     biblioSearch: ""
   };
-
-  function defaultCell() {
-    // Primera celda con claims: lenguaje-primera-infancia o la que esté
-    const preferred = "lenguaje-primera-infancia";
-    if (claims[preferred]) return preferred;
-    const keys = Object.keys(claims);
-    return keys.length ? keys[0] : null;
-  }
 
   // ── UTILS ───────────────────────────────────────────────────
   const escapeHtml = (s) => String(s == null ? "" : s)
@@ -223,7 +215,14 @@
   // ── FICHA DE CELDA ──────────────────────────────────────────
   function renderFicha(cellId) {
     if (!cellId || !claims[cellId]) {
-      return `<div class="ficha-empty">Selecciona una celda de la matriz para ver su ficha.</div>`;
+      return `
+        <div class="ficha-empty">
+          <div class="eyebrow">Ficha activa</div>
+          <div class="ficha-empty-msg">
+            Haz clic en cualquier celda de la matriz para abrir su ficha de evidencia.
+          </div>
+        </div>
+      `;
     }
     const cell = claims[cellId];
     const { dimId, ageId } = splitCellId(cellId);

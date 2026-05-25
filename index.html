@@ -295,7 +295,21 @@ body {
 
 /* ── FICHA ──────────────────────────────────────────────────── */
 .ficha { display: flex; flex-direction: column; }
-.ficha-empty { color: var(--pencil); font-size: 12px; padding: 20px 4px; }
+.ficha-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 4px 0;
+}
+.ficha-empty-msg {
+  color: var(--pencil);
+  font-size: 12.5px;
+  line-height: 1.5;
+  padding: 18px 14px;
+  border: 1px dashed var(--border);
+  border-radius: 3px;
+  background: var(--bg-cell);
+}
 .ficha-chips {
   display: flex; gap: 6px;
   align-items: center; flex-wrap: wrap;
@@ -3442,19 +3456,11 @@ window.__DATA__ = {
   // ── STATE ───────────────────────────────────────────────────
   const state = {
     view: "matriz",              // matriz | bibliografia | metodologia | limitaciones
-    activeCell: defaultCell(),   // cellId actual mostrado en ficha
+    activeCell: null,            // cellId actual mostrado en ficha (null = sin selección)
     selectedAge: "all",          // ageId | "all"
     biblioFilter: "all",         // filterTypes id
     biblioSearch: ""
   };
-
-  function defaultCell() {
-    // Primera celda con claims: lenguaje-primera-infancia o la que esté
-    const preferred = "lenguaje-primera-infancia";
-    if (claims[preferred]) return preferred;
-    const keys = Object.keys(claims);
-    return keys.length ? keys[0] : null;
-  }
 
   // ── UTILS ───────────────────────────────────────────────────
   const escapeHtml = (s) => String(s == null ? "" : s)
@@ -3636,7 +3642,14 @@ window.__DATA__ = {
   // ── FICHA DE CELDA ──────────────────────────────────────────
   function renderFicha(cellId) {
     if (!cellId || !claims[cellId]) {
-      return `<div class="ficha-empty">Selecciona una celda de la matriz para ver su ficha.</div>`;
+      return `
+        <div class="ficha-empty">
+          <div class="eyebrow">Ficha activa</div>
+          <div class="ficha-empty-msg">
+            Haz clic en cualquier celda de la matriz para abrir su ficha de evidencia.
+          </div>
+        </div>
+      `;
     }
     const cell = claims[cellId];
     const { dimId, ageId } = splitCellId(cellId);
