@@ -1,0 +1,2967 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pantallas en la infancia — Síntesis de la evidencia</title>
+<style>
+:root {
+  --bg: #f7f8fa;
+  --bg-soft: #ebeef3;
+  --bg-card: #ffffff;
+  --bg-cell: #ffffff;
+  --text: #1a1d24;
+  --text-soft: #4a5260;
+  --text-mute: #8a93a3;
+  --border: #d8dce4;
+  --border-soft: #e8ebf0;
+  --c-high: #042f4d;
+  --c-medium: #5c728e;
+  --c-low: #d6dfe8;
+  --c-high-bg: #eaf0f6;
+  --c-medium-bg: #f0f2f6;
+  --c-low-bg: #fafbfc;
+  --featured: #042f4d;
+  --accent: #042f4d;
+  --warm: #b07a4a;
+  --warm-soft: #f3e8d8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+a:hover { border-bottom-color: var(--accent); }
+
+/* Header */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(247,248,250,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+header.site-header .brand {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+
+header.site-header nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header.site-header nav a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text-soft);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+header.site-header nav a:hover,
+header.site-header nav a.active {
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+/* Legend pill */
+.legend-pills {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.legend-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-soft);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.legend-dot.high { background: var(--c-high); }
+.legend-dot.medium { background: var(--c-medium); }
+.legend-dot.low { background: var(--c-low); }
+
+/* Main container */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.page {
+  display: none;
+  animation: fadeIn 0.2s ease;
+}
+
+.page.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page header */
+.page-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-mute);
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+h2 {
+  font-size: 21px;
+  font-weight: 600;
+  margin: 40px 0 16px;
+  color: var(--text);
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 24px 0 10px;
+  color: var(--text);
+}
+
+p { margin: 0 0 14px; }
+
+.page-intro {
+  color: var(--text-soft);
+  font-size: 15px;
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+/* Objetivo block (página matriz) */
+.page-objective {
+  background: var(--c-high-bg);
+  border-left: 3px solid var(--c-high);
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 0 0 18px;
+  max-width: 760px;
+}
+
+.page-objective-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-high);
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.page-objective-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* === MATRIX === */
+.matrix-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+  padding-bottom: 12px;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: 200px repeat(5, minmax(160px, 1fr));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-card);
+  min-width: 1100px;
+}
+
+.matrix-corner {
+  background: var(--bg-soft);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-mute);
+}
+
+.matrix-header {
+  background: var(--bg-soft);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.matrix-header:hover { background: #e2e6ed; }
+
+.matrix-header:last-child { border-right: none; }
+
+.matrix-header .age-range {
+  font-size: 11px;
+  color: var(--text-mute);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.matrix-row-label {
+  background: var(--bg-soft);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.matrix-row-label:hover { background: #e2e6ed; }
+
+.matrix-row-label:last-of-type { border-bottom: none; }
+
+.matrix-cell {
+  border-right: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  min-height: 80px;
+  background: var(--bg-cell);
+  position: relative;
+}
+
+.matrix-cell:hover {
+  background: var(--bg-soft);
+  transform: scale(1.02);
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.matrix-cell.high { background: var(--c-high-bg); }
+.matrix-cell.medium { background: var(--c-medium-bg); }
+.matrix-cell.low { background: var(--c-low-bg); }
+
+.matrix-cell:nth-child(6n) { border-right: none; }
+
+.cell-summary {
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.cell-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-mute);
+  font-weight: 600;
+}
+
+.cell-indicator .legend-dot { width: 8px; height: 8px; }
+
+/* Matrix helper text */
+.matrix-help {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: var(--bg-soft);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.matrix-help strong { color: var(--text); }
+
+/* === CELL DETAIL === */
+.detail-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-soft);
+  flex-wrap: wrap;
+}
+
+.detail-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text-soft);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.detail-nav-btn:hover {
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+.detail-nav-btn.primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.detail-nav-btn.primary:hover {
+  background: #06416b;
+  color: white;
+}
+
+.detail-meta {
+  margin-bottom: 24px;
+}
+
+.detail-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  background: var(--bg-soft);
+  border-radius: 99px;
+  font-size: 12px;
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.tag.certainty-high { background: var(--c-high-bg); color: var(--c-high); }
+.tag.certainty-medium { background: var(--c-medium-bg); color: var(--c-medium); }
+.tag.certainty-low { background: var(--c-low-bg); color: #6a7892; }
+
+.detail-content {
+  max-width: 760px;
+}
+
+.detail-content p { color: var(--text); }
+
+.claim {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.claim-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.claim-dot.high { background: var(--c-high); }
+.claim-dot.medium { background: var(--c-medium); }
+.claim-dot.low { background: var(--c-low); }
+
+.claim-text { flex: 1; }
+
+/* Inline citations linking to bibliography */
+.cite {
+  display: inline-block;
+  margin-left: 2px;
+  padding: 0 5px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--c-high);
+  background: var(--c-high-bg);
+  border-radius: 4px;
+  text-decoration: none;
+  border-bottom: none;
+  vertical-align: 1px;
+  transition: background 0.15s;
+}
+
+.cite:hover {
+  background: var(--c-high);
+  color: white;
+  border-bottom: none;
+}
+
+.def {
+  background: var(--warm-soft);
+  border-left: 3px solid var(--warm);
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+}
+
+.def-term { font-weight: 600; }
+
+.chile-note {
+  background: var(--c-high-bg);
+  border-left: 3px solid var(--c-high);
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+}
+
+.chile-note strong { color: var(--c-high); }
+
+.study {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.study-title {
+  font-weight: 600;
+  color: var(--c-high);
+  margin-bottom: 4px;
+}
+
+.study-meta {
+  font-size: 12px;
+  color: var(--text-mute);
+  margin-bottom: 8px;
+}
+
+.study p:last-child { margin-bottom: 0; }
+
+/* Scaffolding links inside cell detail */
+.scaffold-box {
+  margin-top: 32px;
+  padding: 18px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.scaffold-box h3 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-mute);
+}
+
+.scaffold-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scaffold-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  background: var(--bg);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-size: 13px;
+  color: var(--text);
+  border: none;
+  text-align: left;
+}
+
+.scaffold-link:hover { background: var(--bg-soft); }
+
+.scaffold-link .legend-dot { margin-top: 5px; }
+
+.scaffold-link-text { flex: 1; }
+
+.scaffold-link-target {
+  font-weight: 600;
+  color: var(--c-high);
+}
+
+.scaffold-link-desc {
+  color: var(--text-soft);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.scaffold-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 768px) {
+  .scaffold-cols { grid-template-columns: 1fr; }
+}
+
+/* === DIMENSION / AGE VIEWS === */
+.view-section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.view-section:last-child { border-bottom: none; }
+
+.view-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.view-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* === Tables === */
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  text-align: left;
+  padding: 10px 12px;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--text-soft);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+tr:last-child td { border-bottom: none; }
+
+/* === Bibliography === */
+.biblio-toolbar {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.biblio-search-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.biblio-search {
+  flex: 1;
+  min-width: 220px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+.biblio-search:focus {
+  outline: none;
+  border-color: var(--c-high);
+}
+
+.biblio-count {
+  font-size: 12px;
+  color: var(--text-mute);
+  white-space: nowrap;
+}
+
+.biblio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.biblio-filter-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-soft);
+  border-radius: 99px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.biblio-filter-btn:hover {
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+.biblio-filter-btn.active {
+  background: var(--c-high);
+  color: white;
+  border-color: var(--c-high);
+}
+
+.biblio-index {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+}
+
+.biblio-index-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-mute);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.biblio-index-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.biblio-index-list a {
+  font-size: 13px;
+  color: var(--c-high);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.biblio-index-list a:hover { border-bottom-color: var(--c-high); }
+
+.biblio-section { margin-bottom: 36px; scroll-margin-top: 80px; }
+
+.biblio-section h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-mute);
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.biblio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.biblio-entry {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text);
+  scroll-margin-top: 80px;
+  transition: border-color 0.15s;
+}
+
+.biblio-entry:target {
+  border-color: var(--c-high);
+  box-shadow: 0 0 0 3px rgba(4,47,77,0.08);
+}
+
+.biblio-entry.featured {
+  border-left: 4px solid var(--featured);
+  padding-left: 16px;
+}
+
+.biblio-entry-head {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.biblio-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--bg-soft);
+  color: var(--text-soft);
+  border: 1px solid var(--border);
+}
+
+.biblio-chip.type-review,
+.biblio-chip.type-meta {
+  background: var(--c-high-bg);
+  color: var(--c-high);
+  border-color: var(--c-high-bg);
+}
+
+.biblio-chip.type-longitudinal {
+  background: var(--c-medium-bg);
+  color: var(--c-medium);
+  border-color: var(--c-medium-bg);
+}
+
+.biblio-chip.type-guideline,
+.biblio-chip.type-law {
+  background: var(--warm-soft);
+  color: var(--warm);
+  border-color: var(--warm-soft);
+}
+
+.biblio-chip.type-chilean {
+  background: #fbf3e6;
+  color: #8a5a1e;
+  border-color: #fbf3e6;
+}
+
+.biblio-chip.featured-mark {
+  background: var(--featured);
+  color: white;
+  border-color: var(--featured);
+  font-weight: 600;
+}
+
+.biblio-authors {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.biblio-meta {
+  color: var(--text-soft);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.biblio-meta em { color: var(--text); }
+
+.biblio-url {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--c-high);
+  word-break: break-all;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.biblio-url:hover { border-bottom-color: var(--c-high); }
+
+.biblio-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-mute);
+  font-size: 13px;
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+
+/* === Scaffolding page === */
+.scaffold-page-intro {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+
+.scaffold-graph {
+  margin: 32px 0;
+}
+
+.scaffold-cluster {
+  margin-bottom: 28px;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.scaffold-cluster-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: var(--c-high);
+}
+
+.scaffold-chain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.chain-node {
+  padding: 5px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.chain-node:hover { background: var(--bg-soft); }
+
+.chain-arrow {
+  color: var(--text-mute);
+  font-weight: 600;
+}
+
+/* === Methodology / Limitations === */
+.content-page {
+  max-width: 780px;
+}
+
+.content-page ul { padding-left: 22px; }
+
+.content-page li { margin-bottom: 8px; }
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  header.site-header { padding: 12px 16px; }
+  main { padding: 20px 16px; }
+  h1 { font-size: 22px; }
+  .matrix { min-width: 900px; }
+  .legend-pills { font-size: 11px; }
+}
+
+@media (max-width: 600px) {
+  header.site-header nav a { padding: 5px 8px; font-size: 12px; }
+  .legend-pills { display: none; }
+}
+
+/* Footer */
+footer.site-footer {
+  margin-top: 80px;
+  padding: 32px;
+  border-top: 1px solid var(--border);
+  color: var(--text-mute);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Utilities */
+.text-mute { color: var(--text-mute); }
+.text-soft { color: var(--text-soft); }
+hr.div { border: none; height: 1px; background: var(--border); margin: 32px 0; }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">Pantallas en la infancia · síntesis</div>
+  <nav>
+    <a data-route="matrix">Matriz</a>
+    <a data-route="scaffolding">Andamiaje</a>
+    <a data-route="methodology">Metodología</a>
+    <a data-route="limitations">Limitaciones</a>
+    <a data-route="bibliography">Bibliografía</a>
+    <a data-route="legend">Leyenda</a>
+  </nav>
+  <div class="legend-pills">
+    <span class="legend-pill"><span class="legend-dot high"></span>Alta</span>
+    <span class="legend-pill"><span class="legend-dot medium"></span>Media</span>
+    <span class="legend-pill"><span class="legend-dot low"></span>Baja</span>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="site-footer">
+  Síntesis preparada en marzo de 2026 · Documento de referencia, no reemplaza consulta profesional · Evidencia con fecha de corte revisada en bibliografía
+</footer>
+
+<script>
+/* ============================================================
+   DATA
+   ============================================================ */
+
+const ageGroups = [
+  { id: 'lactante',          label: 'Lactante',           range: '0–12 meses' },
+  { id: 'primera-infancia',  label: 'Primera infancia',   range: '1–3 años' },
+  { id: 'preescolar',        label: 'Preescolar',         range: '3–5 años' },
+  { id: 'ninez-media',       label: 'Niñez media',        range: '6–8 años' },
+  { id: 'preadolescencia',   label: 'Preadolescencia',    range: '9–12 años' }
+];
+
+const dimensions = [
+  { id: 'lenguaje',        label: 'Lenguaje' },
+  { id: 'cognicion',       label: 'Cognición y atención' },
+  { id: 'socioemocional',  label: 'Socio-emocional' },
+  { id: 'sueno',           label: 'Sueño' },
+  { id: 'fisica',          label: 'Actividad física y motricidad' },
+  { id: 'vision',          label: 'Visión' },
+  { id: 'salud-mental',    label: 'Salud mental' },
+  { id: 'comportamiento',  label: 'Comportamiento y autorregulación' },
+  { id: 'vinculo',         label: 'Vínculo y apego' },
+  { id: 'creatividad',     label: 'Creatividad y juego' }
+];
+
+const certaintyLabels = { high: 'Alta', medium: 'Media', low: 'Baja' };
+
+/* Helper to build a claim line with certainty */
+function C(level, text) {
+  return `<div class="claim"><div class="claim-dot ${level}"></div><div class="claim-text">${text}</div></div>`;
+}
+
+/* Cell content. Each cell: summary, certainty, content (HTML), upstream/downstream */
+const cells = {
+
+  /* === LENGUAJE === */
+  'lenguaje-lactante': {
+    summary: 'TV de fondo desplaza habla dirigida',
+    certainty: 'high',
+    content: `
+      <p>En los primeros 12 meses, el desarrollo del lenguaje depende fundamentalmente de la <strong>cantidad y calidad del habla dirigida al bebé</strong>. La pantalla actúa principalmente por desplazamiento: cuando hay TV de fondo o smartphones en uso, el adulto habla menos y de manera menos contingente al bebé.</p>
+      ${C('high', 'La TV de fondo en presencia del bebé reduce significativamente el número de palabras dirigidas y los turnos conversacionales con el cuidador (Brushe et al., 2024, asociaciones medidas con grabaciones de audio LENA en infantes australianos).')}
+      ${C('high', 'El estudio inglés Children of the 2020s reporta que a los 9 meses los bebés pasan en promedio 29 minutos diarios frente a pantallas, con 28% de ellos sin uso diario.')}
+      ${C('medium', 'No hay evidencia de que el contenido audiovisual a esta edad enseñe lenguaje. Solo la interacción cara a cara con un adulto responsivo lo hace de manera robusta. Las videollamadas con familiares son la excepción documentada en EYSTAG.')}
+      <div class="chile-note">
+        <strong>Contexto chileno.</strong> En hogares con TV permanentemente encendida, esta es la edad donde la intervención más sencilla y de mayor impacto es apagar la pantalla cuando nadie la está viendo activamente. El estudio chileno <em>Mil Primeros Días</em> (UC) observa esta práctica de forma frecuente en hogares con cuidado por abuelos.
+      </div>
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'lenguaje-primera-infancia', certainty: 'high', text: 'Habla recibida en lactancia alimenta vocabulario receptivo en primera infancia' },
+      { to: 'vinculo-lactante', certainty: 'high', text: 'Calidad de la interacción cara a cara es base del apego seguro' }
+    ]
+  },
+
+  'lenguaje-primera-infancia': {
+    summary: 'Asociación consistente con retraso',
+    certainty: 'high',
+    content: `
+      <p>Es el período más estudiado y donde la asociación entre tiempo de pantalla y desarrollo del lenguaje es más consistente. La magnitud del efecto es pequeña pero estable.</p>
+      ${C('high', 'Meta-análisis de Madigan et al. (2020, JAMA Pediatrics): mayor tiempo de pantalla se asocia con menores habilidades lingüísticas. Contenido educativo de alta calidad puede ser ligeramente positivo.')}
+      ${C('high', 'En el estudio Children of the 2020s, los problemas de lenguaje a los 2 años aparecen sobre todo cuando el tiempo de pantalla supera aproximadamente 86 minutos diarios.')}
+      ${C('medium', 'Algunas revisiones (Jing et al., 2023; Sticca et al., 2025) encuentran beneficios pequeños para vocabulario cuando el contenido está específicamente diseñado y el adulto media activamente.')}
+      ${C('high', 'El co-visionado con interacción contingente del adulto neutraliza buena parte del efecto negativo (Sundqvist et al., 2021). <a class="cite" href="#bib-Sundqvist2021">[ref]</a>')}
+      <div class="def"><span class="def-term">Co-visionado contingente</span>: el adulto mira con el niño, comenta, pregunta y responde. Es el equivalente funcional de leer un libro juntos.</div>
+      <div class="chile-note">
+        <strong>Contexto chileno.</strong> El estudio de Rau y Daniel (UC) con datos ELPI encontró un efecto positivo en vocabulario receptivo asociado a mayor exposición a internet móvil, junto a un efecto negativo en lo socioemocional. Esto sugiere que la pantalla puede aportar input lingüístico pero a costa del intercambio social, sobre todo en hogares con menos tiempo parental disponible.
+      </div>
+    `,
+    upstream: [
+      { to: 'lenguaje-lactante', certainty: 'high', text: 'Habla recibida en lactancia' },
+      { to: 'vinculo-lactante', certainty: 'high', text: 'Apego seguro facilita exploración lingüística' }
+    ],
+    downstream: [
+      { to: 'lenguaje-preescolar', certainty: 'high', text: 'Vocabulario de los 2-3 años predice lenguaje preescolar' },
+      { to: 'cognicion-preescolar', certainty: 'high', text: 'Lenguaje temprano es vehículo para función ejecutiva' }
+    ]
+  },
+
+  'lenguaje-preescolar': {
+    summary: 'Vocabulario y narrativa',
+    certainty: 'high',
+    content: `
+      <p>En preescolar el lenguaje se complejiza: aparecen narrativas, comprensión de instrucciones complejas, conciencia fonológica. La asociación con pantalla persiste pero el moderador clave es el <strong>tipo de uso</strong>.</p>
+      ${C('high', 'Contenido educativo interactivo (apps bien diseñadas, e-books leídos con un adulto) puede tener efectos pequeños positivos sobre vocabulario y comprensión (Xie et al., 2024; Arabiat et al., 2022).')}
+      ${C('medium', 'Visualización pasiva extensa, especialmente de contenido fast-paced (videos cortos, cambios visuales constantes), se asocia con menor desarrollo narrativo y atencional (Mallawaarachchi et al., 2024). <a class="cite" href="#bib-Mallawaarachchi2024">[ref]</a>')}
+      ${C('medium', 'El "video deficit" persiste hasta cerca de la edad escolar: los niños aprenden menos de un video que de la misma información presentada en persona (Strouse & Samson, 2021).')}
+    `,
+    upstream: [
+      { to: 'lenguaje-primera-infancia', certainty: 'high', text: 'Vocabulario receptivo previo' }
+    ],
+    downstream: [
+      { to: 'lenguaje-ninez-media', certainty: 'high', text: 'Lenguaje preescolar predice comprensión lectora escolar' },
+      { to: 'cognicion-preescolar', certainty: 'high', text: 'Lenguaje y función ejecutiva se desarrollan en paralelo' }
+    ]
+  },
+
+  'lenguaje-ninez-media': {
+    summary: 'Comprensión lectora',
+    certainty: 'medium',
+    content: `
+      <p>Fuera del rango EYSTAG. La evidencia se basa en estudios escolares (AAP, OECD, revisiones específicas).</p>
+      ${C('medium', 'Mayor tiempo de pantalla recreativa se asocia con menor desempeño en comprensión lectora, pero la magnitud es modesta y se confunde con nivel socioeconómico (estudios OECD PISA, datos comparativos internacionales).')}
+      ${C('medium', 'El uso educativo dirigido (e-books, programas de alfabetización) puede ser beneficioso bajo supervisión adulta.')}
+      ${C('low', 'No hay evidencia robusta de que la pantalla "atrofie" la comprensión lectora; el mecanismo más probable es el desplazamiento del tiempo de lectura.')}
+    `,
+    upstream: [
+      { to: 'lenguaje-preescolar', certainty: 'high', text: 'Lenguaje oral preescolar es base de la lectura' }
+    ],
+    downstream: [
+      { to: 'lenguaje-preadolescencia', certainty: 'medium', text: 'Comprensión lectora alimenta aprendizaje en preadolescencia' }
+    ]
+  },
+
+  'lenguaje-preadolescencia': {
+    summary: 'Comunicación digital',
+    certainty: 'low',
+    content: `
+      <p>El tipo de uso de pantalla cambia: aparecen mensajería, redes sociales, contenido escrito digital. La evidencia para este grupo es más reciente y menos consolidada.</p>
+      ${C('medium', 'Mayor uso de pantalla recreativa se asocia con menos tiempo de lectura por placer, pero la asociación con habilidades lingüísticas específicas no está bien cuantificada.')}
+      ${C('low', 'Algunas líneas de investigación sugieren que el lenguaje fragmentado de la mensajería podría afectar la producción escrita formal, pero la evidencia es muy preliminar.')}
+    `,
+    upstream: [
+      { to: 'lenguaje-ninez-media', certainty: 'medium', text: 'Comprensión lectora previa' }
+    ],
+    downstream: []
+  },
+
+  /* === COGNICIÓN === */
+  'cognicion-lactante': {
+    summary: 'Atención embrionaria',
+    certainty: 'medium',
+    content: `
+      <p>En el primer año la atención y la función ejecutiva están en formación. Los mecanismos básicos (atención sostenida, alternancia) emergen lentamente.</p>
+      ${C('medium', 'El contenido fast-paced captura la atención del bebé pero no la desarrolla. La atención sostenida y dirigida se entrena con objetos reales y personas (Wass & Goldenberg, 2025).')}
+      ${C('low', 'Hipótesis de "entrenamiento atencional negativo": la pantalla acostumbra al bebé a niveles de estimulación altos, dificultando luego la atención a estímulos lentos (planteada por Liu et al., 2023; no demostrada de forma robusta en lactantes).')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'cognicion-primera-infancia', certainty: 'medium', text: 'Base atencional para función ejecutiva temprana' }
+    ]
+  },
+
+  'cognicion-primera-infancia': {
+    summary: 'Función ejecutiva temprana',
+    certainty: 'medium',
+    content: `
+      <p>Entre 1 y 3 años empieza el desarrollo más rápido de la <strong>función ejecutiva</strong> (control inhibitorio, memoria de trabajo, flexibilidad).</p>
+      ${C('medium', 'Asociaciones negativas entre tiempo de pantalla y función ejecutiva en preescolares han sido reportadas en múltiples meta-análisis, con magnitudes pequeñas (Bal et al., 2024). <a class="cite" href="#bib-Bal2024">[ref]</a>')}
+      ${C('medium', 'Hallazgos mixtos: algunas revisiones (Dutra et al., 2025) no encuentran asociación tras controlar por factores socioeconómicos. <a class="cite" href="#bib-Dutra2025">[ref]</a>')}
+      ${C('low', 'La hipótesis del "video deficit" para el aprendizaje cognitivo está mejor establecida que para el desarrollo atencional propiamente tal.')}
+      <div class="def"><span class="def-term">Función ejecutiva</span>: conjunto de procesos mentales que permiten planificar, inhibir impulsos, sostener atención y cambiar de tarea. Predictor robusto de logros académicos posteriores.</div>
+    `,
+    upstream: [
+      { to: 'cognicion-lactante', certainty: 'medium', text: 'Atención embrionaria' },
+      { to: 'lenguaje-primera-infancia', certainty: 'high', text: 'Lenguaje es vehículo de función ejecutiva' }
+    ],
+    downstream: [
+      { to: 'cognicion-preescolar', certainty: 'high', text: 'Función ejecutiva temprana predice la preescolar' }
+    ]
+  },
+
+  'cognicion-preescolar': {
+    summary: 'Fast-paced y atención',
+    certainty: 'medium',
+    content: `
+      <p>EYSTAG dedica atención especial al contenido fast-paced en preescolares: rapidez visual, cambios de escena frecuentes, múltiples voces simultáneas.</p>
+      ${C('medium', 'Contenido fast-paced se asocia con peor desempeño en tareas de función ejecutiva inmediatamente después de la exposición, aunque los efectos a largo plazo son menos claros (Beyens et al., 2018; revisión).')}
+      ${C('medium', 'La asociación con TDAH (Trastorno por Déficit Atencional e Hiperactividad) es modesta. Causalidad incierta: niños con tendencia a TDAH podrían buscar contenido más estimulante (Jourdren et al., 2023). <a class="cite" href="#bib-Jourdren2023">[ref]</a>')}
+      ${C('high', 'Co-visionado con interacción adulta mejora resultados cognitivos comparado con uso solitario (Sanders et al., 2023, umbrella review).')}
+    `,
+    upstream: [
+      { to: 'cognicion-primera-infancia', certainty: 'high', text: 'Función ejecutiva temprana' },
+      { to: 'sueno-preescolar', certainty: 'high', text: 'Sueño adecuado es necesario para función ejecutiva' }
+    ],
+    downstream: [
+      { to: 'cognicion-ninez-media', certainty: 'high', text: 'Función ejecutiva preescolar predice cognición escolar' }
+    ]
+  },
+
+  'cognicion-ninez-media': {
+    summary: 'Atención escolar',
+    certainty: 'high',
+    content: `
+      <p>Fuera del paraguas EYSTAG. Evidencia tomada de AAP y revisiones específicas en escolares.</p>
+      ${C('high', 'Estudios consistentes muestran asociación entre uso de pantalla recreativa elevado y peor rendimiento académico, con magnitudes pequeñas a moderadas (Sanders et al., 2024, umbrella review en 102 meta-análisis).')}
+      ${C('medium', 'El uso de pantalla en el aula (educativo y dirigido) puede ser beneficioso bajo supervisión; resultados dependen fuertemente del propósito y diseño.')}
+      ${C('medium', 'Un estudio inglés en escuelas (SMART Schools, Lancet Reg Health Eur 2025) no encontró que la restricción de celulares en aula por sí sola mejorara bienestar mental ni resultados académicos.')}
+      <div class="chile-note">
+        <strong>Contexto chileno.</strong> El MINEDUC publicó en febrero 2026 orientaciones para regular el uso de dispositivos móviles en establecimientos educacionales (campaña "Modo Aula"). La evidencia sugiere que la restricción por sí sola es insuficiente: requiere coordinación con familias y políticas pedagógicas claras.
+      </div>
+    `,
+    upstream: [
+      { to: 'cognicion-preescolar', certainty: 'high', text: 'Función ejecutiva preescolar' }
+    ],
+    downstream: [
+      { to: 'cognicion-preadolescencia', certainty: 'high', text: 'Habilidades cognitivas se profundizan en preadolescencia' }
+    ]
+  },
+
+  'cognicion-preadolescencia': {
+    summary: 'Multitarea, memoria',
+    certainty: 'high',
+    content: `
+      <p>En preadolescencia el cerebro entra en una segunda fase de poda sináptica significativa. El uso intensivo de pantalla y la multitarea aparecen como factores que pueden interactuar con este proceso.</p>
+      ${C('high', 'Multitarea con medios (varias pantallas o pantalla + tarea académica simultánea) se asocia con peor memoria de trabajo y peor desempeño académico en estudios longitudinales (varias cohortes en EE.UU. y Europa).')}
+      ${C('medium', 'El uso intensivo de redes sociales aparece como factor de riesgo para problemas atencionales tipo TDAH a los 18 meses de seguimiento (Ra et al., 2018, JAMA, adolescentes).')}
+      ${C('medium', 'Algunas habilidades visuoespaciales pueden beneficiarse de videojuegos (revisiones meta-analíticas en niños mayores y adolescentes).')}
+    `,
+    upstream: [
+      { to: 'cognicion-ninez-media', certainty: 'high', text: 'Habilidades cognitivas escolares' }
+    ],
+    downstream: []
+  },
+
+  /* === SOCIO-EMOCIONAL === */
+  'socioemocional-lactante': {
+    summary: 'Sincronía facial',
+    certainty: 'medium',
+    content: `
+      <p>El desarrollo socio-emocional temprano depende de la sincronía cara a cara con el cuidador: micro-expresiones, contingencia, contacto visual.</p>
+      ${C('medium', 'Tecnointerferencia parental (uso de celular por el adulto durante interacciones) se asocia con menor sensibilidad y responsividad del cuidador (Braune-Krickau et al., 2021).')}
+      ${C('low', 'Los efectos directos del uso de pantalla del bebé sobre su desarrollo socio-emocional están menos estudiados a esta edad: la mayor parte del tiempo el bebé no usa pantalla, sino que está expuesto a la de los adultos.')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'socioemocional-primera-infancia', certainty: 'high', text: 'Base de regulación emocional' },
+      { to: 'vinculo-lactante', certainty: 'high', text: 'Sincronía es base del apego' }
+    ]
+  },
+
+  'socioemocional-primera-infancia': {
+    summary: 'Ciclo bidireccional',
+    certainty: 'high',
+    content: `
+      <p>Es el período crítico para la regulación emocional. Aquí la evidencia longitudinal es más sólida y apunta a un ciclo bidireccional entre pantalla y desregulación.</p>
+      <div class="study">
+        <div class="study-title">Fitzpatrick et al. 2024 — JAMA Pediatrics</div>
+        <div class="study-meta">315 niños canadienses · seguimiento 3.5 → 5.5 años · análisis dentro-del-individuo</div>
+        <p>Más uso de tablet a los 3.5 años predijo más expresiones de ira/frustración al año siguiente, y la ira a los 4.5 predijo más uso de tablet posterior. El ciclo se retroalimenta. El análisis dentro-del-individuo controla por características estables del niño y la familia.</p>
+      </div>
+      ${C('high', 'El meta-análisis longitudinal más potente disponible (Vasconcellos et al., 2025, <em>Psychological Bulletin</em>) sintetiza 117 estudios longitudinales con ~292.000 niños de 0 a 10 años, y confirma la asociación bidireccional entre tiempo de pantalla y problemas socioemocionales. Magnitudes pequeñas pero consistentes; es lo más cercano a evidencia causal disponible sin ensayo aleatorizado. <a class="cite" href="#bib-Vasconcellos2025">[ref]</a>')}
+      ${C('high', 'Tecnointerferencia parental se asocia con más problemas emocionales y conductuales del niño (Toledo-Vargas et al., 2025, <em>JAMA Pediatrics</em>). <a class="cite" href="#bib-Toledo2025">[ref]</a>')}
+    `,
+    upstream: [
+      { to: 'socioemocional-lactante', certainty: 'medium', text: 'Sincronía facial previa' },
+      { to: 'vinculo-lactante', certainty: 'high', text: 'Apego seguro facilita corregulación' }
+    ],
+    downstream: [
+      { to: 'comportamiento-primera-infancia', certainty: 'high', text: 'Regulación emocional alimenta autocontrol conductual' },
+      { to: 'socioemocional-preescolar', certainty: 'high', text: 'Habilidades socioemocionales se profundizan' }
+    ]
+  },
+
+  'socioemocional-preescolar': {
+    summary: 'Empatía emergente',
+    certainty: 'medium',
+    content: `
+      <p>En preescolar se desarrollan habilidades sociales más sofisticadas: empatía, teoría de la mente, juego cooperativo.</p>
+      ${C('medium', 'Mayor tiempo de pantalla se asocia con peores resultados socioemocionales en preescolares, pero la magnitud del efecto es menor que en niños mayores (Al-Jbouri et al., 2026; Neville et al., 2026). El meta-análisis sintetiza esta evidencia en el rango 0–10 años (Vasconcellos et al., 2025). <a class="cite" href="#bib-Vasconcellos2025">[ref]</a>')}
+      ${C('medium', 'Contenido prosocial puede ser beneficioso para desarrollo socioemocional cuando es seleccionado y acompañado (Coyne et al., 2022; Mallawaarachchi et al., 2024). <a class="cite" href="#bib-Mallawaarachchi2024">[ref]</a>')}
+      ${C('low', 'La hipótesis de que la pantalla "atrofia" la empatía en preescolares no tiene respaldo robusto. Lo que sí está documentado: el uso solitario desplaza juego con otros niños, que es donde la empatía se entrena.')}
+    `,
+    upstream: [
+      { to: 'socioemocional-primera-infancia', certainty: 'high', text: 'Regulación emocional temprana' }
+    ],
+    downstream: [
+      { to: 'socioemocional-ninez-media', certainty: 'medium', text: 'Habilidades sociales escolares' }
+    ]
+  },
+
+  'socioemocional-ninez-media': {
+    summary: 'Relaciones de pares',
+    certainty: 'medium',
+    content: `
+      <p>Fuera del paraguas EYSTAG. Período de consolidación de relaciones de pares y autoconcepto social.</p>
+      ${C('medium', 'Uso intensivo de pantalla recreativa se asocia con menos tiempo de juego con pares y peor competencia social (varias revisiones en niños 6-12 años).')}
+      ${C('medium', 'Los videojuegos cooperativos pueden tener efectos prosociales modestos; los competitivos con contenido violento se asocian con más agresividad inmediata (Ferguson et al., revisiones meta-analíticas).')}
+    `,
+    upstream: [
+      { to: 'socioemocional-preescolar', certainty: 'medium', text: 'Empatía preescolar' }
+    ],
+    downstream: [
+      { to: 'salud-mental-preadolescencia', certainty: 'high', text: 'Habilidades sociales protegen contra problemas de salud mental' }
+    ]
+  },
+
+  'socioemocional-preadolescencia': {
+    summary: 'Comparación social',
+    certainty: 'high',
+    content: `
+      <p>La preadolescencia es período crítico de inicio de comparación social, identidad y vulnerabilidad a redes sociales. Aquí la evidencia se torna más robusta.</p>
+      ${C('high', 'El uso intensivo de redes sociales en preadolescencia se asocia con peor autoestima, más síntomas depresivos y problemas de imagen corporal, particularmente en niñas (revisiones recientes 2024-2025).')}
+      ${C('medium', 'El efecto no es uniforme: depende del tipo de uso (pasivo vs activo), del contenido (comparativo vs creativo), y de factores individuales (autoestima previa, apoyo parental).')}
+      ${C('high', 'AAP recomienda evitar redes sociales antes de los 13 años (límite legal en muchas plataformas) y supervisión activa después.')}
+    `,
+    upstream: [
+      { to: 'socioemocional-ninez-media', certainty: 'medium', text: 'Habilidades sociales previas' }
+    ],
+    downstream: []
+  },
+
+  /* === SUEÑO === */
+  'sueno-lactante': {
+    summary: 'Ritmo circadiano',
+    certainty: 'medium',
+    content: `
+      <p>En los primeros 12 meses se establece el ritmo circadiano y los patrones de sueño. La pantalla puede interferir por luz, estimulación y por desplazamiento de rutinas.</p>
+      ${C('medium', 'Exposición a luz azul nocturna podría retrasar la secreción de melatonina, aunque los estudios específicos en lactantes son escasos.')}
+      ${C('medium', 'Pantalla cerca de la hora de dormir se asocia con menor duración total de sueño en estudios observacionales con bebés.')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'sueno-primera-infancia', certainty: 'high', text: 'Rutina de sueño temprana es base de la regulación posterior' },
+      { to: 'cognicion-primera-infancia', certainty: 'high', text: 'Sueño consolidado en lactancia alimenta función ejecutiva' }
+    ]
+  },
+
+  'sueno-primera-infancia': {
+    summary: 'Menos sueño nocturno',
+    certainty: 'high',
+    content: `
+      <p>Es uno de los dominios con evidencia más sólida en pantallas y desarrollo temprano.</p>
+      ${C('high', 'Más tiempo de pantalla se asocia consistentemente con menor duración de sueño nocturno (Janssen et al., 2020; Li et al., 2020; Belmon et al., 2019).')}
+      ${C('high', 'Pantalla en la hora previa a dormir se asocia con horario de acostarse más tardío y menos sueño total.')}
+      ${C('medium', 'Intervenciones que reducen tiempo de pantalla muestran mejoras leves en duración del sueño (Martin et al., 2020, meta-análisis).')}
+      ${C('medium', 'La OMS recomienda 11-14 horas de sueño para niños de 1-2 años y 10-13 horas para 3-4 años, incluyendo siestas.')}
+    `,
+    upstream: [
+      { to: 'sueno-lactante', certainty: 'medium', text: 'Ritmo circadiano establecido' }
+    ],
+    downstream: [
+      { to: 'sueno-preescolar', certainty: 'high', text: 'Patrón de sueño establecido' },
+      { to: 'cognicion-primera-infancia', certainty: 'high', text: 'Sueño es base de función ejecutiva' },
+      { to: 'comportamiento-primera-infancia', certainty: 'high', text: 'Sueño insuficiente empeora regulación emocional' }
+    ]
+  },
+
+  'sueno-preescolar': {
+    summary: 'Consolidación',
+    certainty: 'high',
+    content: `
+      <p>En preescolar el sueño se consolida (menos siestas, más sueño nocturno). La pantalla en el dormitorio aparece como factor de riesgo claro.</p>
+      ${C('high', 'EYSTAG recomienda dormitorios libres de pantalla y no usar pantallas en la hora previa a dormir.')}
+      ${C('high', 'Mayor pantalla en preescolares se asocia con peor calidad y duración de sueño en múltiples revisiones sistemáticas.')}
+      ${C('medium', 'La asociación entre pantalla y trastornos del sueño (pesadillas, despertares) es menos consistente que con duración.')}
+    `,
+    upstream: [
+      { to: 'sueno-primera-infancia', certainty: 'high', text: 'Patrón temprano de sueño' }
+    ],
+    downstream: [
+      { to: 'sueno-ninez-media', certainty: 'high', text: 'Hábitos de sueño escolar' }
+    ]
+  },
+
+  'sueno-ninez-media': {
+    summary: 'Sueño escolar',
+    certainty: 'high',
+    content: `
+      <p>Fuera del paraguas EYSTAG. La AAP, NICE y la AASM (American Academy of Sleep Medicine) recomiendan 9-12 horas de sueño para 6-12 años.</p>
+      ${C('high', 'Pantalla en el dormitorio o uso de pantalla antes de dormir se asocia robustamente con menor duración y peor calidad del sueño en escolares (Hale & Guan, 2015, revisión clásica; múltiples confirmaciones posteriores).')}
+      ${C('high', 'La asociación con sueño es uno de los efectos más consistentes y mejor cuantificados en niños escolares.')}
+    `,
+    upstream: [
+      { to: 'sueno-preescolar', certainty: 'high', text: 'Hábitos de sueño preescolares' }
+    ],
+    downstream: [
+      { to: 'sueno-preadolescencia', certainty: 'high', text: 'Hábitos de sueño se consolidan' },
+      { to: 'cognicion-ninez-media', certainty: 'high', text: 'Sueño suficiente es necesario para aprendizaje escolar' }
+    ]
+  },
+
+  'sueno-preadolescencia': {
+    summary: 'Pantalla nocturna',
+    certainty: 'high',
+    content: `
+      <p>La preadolescencia es período donde el sueño empieza a verse afectado por cambios biológicos (delay de fase circadiana) y por el uso de pantalla nocturna.</p>
+      ${C('high', 'La asociación entre uso de pantalla nocturna (especialmente celular en cama) y menor sueño es robusta y de magnitud relevante en preadolescentes y adolescentes.')}
+      ${C('high', 'Las redes sociales y mensajería tienen un efecto adicional vía estimulación social y FOMO (fear of missing out).')}
+      ${C('medium', 'Intervenciones que eliminan pantalla del dormitorio en preadolescentes muestran mejoras consistentes en duración del sueño.')}
+    `,
+    upstream: [
+      { to: 'sueno-ninez-media', certainty: 'high', text: 'Hábitos escolares de sueño' }
+    ],
+    downstream: []
+  },
+
+  /* === FÍSICA / MOTRICIDAD === */
+  'fisica-lactante': {
+    summary: 'Tummy time desplazado',
+    certainty: 'low',
+    content: `
+      <p>En lactantes la motricidad gruesa se desarrolla con exploración activa: girar, sentarse, gatear, caminar. La pantalla puede desplazar el "tummy time" (tiempo boca abajo despierto), aunque la evidencia específica es escasa.</p>
+      ${C('low', 'No hay evidencia robusta de que la pantalla afecte directamente el desarrollo motor grueso en lactantes. El mecanismo plausible es indirecto: menos tiempo de exploración activa.')}
+      ${C('medium', 'Asociaciones débiles entre tiempo de pantalla y retraso motor en estudios observacionales (Dutra et al., 2025), con causalidad incierta. <a class="cite" href="#bib-Dutra2025">[ref]</a>')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'fisica-primera-infancia', certainty: 'medium', text: 'Motricidad temprana es base para actividad posterior' }
+    ]
+  },
+
+  'fisica-primera-infancia': {
+    summary: 'Sedentarismo temprano',
+    certainty: 'medium',
+    content: `
+      <p>La OMS recomienda al menos 180 minutos de actividad física diaria para niños de 1-4 años, y limitar tiempo sedentario.</p>
+      ${C('medium', 'Pantalla en uso solitario predominantemente sedentaria desplaza juego activo, aunque no toda pantalla es sedentaria (bailar con videos).')}
+      ${C('medium', 'Hábitos sedentarios tempranos predicen patrones posteriores: el niño que se sienta mucho a los 2 años tiende a seguir haciéndolo a los 5 (Pearson et al., 2018). <a class="cite" href="#bib-Pearson2018">[ref]</a>')}
+    `,
+    upstream: [
+      { to: 'fisica-lactante', certainty: 'low', text: 'Motricidad temprana' }
+    ],
+    downstream: [
+      { to: 'fisica-preescolar', certainty: 'high', text: 'Patrones de actividad se consolidan' }
+    ]
+  },
+
+  'fisica-preescolar': {
+    summary: 'Motor fino y grueso',
+    certainty: 'medium',
+    content: `
+      <p>En preescolar se desarrollan habilidades motoras complejas (saltar, correr, dibujar).</p>
+      ${C('medium', 'Asociaciones débiles entre pantalla y motricidad fina: pantallas táctiles podrían tener pequeños beneficios para destreza fina (Crescenzi Lanna & Grané Oro, 2019).')}
+      ${C('medium', 'Para motricidad gruesa la evidencia es mixta: el efecto principal es por desplazamiento del juego activo, no por la pantalla en sí.')}
+      ${C('high', 'CMOs del Reino Unido recomiendan 3 horas diarias de actividad física para menores de 5 años, incluyendo juego activo.')}
+    `,
+    upstream: [
+      { to: 'fisica-primera-infancia', certainty: 'medium', text: 'Patrones sedentarios tempranos' }
+    ],
+    downstream: [
+      { to: 'fisica-ninez-media', certainty: 'high', text: 'Habilidades motoras escolares' }
+    ]
+  },
+
+  'fisica-ninez-media': {
+    summary: 'Sedentarismo y obesidad',
+    certainty: 'high',
+    content: `
+      <p>Fuera del paraguas EYSTAG. AAP, OMS, OECD documentan asociación robusta entre tiempo de pantalla y obesidad infantil.</p>
+      ${C('high', 'Mayor tiempo de pantalla se asocia con mayor índice de masa corporal y obesidad en escolares, con magnitudes moderadas y mecanismos plausibles (sedentarismo, snacking, publicidad de alimentos).')}
+      ${C('high', 'Publicidad alimentaria en pantallas influye directamente sobre elecciones y consumo de alimentos en niños menores de 12 años (Russell et al., 2019). <a class="cite" href="#bib-Russell2019">[ref]</a>')}
+      <div class="study">
+        <div class="study-title">Páez-Herrera et al. 2025 — Pantallas y desarrollo motor en niños chilenos</div>
+        <div class="study-meta">206 niños y niñas de 8 a 10 años · Valparaíso · PUCV · <em>Children</em> (MDPI)</div>
+        <p>Estudio chileno transversal en la región. Asociación entre mayor uso de pantallas (especialmente consolas) y menor desarrollo motor en niñas. Las niñas dedican significativamente más tiempo semanal a consolas que los niños (p=0,004). Evidencia local relevante para SLEP Costa Central. <a class="cite" href="#bib-PaezHerrera2025">[ref]</a></p>
+      </div>
+    `,
+    upstream: [
+      { to: 'fisica-preescolar', certainty: 'medium', text: 'Hábitos motores preescolares' }
+    ],
+    downstream: [
+      { to: 'fisica-preadolescencia', certainty: 'high', text: 'Sedentarismo se consolida' }
+    ]
+  },
+
+  'fisica-preadolescencia': {
+    summary: 'Deporte vs pantalla',
+    certainty: 'high',
+    content: `
+      <p>En preadolescencia el deporte estructurado se asocia con menor uso problemático de pantalla. La OMS recomienda al menos 60 minutos diarios de actividad moderada a vigorosa.</p>
+      ${C('high', 'Niños y preadolescentes con mayor pantalla tienen menos probabilidad de cumplir las recomendaciones de actividad física.')}
+      ${C('high', 'Asociación robusta entre pantalla y obesidad/sobrepeso en este grupo etario.')}
+    `,
+    upstream: [
+      { to: 'fisica-ninez-media', certainty: 'high', text: 'Patrones de sedentarismo escolar' }
+    ],
+    downstream: []
+  },
+
+  /* === VISIÓN === */
+  'vision-lactante': {
+    summary: 'Sin evidencia robusta',
+    certainty: 'low',
+    content: `
+      <p>El desarrollo visual en el primer año es uno de los aspectos más sensibles a estimulación: agudeza, convergencia, visión binocular.</p>
+      ${C('low', 'No hay evidencia robusta de que la pantalla en lactantes afecte el desarrollo visual estructural. La preocupación es más teórica que demostrada.')}
+      ${C('low', 'EYSTAG no encontró evidencia convincente sobre efectos de luz azul o radiación electromagnética en el desarrollo de la primera infancia.')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'vision-preescolar', certainty: 'low', text: 'Base visual temprana' }
+    ]
+  },
+
+  'vision-primera-infancia': {
+    summary: 'Acomodación',
+    certainty: 'low',
+    content: `
+      <p>Entre 1 y 3 años la visión refina su agudeza y precisión. Las recomendaciones sobre pantalla cerca tienen más base intuitiva que empírica para esta edad.</p>
+      ${C('low', 'No hay estudios robustos de pantalla y desarrollo visual en esta edad.')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'vision-preescolar', certainty: 'low', text: 'Continuidad visual' }
+    ]
+  },
+
+  'vision-preescolar': {
+    summary: 'Miopía: causalidad incierta',
+    certainty: 'low',
+    content: `
+      <p>El interés se concentra en miopía. EYSTAG es claro al respecto.</p>
+      ${C('medium', 'La asociación entre pantalla y miopía aparece en estudios transversales pero NO en longitudinales (Foreman et al., 2021, Lancet Digital Health, meta-análisis), sugiriendo que probablemente no es causal.')}
+      ${C('high', 'El factor protector más robusto contra miopía es el tiempo al aire libre, no la ausencia de pantalla.')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'vision-ninez-media', certainty: 'medium', text: 'Miopía emergente en edad escolar' }
+    ]
+  },
+
+  'vision-ninez-media': {
+    summary: 'Miopía emergente',
+    certainty: 'medium',
+    content: `
+      <p>Fuera del paraguas EYSTAG. La miopía en edad escolar es una preocupación global creciente, especialmente en Asia oriental.</p>
+      ${C('medium', 'Asociación entre actividades de "cerca" (close-work, que incluye lectura y pantalla) y miopía es razonablemente consistente. La pantalla en sí no se distingue empíricamente de otras actividades de cerca.')}
+      ${C('high', 'El tiempo al aire libre (al menos 2 horas diarias) es el factor protector más robusto contra el desarrollo y progresión de miopía.')}
+    `,
+    upstream: [
+      { to: 'vision-preescolar', certainty: 'low', text: 'Visión preescolar' }
+    ],
+    downstream: [
+      { to: 'vision-preadolescencia', certainty: 'medium', text: 'Miopía progresa' }
+    ]
+  },
+
+  'vision-preadolescencia': {
+    summary: 'Progresión miopía',
+    certainty: 'medium',
+    content: `
+      <p>La preadolescencia es período de progresión rápida de miopía. La asociación con pantalla persiste.</p>
+      ${C('medium', 'Mayor uso de pantalla se asocia con mayor riesgo de miopía, pero la causalidad sigue siendo discutida vs. simple "cerca-trabajo".')}
+      ${C('high', 'Recomendación universal: tiempo al aire libre y pausas regulares (regla 20-20-20).')}
+    `,
+    upstream: [
+      { to: 'vision-ninez-media', certainty: 'medium', text: 'Miopía emergente' }
+    ],
+    downstream: []
+  },
+
+  /* === SALUD MENTAL === */
+  'salud-mental-lactante': {
+    summary: 'No directamente aplicable',
+    certainty: 'low',
+    content: `
+      <p>La salud mental como tal no es un constructo aplicable a esta edad. Lo relevante es la calidad del vínculo y la regulación, cubiertos en otras dimensiones.</p>
+      ${C('low', 'No hay evidencia directa de pantallas y salud mental en lactantes; los efectos en regulación emocional están cubiertos en la dimensión socio-emocional.')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'salud-mental-primera-infancia', certainty: 'low', text: 'Base socioemocional' }
+    ]
+  },
+
+  'salud-mental-primera-infancia': {
+    summary: 'Indicadores tempranos',
+    certainty: 'medium',
+    content: `
+      <p>Aparecen los primeros indicadores observables: problemas de internalización (retraimiento, ansiedad temprana) y externalización (agresión, hiperactividad).</p>
+      <div class="study">
+        <div class="study-title">Soto-Ramírez, Godoy, Narea y Ayala 2025 — Evidencia chilena longitudinal</div>
+        <div class="study-meta">669 niños chilenos · T1 a 3,5 años (2021), T2 a 5,4 años (2023) · cross-lagged panel model · <em>Frontiers in Psychology</em></div>
+        <p>Asociación significativa entre tiempo de pantalla y problemas de internalización y externalización a los 3 años (CBCL). Hallazgo importante a tener presente: <strong>la asociación se atenúa significativamente a los 5 años</strong> y la direccionalidad es ambigua en el modelo CLPM. Sugiere que la conexión es más fuerte en primera infancia que en preescolar y que parte del efecto podría provenir de factores familiares no medidos. <a class="cite" href="#bib-SotoRamirez2025">[ref]</a></p>
+      </div>
+      ${C('medium', 'Asociaciones consistentes con problemas conductuales emergentes en preescolares, magnitudes pequeñas. El meta-análisis (117 estudios, ~292.000 niños) confirma esta asociación con dirección bidireccional (Vasconcellos et al., 2025). <a class="cite" href="#bib-Vasconcellos2025">[ref]</a>')}
+    `,
+    upstream: [
+      { to: 'socioemocional-primera-infancia', certainty: 'high', text: 'Regulación emocional' }
+    ],
+    downstream: [
+      { to: 'salud-mental-preescolar', certainty: 'medium', text: 'Indicadores se consolidan' }
+    ]
+  },
+
+  'salud-mental-preescolar': {
+    summary: 'Ansiedad emergente',
+    certainty: 'medium',
+    content: `
+      <p>EYSTAG documenta asociaciones modestas con ansiedad, problemas emocionales y de conducta en preescolares.</p>
+      ${C('medium', 'Asociación con ansiedad, depresión emergente e inestabilidad emocional aparece en algunas revisiones (Skalická et al., 2019; Liu et al., 2024).')}
+      ${C('medium', 'Contenido violento o sobreestimulante se asocia con peores resultados emocionales; contenido prosocial neutral o positivo.')}
+    `,
+    upstream: [
+      { to: 'salud-mental-primera-infancia', certainty: 'medium', text: 'Indicadores tempranos' }
+    ],
+    downstream: [
+      { to: 'salud-mental-ninez-media', certainty: 'medium', text: 'Patrones emocionales escolares' }
+    ]
+  },
+
+  'salud-mental-ninez-media': {
+    summary: 'Problemas internalizantes',
+    certainty: 'medium',
+    content: `
+      <p>Fuera del paraguas EYSTAG. La AAP renovó en febrero 2026 su marco para esta franja: en vez de prescribir un número de horas, propone leer el uso digital con las <strong>5 Cs</strong> (Child, Content, Calm, Crowding-out, Communication), apoyada en el modelo socioecológico de Bronfenbrenner. <a class="cite" href="#bib-AAP2026">[ref]</a></p>
+      ${C('medium', 'Asociación entre tiempo de pantalla y síntomas depresivos y ansiosos en escolares, magnitud pequeña, dirección causal incierta. El meta-análisis sintetiza esta evidencia para menores de 12 años (Eirich et al., 2022, <em>JAMA Psychiatry</em>). <a class="cite" href="#bib-Eirich2022">[ref]</a>')}
+      ${C('high', 'Cyberbullying (más común desde 8-9 años) es factor de riesgo robusto para problemas de salud mental.')}
+      <div class="def"><span class="def-term">Las 5 Cs (AAP 2026)</span>: marco para conversar sobre uso digital en familia. <strong>Child</strong> (características del niño), <strong>Content</strong> (qué se ve), <strong>Calm</strong> (cómo se regula con o sin pantalla), <strong>Crowding-out</strong> (qué desplaza el uso), <strong>Communication</strong> (cómo se conversa el tema en casa). Reemplaza el énfasis exclusivo en límites de tiempo.</div>
+    `,
+    upstream: [
+      { to: 'salud-mental-preescolar', certainty: 'medium', text: 'Ansiedad emergente' }
+    ],
+    downstream: [
+      { to: 'salud-mental-preadolescencia', certainty: 'high', text: 'Período crítico de inicio de salud mental' }
+    ]
+  },
+
+  'salud-mental-preadolescencia': {
+    summary: 'Redes y depresión',
+    certainty: 'high',
+    content: `
+      <p>La preadolescencia es punto de inflexión: empieza el uso de redes sociales y aumenta vulnerabilidad a problemas de salud mental.</p>
+      ${C('high', 'Asociación robusta entre uso intensivo de redes sociales y problemas de salud mental (depresión, ansiedad, autoestima, imagen corporal), especialmente en niñas (revisiones sistemáticas recientes).')}
+      ${C('medium', 'La causalidad sigue discutida (Haidt vs Orben et al.), pero la magnitud de la asociación es relevante y consistente entre estudios.')}
+      ${C('high', 'La AAP, en su política revisada de febrero 2026 (<em>Digital Ecosystems, Children, and Adolescents</em>), propone abandonar el énfasis en límites de tiempo absolutos y entender el uso digital como ecosistema: diseño de plataformas, contexto familiar, contenido, displacement, conversación. Recomienda explícitamente acción coordinada de familias, pediatras, escuelas, industria y reguladores. <a class="cite" href="#bib-AAP2026">[ref]</a>')}
+    `,
+    upstream: [
+      { to: 'salud-mental-ninez-media', certainty: 'medium', text: 'Problemas emocionales escolares' },
+      { to: 'socioemocional-ninez-media', certainty: 'medium', text: 'Habilidades sociales escolares' }
+    ],
+    downstream: []
+  },
+
+  /* === COMPORTAMIENTO === */
+  'comportamiento-lactante': {
+    summary: 'Autorregulación incipiente',
+    certainty: 'medium',
+    content: `
+      <p>La autorregulación es incipiente: el bebé depende casi totalmente de la corregulación del cuidador.</p>
+      ${C('medium', 'Tecnointerferencia parental interrumpe procesos de corregulación, con efectos observables en sensibilidad y responsividad (Braune-Krickau et al., 2021).')}
+      ${C('low', 'Los efectos directos del uso de pantalla del bebé en autorregulación son difíciles de aislar a esta edad.')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'comportamiento-primera-infancia', certainty: 'high', text: 'Base de autorregulación' }
+    ]
+  },
+
+  'comportamiento-primera-infancia': {
+    summary: 'Tantrums y pantalla',
+    certainty: 'high',
+    content: `
+      <p>Es el momento crítico para tantrums (berrinches) y para la pregunta sobre uso de pantalla como regulador externo. Aquí la evidencia es más sólida.</p>
+      <div class="study">
+        <div class="study-title">Fitzpatrick et al. 2024 — Tablet y berrinches</div>
+        <div class="study-meta">315 niños canadienses · análisis dentro-del-individuo · <em>JAMA Pediatrics</em></div>
+        <p>Más uso de tablet a los 3.5 años predijo más expresiones de ira a los 4.5 años; más ira a los 4.5 predijo más uso de tablet a los 5.5. La autora recomienda explícitamente evitar la pantalla como "chupete digital" y entrenar alternativas (juego simbólico, lectura compartida). <a class="cite" href="#bib-Fitzpatrick2024">[ref]</a></p>
+      </div>
+      <div class="study">
+        <div class="study-title">Jusienė et al. 2024 — Concepto PDER y "screen time tantrums"</div>
+        <div class="study-meta">265 niños · seguimiento 3.5 → 4.5 años · <em>Frontiers in Child and Adolescent Psychiatry</em></div>
+        <p>Primer estudio longitudinal que documenta el constructo PDER (<em>parental digital emotion regulation</em>): el uso parental de pantallas para regular las emociones del niño en T1 predijo mayor ira y menor control esforzado un año después. Describe el fenómeno de "screen time tantrums" como la reacción intensa al retirar el dispositivo. <a class="cite" href="#bib-Jusiene2024">[ref]</a></p>
+      </div>
+      ${C('high', 'Marco conceptual: la pantalla regula a corto plazo pero no enseña. La corregulación con un adulto sí enseña.')}
+      ${C('medium', 'Contenido fast-paced se asocia con peor autorregulación posterior (Mallawaarachchi et al., 2024). <a class="cite" href="#bib-Mallawaarachchi2024">[ref]</a>')}
+      <div class="def"><span class="def-term">Corregulación</span>: un adulto presta su capacidad de regulación al niño hasta que el niño desarrolla la propia. Mecanismo central del desarrollo socioemocional temprano.</div>
+      <div class="def"><span class="def-term">PDER (Parental Digital Emotion Regulation)</span>: práctica de usar dispositivos digitales para calmar o distraer al niño en momentos de desregulación emocional. La evidencia longitudinal sugiere que es efectiva a corto plazo pero erosiona el desarrollo de autorregulación.</div>
+      <div class="chile-note">
+        <strong>Contexto chileno.</strong> El estudio etnográfico <em>Mil Primeros Días</em> (UC) documenta de forma recurrente el uso de pantalla para que el niño coma o se quede quieto. La guía MINEDUC 2026 <em>Infancias y Pantallas</em> trata explícitamente este patrón como zona a evitar. <a class="cite" href="#bib-MINEDUC2026">[ref]</a>
+      </div>
+    `,
+    upstream: [
+      { to: 'comportamiento-lactante', certainty: 'medium', text: 'Corregulación previa' },
+      { to: 'socioemocional-primera-infancia', certainty: 'high', text: 'Regulación emocional' },
+      { to: 'vinculo-primera-infancia', certainty: 'high', text: 'Vínculo seguro facilita corregulación' }
+    ],
+    downstream: [
+      { to: 'comportamiento-preescolar', certainty: 'high', text: 'Autorregulación preescolar' },
+      { to: 'cognicion-primera-infancia', certainty: 'medium', text: 'Autorregulación es base de función ejecutiva' }
+    ]
+  },
+
+  'comportamiento-preescolar': {
+    summary: 'Autorregulación',
+    certainty: 'medium',
+    content: `
+      <p>EYSTAG señala asociaciones consistentes entre pantalla y problemas de autorregulación en preescolares, con dirección causal incierta.</p>
+      ${C('medium', 'Tablets y videos cortos: asociaciones con peor inhibición conductual (capacidad de detenerse antes de actuar).')}
+      ${C('medium', 'El co-visionado con adulto activo neutraliza buena parte del efecto negativo.')}
+      <div class="study">
+        <div class="study-title">Gavrilova y Veraksa 2024 — Qué previene los "screen time tantrums"</div>
+        <div class="study-meta">Estudio empírico cuantitativo · <em>Frontiers in Psychology</em></div>
+        <p>Más del 90% de las familias estudiadas reporta berrinches al imponer límites de pantalla. Hallazgo central: lo que protege contra esos berrinches <strong>no</strong> son las habilidades de función ejecutiva del niño, sino <strong>la disponibilidad de juego con objetos físicos reales</strong>. Si el niño tiene alternativas concretas y atractivas para jugar, transita mejor la salida de la pantalla. <a class="cite" href="#bib-Gavrilova2024">[ref]</a></p>
+      </div>
+      ${C('low', 'No hay evidencia robusta de daño "permanente" por uso ocasional como regulador. La preocupación es por uso sistemático.')}
+    `,
+    upstream: [
+      { to: 'comportamiento-primera-infancia', certainty: 'high', text: 'Tantrums y corregulación' }
+    ],
+    downstream: [
+      { to: 'comportamiento-ninez-media', certainty: 'high', text: 'Autocontrol escolar' }
+    ]
+  },
+
+  'comportamiento-ninez-media': {
+    summary: 'TDAH y atención',
+    certainty: 'high',
+    content: `
+      <p>Fuera del paraguas EYSTAG. La asociación entre pantalla y problemas atencionales tipo TDAH es bien documentada.</p>
+      ${C('high', 'Asociación consistente entre tiempo de pantalla y síntomas de TDAH; magnitudes pequeñas a moderadas (Liu et al., 2023, meta-análisis).')}
+      ${C('medium', 'Causalidad incierta: niños con tendencia a TDAH podrían buscar más pantalla, no al revés. El ciclo es probablemente bidireccional.')}
+      ${C('high', 'Los videojuegos de acción de alta velocidad muestran asociaciones más fuertes con problemas atencionales que el video pasivo.')}
+    `,
+    upstream: [
+      { to: 'comportamiento-preescolar', certainty: 'medium', text: 'Autorregulación preescolar' }
+    ],
+    downstream: [
+      { to: 'comportamiento-preadolescencia', certainty: 'high', text: 'Problemas atencionales se consolidan' }
+    ]
+  },
+
+  'comportamiento-preadolescencia': {
+    summary: 'Uso problemático',
+    certainty: 'high',
+    content: `
+      <p>Aparece el concepto de "uso problemático de pantalla" (parecido a una adicción conductual, aunque sin consenso diagnóstico definitivo).</p>
+      ${C('high', 'Uso problemático de pantalla se asocia con problemas conductuales, peor desempeño académico y problemas de salud mental (Carter et al., 2024). <a class="cite" href="#bib-Carter2024">[ref]</a>')}
+      ${C('medium', 'No hay consenso en su clasificación como trastorno, pero la OMS reconoce "trastorno por uso de videojuegos" en CIE-11.')}
+    `,
+    upstream: [
+      { to: 'comportamiento-ninez-media', certainty: 'high', text: 'TDAH y autocontrol' }
+    ],
+    downstream: []
+  },
+
+  /* === VÍNCULO === */
+  'vinculo-lactante': {
+    summary: 'Sincronía facial',
+    certainty: 'high',
+    content: `
+      <p>El apego se establece en los primeros meses a través de sincronía facial, contingencia y consistencia del cuidador.</p>
+      ${C('high', 'Tecnointerferencia parental se asocia con menor sensibilidad del cuidador y respuestas menos contingentes al bebé (Braune-Krickau et al., 2021; Beamish et al., 2018). Síntesis con foco en los primeros años muestra consecuencias observables en desarrollo socioemocional, lenguaje y vínculo (Toledo-Vargas et al., 2025, <em>JAMA Pediatrics</em>). <a class="cite" href="#bib-Toledo2025">[ref]</a>')}
+      ${C('medium', 'Asociación entre uso parental de pantalla y características de apego (seguridad, evitación) reportada pero con limitaciones metodológicas.')}
+      ${C('high', 'EYSTAG identifica explícitamente las videollamadas con familia lejana como uso recomendado en menores de 2 años. <a class="cite" href="#bib-EYSTAG2026">[ref]</a>')}
+      <div class="chile-note">
+        <strong>Contexto chileno.</strong> La guía oficial MINEDUC 2026 <em>Infancias y Pantallas: Guía para Cuidar los Vínculos</em> hace de la tecnointerferencia uno de sus dos ejes centrales, y plantea recomendaciones operativas: dejar el celular fuera de los momentos de alimentación, cambio, juego y baño. <a class="cite" href="#bib-MINEDUC2026">[ref]</a>
+      </div>
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'vinculo-primera-infancia', certainty: 'high', text: 'Apego seguro temprano' },
+      { to: 'socioemocional-primera-infancia', certainty: 'high', text: 'Apego es base de regulación emocional' }
+    ]
+  },
+
+  'vinculo-primera-infancia': {
+    summary: 'Apego seguro',
+    certainty: 'medium',
+    content: `
+      <p>El apego se consolida o se vuelve inseguro entre 1 y 3 años, dependiendo de la consistencia del cuidador.</p>
+      ${C('medium', 'Tecnointerferencia parental sigue siendo un factor relevante; menos estudiada que en lactantes.')}
+      ${C('medium', 'Calidad de la relación parento-filial actúa como mediador y moderador de la asociación pantalla-resultados del niño (Xu & Qiao, 2025).')}
+    `,
+    upstream: [
+      { to: 'vinculo-lactante', certainty: 'high', text: 'Sincronía facial' }
+    ],
+    downstream: [
+      { to: 'vinculo-preescolar', certainty: 'medium', text: 'Apego sigue consolidándose' }
+    ]
+  },
+
+  'vinculo-preescolar': {
+    summary: 'Vínculo y autonomía',
+    certainty: 'medium',
+    content: `
+      <p>En preescolar el niño busca autonomía pero sigue dependiendo del vínculo seguro como base.</p>
+      ${C('medium', 'EYSTAG identifica la calidad de la interacción adulto-niño durante el uso de pantalla como factor protector central.')}
+      ${C('low', 'Estudios específicos sobre apego y pantalla en preescolares son escasos.')}
+    `,
+    upstream: [
+      { to: 'vinculo-primera-infancia', certainty: 'medium', text: 'Apego seguro' }
+    ],
+    downstream: [
+      { to: 'vinculo-ninez-media', certainty: 'low', text: 'Vínculo flexible' }
+    ]
+  },
+
+  'vinculo-ninez-media': {
+    summary: 'Vínculo flexible',
+    certainty: 'low',
+    content: `
+      <p>Fuera del paraguas EYSTAG. Período menos estudiado en términos de pantalla y apego.</p>
+      ${C('low', 'Vínculo parental sigue siendo factor protector general para uso saludable de pantalla, pero estudios específicos son escasos.')}
+    `,
+    upstream: [
+      { to: 'vinculo-preescolar', certainty: 'medium', text: 'Vínculo preescolar' }
+    ],
+    downstream: [
+      { to: 'vinculo-preadolescencia', certainty: 'low', text: 'Vínculo cambiante' }
+    ]
+  },
+
+  'vinculo-preadolescencia': {
+    summary: 'Vínculo cambiante',
+    certainty: 'low',
+    content: `
+      <p>El vínculo parental se transforma en preadolescencia: menos cercanía física, más diálogo. Sigue siendo factor protector.</p>
+      ${C('medium', 'Familias con mayor comunicación abierta sobre uso de pantalla tienen niños con menos uso problemático.')}
+      ${C('low', 'No hay marcos teóricos específicos consolidados sobre pantalla y apego en preadolescencia.')}
+    `,
+    upstream: [
+      { to: 'vinculo-ninez-media', certainty: 'low', text: 'Vínculo flexible' }
+    ],
+    downstream: []
+  },
+
+  /* === CREATIVIDAD === */
+  'creatividad-lactante': {
+    summary: 'Juego sensoriomotor',
+    certainty: 'low',
+    content: `
+      <p>La creatividad como tal no es constructo aplicable a lactantes; lo central es el juego sensoriomotor (exploración con manos, boca, movimiento).</p>
+      ${C('low', 'No hay evidencia robusta de que la pantalla en lactantes "atrofie" capacidades creativas posteriores.')}
+      ${C('medium', 'El mecanismo plausible es indirecto: tiempo de pantalla desplaza juego activo y exploración, que son la base sensoriomotora.')}
+    `,
+    upstream: [],
+    downstream: [
+      { to: 'creatividad-primera-infancia', certainty: 'medium', text: 'Exploración sensoriomotora' }
+    ]
+  },
+
+  'creatividad-primera-infancia': {
+    summary: 'Juego simbólico inicia',
+    certainty: 'medium',
+    content: `
+      <p>Entre 1 y 3 años aparece el juego simbólico (pretend play): hacer "como si". Este tipo de juego se considera fundamental para el desarrollo cognitivo, social y emocional.</p>
+      ${C('medium', 'El juego simbólico se asocia con mejor competencia social, regulación emocional y función ejecutiva (Smits-van der Nat et al., 2024, meta-análisis). <a class="cite" href="#bib-Smits2024">[ref]</a>')}
+      ${C('medium', 'Mayor tiempo de pantalla solitaria se asocia con menos juego simbólico, principalmente por desplazamiento.')}
+      ${C('medium', 'Evidencia longitudinal en gran muestra australiana muestra que el juego libre en primera infancia predice autorregulación años después (Colliver et al., 2022): es una de las pocas evidencias longitudinales que respalda el rol del juego libre en el desarrollo posterior. <a class="cite" href="#bib-Colliver2022">[ref]</a>')}
+      ${C('medium', 'Gavrilova y Veraksa (2024): la disponibilidad de juego con <strong>objetos físicos reales</strong> es el factor que mejor protege contra los berrinches al retirar la pantalla; las habilidades de función ejecutiva del niño, no. <a class="cite" href="#bib-Gavrilova2024">[ref]</a>')}
+    `,
+    upstream: [
+      { to: 'creatividad-lactante', certainty: 'low', text: 'Exploración sensoriomotora' }
+    ],
+    downstream: [
+      { to: 'creatividad-preescolar', certainty: 'medium', text: 'Juego simbólico se complejiza' }
+    ]
+  },
+
+  'creatividad-preescolar': {
+    summary: 'Pretend play pleno',
+    certainty: 'medium',
+    content: `
+      <p>Preescolar es la edad de oro del juego simbólico: roles, narrativas, mundos imaginarios. EYSTAG señala su importancia, pero la evidencia específica sobre pantalla y creatividad en preescolares es modesta.</p>
+      ${C('medium', 'Juego simbólico se asocia con mejor pensamiento divergente y resolución creativa de problemas, aunque las revisiones (Lillard et al., 2013) cuestionan la causalidad directa. <a class="cite" href="#bib-Lillard2013">[ref]</a>')}
+      ${C('medium', 'Evidencia longitudinal en gran muestra australiana muestra que el tiempo de juego libre en primera infancia predice autorregulación años después (Colliver et al., 2022). Refuerza el costo de oportunidad cuando la pantalla desplaza juego libre. <a class="cite" href="#bib-Colliver2022">[ref]</a>')}
+      ${C('low', 'La hipótesis "más pantalla → menos creatividad" en preescolares es plausible por encadenamiento (pantalla → menos juego libre → menos práctica de pensamiento divergente) pero no demostrada directamente.')}
+      ${C('low', 'La hipótesis del "aburrimiento productivo" (boredom → creativity) tiene evidencia débil incluso en adultos (Mann & Cadman, 2014, encontró efecto en convergente, no divergente; Hunter et al. 2016 no replicó) y muy limitada en preescolares. <a class="cite" href="#bib-Mann2014">[ref]</a>')}
+      <div class="def"><span class="def-term">Pensamiento divergente</span>: capacidad de generar múltiples ideas o soluciones a un problema abierto. Núcleo de la creatividad. Se desarrolla intensamente entre 4 y 6 años.</div>
+    `,
+    upstream: [
+      { to: 'creatividad-primera-infancia', certainty: 'medium', text: 'Juego simbólico inicial' }
+    ],
+    downstream: [
+      { to: 'creatividad-ninez-media', certainty: 'low', text: 'Juego con reglas' }
+    ]
+  },
+
+  'creatividad-ninez-media': {
+    summary: 'Juego con reglas',
+    certainty: 'low',
+    content: `
+      <p>Fuera del paraguas EYSTAG. El juego simbólico se transforma en juego con reglas, construcciones complejas, narrativas extensas.</p>
+      ${C('low', 'Asociaciones entre pantalla y creatividad en escolares son escasas; el mecanismo principal sigue siendo desplazamiento de juego libre.')}
+      ${C('medium', 'Algunos videojuegos creativos (sandbox, Minecraft) pueden fomentar creatividad técnica y narrativa bajo condiciones específicas.')}
+    `,
+    upstream: [
+      { to: 'creatividad-preescolar', certainty: 'medium', text: 'Pretend play preescolar' }
+    ],
+    downstream: [
+      { to: 'creatividad-preadolescencia', certainty: 'low', text: 'Creatividad como identidad' }
+    ]
+  },
+
+  'creatividad-preadolescencia': {
+    summary: 'Creatividad e identidad',
+    certainty: 'low',
+    content: `
+      <p>La creatividad se vuelve más conceptual y vinculada a identidad. La evidencia sobre pantalla y creatividad en este grupo es limitada y heterogénea.</p>
+      ${C('low', 'Algunos usos de pantalla (creación de contenido, programación, música, edición de video) pueden ser explícitamente creativos. La evidencia sobre su impacto en creatividad general es escasa.')}
+      ${C('medium', 'Consumo pasivo de redes sociales se asocia con menos producción creativa, asociación correlacional.')}
+    `,
+    upstream: [
+      { to: 'creatividad-ninez-media', certainty: 'low', text: 'Juego con reglas' }
+    ],
+    downstream: []
+  }
+};
+
+/* ============================================================
+   RENDERING
+   ============================================================ */
+
+function el(tag, attrs = {}, content = '') {
+  const e = document.createElement(tag);
+  Object.entries(attrs).forEach(([k, v]) => {
+    if (k === 'className') e.className = v;
+    else if (k === 'onclick') e.onclick = v;
+    else e.setAttribute(k, v);
+  });
+  if (typeof content === 'string') e.innerHTML = content;
+  else if (Array.isArray(content)) content.forEach(c => e.appendChild(c));
+  return e;
+}
+
+function findCell(dimId, ageId) {
+  return cells[`${dimId}-${ageId}`];
+}
+
+function findDimension(dimId) {
+  return dimensions.find(d => d.id === dimId);
+}
+
+function findAge(ageId) {
+  return ageGroups.find(a => a.id === ageId);
+}
+
+/* ----- MATRIX ----- */
+function renderMatrix() {
+  const wrap = el('div', { className: 'matrix-wrap' });
+  const grid = el('div', { className: 'matrix' });
+
+  grid.appendChild(el('div', { className: 'matrix-corner' }, 'Dimensión × Edad'));
+
+  ageGroups.forEach(age => {
+    const h = el('div', {
+      className: 'matrix-header',
+      onclick: () => navigate('age', age.id)
+    });
+    h.innerHTML = `<span class="age-range">${age.range}</span><span>${age.label}</span>`;
+    grid.appendChild(h);
+  });
+
+  dimensions.forEach(dim => {
+    const label = el('div', {
+      className: 'matrix-row-label',
+      onclick: () => navigate('dim', dim.id)
+    }, dim.label);
+    grid.appendChild(label);
+
+    ageGroups.forEach(age => {
+      const cell = findCell(dim.id, age.id);
+      if (!cell) {
+        grid.appendChild(el('div', { className: 'matrix-cell' }, '—'));
+        return;
+      }
+      const c = el('div', {
+        className: `matrix-cell ${cell.certainty}`,
+        onclick: () => navigate('cell', `${dim.id}/${age.id}`)
+      });
+      c.innerHTML = `
+        <div class="cell-summary">${cell.summary}</div>
+        <div class="cell-indicator">
+          <span class="legend-dot ${cell.certainty}"></span>
+          ${certaintyLabels[cell.certainty]}
+        </div>
+      `;
+      grid.appendChild(c);
+    });
+  });
+
+  wrap.appendChild(grid);
+  return wrap;
+}
+
+function renderMatrixPage() {
+  const page = el('section', { className: 'page active', id: 'matrix-page' });
+  page.innerHTML = `
+    <p class="page-eyebrow">Síntesis crítica · marzo 2026</p>
+    <h1>Pantallas en la infancia</h1>
+    <div class="page-objective">
+      <p class="page-objective-label">Objetivo</p>
+      <p class="page-objective-text">Esta página busca servir como mapa de la evidencia sobre la exposición a pantallas en niños y niñas de 0 a 12 años. Sin prescribir ni alarmar, distingue lo bien establecido de lo que es hipótesis o creencia popular, para acompañar con evidencia las decisiones de padres y madres a lo largo de la infancia.</p>
+    </div>
+    <p class="page-intro">
+      La síntesis se ordena como matriz de dimensiones del desarrollo (filas) por tramos etarios (columnas). Cada celda resume el estado de la evidencia y enlaza al detalle. Las cabeceras de fila y columna abren las vistas longitudinal (una dimensión a través de las edades) y transversal (una edad a través de las dimensiones).
+    </p>
+  `;
+  page.appendChild(renderMatrix());
+
+  const help = el('div', { className: 'matrix-help' });
+  help.innerHTML = `
+    <strong>Cómo navegar.</strong>
+    Click en una <strong>celda</strong> para abrir el detalle de esa intersección.
+    Click en el <strong>nombre de una dimensión</strong> (columna izquierda) para ver esa dimensión a través de todas las edades.
+    Click en el <strong>nombre de un tramo etario</strong> (fila superior) para ver todas las dimensiones en esa edad.
+    El color de fondo indica el nivel de certeza predominante: <span class="legend-pill"><span class="legend-dot high"></span>alta</span>, <span class="legend-pill"><span class="legend-dot medium"></span>media</span>, <span class="legend-pill"><span class="legend-dot low"></span>baja</span>.
+  `;
+  page.appendChild(help);
+
+  return page;
+}
+
+/* ----- CELL DETAIL ----- */
+function renderCellDetail(dimId, ageId) {
+  const dim = findDimension(dimId);
+  const age = findAge(ageId);
+  const cell = findCell(dimId, ageId);
+  if (!cell) return el('section', { className: 'page active' }, '<p>Celda no encontrada.</p>');
+
+  const page = el('section', { className: 'page active' });
+
+  const nav = el('div', { className: 'detail-nav' });
+  nav.innerHTML = `
+    <button class="detail-nav-btn" onclick="navigate('matrix')">← Matriz</button>
+    <button class="detail-nav-btn" onclick="navigate('dim', '${dimId}')">Ver toda la dimensión: ${dim.label}</button>
+    <button class="detail-nav-btn" onclick="navigate('age', '${ageId}')">Ver todo el tramo: ${age.label}</button>
+  `;
+  page.appendChild(nav);
+
+  const meta = el('div', { className: 'detail-meta' });
+  meta.innerHTML = `
+    <div class="detail-tags">
+      <span class="tag">${dim.label}</span>
+      <span class="tag">${age.label} · ${age.range}</span>
+      <span class="tag certainty-${cell.certainty}"><span class="legend-dot ${cell.certainty}"></span>Certeza ${certaintyLabels[cell.certainty].toLowerCase()}</span>
+    </div>
+    <h1>${dim.label} · ${age.label}</h1>
+  `;
+  page.appendChild(meta);
+
+  const content = el('div', { className: 'detail-content' }, cell.content);
+  page.appendChild(content);
+
+  const scaffoldBox = el('div', { className: 'scaffold-box' });
+  scaffoldBox.innerHTML = '<h3>Andamiaje del desarrollo</h3>';
+  const scaffoldCols = el('div', { className: 'scaffold-cols' });
+
+  const upstream = el('div');
+  upstream.innerHTML = '<h4 style="font-size:13px; color:var(--text-mute); margin:0 0 10px; text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Aguas arriba (alimenta esta celda)</h4>';
+  if (cell.upstream && cell.upstream.length) {
+    const list = el('div', { className: 'scaffold-list' });
+    cell.upstream.forEach(u => list.appendChild(scaffoldLink(u)));
+    upstream.appendChild(list);
+  } else {
+    upstream.innerHTML += '<p class="text-mute" style="font-size:13px;">No identificadas para esta celda inicial.</p>';
+  }
+  scaffoldCols.appendChild(upstream);
+
+  const downstream = el('div');
+  downstream.innerHTML = '<h4 style="font-size:13px; color:var(--text-mute); margin:0 0 10px; text-transform:uppercase; letter-spacing:0.05em; font-weight:600;">Aguas abajo (esta celda alimenta a)</h4>';
+  if (cell.downstream && cell.downstream.length) {
+    const list = el('div', { className: 'scaffold-list' });
+    cell.downstream.forEach(d => list.appendChild(scaffoldLink(d)));
+    downstream.appendChild(list);
+  } else {
+    downstream.innerHTML += '<p class="text-mute" style="font-size:13px;">No identificadas para esta celda terminal.</p>';
+  }
+  scaffoldCols.appendChild(downstream);
+
+  scaffoldBox.appendChild(scaffoldCols);
+  page.appendChild(scaffoldBox);
+
+  return page;
+}
+
+function scaffoldLink(link) {
+  const [targetDim, targetAge] = link.to.split('-');
+  // target.to is dimId-ageId concatenated; need to split correctly
+  // Some dim ids contain hyphens (salud-mental). Need to find the age suffix.
+  let dimId, ageId;
+  for (const age of ageGroups) {
+    if (link.to.endsWith('-' + age.id)) {
+      ageId = age.id;
+      dimId = link.to.slice(0, -age.id.length - 1);
+      break;
+    }
+  }
+  const dim = findDimension(dimId);
+  const age = findAge(ageId);
+  const btn = el('button', {
+    className: 'scaffold-link',
+    onclick: () => navigate('cell', `${dimId}/${ageId}`)
+  });
+  btn.innerHTML = `
+    <span class="legend-dot ${link.certainty}"></span>
+    <span class="scaffold-link-text">
+      <span class="scaffold-link-target">${dim ? dim.label : dimId} · ${age ? age.label : ageId}</span>
+      <span class="scaffold-link-desc">${link.text}</span>
+    </span>
+  `;
+  return btn;
+}
+
+/* ----- DIMENSION VIEW ----- */
+function renderDimensionPage(dimId) {
+  const dim = findDimension(dimId);
+  if (!dim) return el('section', { className: 'page active' }, '<p>Dimensión no encontrada.</p>');
+
+  const page = el('section', { className: 'page active' });
+  page.innerHTML = `
+    <div class="detail-nav">
+      <button class="detail-nav-btn" onclick="navigate('matrix')">← Matriz</button>
+    </div>
+    <p class="page-eyebrow">Modo dimensión-longitudinal</p>
+    <h1>${dim.label}</h1>
+    <p class="page-intro">Cómo se manifiesta esta dimensión a través de los cinco tramos etarios. Útil para entender cómo cambia el riesgo o el efecto con el desarrollo.</p>
+  `;
+
+  ageGroups.forEach(age => {
+    const cell = findCell(dimId, age.id);
+    if (!cell) return;
+    const section = el('div', { className: 'view-section' });
+    section.innerHTML = `
+      <div class="view-section-header">
+        <div>
+          <div class="view-section-title">${age.label} <span class="text-mute" style="font-weight:400;font-size:14px;">· ${age.range}</span></div>
+        </div>
+        <div class="detail-tags">
+          <span class="tag certainty-${cell.certainty}"><span class="legend-dot ${cell.certainty}"></span>${certaintyLabels[cell.certainty]}</span>
+          <button class="detail-nav-btn" onclick="navigate('cell', '${dimId}/${age.id}')">Ver celda completa →</button>
+        </div>
+      </div>
+      <div class="detail-content">${cell.content}</div>
+    `;
+    page.appendChild(section);
+  });
+
+  return page;
+}
+
+/* ----- AGE VIEW ----- */
+function renderAgePage(ageId) {
+  const age = findAge(ageId);
+  if (!age) return el('section', { className: 'page active' }, '<p>Tramo no encontrado.</p>');
+
+  const page = el('section', { className: 'page active' });
+  page.innerHTML = `
+    <div class="detail-nav">
+      <button class="detail-nav-btn" onclick="navigate('matrix')">← Matriz</button>
+    </div>
+    <p class="page-eyebrow">Modo edad-transversal</p>
+    <h1>${age.label} <span class="text-mute" style="font-weight:400;font-size:18px;">· ${age.range}</span></h1>
+    <p class="page-intro">Todas las dimensiones del desarrollo en este tramo etario. Útil para entender el momento del desarrollo en que está el niño.</p>
+  `;
+
+  dimensions.forEach(dim => {
+    const cell = findCell(dim.id, ageId);
+    if (!cell) return;
+    const section = el('div', { className: 'view-section' });
+    section.innerHTML = `
+      <div class="view-section-header">
+        <div>
+          <div class="view-section-title">${dim.label}</div>
+        </div>
+        <div class="detail-tags">
+          <span class="tag certainty-${cell.certainty}"><span class="legend-dot ${cell.certainty}"></span>${certaintyLabels[cell.certainty]}</span>
+          <button class="detail-nav-btn" onclick="navigate('cell', '${dim.id}/${ageId}')">Ver celda completa →</button>
+        </div>
+      </div>
+      <div class="detail-content">${cell.content}</div>
+    `;
+    page.appendChild(section);
+  });
+
+  return page;
+}
+
+/* ----- SCAFFOLDING PAGE ----- */
+function renderScaffoldingPage() {
+  const page = el('section', { className: 'page active' });
+  page.innerHTML = `
+    <p class="page-eyebrow">Andamiaje del desarrollo</p>
+    <h1>Cómo se conectan dimensiones y edades</h1>
+    <p class="page-intro">
+      El desarrollo no avanza en compartimentos separados. Habilidades tempranas funcionan como andamios para habilidades posteriores, y dimensiones distintas se influyen entre sí. Este mapa identifica las conexiones más relevantes para nuestro tema, con su nivel de certeza.
+    </p>
+
+    <div class="scaffold-page-intro">
+      <p><strong>Marcos teóricos en uso.</strong> Esta sección se apoya principalmente en (a) el modelo bioecológico de Bronfenbrenner, que sitúa el desarrollo en sistemas anidados, (b) la perspectiva vygotskiana sobre la zona de desarrollo próximo y el papel del adulto como andamio, y (c) literatura sobre <em>cascading effects</em> en pediatría del desarrollo (Masten & Cicchetti, 2010). No todas las cascadas postuladas son igualmente sólidas: cada conexión declara su nivel de certeza.</p>
+    </div>
+
+    <div class="scaffold-graph">
+
+      <div class="scaffold-cluster">
+        <div class="scaffold-cluster-title">Cascada del lenguaje</div>
+        <p>Una de las cascadas mejor establecidas en pediatría del desarrollo.</p>
+        <div class="scaffold-chain">
+          <button class="chain-node" onclick="navigate('cell','lenguaje-lactante')">Habla recibida en lactancia</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','lenguaje-primera-infancia')">Vocabulario receptivo</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','lenguaje-preescolar')">Narrativa preescolar</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','lenguaje-ninez-media')">Comprensión lectora</button>
+        </div>
+        <div class="claim"><div class="claim-dot high"></div><div class="claim-text">Cada eslabón predice al siguiente con magnitudes moderadas a grandes. Es una de las cascadas más robustas en pediatría del desarrollo.</div></div>
+      </div>
+
+      <div class="scaffold-cluster">
+        <div class="scaffold-cluster-title">Cascada de la regulación emocional</div>
+        <p>Vínculo → corregulación → autorregulación → autocontrol escolar.</p>
+        <div class="scaffold-chain">
+          <button class="chain-node" onclick="navigate('cell','vinculo-lactante')">Sincronía facial</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','socioemocional-primera-infancia')">Corregulación</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','comportamiento-preescolar')">Autorregulación</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','comportamiento-ninez-media')">Autocontrol escolar</button>
+        </div>
+        <div class="claim"><div class="claim-dot high"></div><div class="claim-text">Bien respaldada teóricamente y por estudios longitudinales (Eisenberg, Spinrad y colegas).</div></div>
+        <div class="claim"><div class="claim-dot medium"></div><div class="claim-text">El uso de pantalla como regulador externo puede comprometer esta cascada al desplazar la corregulación con un adulto (Fitzpatrick et al., 2024). <a class="cite" href="#bib-Fitzpatrick2024">[ref]</a></div></div>
+        <div class="claim"><div class="claim-dot medium"></div><div class="claim-text">Específicamente, el uso parental de pantallas para regular las emociones del niño (constructo PDER) predice mayor ira y menor control esforzado un año después, con el fenómeno asociado de "screen time tantrums" (Jusienė et al., 2024). <a class="cite" href="#bib-Jusiene2024">[ref]</a></div></div>
+      </div>
+
+      <div class="scaffold-cluster">
+        <div class="scaffold-cluster-title">Cascada del sueño</div>
+        <p>Sueño consolidado alimenta capacidades cognitivas y regulación.</p>
+        <div class="scaffold-chain">
+          <button class="chain-node" onclick="navigate('cell','sueno-lactante')">Ritmo circadiano</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','sueno-primera-infancia')">Sueño consolidado</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','cognicion-preescolar')">Función ejecutiva</button>
+        </div>
+        <div class="claim"><div class="claim-dot high"></div><div class="claim-text">Sueño suficiente es condición necesaria para consolidación de aprendizaje y regulación emocional. Una de las cascadas más sólidas en neurociencia del desarrollo.</div></div>
+      </div>
+
+      <div class="scaffold-cluster">
+        <div class="scaffold-cluster-title">Cascada del juego simbólico y creatividad</div>
+        <p>Juego sensoriomotor → simbólico → pensamiento divergente. Más débil que las anteriores.</p>
+        <div class="scaffold-chain">
+          <button class="chain-node" onclick="navigate('cell','creatividad-lactante')">Juego sensoriomotor</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','creatividad-primera-infancia')">Juego simbólico</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','creatividad-preescolar')">Pensamiento divergente</button>
+        </div>
+        <div class="claim"><div class="claim-dot medium"></div><div class="claim-text">Asociaciones consistentes en estudios correlacionales (Smits-van der Nat et al., 2024, meta-análisis). Causalidad cuestionada por Lillard et al. (2013).</div></div>
+        <div class="claim"><div class="claim-dot low"></div><div class="claim-text">La hipótesis "pantalla → menos creatividad" en preescolares es plausible por encadenamiento pero no demostrada directamente.</div></div>
+      </div>
+
+      <div class="scaffold-cluster">
+        <div class="scaffold-cluster-title">Cascada socioemocional → salud mental</div>
+        <p>Regulación emocional temprana → habilidades sociales → salud mental en preadolescencia.</p>
+        <div class="scaffold-chain">
+          <button class="chain-node" onclick="navigate('cell','socioemocional-primera-infancia')">Regulación emocional</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','socioemocional-preescolar')">Habilidades sociales</button>
+          <span class="chain-arrow">→</span>
+          <button class="chain-node" onclick="navigate('cell','salud-mental-preadolescencia')">Salud mental</button>
+        </div>
+        <div class="claim"><div class="claim-dot high"></div><div class="claim-text">Bien respaldada por estudios longitudinales (cohortes Dunedin, ALSPAC).</div></div>
+        <div class="claim"><div class="claim-dot medium"></div><div class="claim-text">Habilidades sociales tempranas son factor protector contra problemas de salud mental en preadolescencia y adolescencia.</div></div>
+        <div class="claim"><div class="claim-dot high"></div><div class="claim-text">El meta-análisis longitudinal más amplio disponible (117 estudios, ~292.000 niños 0–10 años) confirma una asociación bidireccional entre tiempo de pantalla y problemas socioemocionales que opera sobre esta cascada (Vasconcellos et al., 2025). <a class="cite" href="#bib-Vasconcellos2025">[ref]</a></div></div>
+      </div>
+
+      <div class="scaffold-cluster">
+        <div class="scaffold-cluster-title">Cascadas conectoras entre dimensiones</div>
+        <p>Conexiones transversales (no solo en línea temporal) que vale la pena destacar.</p>
+        <div class="claim"><div class="claim-dot high"></div><div class="claim-text"><strong>Sueño → cognición.</strong> El sueño insuficiente afecta función ejecutiva en cualquier edad.</div></div>
+        <div class="claim"><div class="claim-dot high"></div><div class="claim-text"><strong>Lenguaje → función ejecutiva.</strong> El lenguaje interno es vehículo del control inhibitorio (Vygotsky; Diamond, 2013).</div></div>
+        <div class="claim"><div class="claim-dot high"></div><div class="claim-text"><strong>Vínculo → regulación emocional.</strong> El apego seguro es base para el desarrollo de la regulación.</div></div>
+        <div class="claim"><div class="claim-dot medium"></div><div class="claim-text"><strong>Juego simbólico → función ejecutiva.</strong> Asociación robusta en estudios correlacionales.</div></div>
+        <div class="claim"><div class="claim-dot low"></div><div class="claim-text"><strong>Actividad física → salud mental.</strong> Plausible y respaldada en escolares y adolescentes; menos clara en menores de 5.</div></div>
+      </div>
+
+    </div>
+  `;
+  return page;
+}
+
+/* ----- METHODOLOGY ----- */
+function renderMethodologyPage() {
+  const page = el('section', { className: 'page active content-page' });
+  page.innerHTML = `
+    <p class="page-eyebrow">Metodología</p>
+    <h1>Cómo se construyó este documento</h1>
+
+    <h2>Tramos etarios adoptados</h2>
+    <p>Los tramos siguen la convención más usada en pediatría del desarrollo y en literatura sobre desarrollo infantil temprano:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tramo</th><th>Rango</th><th>Fuente convencional</th></tr></thead>
+        <tbody>
+          <tr><td>Lactante</td><td>0–12 meses</td><td>AAP Bright Futures; WHO Early Childhood Development</td></tr>
+          <tr><td>Primera infancia (toddler)</td><td>1–3 años</td><td>AAP Bright Futures; OECD Starting Strong</td></tr>
+          <tr><td>Preescolar</td><td>3–5 años</td><td>AAP Bright Futures; EYSTAG cubre 0–5</td></tr>
+          <tr><td>Niñez media temprana</td><td>6–8 años</td><td>AAP Bright Futures (middle childhood); NICHD</td></tr>
+          <tr><td>Niñez tardía / preadolescencia</td><td>9–12 años</td><td>AAP Bright Futures; OMS (preadolescencia 10–19)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Por qué estos cortes.</strong> Coinciden con transiciones biológicas (caminar, lenguaje, escolarización, pubertad incipiente) que cambian sustancialmente la relación del niño con pantallas. Las fuentes principales (AAP, OMS, NICHD) varían en los cortes específicos pero convergen en estos tramos como utilidad clínica y de política pública.</p>
+
+    <p><strong>Limitación del corte.</strong> El desarrollo es continuo. Los tramos son convenciones que facilitan la comunicación, no fronteras biológicas. Un niño de 5 años y 11 meses no es categóricamente distinto de uno de 6 años. Las conexiones de andamiaje cruzan los tramos.</p>
+
+    <h2>Niveles de certeza</h2>
+    <p>Se usan tres niveles para cada afirmación principal y para cada conexión de andamiaje:</p>
+    <ul>
+      <li><span class="legend-dot high"></span> <strong>Alta</strong>: múltiples revisiones sistemáticas o meta-análisis coinciden. Efectos consistentes, magnitud cuantificable. Causalidad razonablemente establecida o asociación muy consistente.</li>
+      <li><span class="legend-dot medium"></span> <strong>Media</strong>: revisiones encuentran resultados divergentes, o el efecto depende fuertemente de moderadores. Hay señal pero no es uniforme. Incluye también casos de evidencia limitada con calidad metodológica baja.</li>
+      <li><span class="legend-dot low"></span> <strong>Baja</strong>: afirmación popular o hipótesis plausible sin estudios sistemáticos que la respalden. O área donde la investigación es incipiente o ausente.</li>
+    </ul>
+    <p>Cuando una sección combina afirmaciones de varios niveles, el nivel de la celda en la matriz refleja el de las afirmaciones principales, con el desglose dentro del detalle.</p>
+
+    <h2>Anclaje en evidencia</h2>
+    <ul>
+      <li><strong>Para 0-5 años:</strong> EYSTAG 2026 como fuente principal, complementada por estudios longitudinales recientes (Fitzpatrick 2024 <em>JAMA Pediatrics</em>; Vasconcellos et al. 2025 <em>Psychological Bulletin</em> con 117 estudios y ~292.000 niños; Toledo-Vargas 2025 <em>JAMA Pediatrics</em>; Jusienė et al. 2024 sobre PDER) y por evidencia chilena disponible (Mil Primeros Días UC; Rau &amp; Daniel UC con datos ELPI; Soto-Ramírez, Godoy, Narea y Ayala 2025 ya publicado en <em>Frontiers in Psychology</em>).</li>
+      <li><strong>Para 6-12 años (fuera del paraguas EYSTAG):</strong> AAP 2026 <em>Digital Ecosystems, Children, and Adolescents</em> (Munzer et al., Pediatrics) con su marco 5Cs y modelo socioecológico; Eirich et al. 2022 <em>JAMA Psychiatry</em> (meta-análisis internalización/externalización en menores de 12); recomendaciones OMS y NICE; umbrella review de Sanders et al. 2024 (102 meta-análisis); estudios chilenos para niñez media (Páez-Herrera et al. 2025, PUCV Valparaíso).</li>
+      <li><strong>Para contexto chileno:</strong> guía oficial MINEDUC <em>Infancias y Pantallas: Guía para Cuidar los Vínculos</em> (enero 2026, Subsecretaría de Educación Parvularia); Ley 21.801 "Modo Aula" vigente desde marzo 2026; encuestas CNTV; Observatorio Nutricional 2025 Nestlé–Universidad Finis Terrae.</li>
+    </ul>
+
+    <h2>Tendencias y contexto cuantitativo</h2>
+    <p>Tres referencias útiles para situar el uso típico actual:</p>
+    <ul>
+      <li><strong>Tendencia global.</strong> Mori et al. 2026 (Universidad de Turku, <em>Clinical Child Psychology and Psychiatry</em>): primera revisión sistemática (60 estudios, 1991–2022, 0–19 años) que cubre pre y post-pandemia. Reporta un alza sostenida del tiempo de pantalla en tres décadas, con un escalón claro después del inicio de COVID-19. <a class="cite" href="#bib-Mori2026">[ref]</a></li>
+      <li><strong>Uso típico en Chile.</strong> Observatorio Nutricional 2025 (Nestlé y Universidad Finis Terrae): los niños chilenos acceden en promedio a <strong>1,8 dispositivos electrónicos</strong> y pasan cerca de <strong>3 horas diarias frente a pantallas</strong>, con el celular como dispositivo dominante. <a class="cite" href="#bib-ObsNutricional2025">[ref]</a></li>
+      <li><strong>Marco regulatorio escolar.</strong> Ley 21.801 ("Modo Aula"), promulgada el 11 de febrero de 2026 y vigente desde el 2 de marzo de 2026, prohíbe como regla general el uso de celulares y dispositivos personales con internet en parvularia, básica y media durante actividades escolares. Excepciones acotadas (uso pedagógico autorizado, NEE, salud, emergencias). Los establecimientos tienen plazo hasta el 30 de junio de 2026 para actualizar sus reglamentos internos. <a class="cite" href="#bib-Ley21801">[ref]</a></li>
+    </ul>
+
+    <h2>Decisiones editoriales</h2>
+    <ul>
+      <li>Cuando EYSTAG declara "evidencia limitada", se mantiene ese nivel; no se infla.</li>
+      <li>Cuando la evidencia es correlacional, se declara y se mencionan factores de confusión plausibles.</li>
+      <li>Cuando hay efecto cuantificado, se incluye la magnitud.</li>
+      <li>Las conexiones de andamiaje no se inventan: si una cascada es plausible pero no está respaldada, se declara con certeza baja.</li>
+    </ul>
+  `;
+  return page;
+}
+
+/* ----- LIMITATIONS ----- */
+function renderLimitationsPage() {
+  const page = el('section', { className: 'page active content-page' });
+  page.innerHTML = `
+    <p class="page-eyebrow">Limitaciones</p>
+    <h1>Lo que esta síntesis no resuelve</h1>
+
+    <h2>Del informe EYSTAG (anclaje principal 0–5)</h2>
+    <ul>
+      <li><strong>Plazo muy corto</strong> (10 semanas entre inicio formal y publicación, enero–marzo 2026). El panel reconoce que impidió una revisión exhaustiva.</li>
+      <li><strong>Una sola base de datos</strong> (PubMed). Excluye literatura no indexada allí (PsycINFO, ERIC, SciELO).</li>
+      <li><strong>Revisión de revisiones</strong> (umbrella review): hereda los sesgos y vacíos de revisiones previas. Si un tema no ha sido revisado sistemáticamente, queda invisible.</li>
+      <li><strong>No evaluó la calidad</strong> de los estudios incluidos en las revisiones.</li>
+      <li><strong>Sesgo de literatura observacional</strong>: la mayoría de los estudios son transversales. Conclusiones causales son frágiles.</li>
+      <li><strong>Excluyó contextos educativos formales</strong>: jardines infantiles y aulas.</li>
+      <li><strong>Pocos estudios en menores de 2 años</strong>; principio precautorio en lugar de evidencia directa para ese grupo.</li>
+      <li><strong>Marco cultural anglosajón</strong>: las recomendaciones sobre estructura del hogar asumen un modelo familiar específico.</li>
+    </ul>
+
+    <h2>De extender a edades fuera del rango EYSTAG (6–12 años)</h2>
+    <ul>
+      <li>Salir del paraguas significa que las afirmaciones para 6-12 años no están respaldadas por la misma revisión sintética. Se usan fuentes separadas (AAP, revisiones específicas), lo que introduce heterogeneidad.</li>
+      <li>La literatura en escolares y preadolescentes está dominada por temas de redes sociales, salud mental y videojuegos, con menos foco en desarrollo cognitivo y lingüístico.</li>
+      <li>La línea entre "uso problemático" y "uso intensivo normal" es difusa en estos rangos.</li>
+    </ul>
+
+    <h2>De este HTML</h2>
+    <ul>
+      <li><strong>Snapshot temporal:</strong> la evidencia se mueve. Esta síntesis refleja literatura disponible en marzo de 2026. En 12-24 meses partes pueden estar desactualizadas, especialmente en preadolescentes y redes sociales, donde la investigación avanza rápido.</li>
+      <li><strong>No es revisión sistemática propia:</strong> se sintetizan revisiones existentes más estudios individuales relevantes. Las decisiones sobre qué incluir son juiciosas, no exhaustivas.</li>
+      <li><strong>No reemplaza consulta profesional:</strong> ante dudas específicas sobre un niño concreto, hablar con pediatra, neurólogo infantil o psicólogo de desarrollo.</li>
+      <li><strong>La adaptación al contexto chileno</strong> se basa en evidencia local disponible más supuestos razonables sobre el contexto, no en una caracterización cuantitativa exhaustiva del uso de pantallas en Chile.</li>
+      <li><strong>Causalidad limitada:</strong> incluso los hallazgos con certeza alta son en su mayoría correlacionales. Asociaciones consistentes no son lo mismo que causas demostradas.</li>
+    </ul>
+  `;
+  return page;
+}
+
+/* ----- BIBLIOGRAPHY ----- */
+
+/* Estructura de datos: id, autores+año, título, journal, url, type, group, featured */
+const BIBLIO_TYPES = {
+  'review':       { label: 'Revisión sistemática', cls: 'type-review' },
+  'meta':         { label: 'Meta-análisis',        cls: 'type-meta' },
+  'longitudinal': { label: 'Estudio longitudinal', cls: 'type-longitudinal' },
+  'transversal':  { label: 'Estudio transversal',  cls: '' },
+  'cohort':       { label: 'Estudio de cohorte',   cls: 'type-longitudinal' },
+  'guideline':    { label: 'Guía oficial',         cls: 'type-guideline' },
+  'law':          { label: 'Norma jurídica',       cls: 'type-law' },
+  'chilean':      { label: 'Evidencia chilena',    cls: 'type-chilean' },
+  'theory':       { label: 'Marco teórico',        cls: '' },
+  'survey':       { label: 'Encuesta nacional',    cls: '' }
+};
+
+const BIBLIO_GROUPS = [
+  { id: 'anchor',     label: 'Documento anclaje (0–5 años)' },
+  { id: 'recent',     label: 'Estudios longitudinales y meta-análisis recientes' },
+  { id: 'regulation', label: 'Regulación emocional y tantrums' },
+  { id: 'sleep',      label: 'Sueño' },
+  { id: 'play',       label: 'Juego simbólico, creatividad y aburrimiento' },
+  { id: 'childcare',  label: 'Pantallas en jardines y centros de cuidado' },
+  { id: 'school',     label: 'Niñez media y preadolescencia' },
+  { id: 'chile',      label: 'Evidencia y guías chilenas' },
+  { id: 'intl',       label: 'Guías internacionales' },
+  { id: 'theory',     label: 'Marcos teóricos del desarrollo' },
+  { id: 'context',    label: 'Contexto y tendencias' }
+];
+
+const BIBLIO = [
+  /* ANCLAJE */
+  { id: 'EYSTAG2026', group: 'anchor', featured: true, type: 'review',
+    authors: 'Early Years Screen Time Advisory Group (EYSTAG). 2026',
+    title: 'Screen use by children aged under five: independent report',
+    journal: 'Department for Education y Department of Health and Social Care, Reino Unido. Marzo 2026',
+    url: 'https://assets.publishing.service.gov.uk/media/69c53daf4a06660f085442a7/EYSTAG_report.pdf'
+  },
+
+  /* RECIENTES LONGITUDINALES Y META-ANÁLISIS */
+  { id: 'Fitzpatrick2024', group: 'recent', featured: true, type: 'longitudinal',
+    authors: 'Fitzpatrick C., Pan P.M., Lemieux A., Harvey E., Rocha F.A., Garon-Carrier G. 2024',
+    title: 'Early-Childhood Tablet Use and Outbursts of Anger',
+    journal: 'JAMA Pediatrics, octubre 2024. 315 niños canadienses, análisis dentro-del-individuo, 3,5 → 5,5 años',
+    url: 'https://jamanetwork.com/journals/jamapediatrics/fullarticle/2822089'
+  },
+  { id: 'Vasconcellos2025', group: 'recent', featured: true, type: 'meta',
+    authors: 'Vasconcellos R.P., Sanders T., Lonsdale C., Parker P., Conigrave J., Tang S., del Pozo Cruz B., Biddle S.J.H., Taylor R., Innes-Hughes C., Salmela-Aro K., Vasconcellos D., Wilhite K., Tremaine E., Booker B., Noetel M. 2025',
+    title: 'Electronic screen use and children\'s socioemotional problems: A systematic review and meta-analysis of longitudinal studies',
+    journal: 'Psychological Bulletin 151(5):513–543. 117 estudios longitudinales, ~292.000 niños 0–10 años',
+    url: 'https://www.apa.org/pubs/journals/releases/bul-bul0000468.pdf'
+  },
+  { id: 'Toledo2025', group: 'recent', type: 'review',
+    authors: 'Toledo-Vargas M., Chong K.H., Maddren C.I., Howard S.J., Wakefield B., Okely A.D. 2025',
+    title: 'Parental Technology Use in a Child\'s Presence and Health and Development in the Early Years',
+    journal: 'JAMA Pediatrics, 2025',
+    url: 'https://jamanetwork.com/journals/jamapediatrics/fullarticle/2832194'
+  },
+  { id: 'Madigan2020', group: 'recent', featured: true, type: 'meta',
+    authors: 'Madigan S., McArthur B.A., Anhorn C., Eirich R., Christakis D.A. 2020',
+    title: 'Associations Between Screen Use and Child Language Skills: A Systematic Review and Meta-analysis',
+    journal: 'JAMA Pediatrics',
+    url: 'https://jamanetwork.com/journals/jamapediatrics/fullarticle/2762864'
+  },
+  { id: 'Mallawaarachchi2024', group: 'recent', type: 'meta',
+    authors: 'Mallawaarachchi S. y col. 2024',
+    title: 'Early Childhood Screen Use Contexts and Cognitive and Psychosocial Outcomes: A Systematic Review and Meta-analysis',
+    journal: 'JAMA Pediatrics',
+    url: 'https://jamanetwork.com/journals/jamapediatrics/fullarticle/2822091'
+  },
+  { id: 'Sanders2024', group: 'recent', type: 'review',
+    authors: 'Sanders T. y col. 2024',
+    title: 'An umbrella review of the benefits and risks associated with youths\' interactions with electronic screens',
+    journal: 'Nature Human Behaviour. 102 meta-análisis sintetizados',
+    url: 'https://www.nature.com/articles/s41562-023-01712-8'
+  },
+  { id: 'Brushe2024', group: 'recent', type: 'cohort',
+    authors: 'Brushe M.E., Haag D.G., Melhuish E.C., Reilly S., Gregory T. 2024',
+    title: 'Screen Time and Parent-Child Talk When Children Are Aged 12 to 36 Months',
+    journal: 'JAMA Pediatrics. Mediciones con grabaciones de audio LENA',
+    url: 'https://jamanetwork.com/journals/jamapediatrics/fullarticle/2815616'
+  },
+  { id: 'Eirich2022', group: 'school', featured: true, type: 'meta',
+    authors: 'Eirich R., McArthur B.A., Anhorn C., McGuinness C., Christakis D.A., Madigan S. 2022',
+    title: 'Association of Screen Time With Internalizing and Externalizing Behavior Problems in Children 12 Years or Younger: A Systematic Review and Meta-analysis',
+    journal: 'JAMA Psychiatry 79(5):393–405',
+    url: 'https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2790189'
+  },
+  { id: 'Mori2026', group: 'context', type: 'review',
+    authors: 'Mori Y., Silwal S., Wan Mohd Yunus W.M.A., Sourander A. 2026',
+    title: 'Long-Term Trends in Screen Time Use Among Children and Adolescents: A Systematic Review Including Pre- and Post-COVID Periods',
+    journal: 'Clinical Child Psychology and Psychiatry, marzo 2026. 60 estudios 1991–2022, 0–19 años',
+    url: 'https://journals.sagepub.com/doi/full/10.1177/13591045261432532'
+  },
+
+  /* REGULACIÓN EMOCIONAL */
+  { id: 'Jusiene2024', group: 'regulation', type: 'longitudinal',
+    authors: 'Jusienė R. y col. 2024',
+    title: 'Cure for tantrums? Longitudinal associations between parental digital emotion regulation and children\'s self-regulatory skills',
+    journal: 'Frontiers in Child and Adolescent Psychiatry. 265 niños lituanos, T1 3,5 años → T2 4,5 años. Introduce el constructo PDER',
+    url: 'https://www.frontiersin.org/journals/child-and-adolescent-psychiatry/articles/10.3389/frcha.2024.1276154/full'
+  },
+  { id: 'Gavrilova2024', group: 'regulation', type: 'transversal',
+    authors: 'Gavrilova M., Veraksa N. 2024',
+    title: 'Not EF skills but play with real toys prevents screen time tantrums in children',
+    journal: 'Frontiers in Psychology, julio 2024',
+    url: 'https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1384424/full'
+  },
+
+  /* SUEÑO */
+  { id: 'Janssen2020', group: 'sleep', type: 'review',
+    authors: 'Janssen X. y col. 2020',
+    title: 'Associations of screen time, sedentary time and physical activity with sleep in under 5s',
+    journal: 'Sleep Medicine Reviews',
+    url: 'https://www.sciencedirect.com/science/article/abs/pii/S1087079219301455'
+  },
+  { id: 'Carter2016', group: 'sleep', type: 'meta',
+    authors: 'Carter B., Rees P., Hale L., Bhattacharjee D., Paradkar M.S. 2016',
+    title: 'Association Between Portable Screen-Based Media Device Access or Use and Sleep Outcomes: A Systematic Review and Meta-analysis',
+    journal: 'JAMA Pediatrics. 6–19 años',
+    url: 'https://jamanetwork.com/journals/jamapediatrics/fullarticle/2571467'
+  },
+  { id: 'Hale2015', group: 'sleep', type: 'review',
+    authors: 'Hale L., Guan S. 2015',
+    title: 'Screen time and sleep among school-aged children and adolescents: A systematic literature review',
+    journal: 'Sleep Medicine Reviews',
+    url: ''
+  },
+  { id: 'Hysing2015', group: 'sleep', type: 'transversal',
+    authors: 'Hysing M. y col. 2015',
+    title: 'Sleep and use of electronic devices in adolescence: Results from a large population-based study',
+    journal: 'BMJ Open',
+    url: 'https://bmjopen.bmj.com/content/5/1/e006748'
+  },
+
+  /* JUEGO Y CREATIVIDAD */
+  { id: 'Smits2024', group: 'play', type: 'meta',
+    authors: 'Smits-van der Nat M., van der Wilt F., Meeter M., van der Veen C. 2024',
+    title: 'The Value of Pretend Play for Social Competence in Early Childhood: A Meta-analysis',
+    journal: 'Educational Psychology Review',
+    url: 'https://link.springer.com/article/10.1007/s10648-024-09884-z'
+  },
+  { id: 'Lillard2013', group: 'play', type: 'review',
+    authors: 'Lillard A.S. y col. 2013',
+    title: 'The Impact of Pretend Play on Children\'s Development: A Review of the Evidence',
+    journal: 'Psychological Bulletin',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/22905949/'
+  },
+  { id: 'Mann2014', group: 'play', type: 'transversal',
+    authors: 'Mann S., Cadman R. 2014',
+    title: 'Does being bored make us more creative?',
+    journal: 'Creativity Research Journal',
+    url: 'https://www.tandfonline.com/doi/abs/10.1080/10400419.2014.901073'
+  },
+  { id: 'Colliver2022', group: 'play', type: 'longitudinal',
+    authors: 'Colliver Y., Harrison L.J., Brown J.E., Humburg P. 2022',
+    title: 'Free play predicts self-regulation years later: Longitudinal evidence from a large Australian sample of toddlers and preschoolers',
+    journal: 'Early Childhood Research Quarterly',
+    url: ''
+  },
+
+  /* JARDINES Y CENTROS DE CUIDADO */
+  { id: 'Vanderloo2014', group: 'childcare', type: 'review',
+    authors: 'Vanderloo L.M. 2014',
+    title: 'Screen-viewing among preschoolers in childcare: a systematic review',
+    journal: 'BMC Pediatrics',
+    url: 'https://bmcpediatr.biomedcentral.com/articles/10.1186/1471-2431-14-205'
+  },
+
+  /* NIÑEZ MEDIA Y PREADOLESCENCIA */
+  { id: 'AAP2026', group: 'school', featured: true, type: 'guideline',
+    authors: 'Munzer T., Parga-Belinkie J., Milkovich L.M., Tomopoulos S., Ajumobi T., Cross C., Gerwin R., Madigan S., Council on Communications and Media. 2026',
+    title: 'Digital Ecosystems, Children, and Adolescents: Policy Statement (con Technical Report acompañante)',
+    journal: 'Pediatrics 157(2):e2025075320–e2025075321. Reemplaza la guía AAP 2016. Introduce el marco de las 5 Cs y modelo socioecológico de Bronfenbrenner',
+    url: 'https://publications.aap.org/pediatrics/article/157/2/e2025075320/206129/Digital-Ecosystems-Children-and-Adolescents-Policy'
+  },
+  { id: 'Adelantado2019', group: 'school', type: 'meta',
+    authors: 'Adelantado-Renau M. y col. 2019',
+    title: 'Association Between Screen Media Use and Academic Performance Among Children and Adolescents: A Systematic Review and Meta-analysis',
+    journal: 'JAMA Pediatrics. 58 estudios, 4–18 años',
+    url: 'https://jamanetwork.com/journals/jamapediatrics/fullarticle/2751330'
+  },
+  { id: 'Lai2025', group: 'school', type: 'meta',
+    authors: 'Lai N.M. y col. 2025',
+    title: 'The effectiveness of school-based interventions for reducing screen time – a systematic review and meta-analysis',
+    journal: 'Child and Adolescent Mental Health. 39 estudios, 95.033 participantes. Certeza GRADE baja para la mayoría de resultados',
+    url: 'https://acamh.onlinelibrary.wiley.com/doi/full/10.1111/camh.70022'
+  },
+  { id: 'Ulum2026', group: 'school', type: 'meta',
+    authors: 'Ulum Ö.G. 2026',
+    title: 'Screen Handicap in Mathematics: A Meta-Analysis of Mathematics Performance Related to Screen Time and Type',
+    journal: 'European Journal of Education',
+    url: 'https://onlinelibrary.wiley.com/doi/10.1111/ejed.70400'
+  },
+  { id: 'Foreman2021', group: 'school', type: 'meta',
+    authors: 'Foreman J., Salim A.T. y col. 2021',
+    title: 'Association between digital smart device use and myopia: a systematic review and meta-analysis',
+    journal: 'The Lancet Digital Health',
+    url: 'https://www.thelancet.com/journals/landig/article/PIIS2589-7500(21)00135-7/fulltext'
+  },
+  { id: 'Shannon2022', group: 'school', type: 'meta',
+    authors: 'Shannon H., Bush K., Villeneuve P.J., Hellemans K.G.C., Guimond S. 2022',
+    title: 'Problematic Social Media Use in Adolescents and Young Adults: Systematic Review and Meta-analysis',
+    journal: 'JMIR Mental Health 9(4):e33450',
+    url: 'https://mental.jmir.org/2022/4/e33450/'
+  },
+
+  /* EVIDENCIA CHILENA */
+  { id: 'MINEDUC2026', group: 'chile', featured: true, type: 'guideline',
+    authors: 'Subsecretaría de Educación Parvularia, MINEDUC. 2026',
+    title: 'Infancias y Pantallas: Guía para Cuidar los Vínculos',
+    journal: 'Gobierno de Chile, enero 2026',
+    url: 'https://parvularia.mineduc.cl/wp-content/uploads/2026/02/Infancia-y-Pantallas.pdf'
+  },
+  { id: 'SotoRamirez2025', group: 'chile', featured: true, type: 'longitudinal',
+    authors: 'Soto-Ramírez P., Godoy F., Narea M., Ayala C. 2025',
+    title: 'Screen exposure in Chilean children during early childhood and socio-emotional problems: relationship and directionality',
+    journal: 'Frontiers in Psychology, agosto 2025. 669 niños chilenos, CBCL, T1 3,5 años (2021) → T2 5,4 años (2023), cross-lagged panel model',
+    url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12410099/'
+  },
+  { id: 'NareaMilDias', group: 'chile', type: 'chilean',
+    authors: 'Narea M. y equipo del Centro Justicia Educacional UC',
+    title: 'Mil Primeros Días',
+    journal: 'Estudio longitudinal con 1.000 familias de Santiago seguidas desde 2019',
+    url: 'https://centrojusticiaeducacional.uc.cl'
+  },
+  { id: 'RauDaniel', group: 'chile', type: 'chilean',
+    authors: 'Rau T., Daniel F.',
+    title: 'Efecto de la exposición a Internet móvil en el desarrollo cognitivo y socioemocional de niños chilenos: evidencia de la instalación de antenas 4G/5G y datos ELPI',
+    journal: 'Instituto de Economía UC y Clapes UC',
+    url: 'https://clapesuc.cl/'
+  },
+  { id: 'PaezHerrera2025', group: 'chile', type: 'transversal',
+    authors: 'Páez-Herrera J., Álvarez-González S., López-Lara S., Otero-Tricio C., Rojas-Martínez W., Salgado-Díaz S., Yáñez-Sepúlveda R., Hurtado-Almonacid J. 2025',
+    title: 'Relationship Between the Use of Screens and the Motor Development of Children from 8 to 10 Years of Age',
+    journal: 'Children 12(5):584. PUCV Valparaíso. 206 niños chilenos 8–10 años',
+    url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12109627/'
+  },
+  { id: 'Aboitiz', group: 'chile', type: 'chilean',
+    authors: 'Aboitiz F., Alamos F.',
+    title: 'Comentarios sobre captura atencional y desarrollo neurológico en relación a pantallas',
+    journal: 'Centro Interdisciplinario de Neurociencia UC',
+    url: ''
+  },
+  { id: 'ChileCrece2017', group: 'chile', type: 'guideline',
+    authors: 'Chile Crece Contigo. 2017',
+    title: 'Niños, niñas y adolescentes frente a las pantallas',
+    journal: 'Gobierno de Chile',
+    url: 'https://www.crececontigo.gob.cl/wp-content/uploads/2017/03/NN-frente-a-las-pantallas.pdf'
+  },
+  { id: 'CNTV2023', group: 'chile', type: 'survey',
+    authors: 'Consejo Nacional de Televisión (CNTV) Chile. 2023',
+    title: 'Encuesta sobre consumo audiovisual de niños, niñas y adolescentes',
+    journal: '',
+    url: 'https://www.cntv.cl/'
+  },
+  { id: 'Ley21801', group: 'chile', type: 'law',
+    authors: 'República de Chile. 2026',
+    title: 'Ley 21.801 ("Modo Aula") que regula el uso de dispositivos móviles personales con internet en establecimientos educacionales',
+    journal: 'Promulgada el 11 de febrero de 2026, vigente desde el 2 de marzo de 2026. Aplica a educación parvularia, básica y media',
+    url: 'https://www.gob.cl/noticias/ley-regulacion-celulares-salas-clases-modo-aula/'
+  },
+  { id: 'ObsNutricional2025', group: 'chile', type: 'survey',
+    authors: 'Observatorio Nutricional Nestlé–Universidad Finis Terrae. 2025',
+    title: 'Encuesta sobre acceso a dispositivos y consumo de pantallas en niños chilenos',
+    journal: 'Hallazgos: 1,8 dispositivos en promedio por niño, ~3 horas diarias frente a pantallas, celular dominante',
+    url: 'https://radio.uchile.cl/2026/03/20/pantallas-infancia-y-la-mesa-que-se-esta-perdiendo/'
+  },
+
+  /* GUÍAS INTERNACIONALES */
+  { id: 'WHO2019', group: 'intl', type: 'guideline',
+    authors: 'Organización Mundial de la Salud. 2019',
+    title: 'Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age',
+    journal: 'WHO',
+    url: 'https://www.who.int/publications/i/item/9789241550536'
+  },
+  { id: 'NICE', group: 'intl', type: 'guideline',
+    authors: 'National Institute for Health and Care Excellence (NICE)',
+    title: 'Guías relacionadas con desarrollo infantil y bienestar digital',
+    journal: 'Reino Unido',
+    url: 'https://www.nice.org.uk/'
+  },
+  { id: 'BrightFutures', group: 'intl', type: 'guideline',
+    authors: 'American Academy of Pediatrics',
+    title: 'Bright Futures: Guidelines for Health Supervision of Infants, Children, and Adolescents (4ª ed.)',
+    journal: '',
+    url: 'https://brightfutures.aap.org/'
+  },
+
+  /* MARCOS TEÓRICOS */
+  { id: 'Bronfenbrenner1979', group: 'theory', type: 'theory',
+    authors: 'Bronfenbrenner U. 1979',
+    title: 'The Ecology of Human Development',
+    journal: 'Harvard University Press',
+    url: ''
+  },
+  { id: 'Vygotsky1978', group: 'theory', type: 'theory',
+    authors: 'Vygotsky L.S. 1978',
+    title: 'Mind in Society: The Development of Higher Psychological Processes',
+    journal: 'Harvard University Press',
+    url: ''
+  },
+  { id: 'Masten2010', group: 'theory', type: 'theory',
+    authors: 'Masten A.S., Cicchetti D. 2010',
+    title: 'Developmental cascades',
+    journal: 'Development and Psychopathology',
+    url: ''
+  },
+  { id: 'Diamond2013', group: 'theory', type: 'theory',
+    authors: 'Diamond A. 2013',
+    title: 'Executive functions',
+    journal: 'Annual Review of Psychology',
+    url: ''
+  },
+  { id: 'Eisenberg2004', group: 'theory', type: 'theory',
+    authors: 'Eisenberg N., Spinrad T.L. 2004',
+    title: 'Emotion-related regulation: Sharpening the definition',
+    journal: 'Child Development',
+    url: ''
+  },
+
+  /* REFERENCIAS AGREGADAS SESIÓN 2 */
+  { id: 'Sundqvist2021', group: 'recent', type: 'longitudinal',
+    authors: 'Sundqvist A., Koch F.S., Birberg Thornberg U., Barr R., Heimann M. 2021',
+    title: 'Growing up in a digital world – Digital media and the association with the child\'s language development at two years of age',
+    journal: 'Frontiers in Psychology 12:569920',
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7886794/'
+  },
+  { id: 'Bal2024', group: 'recent', type: 'review',
+    authors: 'Bal M., Kara Aydemir A.G., Tepetaş Cengiz G.Ş., Altındağ A. 2024',
+    title: 'Examining the Relationship Between Language Development, Executive Function, and Screen Time: A Systematic Review',
+    journal: 'PLoS ONE 19(12):e0314540',
+    url: 'https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0314540'
+  },
+  { id: 'Dutra2025', group: 'recent', type: 'review',
+    authors: 'Dutra R.P., Castro Y.M., Moran V., Wink Mattos V.G., Moura Rodrigues P.V., Araújo Bacil E.D., Pereira da Silva M. 2025',
+    title: 'Association Between Exposure to Smartphones and Tablets and Motor Development in Early Childhood: A Systematic Review',
+    journal: 'Child: Care, Health and Development 51(6):e70180',
+    url: 'https://onlinelibrary.wiley.com/doi/10.1111/cch.70180'
+  },
+  { id: 'Jourdren2023', group: 'recent', type: 'review',
+    authors: 'Jourdren M., Bucaille A., Ropars J. 2023',
+    title: 'The impact of screen exposure on attention abilities in young children: A systematic review',
+    journal: 'Pediatric Neurology 142:76-88',
+    url: 'https://doi.org/10.1016/j.pediatrneurol.2023.01.005'
+  },
+  { id: 'Russell2019', group: 'recent', type: 'meta',
+    authors: 'Russell S.J., Croker H., Viner R.M. 2019',
+    title: 'The effect of screen advertising on children\'s dietary intake: A systematic review and meta-analysis',
+    journal: 'Obesity Reviews 20(4):554-568',
+    url: 'https://onlinelibrary.wiley.com/doi/10.1111/obr.12812'
+  },
+  { id: 'Pearson2018', group: 'recent', type: 'longitudinal',
+    authors: 'Pearson N., Biddle S.J.H., Griffiths P., Johnston J.P., Haycraft E. 2018',
+    title: 'Clustering and correlates of screen-time and eating behaviours among young children',
+    journal: 'BMC Public Health 18(1):753. Reemplaza cita previa "Pearson 2017" no localizable',
+    url: 'https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-018-5698-9'
+  },
+  { id: 'Carter2024', group: 'recent', type: 'longitudinal',
+    authors: 'Carter B., Payne M., Rees P., Sohn S.Y., Brown J., Kalk N. 2024',
+    title: 'A multi-school study in England to assess problematic smartphone usage and anxiety and depression',
+    journal: 'Acta Paediatrica 113(10):2240-2248. Reemplaza cita previa "Montag 2024" no localizable',
+    url: 'https://onlinelibrary.wiley.com/doi/10.1111/apa.17317'
+  }
+];
+
+const FILTER_TYPES = [
+  { id: 'all',          label: 'Todas' },
+  { id: 'featured',     label: 'Destacadas' },
+  { id: 'meta',         label: 'Meta-análisis' },
+  { id: 'review',       label: 'Revisiones sistemáticas' },
+  { id: 'longitudinal', label: 'Longitudinales' },
+  { id: 'guideline',    label: 'Guías oficiales' },
+  { id: 'chilean',      label: 'Evidencia chilena' }
+];
+
+function renderBibliographyPage() {
+  const page = el('section', { className: 'page active content-page' });
+  page.innerHTML = `
+    <p class="page-eyebrow">Bibliografía</p>
+    <h1>Fuentes principales</h1>
+    <p class="page-intro">Organizada por temática. Las marcadas como <strong>destacadas</strong> (borde y chip azul oscuro) son las de mayor peso o más actuales en su campo. Usa el buscador para filtrar por autor, año o palabra clave; los filtros rápidos permiten ver solo un tipo de evidencia.</p>
+
+    <div class="biblio-toolbar">
+      <div class="biblio-search-row">
+        <input type="search" class="biblio-search" id="biblio-search" placeholder="Buscar por autor, año, título, revista…" autocomplete="off">
+        <span class="biblio-count" id="biblio-count"></span>
+      </div>
+      <div class="biblio-filters" id="biblio-filters">
+        ${FILTER_TYPES.map((f, i) => `<button class="biblio-filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f.id}">${f.label}</button>`).join('')}
+      </div>
+    </div>
+
+    <div class="biblio-index">
+      <p class="biblio-index-title">Índice de secciones</p>
+      <ul class="biblio-index-list" id="biblio-index-list">
+        ${BIBLIO_GROUPS.map(g => `<li><a href="#bibgroup-${g.id}">${g.label}</a></li>`).join('')}
+      </ul>
+    </div>
+
+    <div id="biblio-content"></div>
+  `;
+
+  /* Render sections */
+  function renderEntries(filter) {
+    const search = (document.getElementById('biblio-search')?.value || '').toLowerCase().trim();
+    const content = page.querySelector('#biblio-content');
+    let totalShown = 0;
+    let html = '';
+
+    BIBLIO_GROUPS.forEach(group => {
+      const groupEntries = BIBLIO.filter(b => b.group === group.id);
+      const visible = groupEntries.filter(b => {
+        if (filter === 'featured' && !b.featured) return false;
+        if (filter === 'chilean' && b.group !== 'chile') return false;
+        if (filter !== 'all' && filter !== 'featured' && filter !== 'chilean' && b.type !== filter) return false;
+        if (search) {
+          const hay = (b.authors + ' ' + b.title + ' ' + (b.journal || '')).toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+        return true;
+      });
+
+      if (visible.length === 0) return;
+      totalShown += visible.length;
+
+      html += `<div class="biblio-section" id="bibgroup-${group.id}">
+        <h3>${group.label}</h3>
+        <ul class="biblio-list">`;
+
+      visible.forEach(b => {
+        const typeInfo = BIBLIO_TYPES[b.type] || { label: b.type, cls: '' };
+        html += `<li class="biblio-entry${b.featured ? ' featured' : ''}" id="bib-${b.id}">
+          <div class="biblio-entry-head">
+            <span class="biblio-chip ${typeInfo.cls}">${typeInfo.label}</span>
+            ${b.featured ? '<span class="biblio-chip featured-mark">Destacada</span>' : ''}
+          </div>
+          <div class="biblio-authors">${b.authors}</div>
+          <div class="biblio-meta">${b.title}${b.journal ? '. <em>' + b.journal + '</em>' : ''}</div>
+          ${b.url ? `<a class="biblio-url" href="${b.url}" target="_blank" rel="noopener">${b.url}</a>` : ''}
+        </li>`;
+      });
+
+      html += `</ul></div>`;
+    });
+
+    if (totalShown === 0) {
+      html = '<div class="biblio-empty">No hay fuentes que coincidan con la búsqueda y filtro actuales.</div>';
+    }
+
+    content.innerHTML = html;
+    const countEl = page.querySelector('#biblio-count');
+    if (countEl) countEl.textContent = `${totalShown} de ${BIBLIO.length} fuentes`;
+  }
+
+  /* Initial render after page is attached */
+  setTimeout(() => {
+    let currentFilter = 'all';
+    renderEntries(currentFilter);
+
+    const searchInput = page.querySelector('#biblio-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => renderEntries(currentFilter));
+    }
+
+    const filters = page.querySelectorAll('.biblio-filter-btn');
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        renderEntries(currentFilter);
+      });
+    });
+  }, 0);
+
+  return page;
+}
+
+/* ----- LEGEND PAGE ----- */
+function renderLegendPage() {
+  const page = el('section', { className: 'page active content-page' });
+  page.innerHTML = `
+    <p class="page-eyebrow">Leyenda</p>
+    <h1>Cómo leer este documento</h1>
+
+    <h2>Niveles de certeza</h2>
+    <p>Cada afirmación principal de cada celda lleva un indicador de certeza. La escala tiene tres niveles, en orden decreciente:</p>
+
+    <div class="study">
+      <div class="claim">
+        <div class="claim-dot high"></div>
+        <div class="claim-text"><strong>Alta certeza.</strong> Color <code>#042f4d</code>. Múltiples revisiones sistemáticas o meta-análisis coinciden, efectos consistentes, magnitud cuantificable. Causalidad razonablemente establecida o asociación muy consistente.</div>
+      </div>
+      <div class="claim">
+        <div class="claim-dot medium"></div>
+        <div class="claim-text"><strong>Media certeza.</strong> Color <code>#5c728e</code>. Revisiones encuentran resultados divergentes, o el efecto depende fuertemente de moderadores (edad, contenido, contexto de uso, mediación adulta). Hay señal pero no es uniforme. Incluye también casos de evidencia limitada con calidad metodológica baja.</div>
+      </div>
+      <div class="claim">
+        <div class="claim-dot low"></div>
+        <div class="claim-text"><strong>Baja certeza.</strong> Color <code>#d6dfe8</code>. Afirmación popular o hipótesis teóricamente plausible pero sin estudios sistemáticos que la respalden. O área donde la investigación es incipiente o ausente.</div>
+      </div>
+    </div>
+
+    <h2>Cómo se aplica</h2>
+    <ul>
+      <li><strong>Matriz principal.</strong> El color de fondo de cada celda indica el nivel de certeza predominante de esa intersección.</li>
+      <li><strong>Detalle de celda.</strong> Cada afirmación lleva su propio dot de color. Una celda "media" puede contener afirmaciones "altas" mezcladas con "bajas".</li>
+      <li><strong>Andamiaje.</strong> Cada conexión (upstream/downstream) lleva su nivel de certeza propio.</li>
+      <li><strong>Regla de cierre.</strong> Cuando una celda combina afirmaciones de varios niveles, el nivel asignado refleja la afirmación principal, no el promedio.</li>
+    </ul>
+
+    <h2>Otras convenciones</h2>
+    <ul>
+      <li>Los <strong>recuadros marrón claro</strong> son definiciones de términos técnicos.</li>
+      <li>Los <strong>recuadros azul claro</strong> son notas sobre contexto chileno.</li>
+      <li>Los <strong>recuadros con borde</strong> son resúmenes de estudios específicos clave.</li>
+      <li>Los <strong>enlaces de andamiaje</strong> al final de cada celda llevan a celdas conectadas en el desarrollo (upstream = lo que la alimenta; downstream = lo que ella alimenta).</li>
+    </ul>
+  `;
+  return page;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+function navigate(route, params = '') {
+  const hash = params ? `${route}/${params}` : route;
+  window.location.hash = hash;
+}
+
+function router() {
+  const hash = window.location.hash.replace('#', '') || 'matrix';
+  const [route, ...rest] = hash.split('/');
+  const params = rest.join('/');
+
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+
+  // Manejo de enlaces directos a bibliografía (#bib-XXX o #bibgroup-XXX)
+  if (hash.startsWith('bib-') || hash.startsWith('bibgroup-')) {
+    document.querySelectorAll('header.site-header nav a').forEach(a => {
+      a.classList.toggle('active', a.dataset.route === 'bibliography');
+    });
+    app.appendChild(renderBibliographyPage());
+    // Pequeño retraso para que el render asíncrono termine y luego hacer scroll
+    setTimeout(() => {
+      const target = document.getElementById(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 50);
+    return;
+  }
+
+  // Update active nav
+  document.querySelectorAll('header.site-header nav a').forEach(a => {
+    a.classList.toggle('active', a.dataset.route === route);
+  });
+
+  let view;
+  switch (route) {
+    case 'matrix':
+      view = renderMatrixPage();
+      break;
+    case 'cell': {
+      const [dim, age] = params.split('/');
+      view = renderCellDetail(dim, age);
+      break;
+    }
+    case 'dim':
+      view = renderDimensionPage(params);
+      break;
+    case 'age':
+      view = renderAgePage(params);
+      break;
+    case 'scaffolding':
+      view = renderScaffoldingPage();
+      break;
+    case 'methodology':
+      view = renderMethodologyPage();
+      break;
+    case 'limitations':
+      view = renderLimitationsPage();
+      break;
+    case 'bibliography':
+      view = renderBibliographyPage();
+      break;
+    case 'legend':
+      view = renderLegendPage();
+      break;
+    default:
+      view = renderMatrixPage();
+  }
+
+  app.appendChild(view);
+  window.scrollTo(0, 0);
+}
+
+/* Header nav click handlers */
+document.querySelectorAll('header.site-header nav a').forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigate(a.dataset.route);
+  });
+});
+
+window.addEventListener('hashchange', router);
+window.addEventListener('DOMContentLoaded', router);
+router();
+
+</script>
+
+</body>
+</html>
