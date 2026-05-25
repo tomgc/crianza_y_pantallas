@@ -4,11 +4,16 @@ Sitio único autocontenido (HTML + CSS + JS inline, sin dependencias) que sintet
 
 ## Estructura del repo
 
-- `index.html` — sitio completo (matriz 10×5, andamiaje, bibliografía con 52 entradas).
+- `index.html` — output del build, sitio publicado por GitHub Pages. NO se edita a mano.
+- `CLAUDE.md` (raíz) — stub que apunta a este archivo.
+- `00_build.sh` — script que ensambla `index.html` desde `10_fuentes/`.
 - `README.md` — documentación pública.
-- `recursos/` — instrucciones para descarga local de PDFs UNICEF/CJE UC (PDFs ignorados por git).
-- `50_documentacion/traspasos/` — handoffs de sesión (`traspaso-cierre-vNN.md`).
-- `50_documentacion/versiones/` — snapshots locales (ignorados por git).
+- `10_fuentes/` — fuentes del sitio: `template.html`, `styles.css`, `data/` (JSON), `app.js` (cuando exista).
+- `20_recursos/` — instrucciones para descarga local de PDFs UNICEF/CJE UC (PDFs ignorados por git).
+- `30_documentacion/activa/` — documentación viva del proyecto (este `CLAUDE.md` y otros).
+- `30_documentacion/traspasos/` — handoffs de sesión (`traspaso-cierre-vNN.md`).
+- `30_documentacion/andamios/` — wireframes y refactors ya ejecutados, conservados como registro histórico.
+- `30_documentacion/versiones/` — snapshots locales (ignorados por git).
 
 ## Convenciones del proyecto
 
@@ -20,7 +25,7 @@ Sitio único autocontenido (HTML + CSS + JS inline, sin dependencias) que sintet
 
 ## Estado actual
 
-Último handoff: `50_documentacion/traspasos/traspaso-cierre-v02.md`. Revisar siempre el handoff más reciente al inicio de cada sesión.
+Último handoff: `30_documentacion/traspasos/traspaso-cierre-v02.md`. Revisar siempre el handoff más reciente al inicio de cada sesión.
 
 ## Preferencias de trabajo (Tomás)
 
@@ -30,3 +35,15 @@ Sitio único autocontenido (HTML + CSS + JS inline, sin dependencias) que sintet
 - Alternativas: cuando se presentan opciones, declarar siempre una recomendación concreta con razón en una frase, salvo equivalencia técnica genuina.
 - Estructura de proyectos: convenciones `10_utils / 20_insumos / 30_procesamiento / 40_salidas / 50_documentacion` cuando aplica (este sitio no las usa todas porque no es un pipeline de análisis).
 - Decisiones de diseño visual: paletas y convenciones por proyecto son distintas; no mezclar.
+
+## Convención de build
+
+El sitio se ensambla con `./00_build.sh`. Este script lee fuentes desde `10_fuentes/` (template, styles, data/, app) y escribe `index.html` en la raíz, que es lo que GitHub Pages publica.
+
+**Regla obligatoria:** todo commit que modifique archivos en `10_fuentes/` debe:
+1. Ejecutar `./00_build.sh` antes de stagear.
+2. Incluir el `index.html` regenerado en el mismo commit que las fuentes.
+
+Razón: GitHub Pages sirve `index.html` directamente. Si las fuentes y el output se desincronizan en un commit, el sitio público queda inconsistente con su fuente. Mantenerlos juntos garantiza que `git checkout <commit>` siempre dé un estado coherente.
+
+`index.html` NO se edita a mano nunca. Cualquier cambio se hace en las fuentes y se regenera con el build.
