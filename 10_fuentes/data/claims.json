@@ -1079,9 +1079,9 @@
       },
       {
         "certainty": "high",
-        "text": "Meta-análisis dosis-respuesta (N=335.524, edad media 9,3 años): cada hora diaria adicional de pantalla se asocia con **21% mayor probabilidad de miopía**, con aceleración del riesgo entre 1 y 4 horas de uso (Wang et al., 2025).",
+        "text": "Meta-análisis dosis-respuesta (N=335.524, edad media 9,3 años): cada hora diaria adicional de pantalla se asocia con **21% mayor probabilidad de miopía**, con aceleración del riesgo entre 1 y 4 horas de uso (Ha et al., 2025).",
         "refs": [
-          "Wang2025"
+          "Ha2025"
         ]
       }
     ],
@@ -1121,9 +1121,9 @@
       },
       {
         "certainty": "high",
-        "text": "El meta-análisis dosis-respuesta de Wang y col. (2025) refuerza para preadolescentes la asociación cuantificada entre pantalla y miopía, con riesgo creciente sobre 1 hora diaria de uso (N=335.524, edad media 9,3 años).",
+        "text": "El meta-análisis dosis-respuesta de Ha y col. (2025) refuerza para preadolescentes la asociación cuantificada entre pantalla y miopía, con riesgo creciente sobre 1 hora diaria de uso (N=335.524, edad media 9,3 años).",
         "refs": [
-          "Wang2025"
+          "Ha2025"
         ]
       }
     ],
