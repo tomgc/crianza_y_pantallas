@@ -474,5 +474,79 @@
     "title": "A multi-school study in England to assess problematic smartphone usage and anxiety and depression",
     "journal": "Acta Paediatrica 113(10):2240-2248. Reemplaza cita previa \"Montag 2024\" no localizable",
     "url": "https://onlinelibrary.wiley.com/doi/10.1111/apa.17317"
+  },
+  {
+    "id": "Karani2022",
+    "group": "recent",
+    "type": "review",
+    "authors": "Karani N.F., Sher J., Mophosho M. 2022",
+    "title": "The influence of screen time on children's language development: A scoping review",
+    "journal": "South African Journal of Communication Disorders 69(1):a825",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8905397/"
+  },
+  {
+    "id": "AAP2024",
+    "group": "intl",
+    "type": "guideline",
+    "authors": "American Academy of Pediatrics. 2024",
+    "title": "Screen Time for Infants",
+    "journal": "AAP Q&A Portal — Center of Excellence on Social Media and Youth Mental Health",
+    "url": "https://www.aap.org/en/patient-care/media-and-children/center-of-excellence-on-social-media-and-youth-mental-health/qa-portal/qa-screen-time-for-infants/"
+  },
+  {
+    "id": "AAP2016",
+    "group": "anchor",
+    "type": "guideline",
+    "authors": "AAP Council on Communications and Media. 2016",
+    "title": "Media and Young Minds",
+    "journal": "Pediatrics 138(5):e20162591. Policy statement reemplazada por AAP 2026",
+    "url": "https://doi.org/10.1542/peds.2016-2591"
+  },
+  {
+    "id": "Foreman2024",
+    "group": "school",
+    "type": "meta",
+    "authors": "Foreman J., Xiong S., Keel S. y col. 2024",
+    "title": "The association between screen time exposure and myopia in children and adolescents: a meta-analysis",
+    "journal": "BMC Public Health 24:1881",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38890613/"
+  },
+  {
+    "id": "Wang2025",
+    "group": "school",
+    "featured": true,
+    "type": "meta",
+    "authors": "Wang X. y col. 2025",
+    "title": "Digital Screen Time and Myopia: A Systematic Review and Dose-Response Meta-Analysis",
+    "journal": "JAMA Network Open 8(2):e2462399. Meta-análisis dosis-respuesta con N=335.524",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39982728/"
+  },
+  {
+    "id": "LlanosMerin2024",
+    "group": "sleep",
+    "type": "review",
+    "authors": "Llanos Merín M., Toledano-González A., Fernández-Aguilar L. y col. 2024",
+    "title": "Evaluation of the association between excessive screen use, sleep patterns and behavioral and cognitive aspects in preschool population. A systematic review",
+    "journal": "European Child & Adolescent Psychiatry 33(12):4097–4114",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618148/"
+  },
+  {
+    "id": "Gomes2024",
+    "group": "sleep",
+    "type": "review",
+    "authors": "Gomes K., Goldman R.D. 2024",
+    "title": "Screen time and sleep in children",
+    "journal": "Canadian Family Physician 70(6):388–390",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11280700/"
+  },
+  {
+    "id": "NSF2024",
+    "group": "sleep",
+    "featured": true,
+    "type": "guideline",
+    "authors": "National Sleep Foundation. 2024",
+    "title": "The impact of screen use on sleep health across the lifespan: A National Sleep Foundation consensus statement",
+    "journal": "Sleep Health (declaración de consenso basada en 574 manuscritos revisados por pares)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38806392/"
   }
 ]

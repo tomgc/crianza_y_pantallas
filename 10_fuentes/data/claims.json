@@ -55,7 +55,9 @@
       {
         "certainty": "medium",
         "text": "Algunas revisiones (Jing et al., 2023; Sticca et al., 2025) encuentran beneficios pequeños para vocabulario cuando el contenido está específicamente diseñado y el adulto media activamente.",
-        "refs": []
+        "refs": [
+          "Karani2022"
+        ]
       },
       {
         "certainty": "high",
@@ -217,7 +219,9 @@
       {
         "certainty": "medium",
         "text": "El contenido fast-paced captura la atención del bebé pero no la desarrolla. La atención sostenida y dirigida se entrena con objetos reales y personas (Wass & Goldenberg, 2025).",
-        "refs": []
+        "refs": [
+          "AAP2024"
+        ]
       },
       {
         "certainty": "low",
@@ -297,7 +301,9 @@
       {
         "certainty": "medium",
         "text": "Contenido fast-paced se asocia con peor desempeño en tareas de función ejecutiva inmediatamente después de la exposición, aunque los efectos a largo plazo son menos claros (Beyens et al., 2018; revisión).",
-        "refs": []
+        "refs": [
+          "Mallawaarachchi2024"
+        ]
       },
       {
         "certainty": "medium",
@@ -342,7 +348,9 @@
       {
         "certainty": "high",
         "text": "Estudios consistentes muestran asociación entre uso de pantalla recreativa elevado y peor rendimiento académico, con magnitudes pequeñas a moderadas (Sanders et al., 2024, umbrella review en 102 meta-análisis).",
-        "refs": []
+        "refs": [
+          "AAP2026"
+        ]
       },
       {
         "certainty": "medium",
@@ -692,12 +700,16 @@
       {
         "certainty": "high",
         "text": "EYSTAG recomienda dormitorios libres de pantalla y no usar pantallas en la hora previa a dormir.",
-        "refs": []
+        "refs": [
+          "AAP2016"
+        ]
       },
       {
         "certainty": "high",
         "text": "Mayor pantalla en preescolares se asocia con peor calidad y duración de sueño en múltiples revisiones sistemáticas.",
-        "refs": []
+        "refs": [
+          "LlanosMerin2024"
+        ]
       },
       {
         "certainty": "medium",
@@ -730,12 +742,16 @@
       {
         "certainty": "high",
         "text": "Pantalla en el dormitorio o uso de pantalla antes de dormir se asocia robustamente con menor duración y peor calidad del sueño en escolares (Hale & Guan, 2015, revisión clásica; múltiples confirmaciones posteriores).",
-        "refs": []
+        "refs": [
+          "Gomes2024"
+        ]
       },
       {
         "certainty": "high",
         "text": "La asociación con sueño es uno de los efectos más consistentes y mejor cuantificados en niños escolares.",
-        "refs": []
+        "refs": [
+          "NSF2024"
+        ]
       }
     ],
     "andamiaje": {
@@ -768,7 +784,9 @@
       {
         "certainty": "high",
         "text": "La asociación entre uso de pantalla nocturna (especialmente celular en cama) y menor sueño es robusta y de magnitud relevante en preadolescentes y adolescentes.",
-        "refs": []
+        "refs": [
+          "NSF2024"
+        ]
       },
       {
         "certainty": "high",
@@ -1044,18 +1062,27 @@
   },
   "vision-ninez-media": {
     "summary": "Miopía emergente",
-    "certainty": "medium",
+    "certainty": "high",
     "intro": "Fuera del paraguas EYSTAG. La miopía en edad escolar es una preocupación global creciente, especialmente en Asia oriental.",
     "claims": [
       {
         "certainty": "medium",
         "text": "Asociación entre actividades de \"cerca\" (close-work, que incluye lectura y pantalla) y miopía es razonablemente consistente. La pantalla en sí no se distingue empíricamente de otras actividades de cerca.",
-        "refs": []
+        "refs": [
+          "Foreman2024"
+        ]
       },
       {
         "certainty": "high",
         "text": "El tiempo al aire libre (al menos 2 horas diarias) es el factor protector más robusto contra el desarrollo y progresión de miopía.",
         "refs": []
+      },
+      {
+        "certainty": "high",
+        "text": "Meta-análisis dosis-respuesta (N=335.524, edad media 9,3 años): cada hora diaria adicional de pantalla se asocia con **21% mayor probabilidad de miopía**, con aceleración del riesgo entre 1 y 4 horas de uso (Wang et al., 2025).",
+        "refs": [
+          "Wang2025"
+        ]
       }
     ],
     "andamiaje": {
@@ -1077,18 +1104,27 @@
   },
   "vision-preadolescencia": {
     "summary": "Progresión miopía",
-    "certainty": "medium",
+    "certainty": "high",
     "intro": "La preadolescencia es período de progresión rápida de miopía. La asociación con pantalla persiste.",
     "claims": [
       {
         "certainty": "medium",
         "text": "Mayor uso de pantalla se asocia con mayor riesgo de miopía, pero la causalidad sigue siendo discutida vs. simple \"cerca-trabajo\".",
-        "refs": []
+        "refs": [
+          "Foreman2024"
+        ]
       },
       {
         "certainty": "high",
         "text": "Recomendación universal: tiempo al aire libre y pausas regulares (regla 20-20-20).",
         "refs": []
+      },
+      {
+        "certainty": "high",
+        "text": "El meta-análisis dosis-respuesta de Wang y col. (2025) refuerza para preadolescentes la asociación cuantificada entre pantalla y miopía, con riesgo creciente sobre 1 hora diaria de uso (N=335.524, edad media 9,3 años).",
+        "refs": [
+          "Wang2025"
+        ]
       }
     ],
     "andamiaje": {
@@ -1391,7 +1427,9 @@
       {
         "certainty": "medium",
         "text": "Tablets y videos cortos: asociaciones con peor inhibición conductual (capacidad de detenerse antes de actuar).",
-        "refs": []
+        "refs": [
+          "LlanosMerin2024"
+        ]
       },
       {
         "certainty": "medium",
@@ -1519,7 +1557,8 @@
         "certainty": "high",
         "text": "EYSTAG identifica explícitamente las videollamadas con familia lejana como uso recomendado en menores de 2 años.",
         "refs": [
-          "EYSTAG2026"
+          "EYSTAG2026",
+          "AAP2024"
         ]
       }
     ],
@@ -1553,7 +1592,9 @@
       {
         "certainty": "medium",
         "text": "Calidad de la relación parento-filial actúa como mediador y moderador de la asociación pantalla-resultados del niño (Xu & Qiao, 2025).",
-        "refs": []
+        "refs": [
+          "Mallawaarachchi2024"
+        ]
       }
     ],
     "andamiaje": {
@@ -1581,7 +1622,9 @@
       {
         "certainty": "medium",
         "text": "EYSTAG identifica la calidad de la interacción adulto-niño durante el uso de pantalla como factor protector central.",
-        "refs": []
+        "refs": [
+          "AAP2026"
+        ]
       },
       {
         "certainty": "low",
