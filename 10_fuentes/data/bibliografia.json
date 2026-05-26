@@ -548,5 +548,51 @@
     "title": "The impact of screen use on sleep health across the lifespan: A National Sleep Foundation consensus statement",
     "journal": "Sleep Health (declaración de consenso basada en 574 manuscritos revisados por pares)",
     "url": "https://pubmed.ncbi.nlm.nih.gov/38806392/"
+  },
+  {
+    "id": "He2025",
+    "group": "sleep",
+    "featured": true,
+    "type": "meta",
+    "authors": "He X., Pan B., Ma N., Li D., Kong W., Liu Q., Liu X., Wang X., Deng X., Yang K. 2025",
+    "title": "The association of screen time and the risk of sleep outcomes: a systematic review and meta-analysis",
+    "journal": "Frontiers in Psychiatry 16:1640263. N=548.338, 21 cohortes prospectivas. Mediana de edad 12,76 años",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41480345/"
+  },
+  {
+    "id": "Bakht2025",
+    "group": "recent",
+    "type": "review",
+    "authors": "Bakht D., Yousaf F., Alvi Z. y col. 2025",
+    "title": "Assessing the Impact of Screen Time on the Motor Development of Children: A Systematic Review",
+    "journal": "Pediatric Discovery 3(2):e70002. 24 estudios observacionales y experimentales en niños de 0-7 años",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/pdi3.70002"
+  },
+  {
+    "id": "Gath2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Gath M., Horwood L.J., Gillon G., McNeill B., Woodward L.J. 2025",
+    "title": "Longitudinal Associations Between Screen Time and Children's Language, Early Educational Skills, and Peer Social Functioning",
+    "journal": "Developmental Psychology. N=6.281, cohorte Growing Up in New Zealand, evaluados a los 2, 4,5 y 8 años",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39786801/"
+  },
+  {
+    "id": "Bustamante2023",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Bustamante J.C., Fernández-Castilla B., Alcaraz-Iborra M. 2023",
+    "title": "Relation between executive functions and screen time exposure in under 6 year-olds: A meta-analysis",
+    "journal": "Computers in Human Behavior 145:107739. 15 estudios, N=6.922, 44 effect sizes. r=0,05 (no significativo)",
+    "url": "https://doi.org/10.1016/j.chb.2023.107739"
+  },
+  {
+    "id": "AguilarFarias2021",
+    "group": "chile",
+    "type": "chilean",
+    "authors": "Aguilar-Farias N., Toledo-Vargas M., Miranda-Marquez S., Cortinez-O'Ryan A., Cristi-Montero C., Rodriguez-Rodriguez F., Martino-Fuentealba P., Okely A.D., del Pozo Cruz B. 2021",
+    "title": "Sociodemographic Predictors of Changes in Physical Activity, Screen Time, and Sleep among Toddlers and Preschoolers in Chile during the COVID-19 Pandemic",
+    "journal": "International Journal of Environmental Research and Public Health 18(1):176. N=3.158 cuidadores de niños 1-5 años, encuesta nacional Chile durante pandemia",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7796176/"
   }
 ]
