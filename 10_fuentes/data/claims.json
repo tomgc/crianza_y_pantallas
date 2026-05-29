@@ -482,7 +482,9 @@
       {
         "certainty": "medium",
         "text": "Tecnointerferencia parental (uso de celular por el adulto durante interacciones) se asocia con menor sensibilidad y responsividad del cuidador (Braune-Krickau et al., 2021).",
-        "refs": []
+        "refs": [
+          "BrauneKrickau2021"
+        ]
       },
       {
         "certainty": "low",
@@ -979,7 +981,7 @@
     "claims": [
       {
         "certainty": "medium",
-        "text": "Asociaciones débiles entre pantalla y motricidad fina: pantallas táctiles podrían tener pequeños beneficios para destreza fina (Crescenzi Lanna & Grané Oro, 2019).",
+        "text": "Asociaciones débiles entre pantalla y motricidad fina: pantallas táctiles podrían tener pequeños beneficios para destreza fina.",
         "refs": []
       },
       {
@@ -1426,7 +1428,9 @@
       {
         "certainty": "medium",
         "text": "Tecnointerferencia parental interrumpe procesos de corregulación, con efectos observables en sensibilidad y responsividad (Braune-Krickau et al., 2021).",
-        "refs": []
+        "refs": [
+          "BrauneKrickau2021"
+        ]
       },
       {
         "certainty": "low",
