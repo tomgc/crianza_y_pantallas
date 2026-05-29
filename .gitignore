@@ -15,3 +15,7 @@
 
 # Snapshots locales (versionado vía git log, no duplicados)
 30_documentacion/versiones/
+
+# Snapshots timestamped del escáner (solo se trackean los alias estructura_actual.*)
+30_documentacion/estructura/2*_estructura.txt
+30_documentacion/estructura/2*_estructura.md
