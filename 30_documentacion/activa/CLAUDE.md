@@ -21,7 +21,7 @@ Sitio único autocontenido (HTML + CSS + JS inline, sin dependencias) que sintet
 
 ## Convenciones del proyecto
 
-- **Citas en claims:** formato `(Autor et al., año) [ref]` con `[ref]` como enlace navegable a la entrada bibliográfica. Toda cita va entre paréntesis, nunca como sujeto del párrafo.
+- **Citas en claims:** las referencias se muestran solo como chips `[ref]` navegables a la entrada bibliográfica (poblados desde el array `refs` de cada claim). El texto del claim NO lleva la cita de autor inline `(Autor et al., año)` — esa convención se eliminó en sesión 5 (P-nuevo-B). Los datos metodológicos entre paréntesis (N=, tamaños de muestra) sí se conservan en el texto.
 - **Sistema de certeza:** 3 niveles (alta/media/baja), aplicados via función `C(certainty, text)` en el JS.
 - **Paleta actual:** fondo `#f7f8fa`, texto `#1a1d24`, acento `#042f4d` (azul marino), cálido secundario `#b07a4a`. Tres tonos del azul marino para los niveles de certeza.
 - **Tipografía:** stack del sistema, 15 px base, line-height 1.65.
