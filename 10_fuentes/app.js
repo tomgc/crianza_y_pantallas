@@ -87,8 +87,8 @@
   function renderTopBar() {
     const tabs = [
       { id: "matriz",       label: "Matriz" },
-      { id: "bibliografia", label: "Bibliografía" },
       { id: "glosario",     label: "Glosario" },
+      { id: "bibliografia", label: "Bibliografía" },
       { id: "metodologia",  label: "Metodología" },
       { id: "limitaciones", label: "Limitaciones" }
     ];
