@@ -204,7 +204,8 @@ body {
   font-weight: 600;
   cursor: default;
 }
-.grid-cell.row-head { align-items: flex-start; justify-content: center; }
+.grid-cell.row-head { align-items: flex-start; justify-content: center; flex-direction: column; }
+.dim-paper-count { font-size: 10px; font-weight: 400; color: var(--pencil); margin-top: 2px; }
 .grid-cell.row-head:hover, .grid-cell.col-head:hover { background: var(--bg-soft); }
 
 .grid-cell.col-head {
@@ -433,6 +434,7 @@ body {
 .page-head { margin-bottom: 20px; }
 .page-title { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
 .page-sub { font-size: 12.5px; color: var(--pencil); }
+.page-body { max-width: 680px; }
 
 /* ── BIBLIOGRAFÍA ───────────────────────────────────────────── */
 .biblio-controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }

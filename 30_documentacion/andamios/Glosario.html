@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glosario — Crianza y pantallas</title>
+
+<style>
+/* ─────────────────────────────────────────────────────────────
+   Crianza y pantallas — Glosario (propuesta C resuelta)
+   Índice por dimensión, espejado en la matriz · sistema navy.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --bg:           #ffffff;
+  --bg-soft:      #f0f2f5;
+  --bg-cell:      #f9fafc;
+  --ink:          #1a1d24;
+  --ink-soft:     #4a5260;
+  --pencil:       #6a7280;
+  --pencil-soft:  #b3bac4;
+  --border:       #d4dce4;
+  --border-soft:  #e5e9ee;
+
+  --c-high:       #042f4d;
+  --c-medium:     #5c728e;
+  --c-low:        #d6dfe8;
+
+  --accent:       #042f4d;
+  --accent-soft:  #eaf0f6;
+  --highlight:    #f4dd8a;
+  --chile-mark:   #1f5b3d;
+  --chile-soft:   #e8efe9;
+}
+
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+#root { height: 100vh; position: relative; }
+
+/* ── Dots de certeza ─────────────────────────────────────────── */
+.cdot {
+  display: inline-block;
+  width: 11px; height: 11px;
+  border-radius: 50%; flex-shrink: 0; box-sizing: border-box;
+}
+.cdot.high   { background: var(--c-high); }
+.cdot.medium { background: linear-gradient(90deg, var(--c-medium) 50%, transparent 50%); border: 1.5px solid var(--c-medium); }
+.cdot.low    { background: var(--c-low); border: 1px solid var(--c-medium); }
+
+.mini-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  display: inline-block; box-sizing: border-box; flex-shrink: 0;
+}
+.mini-dot.h { background: var(--c-high); }
+.mini-dot.m { background: linear-gradient(90deg, var(--c-medium) 50%, transparent 50%); border: 1px solid var(--c-medium); }
+.mini-dot.l { background: var(--c-low); border: 1px solid var(--c-medium); }
+
+.cl-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 17px; height: 14px;
+  border: 1px solid var(--chile-mark); border-radius: 2px;
+  color: var(--chile-mark);
+  font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: 0.5px;
+  background: var(--bg); padding: 0 2px; flex-shrink: 0;
+}
+
+/* ── Select (selector de tramo, igual que en la matriz) ──────── */
+.select {
+  appearance: none; -webkit-appearance: none;
+  border: 1px solid var(--c-high); background: var(--bg);
+  padding: 7px 30px 7px 11px; border-radius: 4px;
+  font-size: 12.5px; font-family: inherit; color: var(--ink);
+  cursor: pointer; line-height: 1.2;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23042f4d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-position: right 10px center; background-repeat: no-repeat; background-size: 10px 6px;
+}
+.select:hover { border-color: var(--accent); background-color: var(--accent-soft); }
+
+/* ── La app: índice + ficha ──────────────────────────────────── */
+.gl-app {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  background: var(--bg);
+  font-size: 13px; line-height: 1.55; color: var(--ink);
+}
+
+/* TOP BAR */
+.gl-topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 0 18px; height: 48px; flex-shrink: 0;
+  border-bottom: 1px solid var(--border); background: var(--bg-soft);
+}
+.gl-topbar-left { display: flex; align-items: center; gap: 14px; }
+.gl-brand { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.gl-divider { width: 1px; height: 18px; background: var(--border); }
+.gl-tab-active {
+  font-size: 12.5px; font-weight: 600; color: var(--c-high);
+  padding: 4px 11px; border: 1px solid var(--c-high); border-radius: 4px; background: var(--bg);
+}
+.gl-mode { font-size: 11.5px; color: var(--pencil); }
+.gl-legend { display: flex; gap: 12px; font-size: 11px; color: var(--pencil); }
+.gl-legend-item { display: inline-flex; align-items: center; gap: 5px; }
+
+/* CUERPO */
+.gl-body { display: grid; grid-template-columns: 320px 1fr; flex: 1; min-height: 0; }
+.gl-index {
+  border-right: 1px solid var(--border); background: var(--bg-cell);
+  min-height: 0; overflow: auto;
+}
+.gl-index-scroll { padding: 14px 14px 28px; }
+.gl-index-intro {
+  font-size: 11px; line-height: 1.5; color: var(--pencil);
+  margin: 0 0 12px;
+}
+.gl-index-label {
+  display: block; font-size: 11px; font-weight: 600; color: var(--pencil);
+  margin-bottom: 5px;
+}
+.gl-tramo-sel { width: 100%; box-sizing: border-box; margin-bottom: 16px; }
+
+/* grupos por dimensión */
+.gl-dim-group { margin-bottom: 14px; scroll-margin-top: 8px; }
+.gl-dim-head {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 11.5px; font-weight: 700; color: var(--c-high);
+  padding: 4px 0 5px; margin-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.gl-dim-head-active {
+  border-bottom-color: var(--c-high); border-bottom-width: 1.5px;
+}
+.gl-dim-head-soft { color: var(--pencil); }
+.gl-dim-count {
+  font-size: 10px; font-weight: 600; color: var(--pencil);
+  border: 1px solid var(--border); border-radius: 9px; padding: 0 6px;
+}
+
+/* lista */
+.gl-list { display: flex; flex-direction: column; gap: 2px; }
+.gl-item {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; text-align: left;
+  background: transparent; border: none; border-radius: 4px;
+  padding: 7px 9px;
+  font-family: inherit; font-size: 12.5px; color: var(--ink);
+  cursor: pointer; transition: background .12s;
+}
+.gl-item:hover { background: var(--accent-soft); }
+.gl-item.active {
+  background: var(--bg); box-shadow: inset 0 0 0 1.5px var(--c-high); font-weight: 600;
+}
+.gl-item-main { display: flex; align-items: center; gap: 7px; flex: 1; min-width: 0; }
+.gl-item-term { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-novel-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-high); flex-shrink: 0; }
+.gl-empty {
+  padding: 16px; text-align: center; color: var(--pencil);
+  font-size: 12px; border: 1px dashed var(--border); border-radius: 4px; margin-top: 8px;
+}
+
+/* ── FICHA ────────────────────────────────────────────────────── */
+.gl-ficha-pane {
+  background: var(--bg); min-height: 0; overflow: auto;
+  padding: 26px 34px 40px;
+}
+.gl-ficha { max-width: 560px; }
+.gl-ficha-chips { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.gl-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 3px;
+}
+.gl-tag.campo      { background: var(--c-high); color: var(--bg); }
+.gl-tag.metodo     { background: var(--bg-soft); color: var(--ink-soft); border: 1px solid var(--border); }
+.gl-tag.desarrollo { background: var(--chile-soft); color: var(--chile-mark); border: 1px solid var(--chile-mark); }
+.gl-novel-chip { font-size: 10px; font-weight: 600; color: var(--c-high); display: inline-flex; align-items: center; gap: 5px; }
+.gl-novel-chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--c-high); }
+.gl-ficha-cert {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10.5px; color: var(--ink-soft); margin-left: auto;
+}
+
+.gl-ficha-title {
+  font-size: 24px; line-height: 1.18; font-weight: 600;
+  margin: 12px 0 10px; letter-spacing: -0.01em; text-wrap: balance;
+}
+.gl-def { font-size: 14.5px; line-height: 1.6; margin: 0 0 16px; color: var(--ink); }
+
+.gl-why {
+  border-left: 3px solid var(--c-high); background: var(--accent-soft);
+  padding: 12px 16px; border-radius: 2px; margin-bottom: 22px;
+}
+.gl-why-label {
+  font-size: 10.5px; font-weight: 700; color: var(--c-high);
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.gl-why-text { margin: 5px 0 0; font-size: 13.5px; line-height: 1.55; color: var(--ink); }
+
+.gl-sec { margin-bottom: 22px; }
+.gl-sec-label {
+  font-size: 11px; font-weight: 700; color: var(--ink-soft);
+  letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 9px;
+}
+
+/* dónde aparece en la matriz */
+.gl-cells { display: flex; flex-wrap: wrap; gap: 6px; }
+.gl-cell-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--border); border-radius: 13px;
+  padding: 3px 10px 3px 8px; font-size: 11.5px; background: var(--bg);
+  font-family: inherit; color: var(--ink);
+}
+.gl-cell-chip-btn { cursor: pointer; transition: border-color .12s, background .12s; }
+.gl-cell-chip-btn:hover { border-color: var(--c-high); background: var(--accent-soft); }
+.gl-cell-dim { font-weight: 600; color: var(--ink); }
+.gl-cell-tramo { color: var(--pencil); font-size: 10.5px; }
+
+/* papers */
+.gl-papers { display: flex; flex-direction: column; gap: 8px; }
+.gl-paper {
+  display: block; text-decoration: none;
+  border: 1px solid var(--border); border-left: 2px solid var(--c-medium);
+  border-radius: 3px; padding: 9px 12px; background: var(--bg);
+  transition: border-color .15s, background .15s;
+}
+.gl-paper:hover { border-color: var(--c-high); border-left-color: var(--c-high); background: var(--bg-cell); }
+.gl-paper-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+.biblio-type {
+  font-size: 9.5px; font-weight: 600; padding: 1px 7px; border-radius: 9px;
+  background: var(--bg-soft); color: var(--ink-soft); border: 1px solid var(--border);
+}
+.biblio-type.type-review        { background: #e8f0e8; color: #2d5a2d; border-color: #c5d8c5; }
+.biblio-type.type-meta          { background: #e8edf5; color: #1d3a6e; border-color: #c0cde2; }
+.biblio-type.type-longitudinal  { background: #f5ecdb; color: #6b4a1e; border-color: #d8c290; }
+.biblio-type.type-guideline     { background: #f0e8f0; color: #5c2d5c; border-color: #d4bdd4; }
+.biblio-type.type-chilean       { background: var(--chile-soft); color: var(--chile-mark); border-color: var(--chile-mark); }
+.gl-paper-authors { font-size: 11.5px; font-weight: 600; color: var(--ink); }
+.gl-paper-title { font-size: 12px; line-height: 1.4; color: var(--ink-soft); }
+.gl-paper-journal { font-size: 11px; color: var(--c-high); margin-top: 3px; font-style: italic; }
+
+/* relacionados */
+.gl-related { display: flex; flex-wrap: wrap; gap: 6px; }
+.gl-rel-chip {
+  border: 1px solid var(--c-high); border-radius: 13px;
+  padding: 3px 11px; background: var(--accent-soft);
+  font-family: inherit; font-size: 11.5px; color: var(--c-high);
+  cursor: pointer; transition: background .12s, color .12s;
+}
+.gl-rel-chip:hover { background: var(--c-high); color: var(--bg); }
+
+.gl-extlink {
+  display: inline-block; font-size: 12px; color: var(--c-high);
+  text-decoration: none; border-bottom: 1px dotted var(--c-high);
+}
+.gl-extlink:hover { background: var(--accent-soft); }
+
+.gl-ficha-empty {
+  max-width: 420px; color: var(--pencil); font-size: 13px; line-height: 1.6;
+  padding: 22px; border: 1px dashed var(--border); border-radius: 4px; background: var(--bg-cell);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 760px) {
+  .gl-body { grid-template-columns: 1fr; grid-template-rows: minmax(0,42%) minmax(0,58%); }
+  .gl-index { border-right: none; border-bottom: 1px solid var(--border); }
+  .gl-ficha-pane { padding: 20px 18px 32px; }
+  .gl-ficha-title { font-size: 21px; }
+  .gl-legend { display: none; }
+}
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#d6dfe8"/>
+    <g transform="translate(26,24)" fill="#042f4d">
+      <rect x="0" y="0" width="20" height="4"/>
+      <rect x="0" y="9" width="32" height="3" fill="#5c728e"/>
+      <rect x="0" y="16" width="28" height="3" fill="#5c728e"/>
+      <rect x="0" y="27" width="14" height="4"/>
+      <rect x="0" y="36" width="32" height="3" fill="#5c728e"/>
+      <rect x="0" y="43" width="24" height="3" fill="#5c728e"/>
+      <circle cx="44" cy="2" r="3"/>
+    </g>
+  </svg>
+</template>
+
+<script src="glosario-data.js"></script>
+<script type="text/babel" src="glosario-app.jsx"></script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  ReactDOM.createRoot(document.getElementById('root')).render(<GlosarioApp organize="matrix" />);
+</script>
+
+</body>
+</html>

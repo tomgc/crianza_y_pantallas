@@ -474,5 +474,209 @@
     "title": "A multi-school study in England to assess problematic smartphone usage and anxiety and depression",
     "journal": "Acta Paediatrica 113(10):2240-2248. Reemplaza cita previa \"Montag 2024\" no localizable",
     "url": "https://onlinelibrary.wiley.com/doi/10.1111/apa.17317"
+  },
+  {
+    "id": "Karani2022",
+    "group": "recent",
+    "type": "review",
+    "authors": "Karani N.F., Sher J., Mophosho M. 2022",
+    "title": "The influence of screen time on children's language development: A scoping review",
+    "journal": "South African Journal of Communication Disorders 69(1):a825",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8905397/"
+  },
+  {
+    "id": "AAP2024",
+    "group": "intl",
+    "type": "guideline",
+    "authors": "American Academy of Pediatrics. 2024",
+    "title": "Screen Time for Infants",
+    "journal": "AAP Q&A Portal — Center of Excellence on Social Media and Youth Mental Health",
+    "url": "https://www.aap.org/en/patient-care/media-and-children/center-of-excellence-on-social-media-and-youth-mental-health/qa-portal/qa-screen-time-for-infants/"
+  },
+  {
+    "id": "AAP2016",
+    "group": "anchor",
+    "type": "guideline",
+    "authors": "AAP Council on Communications and Media. 2016",
+    "title": "Media and Young Minds",
+    "journal": "Pediatrics 138(5):e20162591. Policy statement reemplazada por AAP 2026",
+    "url": "https://doi.org/10.1542/peds.2016-2591"
+  },
+  {
+    "id": "Foreman2024",
+    "group": "school",
+    "type": "meta",
+    "authors": "Foreman J., Xiong S., Keel S. y col. 2024",
+    "title": "The association between screen time exposure and myopia in children and adolescents: a meta-analysis",
+    "journal": "BMC Public Health 24:1881",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38890613/"
+  },
+  {
+    "id": "Ha2025",
+    "group": "school",
+    "featured": true,
+    "type": "meta",
+    "authors": "Ha A., Lee Y.J., Lee M., Shim S.R., Kim Y.K. 2025",
+    "title": "Digital Screen Time and Myopia: A Systematic Review and Dose-Response Meta-Analysis",
+    "journal": "JAMA Network Open 8(2):e2460026. Meta-análisis dosis-respuesta con N=335.524",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39982728/"
+  },
+  {
+    "id": "LlanosMerin2024",
+    "group": "sleep",
+    "type": "review",
+    "authors": "Llanos Merín M., Toledano-González A., Fernández-Aguilar L. y col. 2024",
+    "title": "Evaluation of the association between excessive screen use, sleep patterns and behavioral and cognitive aspects in preschool population. A systematic review",
+    "journal": "European Child & Adolescent Psychiatry 33(12):4097–4114",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618148/"
+  },
+  {
+    "id": "Gomes2024",
+    "group": "sleep",
+    "type": "review",
+    "authors": "Gomes K., Goldman R.D. 2024",
+    "title": "Screen time and sleep in children",
+    "journal": "Canadian Family Physician 70(6):388–390",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11280700/"
+  },
+  {
+    "id": "NSF2024",
+    "group": "sleep",
+    "featured": true,
+    "type": "guideline",
+    "authors": "National Sleep Foundation. 2024",
+    "title": "The impact of screen use on sleep health across the lifespan: A National Sleep Foundation consensus statement",
+    "journal": "Sleep Health (declaración de consenso basada en 574 manuscritos revisados por pares)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38806392/"
+  },
+  {
+    "id": "He2025",
+    "group": "sleep",
+    "featured": true,
+    "type": "meta",
+    "authors": "He X., Pan B., Ma N., Li D., Kong W., Liu Q., Liu X., Wang X., Deng X., Yang K. 2025",
+    "title": "The association of screen time and the risk of sleep outcomes: a systematic review and meta-analysis",
+    "journal": "Frontiers in Psychiatry 16:1640263. N=548.338, 21 cohortes prospectivas. Mediana de edad 12,76 años",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41480345/"
+  },
+  {
+    "id": "Bakht2025",
+    "group": "recent",
+    "type": "review",
+    "authors": "Bakht D., Yousaf F., Alvi Z. y col. 2025",
+    "title": "Assessing the Impact of Screen Time on the Motor Development of Children: A Systematic Review",
+    "journal": "Pediatric Discovery 3(2):e70002. 24 estudios observacionales y experimentales en niños de 0-7 años",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/pdi3.70002"
+  },
+  {
+    "id": "Gath2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Gath M., Horwood L.J., Gillon G., McNeill B., Woodward L.J. 2025",
+    "title": "Longitudinal Associations Between Screen Time and Children's Language, Early Educational Skills, and Peer Social Functioning",
+    "journal": "Developmental Psychology. N=6.281, cohorte Growing Up in New Zealand, evaluados a los 2, 4,5 y 8 años",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39786801/"
+  },
+  {
+    "id": "Bustamante2023",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Bustamante J.C., Fernández-Castilla B., Alcaraz-Iborra M. 2023",
+    "title": "Relation between executive functions and screen time exposure in under 6 year-olds: A meta-analysis",
+    "journal": "Computers in Human Behavior 145:107739. 15 estudios, N=6.922, 44 effect sizes. r=0,05 (no significativo)",
+    "url": "https://doi.org/10.1016/j.chb.2023.107739"
+  },
+  {
+    "id": "AguilarFarias2021",
+    "group": "chile",
+    "type": "chilean",
+    "authors": "Aguilar-Farias N., Toledo-Vargas M., Miranda-Marquez S., Cortinez-O'Ryan A., Cristi-Montero C., Rodriguez-Rodriguez F., Martino-Fuentealba P., Okely A.D., del Pozo Cruz B. 2021",
+    "title": "Sociodemographic Predictors of Changes in Physical Activity, Screen Time, and Sleep among Toddlers and Preschoolers in Chile during the COVID-19 Pandemic",
+    "journal": "International Journal of Environmental Research and Public Health 18(1):176. N=3.158 cuidadores de niños 1-5 años, encuesta nacional Chile durante pandemia",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7796176/"
+  },
+  {
+    "id": "GagoGalvagno2025",
+    "group": "recent",
+    "type": "transversal",
+    "authors": "Gago-Galvagno L.G., Elgier A.M., Tabullo A.J., Huaire-Inacio E.J., et al. 2025",
+    "title": "Use of screens, books and adults' interactions on toddler's language and motor skills: A cross-cultural study among 19 Latin American countries from different SES",
+    "journal": "PLOS ONE 20(2):e0314569",
+    "url": "https://doi.org/10.1371/journal.pone.0314569"
+  },
+  {
+    "id": "Jing2023",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Jing M., Ye T., Kirkorian H.L., Mares M.-L. 2023",
+    "title": "Screen media exposure and young children's vocabulary learning and development: A meta-analysis",
+    "journal": "Child Development 94(5):1398–1418",
+    "url": "https://doi.org/10.1111/cdev.13927"
+  },
+  {
+    "id": "Martinot2021",
+    "group": "recent",
+    "type": "cohort",
+    "authors": "Martinot P., Bernard J.Y., Peyre H., De Agostini M., Forhan A., Charles M.-A., Plancoulaine S., Heude B. 2021",
+    "title": "Exposure to screens and children's language development in the EDEN mother–child cohort",
+    "journal": "Scientific Reports 11:11863",
+    "url": "https://doi.org/10.1038/s41598-021-90867-3"
+  },
+  {
+    "id": "Massaroni2023",
+    "group": "recent",
+    "type": "review",
+    "authors": "Massaroni V., Delle Donne V., Marra C., Arcangeli V., Chieffo D.P.R. 2023",
+    "title": "The Relationship between Language and Technology: How Screen Time Affects Language Development in Early Life—A Systematic Review",
+    "journal": "Brain Sciences 14(1):27",
+    "url": "https://doi.org/10.3390/brainsci14010027"
+  },
+  {
+    "id": "Nwachukwu2025",
+    "group": "recent",
+    "type": "review",
+    "authors": "Nwachukwu E.C., Nigam A., Sekar Lakshmisai S., Sakarkar P., Bheemaneni R.S., Malasevskaia I.A. 2025",
+    "title": "Impact of Screen Time on Language Development and Vocabulary Acquisition in Early Childhood: A Systematic Review",
+    "journal": "Cureus 17(11):e97429",
+    "url": "https://doi.org/10.7759/cureus.97429"
+  },
+  {
+    "id": "Strouse2021",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Strouse G.A., Samson J.E. 2021",
+    "title": "Learning From Video: A Meta-Analysis of the Video Deficit in Children Ages 0 to 6 Years",
+    "journal": "Child Development 92(1):e20–e38",
+    "url": "https://doi.org/10.1111/cdev.13429"
+  },
+  {
+    "id": "VerheijenSpooren2021",
+    "group": "recent",
+    "type": "transversal",
+    "authors": "Verheijen L., Spooren W. 2021",
+    "title": "The impact of WhatsApp on Dutch youths' school writing and spelling",
+    "journal": "Journal of Writing Research 13(1):155–191",
+    "url": "https://doi.org/10.17239/jowr-2021.13.01.05"
+  },
+  {
+    "id": "Yang2024",
+    "group": "recent",
+    "featured": true,
+    "type": "cohort",
+    "authors": "Yang S., Saïd M., Peyre H., Ramus F., Taine M., Law E.C., Dufourg M.-N., Heude B., Charles M.-A., Bernard J.Y. 2024",
+    "title": "Associations of screen use with cognitive development in early childhood: the ELFE birth cohort",
+    "journal": "Journal of Child Psychology and Psychiatry 65(5):680–693",
+    "url": "https://doi.org/10.1111/jcpp.13887"
+  },
+  {
+    "id": "BrauneKrickau2021",
+    "group": "regulation",
+    "type": "review",
+    "authors": "Braune-Krickau K., Schneebeli L., Pehlke-Milde J., Gemperle M., Koch R., von Wyl A. 2021",
+    "title": "Smartphones in the nursery: Parental smartphone use and parental sensitivity and responsiveness within parent-child interaction in early childhood (0-5 years): A scoping review",
+    "journal": "Infant Mental Health Journal 42(2):161-175",
+    "url": "https://doi.org/10.1002/imhj.21908"
   }
 ]

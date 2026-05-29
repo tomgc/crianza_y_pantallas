@@ -211,7 +211,8 @@ body {
   font-weight: 600;
   cursor: default;
 }
-.grid-cell.row-head { align-items: flex-start; justify-content: center; }
+.grid-cell.row-head { align-items: flex-start; justify-content: center; flex-direction: column; }
+.dim-paper-count { font-size: 10px; font-weight: 400; color: var(--pencil); margin-top: 2px; }
 .grid-cell.row-head:hover, .grid-cell.col-head:hover { background: var(--bg-soft); }
 
 .grid-cell.col-head {
@@ -440,6 +441,7 @@ body {
 .page-head { margin-bottom: 20px; }
 .page-title { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
 .page-sub { font-size: 12.5px; color: var(--pencil); }
+.page-body { max-width: 680px; }
 
 /* ── BIBLIOGRAFÍA ───────────────────────────────────────────── */
 .biblio-controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
@@ -1276,6 +1278,210 @@ window.__DATA__ = {
       "title": "A multi-school study in England to assess problematic smartphone usage and anxiety and depression",
       "journal": "Acta Paediatrica 113(10):2240-2248. Reemplaza cita previa \"Montag 2024\" no localizable",
       "url": "https://onlinelibrary.wiley.com/doi/10.1111/apa.17317"
+    },
+    {
+      "id": "Karani2022",
+      "group": "recent",
+      "type": "review",
+      "authors": "Karani N.F., Sher J., Mophosho M. 2022",
+      "title": "The influence of screen time on children's language development: A scoping review",
+      "journal": "South African Journal of Communication Disorders 69(1):a825",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8905397/"
+    },
+    {
+      "id": "AAP2024",
+      "group": "intl",
+      "type": "guideline",
+      "authors": "American Academy of Pediatrics. 2024",
+      "title": "Screen Time for Infants",
+      "journal": "AAP Q&A Portal — Center of Excellence on Social Media and Youth Mental Health",
+      "url": "https://www.aap.org/en/patient-care/media-and-children/center-of-excellence-on-social-media-and-youth-mental-health/qa-portal/qa-screen-time-for-infants/"
+    },
+    {
+      "id": "AAP2016",
+      "group": "anchor",
+      "type": "guideline",
+      "authors": "AAP Council on Communications and Media. 2016",
+      "title": "Media and Young Minds",
+      "journal": "Pediatrics 138(5):e20162591. Policy statement reemplazada por AAP 2026",
+      "url": "https://doi.org/10.1542/peds.2016-2591"
+    },
+    {
+      "id": "Foreman2024",
+      "group": "school",
+      "type": "meta",
+      "authors": "Foreman J., Xiong S., Keel S. y col. 2024",
+      "title": "The association between screen time exposure and myopia in children and adolescents: a meta-analysis",
+      "journal": "BMC Public Health 24:1881",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38890613/"
+    },
+    {
+      "id": "Ha2025",
+      "group": "school",
+      "featured": true,
+      "type": "meta",
+      "authors": "Ha A., Lee Y.J., Lee M., Shim S.R., Kim Y.K. 2025",
+      "title": "Digital Screen Time and Myopia: A Systematic Review and Dose-Response Meta-Analysis",
+      "journal": "JAMA Network Open 8(2):e2460026. Meta-análisis dosis-respuesta con N=335.524",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39982728/"
+    },
+    {
+      "id": "LlanosMerin2024",
+      "group": "sleep",
+      "type": "review",
+      "authors": "Llanos Merín M., Toledano-González A., Fernández-Aguilar L. y col. 2024",
+      "title": "Evaluation of the association between excessive screen use, sleep patterns and behavioral and cognitive aspects in preschool population. A systematic review",
+      "journal": "European Child & Adolescent Psychiatry 33(12):4097–4114",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11618148/"
+    },
+    {
+      "id": "Gomes2024",
+      "group": "sleep",
+      "type": "review",
+      "authors": "Gomes K., Goldman R.D. 2024",
+      "title": "Screen time and sleep in children",
+      "journal": "Canadian Family Physician 70(6):388–390",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11280700/"
+    },
+    {
+      "id": "NSF2024",
+      "group": "sleep",
+      "featured": true,
+      "type": "guideline",
+      "authors": "National Sleep Foundation. 2024",
+      "title": "The impact of screen use on sleep health across the lifespan: A National Sleep Foundation consensus statement",
+      "journal": "Sleep Health (declaración de consenso basada en 574 manuscritos revisados por pares)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38806392/"
+    },
+    {
+      "id": "He2025",
+      "group": "sleep",
+      "featured": true,
+      "type": "meta",
+      "authors": "He X., Pan B., Ma N., Li D., Kong W., Liu Q., Liu X., Wang X., Deng X., Yang K. 2025",
+      "title": "The association of screen time and the risk of sleep outcomes: a systematic review and meta-analysis",
+      "journal": "Frontiers in Psychiatry 16:1640263. N=548.338, 21 cohortes prospectivas. Mediana de edad 12,76 años",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41480345/"
+    },
+    {
+      "id": "Bakht2025",
+      "group": "recent",
+      "type": "review",
+      "authors": "Bakht D., Yousaf F., Alvi Z. y col. 2025",
+      "title": "Assessing the Impact of Screen Time on the Motor Development of Children: A Systematic Review",
+      "journal": "Pediatric Discovery 3(2):e70002. 24 estudios observacionales y experimentales en niños de 0-7 años",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/pdi3.70002"
+    },
+    {
+      "id": "Gath2025",
+      "group": "recent",
+      "type": "longitudinal",
+      "authors": "Gath M., Horwood L.J., Gillon G., McNeill B., Woodward L.J. 2025",
+      "title": "Longitudinal Associations Between Screen Time and Children's Language, Early Educational Skills, and Peer Social Functioning",
+      "journal": "Developmental Psychology. N=6.281, cohorte Growing Up in New Zealand, evaluados a los 2, 4,5 y 8 años",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39786801/"
+    },
+    {
+      "id": "Bustamante2023",
+      "group": "recent",
+      "type": "meta",
+      "authors": "Bustamante J.C., Fernández-Castilla B., Alcaraz-Iborra M. 2023",
+      "title": "Relation between executive functions and screen time exposure in under 6 year-olds: A meta-analysis",
+      "journal": "Computers in Human Behavior 145:107739. 15 estudios, N=6.922, 44 effect sizes. r=0,05 (no significativo)",
+      "url": "https://doi.org/10.1016/j.chb.2023.107739"
+    },
+    {
+      "id": "AguilarFarias2021",
+      "group": "chile",
+      "type": "chilean",
+      "authors": "Aguilar-Farias N., Toledo-Vargas M., Miranda-Marquez S., Cortinez-O'Ryan A., Cristi-Montero C., Rodriguez-Rodriguez F., Martino-Fuentealba P., Okely A.D., del Pozo Cruz B. 2021",
+      "title": "Sociodemographic Predictors of Changes in Physical Activity, Screen Time, and Sleep among Toddlers and Preschoolers in Chile during the COVID-19 Pandemic",
+      "journal": "International Journal of Environmental Research and Public Health 18(1):176. N=3.158 cuidadores de niños 1-5 años, encuesta nacional Chile durante pandemia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7796176/"
+    },
+    {
+      "id": "GagoGalvagno2025",
+      "group": "recent",
+      "type": "transversal",
+      "authors": "Gago-Galvagno L.G., Elgier A.M., Tabullo A.J., Huaire-Inacio E.J., et al. 2025",
+      "title": "Use of screens, books and adults' interactions on toddler's language and motor skills: A cross-cultural study among 19 Latin American countries from different SES",
+      "journal": "PLOS ONE 20(2):e0314569",
+      "url": "https://doi.org/10.1371/journal.pone.0314569"
+    },
+    {
+      "id": "Jing2023",
+      "group": "recent",
+      "featured": true,
+      "type": "meta",
+      "authors": "Jing M., Ye T., Kirkorian H.L., Mares M.-L. 2023",
+      "title": "Screen media exposure and young children's vocabulary learning and development: A meta-analysis",
+      "journal": "Child Development 94(5):1398–1418",
+      "url": "https://doi.org/10.1111/cdev.13927"
+    },
+    {
+      "id": "Martinot2021",
+      "group": "recent",
+      "type": "cohort",
+      "authors": "Martinot P., Bernard J.Y., Peyre H., De Agostini M., Forhan A., Charles M.-A., Plancoulaine S., Heude B. 2021",
+      "title": "Exposure to screens and children's language development in the EDEN mother–child cohort",
+      "journal": "Scientific Reports 11:11863",
+      "url": "https://doi.org/10.1038/s41598-021-90867-3"
+    },
+    {
+      "id": "Massaroni2023",
+      "group": "recent",
+      "type": "review",
+      "authors": "Massaroni V., Delle Donne V., Marra C., Arcangeli V., Chieffo D.P.R. 2023",
+      "title": "The Relationship between Language and Technology: How Screen Time Affects Language Development in Early Life—A Systematic Review",
+      "journal": "Brain Sciences 14(1):27",
+      "url": "https://doi.org/10.3390/brainsci14010027"
+    },
+    {
+      "id": "Nwachukwu2025",
+      "group": "recent",
+      "type": "review",
+      "authors": "Nwachukwu E.C., Nigam A., Sekar Lakshmisai S., Sakarkar P., Bheemaneni R.S., Malasevskaia I.A. 2025",
+      "title": "Impact of Screen Time on Language Development and Vocabulary Acquisition in Early Childhood: A Systematic Review",
+      "journal": "Cureus 17(11):e97429",
+      "url": "https://doi.org/10.7759/cureus.97429"
+    },
+    {
+      "id": "Strouse2021",
+      "group": "recent",
+      "featured": true,
+      "type": "meta",
+      "authors": "Strouse G.A., Samson J.E. 2021",
+      "title": "Learning From Video: A Meta-Analysis of the Video Deficit in Children Ages 0 to 6 Years",
+      "journal": "Child Development 92(1):e20–e38",
+      "url": "https://doi.org/10.1111/cdev.13429"
+    },
+    {
+      "id": "VerheijenSpooren2021",
+      "group": "recent",
+      "type": "transversal",
+      "authors": "Verheijen L., Spooren W. 2021",
+      "title": "The impact of WhatsApp on Dutch youths' school writing and spelling",
+      "journal": "Journal of Writing Research 13(1):155–191",
+      "url": "https://doi.org/10.17239/jowr-2021.13.01.05"
+    },
+    {
+      "id": "Yang2024",
+      "group": "recent",
+      "featured": true,
+      "type": "cohort",
+      "authors": "Yang S., Saïd M., Peyre H., Ramus F., Taine M., Law E.C., Dufourg M.-N., Heude B., Charles M.-A., Bernard J.Y. 2024",
+      "title": "Associations of screen use with cognitive development in early childhood: the ELFE birth cohort",
+      "journal": "Journal of Child Psychology and Psychiatry 65(5):680–693",
+      "url": "https://doi.org/10.1111/jcpp.13887"
+    },
+    {
+      "id": "BrauneKrickau2021",
+      "group": "regulation",
+      "type": "review",
+      "authors": "Braune-Krickau K., Schneebeli L., Pehlke-Milde J., Gemperle M., Koch R., von Wyl A. 2021",
+      "title": "Smartphones in the nursery: Parental smartphone use and parental sensitivity and responsiveness within parent-child interaction in early childhood (0-5 years): A scoping review",
+      "journal": "Infant Mental Health Journal 42(2):161-175",
+      "url": "https://doi.org/10.1002/imhj.21908"
     }
   ],
   "claims": {
@@ -1286,8 +1492,11 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "La TV de fondo en presencia del bebé reduce significativamente el número de palabras dirigidas y los turnos conversacionales con el cuidador (Brushe et al., 2024, asociaciones medidas con grabaciones de audio LENA en infantes australianos).",
-          "refs": []
+          "text": "La TV de fondo en presencia del bebé reduce significativamente el número de palabras dirigidas y los turnos conversacionales con el cuidador (asociaciones medidas con grabaciones de audio LENA en infantes australianos).",
+          "refs": [
+            "Brushe2024",
+            "Massaroni2023"
+          ]
         },
         {
           "certainty": "high",
@@ -1297,7 +1506,9 @@ window.__DATA__ = {
         {
           "certainty": "medium",
           "text": "No hay evidencia de que el contenido audiovisual a esta edad enseñe lenguaje. Solo la interacción cara a cara con un adulto responsivo lo hace de manera robusta. Las videollamadas con familiares son la excepción documentada en EYSTAG.",
-          "refs": []
+          "refs": [
+            "Strouse2021"
+          ]
         }
       ],
       "chile_note": "En hogares con TV permanentemente encendida, esta es la edad donde la intervención más sencilla y de mayor impacto es apagar la pantalla cuando nadie la está viendo activamente. El estudio chileno *Mil Primeros Días* (UC) observa esta práctica de forma frecuente en hogares con cuidado por abuelos.",
@@ -1324,8 +1535,14 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "Meta-análisis de Madigan et al. (2020, JAMA Pediatrics): mayor tiempo de pantalla se asocia con menores habilidades lingüísticas. Contenido educativo de alta calidad puede ser ligeramente positivo.",
-          "refs": []
+          "text": "Meta-análisis de Madigan et al. (2020, JAMA Pediatrics, N=18.905): mayor tiempo de pantalla se asocia con menores habilidades lingüísticas (r=−.14). Sin embargo, cohortes grandes con control de confusores (ELFE, N=13.763; EDEN, N=1.562) muestran que el efecto del tiempo de pantalla per se es débil; lo que predice peores resultados es el contexto, como la TV encendida durante las comidas.",
+          "refs": [
+            "Madigan2020",
+            "Yang2024",
+            "Martinot2021",
+            "Brushe2024",
+            "Massaroni2023"
+          ]
         },
         {
           "certainty": "high",
@@ -1334,14 +1551,34 @@ window.__DATA__ = {
         },
         {
           "certainty": "medium",
-          "text": "Algunas revisiones (Jing et al., 2023; Sticca et al., 2025) encuentran beneficios pequeños para vocabulario cuando el contenido está específicamente diseñado y el adulto media activamente.",
-          "refs": []
+          "text": "Algunas revisiones encuentran beneficios pequeños para vocabulario cuando el contenido está específicamente diseñado y el adulto media activamente.",
+          "refs": [
+            "Karani2022",
+            "Jing2023",
+            "GagoGalvagno2025"
+          ]
         },
         {
           "certainty": "high",
-          "text": "El co-visionado con interacción contingente del adulto neutraliza buena parte del efecto negativo (Sundqvist et al., 2021).",
+          "text": "El co-visionado con interacción contingente del adulto neutraliza buena parte del efecto negativo.",
           "refs": [
-            "Sundqvist2021"
+            "Sundqvist2021",
+            "GagoGalvagno2025"
+          ]
+        },
+        {
+          "certainty": "high",
+          "text": "Más de 1,5 horas diarias de pantalla a los 2 años predice menor vocabulario y peor comunicación a los 4,5 años, en cohorte longitudinal de N=6.281, tras ajustar por factores socioeconómicos.",
+          "refs": [
+            "Gath2025"
+          ]
+        },
+        {
+          "certainty": "high",
+          "text": "Cohortes grandes con control de confusores (EDEN, N=1.562; ELFE, N=13.763) muestran que el tiempo de pantalla per se tiene asociaciones débiles o nulas con el lenguaje; lo que predice peores resultados es el contexto: TV encendida durante las comidas a los 2 años se asocia con peor desarrollo lingüístico a los 3,5 años.",
+          "refs": [
+            "Martinot2021",
+            "Yang2024"
           ]
         }
       ],
@@ -1386,20 +1623,29 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "Contenido educativo interactivo (apps bien diseñadas, e-books leídos con un adulto) puede tener efectos pequeños positivos sobre vocabulario y comprensión (Xie et al., 2024; Arabiat et al., 2022).",
-          "refs": []
-        },
-        {
-          "certainty": "medium",
-          "text": "Visualización pasiva extensa, especialmente de contenido fast-paced (videos cortos, cambios visuales constantes), se asocia con menor desarrollo narrativo y atencional (Mallawaarachchi et al., 2024).",
+          "text": "Contenido educativo interactivo (apps bien diseñadas, e-books leídos con un adulto) puede tener efectos pequeños positivos sobre vocabulario y comprensión.",
           "refs": [
-            "Mallawaarachchi2024"
+            "Madigan2020",
+            "Jing2023",
+            "Nwachukwu2025"
           ]
         },
         {
           "certainty": "medium",
-          "text": "El \"video deficit\" persiste hasta cerca de la edad escolar: los niños aprenden menos de un video que de la misma información presentada en persona (Strouse & Samson, 2021).",
-          "refs": []
+          "text": "Visualización pasiva extensa, especialmente de contenido fast-paced (videos cortos, cambios visuales constantes), se asocia con menor desarrollo narrativo y atencional.",
+          "refs": [
+            "Mallawaarachchi2024",
+            "Nwachukwu2025",
+            "Yang2024"
+          ]
+        },
+        {
+          "certainty": "medium",
+          "text": "El \"video deficit\" persiste hasta cerca de la edad escolar: los niños aprenden menos de un video que de la misma información presentada en persona.",
+          "refs": [
+            "Strouse2021",
+            "Jing2023"
+          ]
         }
       ],
       "andamiaje": {
@@ -1473,9 +1719,11 @@ window.__DATA__ = {
           "refs": []
         },
         {
-          "certainty": "low",
-          "text": "Algunas líneas de investigación sugieren que el lenguaje fragmentado de la mensajería podría afectar la producción escrita formal, pero la evidencia es muy preliminar.",
-          "refs": []
+          "certainty": "medium",
+          "text": "La mensajería instantánea no perjudica la escritura formal escolar; estudios experimentales hallan un leve efecto positivo en ortografía, posiblemente porque el uso frecuente incrementa la conciencia ortográfica.",
+          "refs": [
+            "VerheijenSpooren2021"
+          ]
         }
       ],
       "andamiaje": {
@@ -1496,12 +1744,14 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "El contenido fast-paced captura la atención del bebé pero no la desarrolla. La atención sostenida y dirigida se entrena con objetos reales y personas (Wass & Goldenberg, 2025).",
-          "refs": []
+          "text": "El contenido fast-paced captura la atención del bebé pero no la desarrolla. La atención sostenida y dirigida se entrena con objetos reales y personas.",
+          "refs": [
+            "AAP2024"
+          ]
         },
         {
           "certainty": "low",
-          "text": "Hipótesis de \"entrenamiento atencional negativo\": la pantalla acostumbra al bebé a niveles de estimulación altos, dificultando luego la atención a estímulos lentos (planteada por Liu et al., 2023; no demostrada de forma robusta en lactantes).",
+          "text": "Hipótesis de \"entrenamiento atencional negativo\": la pantalla acostumbra al bebé a niveles de estimulación altos, dificultando luego la atención a estímulos lentos. No demostrada de forma robusta en lactantes.",
           "refs": []
         }
       ],
@@ -1523,14 +1773,14 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Asociaciones negativas entre tiempo de pantalla y función ejecutiva en preescolares han sido reportadas en múltiples meta-análisis, con magnitudes pequeñas (Bal et al., 2024).",
+          "text": "Asociaciones negativas entre tiempo de pantalla y función ejecutiva en preescolares han sido reportadas en múltiples meta-análisis, con magnitudes pequeñas.",
           "refs": [
             "Bal2024"
           ]
         },
         {
           "certainty": "medium",
-          "text": "Hallazgos mixtos: algunas revisiones (Dutra et al., 2025) no encuentran asociación tras controlar por factores socioeconómicos.",
+          "text": "Hallazgos mixtos: algunas revisiones no encuentran asociación tras controlar por factores socioeconómicos.",
           "refs": [
             "Dutra2025"
           ]
@@ -1539,6 +1789,13 @@ window.__DATA__ = {
           "certainty": "low",
           "text": "La hipótesis del \"video deficit\" para el aprendizaje cognitivo está mejor establecida que para el desarrollo atencional propiamente tal.",
           "refs": []
+        },
+        {
+          "certainty": "medium",
+          "text": "Meta-análisis de 15 estudios en menores de 6 años (N=6.922): **no encuentra asociación estadísticamente significativa** entre tiempo de pantalla bruto y funciones ejecutivas. El hallazgo matiza el discurso simplista y refuerza la centralidad de moderadores contextuales como contenido, co-uso y calidad de la interacción.",
+          "refs": [
+            "Bustamante2023"
+          ]
         }
       ],
       "definitions": [
@@ -1576,20 +1833,36 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Contenido fast-paced se asocia con peor desempeño en tareas de función ejecutiva inmediatamente después de la exposición, aunque los efectos a largo plazo son menos claros (Beyens et al., 2018; revisión).",
-          "refs": []
+          "text": "Contenido fast-paced se asocia con peor desempeño en tareas de función ejecutiva inmediatamente después de la exposición, aunque los efectos a largo plazo son menos claros.",
+          "refs": [
+            "Mallawaarachchi2024"
+          ]
         },
         {
           "certainty": "medium",
-          "text": "La asociación con TDAH (Trastorno por Déficit Atencional e Hiperactividad) es modesta. Causalidad incierta: niños con tendencia a TDAH podrían buscar contenido más estimulante (Jourdren et al., 2023).",
+          "text": "La asociación con TDAH (Trastorno por Déficit Atencional e Hiperactividad) es modesta. Causalidad incierta: niños con tendencia a TDAH podrían buscar contenido más estimulante.",
           "refs": [
             "Jourdren2023"
           ]
         },
         {
           "certainty": "high",
-          "text": "Co-visionado con interacción adulta mejora resultados cognitivos comparado con uso solitario (Sanders et al., 2023, umbrella review).",
+          "text": "Co-visionado con interacción adulta mejora resultados cognitivos comparado con uso solitario.",
           "refs": []
+        },
+        {
+          "certainty": "high",
+          "text": "Exposición elevada en infancia temprana predice peores resultados en lectoescritura, aritmética y fluidez de letras a los 4,5 años, controlando por nivel educativo materno y nivel socioeconómico.",
+          "refs": [
+            "Gath2025"
+          ]
+        },
+        {
+          "certainty": "medium",
+          "text": "No se encuentra moderación significativa por edad, sexo, tipo de exposición ni tipo de función ejecutiva en menores de 6 años. Meta-análisis transversales nulos coexisten con cohortes longitudinales que sí detectan asociación.",
+          "refs": [
+            "Bustamante2023"
+          ]
         }
       ],
       "andamiaje": {
@@ -1621,8 +1894,10 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "Estudios consistentes muestran asociación entre uso de pantalla recreativa elevado y peor rendimiento académico, con magnitudes pequeñas a moderadas (Sanders et al., 2024, umbrella review en 102 meta-análisis).",
-          "refs": []
+          "text": "Estudios consistentes muestran asociación entre uso de pantalla recreativa elevado y peor rendimiento académico, con magnitudes pequeñas a moderadas (umbrella review en 102 meta-análisis).",
+          "refs": [
+            "AAP2026"
+          ]
         },
         {
           "certainty": "medium",
@@ -1631,7 +1906,7 @@ window.__DATA__ = {
         },
         {
           "certainty": "medium",
-          "text": "Un estudio inglés en escuelas (SMART Schools, Lancet Reg Health Eur 2025) no encontró que la restricción de celulares en aula por sí sola mejorara bienestar mental ni resultados académicos.",
+          "text": "La restricción de celulares en aula por sí sola no mejora bienestar mental ni resultados académicos, según un ensayo controlado en escuelas inglesas.",
           "refs": []
         }
       ],
@@ -1665,7 +1940,7 @@ window.__DATA__ = {
         },
         {
           "certainty": "medium",
-          "text": "El uso intensivo de redes sociales aparece como factor de riesgo para problemas atencionales tipo TDAH a los 18 meses de seguimiento (Ra et al., 2018, JAMA, adolescentes).",
+          "text": "El uso intensivo de redes sociales aparece como factor de riesgo para problemas atencionales tipo TDAH a los 18 meses de seguimiento.",
           "refs": []
         },
         {
@@ -1692,8 +1967,10 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Tecnointerferencia parental (uso de celular por el adulto durante interacciones) se asocia con menor sensibilidad y responsividad del cuidador (Braune-Krickau et al., 2021).",
-          "refs": []
+          "text": "Tecnointerferencia parental (uso de celular por el adulto durante interacciones) se asocia con menor sensibilidad y responsividad del cuidador.",
+          "refs": [
+            "BrauneKrickau2021"
+          ]
         },
         {
           "certainty": "low",
@@ -1724,14 +2001,14 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "El meta-análisis longitudinal más potente disponible (Vasconcellos et al., 2025, *Psychological Bulletin*) sintetiza 117 estudios longitudinales con ~292.000 niños de 0 a 10 años, y confirma la asociación bidireccional entre tiempo de pantalla y problemas socioemocionales. Magnitudes pequeñas pero consistentes; es lo más cercano a evidencia causal disponible sin ensayo aleatorizado.",
+          "text": "Meta-análisis longitudinal de 117 estudios con ~292.000 niños de 0 a 10 años confirma la asociación bidireccional entre tiempo de pantalla y problemas socioemocionales. Magnitudes pequeñas pero consistentes; es lo más cercano a evidencia causal disponible sin ensayo aleatorizado.",
           "refs": [
             "Vasconcellos2025"
           ]
         },
         {
           "certainty": "high",
-          "text": "Tecnointerferencia parental se asocia con más problemas emocionales y conductuales del niño (Toledo-Vargas et al., 2025, *JAMA Pediatrics*).",
+          "text": "Tecnointerferencia parental se asocia con más problemas emocionales y conductuales del niño.",
           "refs": [
             "Toledo2025"
           ]
@@ -1779,14 +2056,14 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Mayor tiempo de pantalla se asocia con peores resultados socioemocionales en preescolares, pero la magnitud del efecto es menor que en niños mayores (Al-Jbouri et al., 2026; Neville et al., 2026). El meta-análisis sintetiza esta evidencia en el rango 0–10 años (Vasconcellos et al., 2025).",
+          "text": "Mayor tiempo de pantalla se asocia con peores resultados socioemocionales en preescolares, pero la magnitud del efecto es menor que en niños mayores.",
           "refs": [
             "Vasconcellos2025"
           ]
         },
         {
           "certainty": "medium",
-          "text": "Contenido prosocial puede ser beneficioso para desarrollo socioemocional cuando es seleccionado y acompañado (Coyne et al., 2022; Mallawaarachchi et al., 2024).",
+          "text": "Contenido prosocial puede ser beneficioso para desarrollo socioemocional cuando es seleccionado y acompañado.",
           "refs": [
             "Mallawaarachchi2024"
           ]
@@ -1854,7 +2131,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "El uso intensivo de redes sociales en preadolescencia se asocia con peor autoestima, más síntomas depresivos y problemas de imagen corporal, particularmente en niñas (revisiones recientes 2024-2025).",
+          "text": "El uso intensivo de redes sociales en preadolescencia se asocia con peor autoestima, más síntomas depresivos y problemas de imagen corporal, particularmente en niñas.",
           "refs": []
         },
         {
@@ -1864,8 +2141,17 @@ window.__DATA__ = {
         },
         {
           "certainty": "high",
-          "text": "AAP recomienda evitar redes sociales antes de los 13 años (límite legal en muchas plataformas) y supervisión activa después.",
-          "refs": []
+          "text": "La Academia Americana de Pediatría recomienda evitar redes sociales antes de los 13 años (límite legal en muchas plataformas) y supervisión activa después.",
+          "refs": [
+            "AAP2026"
+          ]
+        },
+        {
+          "certainty": "high",
+          "text": "El consumo superior a 2,5 horas diarias de pantalla en niñez temprana predice un aumento sostenido de problemas de relación con pares a los 8 años, en cohorte longitudinal neozelandesa.",
+          "refs": [
+            "Gath2025"
+          ]
         }
       ],
       "andamiaje": {
@@ -1918,23 +2204,30 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "Más tiempo de pantalla se asocia consistentemente con menor duración de sueño nocturno (Janssen et al., 2020; Li et al., 2020; Belmon et al., 2019).",
-          "refs": []
+          "text": "Más tiempo de pantalla se asocia consistentemente con menor duración de sueño nocturno.",
+          "refs": [
+            "Janssen2020"
+          ]
         },
         {
           "certainty": "high",
           "text": "Pantalla en la hora previa a dormir se asocia con horario de acostarse más tardío y menos sueño total.",
-          "refs": []
+          "refs": [
+            "Carter2016",
+            "Gomes2024"
+          ]
         },
         {
           "certainty": "medium",
-          "text": "Intervenciones que reducen tiempo de pantalla muestran mejoras leves en duración del sueño (Martin et al., 2020, meta-análisis).",
+          "text": "Intervenciones que reducen tiempo de pantalla muestran mejoras leves en duración del sueño.",
           "refs": []
         },
         {
           "certainty": "medium",
           "text": "La OMS recomienda 11-14 horas de sueño para niños de 1-2 años y 10-13 horas para 3-4 años, incluyendo siestas.",
-          "refs": []
+          "refs": [
+            "WHO2019"
+          ]
         }
       ],
       "andamiaje": {
@@ -1971,18 +2264,29 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "EYSTAG recomienda dormitorios libres de pantalla y no usar pantallas en la hora previa a dormir.",
-          "refs": []
+          "text": "El Grupo Asesor sobre el Tiempo de Pantalla en la Primera Infancia del Reino Unido recomienda dormitorios libres de pantalla y no usar pantallas en la hora previa a dormir.",
+          "refs": [
+            "EYSTAG2026"
+          ]
         },
         {
           "certainty": "high",
           "text": "Mayor pantalla en preescolares se asocia con peor calidad y duración de sueño en múltiples revisiones sistemáticas.",
-          "refs": []
+          "refs": [
+            "LlanosMerin2024"
+          ]
         },
         {
           "certainty": "medium",
           "text": "La asociación entre pantalla y trastornos del sueño (pesadillas, despertares) es menos consistente que con duración.",
           "refs": []
+        },
+        {
+          "certainty": "high",
+          "text": "La falta de rutinas estructuradas durante el confinamiento desorganizó los patrones de sueño nocturno en preescolares, en hogares donde la pantalla aumentó. El dato es pandémico y debe leerse con cautela respecto al uso típico post-pandemia.",
+          "refs": [
+            "AguilarFarias2021"
+          ]
         }
       ],
       "andamiaje": {
@@ -2009,13 +2313,24 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "Pantalla en el dormitorio o uso de pantalla antes de dormir se asocia robustamente con menor duración y peor calidad del sueño en escolares (Hale & Guan, 2015, revisión clásica; múltiples confirmaciones posteriores).",
-          "refs": []
+          "text": "Pantalla en el dormitorio o uso de pantalla antes de dormir se asocia robustamente con menor duración y peor calidad del sueño en escolares, con múltiples confirmaciones en la literatura.",
+          "refs": [
+            "Gomes2024"
+          ]
         },
         {
           "certainty": "high",
           "text": "La asociación con sueño es uno de los efectos más consistentes y mejor cuantificados en niños escolares.",
-          "refs": []
+          "refs": [
+            "NSF2024"
+          ]
+        },
+        {
+          "certainty": "high",
+          "text": "Meta-análisis de cohortes prospectivas (N=548.338, 21 estudios): cada hora diaria adicional de pantalla predice **3 a 5 minutos menos de sueño nocturno**, 13 minutos de retraso en la hora de acostarse, y triplica las dificultades severas de conciliación cuando se usa pantalla en la cama.",
+          "refs": [
+            "He2025"
+          ]
         }
       ],
       "andamiaje": {
@@ -2048,7 +2363,9 @@ window.__DATA__ = {
         {
           "certainty": "high",
           "text": "La asociación entre uso de pantalla nocturna (especialmente celular en cama) y menor sueño es robusta y de magnitud relevante en preadolescentes y adolescentes.",
-          "refs": []
+          "refs": [
+            "NSF2024"
+          ]
         },
         {
           "certainty": "high",
@@ -2059,6 +2376,13 @@ window.__DATA__ = {
           "certainty": "medium",
           "text": "Intervenciones que eliminan pantalla del dormitorio en preadolescentes muestran mejoras consistentes en duración del sueño.",
           "refs": []
+        },
+        {
+          "certainty": "high",
+          "text": "Meta-análisis prospectivo confirma para preadolescentes la pérdida sostenida de sueño nocturno por cada hora de pantalla adicional, con el patrón más fuerte de asociación en el uso de pantallas en la cama.",
+          "refs": [
+            "He2025"
+          ]
         }
       ],
       "andamiaje": {
@@ -2084,7 +2408,7 @@ window.__DATA__ = {
         },
         {
           "certainty": "medium",
-          "text": "Asociaciones débiles entre tiempo de pantalla y retraso motor en estudios observacionales (Dutra et al., 2025), con causalidad incierta.",
+          "text": "Asociaciones débiles entre tiempo de pantalla y retraso motor en estudios observacionales, con causalidad incierta.",
           "refs": [
             "Dutra2025"
           ]
@@ -2109,13 +2433,22 @@ window.__DATA__ = {
         {
           "certainty": "medium",
           "text": "Pantalla en uso solitario predominantemente sedentaria desplaza juego activo, aunque no toda pantalla es sedentaria (bailar con videos).",
-          "refs": []
+          "refs": [
+            "Bakht2025"
+          ]
         },
         {
           "certainty": "medium",
-          "text": "Hábitos sedentarios tempranos predicen patrones posteriores: el niño que se sienta mucho a los 2 años tiende a seguir haciéndolo a los 5 (Pearson et al., 2018).",
+          "text": "Hábitos sedentarios tempranos predicen patrones posteriores: el niño que se sienta mucho a los 2 años tiende a seguir haciéndolo a los 5.",
           "refs": [
             "Pearson2018"
+          ]
+        },
+        {
+          "certainty": "high",
+          "text": "Estudio chileno con 3.158 cuidadores: durante las primeras etapas de la pandemia, los preescolares duplicaron su tiempo de pantalla recreativo (1,7 → 3,1 h/día), con detrimento simultáneo de actividad física. El mayor incremento se observó en hogares con menor nivel educativo y sin patio. El dato es pandémico y debe leerse con cautela respecto al uso típico post-pandemia.",
+          "refs": [
+            "AguilarFarias2021"
           ]
         }
       ],
@@ -2143,7 +2476,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Asociaciones débiles entre pantalla y motricidad fina: pantallas táctiles podrían tener pequeños beneficios para destreza fina (Crescenzi Lanna & Grané Oro, 2019).",
+          "text": "Asociaciones débiles entre pantalla y motricidad fina: pantallas táctiles podrían tener pequeños beneficios para destreza fina.",
           "refs": []
         },
         {
@@ -2155,6 +2488,13 @@ window.__DATA__ = {
           "certainty": "high",
           "text": "CMOs del Reino Unido recomiendan 3 horas diarias de actividad física para menores de 5 años, incluyendo juego activo.",
           "refs": []
+        },
+        {
+          "certainty": "medium",
+          "text": "Revisión sistemática de 24 estudios en niños de 0 a 7 años: el 71% reporta asociación negativa entre tiempo de pantalla y desarrollo motor. El mecanismo principal es el desplazamiento del juego activo tridimensional, no la pantalla en sí.",
+          "refs": [
+            "Bakht2025"
+          ]
         }
       ],
       "andamiaje": {
@@ -2186,7 +2526,7 @@ window.__DATA__ = {
         },
         {
           "certainty": "high",
-          "text": "Publicidad alimentaria en pantallas influye directamente sobre elecciones y consumo de alimentos en niños menores de 12 años (Russell et al., 2019).",
+          "text": "Publicidad alimentaria en pantallas influye directamente sobre elecciones y consumo de alimentos en niños menores de 12 años.",
           "refs": [
             "Russell2019"
           ]
@@ -2258,8 +2598,10 @@ window.__DATA__ = {
         },
         {
           "certainty": "low",
-          "text": "EYSTAG no encontró evidencia convincente sobre efectos de luz azul o radiación electromagnética en el desarrollo de la primera infancia.",
-          "refs": []
+          "text": "El Grupo Asesor sobre el Tiempo de Pantalla en la Primera Infancia del Reino Unido no encontró evidencia convincente sobre efectos de luz azul o radiación electromagnética en el desarrollo de la primera infancia.",
+          "refs": [
+            "EYSTAG2026"
+          ]
         }
       ],
       "andamiaje": {
@@ -2302,7 +2644,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "La asociación entre pantalla y miopía aparece en estudios transversales pero NO en longitudinales (Foreman et al., 2021, Lancet Digital Health, meta-análisis), sugiriendo que probablemente no es causal.",
+          "text": "La asociación entre pantalla y miopía aparece en estudios transversales pero NO en longitudinales, sugiriendo que probablemente no es causal.",
           "refs": []
         },
         {
@@ -2324,18 +2666,27 @@ window.__DATA__ = {
     },
     "vision-ninez-media": {
       "summary": "Miopía emergente",
-      "certainty": "medium",
+      "certainty": "high",
       "intro": "Fuera del paraguas EYSTAG. La miopía en edad escolar es una preocupación global creciente, especialmente en Asia oriental.",
       "claims": [
         {
           "certainty": "medium",
           "text": "Asociación entre actividades de \"cerca\" (close-work, que incluye lectura y pantalla) y miopía es razonablemente consistente. La pantalla en sí no se distingue empíricamente de otras actividades de cerca.",
-          "refs": []
+          "refs": [
+            "Foreman2024"
+          ]
         },
         {
           "certainty": "high",
           "text": "El tiempo al aire libre (al menos 2 horas diarias) es el factor protector más robusto contra el desarrollo y progresión de miopía.",
           "refs": []
+        },
+        {
+          "certainty": "high",
+          "text": "Meta-análisis dosis-respuesta (N=335.524, edad media 9,3 años): cada hora diaria adicional de pantalla se asocia con **21% mayor probabilidad de miopía**, con aceleración del riesgo entre 1 y 4 horas de uso.",
+          "refs": [
+            "Ha2025"
+          ]
         }
       ],
       "andamiaje": {
@@ -2357,18 +2708,27 @@ window.__DATA__ = {
     },
     "vision-preadolescencia": {
       "summary": "Progresión miopía",
-      "certainty": "medium",
+      "certainty": "high",
       "intro": "La preadolescencia es período de progresión rápida de miopía. La asociación con pantalla persiste.",
       "claims": [
         {
           "certainty": "medium",
           "text": "Mayor uso de pantalla se asocia con mayor riesgo de miopía, pero la causalidad sigue siendo discutida vs. simple \"cerca-trabajo\".",
-          "refs": []
+          "refs": [
+            "Foreman2024"
+          ]
         },
         {
           "certainty": "high",
           "text": "Recomendación universal: tiempo al aire libre y pausas regulares (regla 20-20-20).",
           "refs": []
+        },
+        {
+          "certainty": "high",
+          "text": "El meta-análisis dosis-respuesta de Ha y col. (2025) refuerza para preadolescentes la asociación cuantificada entre pantalla y miopía, con riesgo creciente sobre 1 hora diaria de uso (N=335.524, edad media 9,3 años).",
+          "refs": [
+            "Ha2025"
+          ]
         }
       ],
       "andamiaje": {
@@ -2411,7 +2771,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Asociaciones consistentes con problemas conductuales emergentes en preescolares, magnitudes pequeñas. El meta-análisis (117 estudios, ~292.000 niños) confirma esta asociación con dirección bidireccional (Vasconcellos et al., 2025).",
+          "text": "Meta-análisis de 117 estudios con ~292.000 niños confirma esta asociación con dirección bidireccional.",
           "refs": [
             "Vasconcellos2025"
           ]
@@ -2451,8 +2811,11 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Asociación con ansiedad, depresión emergente e inestabilidad emocional aparece en algunas revisiones (Skalická et al., 2019; Liu et al., 2024).",
-          "refs": []
+          "text": "Asociación con ansiedad, depresión emergente e inestabilidad emocional aparece en algunas revisiones.",
+          "refs": [
+            "Vasconcellos2025",
+            "SotoRamirez2025"
+          ]
         },
         {
           "certainty": "medium",
@@ -2484,7 +2847,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Asociación entre tiempo de pantalla y síntomas depresivos y ansiosos en escolares, magnitud pequeña, dirección causal incierta. El meta-análisis sintetiza esta evidencia para menores de 12 años (Eirich et al., 2022, *JAMA Psychiatry*).",
+          "text": "Asociación entre tiempo de pantalla y síntomas depresivos y ansiosos en escolares, magnitud pequeña, dirección causal incierta.",
           "refs": [
             "Eirich2022"
           ]
@@ -2564,8 +2927,10 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Tecnointerferencia parental interrumpe procesos de corregulación, con efectos observables en sensibilidad y responsividad (Braune-Krickau et al., 2021).",
-          "refs": []
+          "text": "Tecnointerferencia parental interrumpe procesos de corregulación, con efectos observables en sensibilidad y responsividad.",
+          "refs": [
+            "BrauneKrickau2021"
+          ]
         },
         {
           "certainty": "low",
@@ -2596,7 +2961,7 @@ window.__DATA__ = {
         },
         {
           "certainty": "medium",
-          "text": "Contenido fast-paced se asocia con peor autorregulación posterior (Mallawaarachchi et al., 2024).",
+          "text": "Contenido fast-paced se asocia con peor autorregulación posterior.",
           "refs": [
             "Mallawaarachchi2024"
           ]
@@ -2671,7 +3036,9 @@ window.__DATA__ = {
         {
           "certainty": "medium",
           "text": "Tablets y videos cortos: asociaciones con peor inhibición conductual (capacidad de detenerse antes de actuar).",
-          "refs": []
+          "refs": [
+            "LlanosMerin2024"
+          ]
         },
         {
           "certainty": "medium",
@@ -2718,7 +3085,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "Asociación consistente entre tiempo de pantalla y síntomas de TDAH; magnitudes pequeñas a moderadas (Liu et al., 2023, meta-análisis).",
+          "text": "Asociación consistente entre tiempo de pantalla y síntomas de TDAH; magnitudes pequeñas a moderadas.",
           "refs": []
         },
         {
@@ -2756,7 +3123,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "Uso problemático de pantalla se asocia con problemas conductuales, peor desempeño académico y problemas de salud mental (Carter et al., 2024).",
+          "text": "Uso problemático de pantalla se asocia con problemas conductuales, peor desempeño académico y problemas de salud mental.",
           "refs": [
             "Carter2024"
           ]
@@ -2785,7 +3152,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "high",
-          "text": "Tecnointerferencia parental se asocia con menor sensibilidad del cuidador y respuestas menos contingentes al bebé (Braune-Krickau et al., 2021; Beamish et al., 2018). Síntesis con foco en los primeros años muestra consecuencias observables en desarrollo socioemocional, lenguaje y vínculo (Toledo-Vargas et al., 2025, *JAMA Pediatrics*).",
+          "text": "Tecnointerferencia parental se asocia con menor sensibilidad del cuidador y respuestas menos contingentes al bebé. La síntesis de evidencia disponible muestra consecuencias observables en desarrollo socioemocional, lenguaje y vínculo.",
           "refs": [
             "Toledo2025"
           ]
@@ -2797,9 +3164,10 @@ window.__DATA__ = {
         },
         {
           "certainty": "high",
-          "text": "EYSTAG identifica explícitamente las videollamadas con familia lejana como uso recomendado en menores de 2 años.",
+          "text": "El Grupo Asesor sobre el Tiempo de Pantalla en la Primera Infancia del Reino Unido identifica explícitamente las videollamadas con familia lejana como uso recomendado en menores de 2 años.",
           "refs": [
-            "EYSTAG2026"
+            "EYSTAG2026",
+            "AAP2024"
           ]
         }
       ],
@@ -2832,8 +3200,10 @@ window.__DATA__ = {
         },
         {
           "certainty": "medium",
-          "text": "Calidad de la relación parento-filial actúa como mediador y moderador de la asociación pantalla-resultados del niño (Xu & Qiao, 2025).",
-          "refs": []
+          "text": "Calidad de la relación parento-filial actúa como mediador y moderador de la asociación pantalla-resultados del niño.",
+          "refs": [
+            "Mallawaarachchi2024"
+          ]
         }
       ],
       "andamiaje": {
@@ -2860,8 +3230,10 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "EYSTAG identifica la calidad de la interacción adulto-niño durante el uso de pantalla como factor protector central.",
-          "refs": []
+          "text": "El Grupo Asesor sobre el Tiempo de Pantalla en la Primera Infancia del Reino Unido identifica la calidad de la interacción adulto-niño durante el uso de pantalla como factor protector central.",
+          "refs": [
+            "EYSTAG2026"
+          ]
         },
         {
           "certainty": "low",
@@ -2975,7 +3347,7 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "El juego simbólico se asocia con mejor competencia social, regulación emocional y función ejecutiva (Smits-van der Nat et al., 2024, meta-análisis).",
+          "text": "El juego simbólico se asocia con mejor competencia social, regulación emocional y función ejecutiva.",
           "refs": [
             "Smits2024"
           ]
@@ -2987,7 +3359,7 @@ window.__DATA__ = {
         },
         {
           "certainty": "medium",
-          "text": "Evidencia longitudinal en gran muestra australiana muestra que el juego libre en primera infancia predice autorregulación años después (Colliver et al., 2022): es una de las pocas evidencias longitudinales que respalda el rol del juego libre en el desarrollo posterior.",
+          "text": "Evidencia longitudinal en gran muestra australiana muestra que el juego libre en primera infancia predice autorregulación años después: es una de las pocas evidencias longitudinales que respalda el rol del juego libre en el desarrollo posterior.",
           "refs": [
             "Colliver2022"
           ]
@@ -3024,14 +3396,14 @@ window.__DATA__ = {
       "claims": [
         {
           "certainty": "medium",
-          "text": "Juego simbólico se asocia con mejor pensamiento divergente y resolución creativa de problemas, aunque las revisiones (Lillard et al., 2013) cuestionan la causalidad directa.",
+          "text": "Juego simbólico se asocia con mejor pensamiento divergente y resolución creativa de problemas, aunque la evidencia disponible cuestiona la causalidad directa.",
           "refs": [
             "Lillard2013"
           ]
         },
         {
           "certainty": "medium",
-          "text": "Evidencia longitudinal en gran muestra australiana muestra que el tiempo de juego libre en primera infancia predice autorregulación años después (Colliver et al., 2022). Refuerza el costo de oportunidad cuando la pantalla desplaza juego libre.",
+          "text": "Evidencia longitudinal en gran muestra australiana muestra que el tiempo de juego libre en primera infancia predice autorregulación años después. Refuerza el costo de oportunidad cuando la pantalla desplaza juego libre.",
           "refs": [
             "Colliver2022"
           ]
@@ -3043,7 +3415,7 @@ window.__DATA__ = {
         },
         {
           "certainty": "low",
-          "text": "La hipótesis del \"aburrimiento productivo\" (boredom → creativity) tiene evidencia débil incluso en adultos (Mann & Cadman, 2014, encontró efecto en convergente, no divergente; Hunter et al. 2016 no replicó) y muy limitada en preescolares.",
+          "text": "La hipótesis del \"aburrimiento productivo\" (boredom → creativity) tiene evidencia débil incluso en adultos: un estudio encontró efecto en pensamiento convergente pero no divergente, y una replicación posterior no encontró efecto. La evidencia en preescolares es muy limitada.",
           "refs": [
             "Mann2014"
           ]
@@ -3502,6 +3874,7 @@ window.__DATA__ = {
   function renderCurrentView() {
     switch (state.view) {
       case "bibliografia": return renderBibliografia();
+      case "glosario":     return renderGlosario();
       case "metodologia":  return renderMetodologia();
       case "limitaciones": return renderLimitaciones();
       case "matriz":
@@ -3513,6 +3886,7 @@ window.__DATA__ = {
   function renderTopBar() {
     const tabs = [
       { id: "matriz",       label: "Matriz" },
+      { id: "glosario",     label: "Glosario" },
       { id: "bibliografia", label: "Bibliografía" },
       { id: "metodologia",  label: "Metodología" },
       { id: "limitaciones", label: "Limitaciones" }
@@ -3605,9 +3979,20 @@ window.__DATA__ = {
         </div>`;
     });
 
+    const paperCountByDim = {};
+    dims.forEach(d => {
+      const refs = new Set();
+      ages.forEach(a => {
+        const cell = claims[`${d.id}-${a.id}`];
+        if (cell) (cell.claims || []).forEach(c => (c.refs || []).forEach(r => refs.add(r)));
+      });
+      paperCountByDim[d.id] = refs.size;
+    });
+
     // Filas: dimension + 5 celdas
     dims.forEach(d => {
-      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span></div>`;
+      const pc = paperCountByDim[d.id];
+      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
@@ -3825,6 +4210,76 @@ window.__DATA__ = {
   }
 
   // ── VISTA: BIBLIOGRAFÍA ─────────────────────────────────────
+  function renderGlosario() {
+    const sections = [
+      {
+        title: "Conceptos del campo",
+        subtitle: "Los términos propios de la investigación sobre pantallas en la infancia.",
+        terms: [
+          { term: "Technoference",            def: "Interferencia del uso de dispositivos del cuidador en la interacción cara a cara con el niño.",                                                                                        url: "https://en.wikipedia.org/wiki/Technoference" },
+          { term: "Video deficit",             def: "Los niños menores de 3 años aprenden significativamente menos de un contenido en pantalla que de la misma información presentada en persona.",                                          url: "https://en.wikipedia.org/wiki/Video_deficit_effect" },
+          { term: "TV de fondo",               def: "Televisión encendida en el hogar sin ser el foco de atención del niño; reduce la cantidad y calidad del habla dirigida.",                                                              url: "https://en.wikipedia.org/wiki/Background_television" },
+          { term: "Fast-paced content",        def: "Contenido con cambios visuales y auditivos muy rápidos; se asocia con menor capacidad atencional inmediata en preescolares.",                                                          url: "https://en.wikipedia.org/wiki/Attention_span" },
+          { term: "Co-visionado contingente",  def: "Ver pantallas junto al niño con interacción activa y responsiva del adulto; mitiga los efectos negativos del contenido pasivo.",                                                       url: "https://es.wikipedia.org/wiki/Mediaci%C3%B3n_parental_de_medios" },
+          { term: "Corregulación",             def: "Proceso por el cual el cuidador ayuda al niño a manejar sus emociones antes de que pueda autorregularse solo.",                                                                       url: "https://es.wikipedia.org/wiki/Autorregulaci%C3%B3n_emocional" },
+          { term: "PDER · regulación emocional con pantalla", def: "Parental Digital Emotion Regulation: uso del dispositivo por parte del cuidador para calmar o distraer al niño ante emociones difíciles.",                            url: "https://doi.org/10.1016/j.chb.2021.106866" },
+          { term: "Las 5 Cs (AAP 2026)",       def: "Marco de la Academia Americana de Pediatría: Child, Content, Calm, Crowding-out y Communication. Sustituye la regla de tiempo por criterios cualitativos.",                          url: "https://publications.aap.org/pediatrics/article/157/1/e2025071223/" },
+          { term: "Tiempo de pantalla recreativa", def: "Uso de dispositivos con fines de entretenimiento, sin mediación adulta ni propósito educativo explícito.",                                                                        url: "https://es.wikipedia.org/wiki/Tiempo_de_pantalla" },
+        ]
+      },
+      {
+        title: "Para leer la evidencia",
+        subtitle: "Cómo se produce y se pondera la evidencia científica en este campo.",
+        terms: [
+          { term: "Certeza de la evidencia: alta / media / baja", def: "Clasificación de este sitio: alta = meta-análisis o cohortes grandes replicadas; media = longitudinales con limitaciones; baja = transversales pequeños o preliminares.", url: "https://es.wikipedia.org/wiki/Medicina_basada_en_evidencia" },
+          { term: "Meta-análisis",             def: "Método estadístico que combina los resultados de múltiples estudios independientes para estimar un efecto global con mayor precisión.",                                                  url: "https://es.wikipedia.org/wiki/Metaan%C3%A1lisis" },
+          { term: "Cohorte longitudinal",      def: "Diseño que sigue a un grupo de personas durante años para observar cómo cambian ciertas variables en el tiempo.",                                                                      url: "https://es.wikipedia.org/wiki/Estudio_de_cohorte" },
+          { term: "Estudio transversal",       def: "Diseño que mide variables en una población en un momento único; no permite establecer causalidad.",                                                                                    url: "https://es.wikipedia.org/wiki/Estudio_transversal" },
+        ]
+      },
+      {
+        title: "Desarrollo infantil",
+        subtitle: "El sustrato del desarrollo humano sobre el que actúan las pantallas.",
+        terms: [
+          { term: "Función ejecutiva",         def: "Procesos mentales que permiten planificar, inhibir impulsos, sostener atención y cambiar de tarea.",                                                                                   url: "https://es.wikipedia.org/wiki/Funci%C3%B3n_ejecutiva" },
+          { term: "Apego seguro",              def: "Vínculo estable entre el niño y su cuidador, caracterizado por confianza y disponibilidad emocional.",                                                                                 url: "https://es.wikipedia.org/wiki/Teor%C3%ADa_del_apego" },
+          { term: "Ritmo circadiano",          def: "Ciclo biológico de ~24 horas que regula el sueño y la vigilia; sensible a la luz de pantallas en horas nocturnas.",                                                                   url: "https://es.wikipedia.org/wiki/Ritmo_circadiano" },
+          { term: "Conciencia fonológica",     def: "Capacidad de identificar y manipular los sonidos del lenguaje oral; predictor clave del aprendizaje lector.",                                                                          url: "https://es.wikipedia.org/wiki/Conciencia_fonol%C3%B3gica" },
+          { term: "Pensamiento divergente",    def: "Capacidad de generar múltiples soluciones ante un problema; componente central de la creatividad.",                                                                                    url: "https://es.wikipedia.org/wiki/Pensamiento_divergente" },
+          { term: "Andamiaje del desarrollo",  def: "Relación de dependencia entre habilidades: algunas capacidades tempranas son prerequisito de otras posteriores.",                                                                     url: "https://es.wikipedia.org/wiki/Zona_de_desarrollo_pr%C3%B3ximo" },
+          { term: "Miopía",                    def: "Trastorno refractivo en que los objetos lejanos se ven borrosos; su prevalencia ha aumentado globalmente, con evidencia que la asocia más al tiempo en interiores que a la pantalla en sí.", url: "https://es.wikipedia.org/wiki/Miop%C3%ADa" },
+          { term: "Sedentarismo",              def: "Comportamiento de bajo gasto energético en posición sentada; el tiempo de pantalla es uno de sus principales correlatos en niños.",                                                    url: "https://es.wikipedia.org/wiki/Sedentarismo" },
+          { term: "Retraso del desarrollo",    def: "Alteración en el ritmo o la secuencia del desarrollo esperado para la edad; puede afectar lenguaje, motricidad, cognición o área socioemocional.",                                    url: "https://es.wikipedia.org/wiki/Trastorno_del_desarrollo" },
+        ]
+      },
+    ];
+
+    const html = sections.map(s => `
+      <div class="glosario-section">
+        <h2 class="glosario-section-title">${escapeHtml(s.title)}</h2>
+        <p class="glosario-section-sub">${escapeHtml(s.subtitle)}</p>
+        <dl class="glosario-list">
+          ${s.terms.map(t => `
+            <div class="glosario-item">
+              <dt class="glosario-term">
+                ${escapeHtml(t.term)}
+                <a class="glosario-link" href="${t.url}" target="_blank" rel="noopener">↗</a>
+              </dt>
+              <dd class="glosario-def">${escapeHtml(t.def)}</dd>
+            </div>
+          `).join("")}
+        </dl>
+      </div>
+    `).join("");
+
+    return `
+      <div class="page-body">
+        <h1 class="page-title">Glosario</h1>
+        <p class="page-sub">Términos técnicos y conceptos clave usados en esta síntesis.</p>
+        ${html}
+      </div>`;
+  }
+
   function renderBibliografia() {
     const q = state.biblioSearch.toLowerCase().trim();
     const f = state.biblioFilter;

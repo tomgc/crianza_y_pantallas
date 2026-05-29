@@ -75,6 +75,7 @@
   function renderCurrentView() {
     switch (state.view) {
       case "bibliografia": return renderBibliografia();
+      case "glosario":     return renderGlosario();
       case "metodologia":  return renderMetodologia();
       case "limitaciones": return renderLimitaciones();
       case "matriz":
@@ -86,6 +87,7 @@
   function renderTopBar() {
     const tabs = [
       { id: "matriz",       label: "Matriz" },
+      { id: "glosario",     label: "Glosario" },
       { id: "bibliografia", label: "Bibliografía" },
       { id: "metodologia",  label: "Metodología" },
       { id: "limitaciones", label: "Limitaciones" }
@@ -178,9 +180,20 @@
         </div>`;
     });
 
+    const paperCountByDim = {};
+    dims.forEach(d => {
+      const refs = new Set();
+      ages.forEach(a => {
+        const cell = claims[`${d.id}-${a.id}`];
+        if (cell) (cell.claims || []).forEach(c => (c.refs || []).forEach(r => refs.add(r)));
+      });
+      paperCountByDim[d.id] = refs.size;
+    });
+
     // Filas: dimension + 5 celdas
     dims.forEach(d => {
-      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span></div>`;
+      const pc = paperCountByDim[d.id];
+      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
@@ -398,6 +411,76 @@
   }
 
   // ── VISTA: BIBLIOGRAFÍA ─────────────────────────────────────
+  function renderGlosario() {
+    const sections = [
+      {
+        title: "Conceptos del campo",
+        subtitle: "Los términos propios de la investigación sobre pantallas en la infancia.",
+        terms: [
+          { term: "Technoference",            def: "Interferencia del uso de dispositivos del cuidador en la interacción cara a cara con el niño.",                                                                                        url: "https://en.wikipedia.org/wiki/Technoference" },
+          { term: "Video deficit",             def: "Los niños menores de 3 años aprenden significativamente menos de un contenido en pantalla que de la misma información presentada en persona.",                                          url: "https://en.wikipedia.org/wiki/Video_deficit_effect" },
+          { term: "TV de fondo",               def: "Televisión encendida en el hogar sin ser el foco de atención del niño; reduce la cantidad y calidad del habla dirigida.",                                                              url: "https://en.wikipedia.org/wiki/Background_television" },
+          { term: "Fast-paced content",        def: "Contenido con cambios visuales y auditivos muy rápidos; se asocia con menor capacidad atencional inmediata en preescolares.",                                                          url: "https://en.wikipedia.org/wiki/Attention_span" },
+          { term: "Co-visionado contingente",  def: "Ver pantallas junto al niño con interacción activa y responsiva del adulto; mitiga los efectos negativos del contenido pasivo.",                                                       url: "https://es.wikipedia.org/wiki/Mediaci%C3%B3n_parental_de_medios" },
+          { term: "Corregulación",             def: "Proceso por el cual el cuidador ayuda al niño a manejar sus emociones antes de que pueda autorregularse solo.",                                                                       url: "https://es.wikipedia.org/wiki/Autorregulaci%C3%B3n_emocional" },
+          { term: "PDER · regulación emocional con pantalla", def: "Parental Digital Emotion Regulation: uso del dispositivo por parte del cuidador para calmar o distraer al niño ante emociones difíciles.",                            url: "https://doi.org/10.1016/j.chb.2021.106866" },
+          { term: "Las 5 Cs (AAP 2026)",       def: "Marco de la Academia Americana de Pediatría: Child, Content, Calm, Crowding-out y Communication. Sustituye la regla de tiempo por criterios cualitativos.",                          url: "https://publications.aap.org/pediatrics/article/157/1/e2025071223/" },
+          { term: "Tiempo de pantalla recreativa", def: "Uso de dispositivos con fines de entretenimiento, sin mediación adulta ni propósito educativo explícito.",                                                                        url: "https://es.wikipedia.org/wiki/Tiempo_de_pantalla" },
+        ]
+      },
+      {
+        title: "Para leer la evidencia",
+        subtitle: "Cómo se produce y se pondera la evidencia científica en este campo.",
+        terms: [
+          { term: "Certeza de la evidencia: alta / media / baja", def: "Clasificación de este sitio: alta = meta-análisis o cohortes grandes replicadas; media = longitudinales con limitaciones; baja = transversales pequeños o preliminares.", url: "https://es.wikipedia.org/wiki/Medicina_basada_en_evidencia" },
+          { term: "Meta-análisis",             def: "Método estadístico que combina los resultados de múltiples estudios independientes para estimar un efecto global con mayor precisión.",                                                  url: "https://es.wikipedia.org/wiki/Metaan%C3%A1lisis" },
+          { term: "Cohorte longitudinal",      def: "Diseño que sigue a un grupo de personas durante años para observar cómo cambian ciertas variables en el tiempo.",                                                                      url: "https://es.wikipedia.org/wiki/Estudio_de_cohorte" },
+          { term: "Estudio transversal",       def: "Diseño que mide variables en una población en un momento único; no permite establecer causalidad.",                                                                                    url: "https://es.wikipedia.org/wiki/Estudio_transversal" },
+        ]
+      },
+      {
+        title: "Desarrollo infantil",
+        subtitle: "El sustrato del desarrollo humano sobre el que actúan las pantallas.",
+        terms: [
+          { term: "Función ejecutiva",         def: "Procesos mentales que permiten planificar, inhibir impulsos, sostener atención y cambiar de tarea.",                                                                                   url: "https://es.wikipedia.org/wiki/Funci%C3%B3n_ejecutiva" },
+          { term: "Apego seguro",              def: "Vínculo estable entre el niño y su cuidador, caracterizado por confianza y disponibilidad emocional.",                                                                                 url: "https://es.wikipedia.org/wiki/Teor%C3%ADa_del_apego" },
+          { term: "Ritmo circadiano",          def: "Ciclo biológico de ~24 horas que regula el sueño y la vigilia; sensible a la luz de pantallas en horas nocturnas.",                                                                   url: "https://es.wikipedia.org/wiki/Ritmo_circadiano" },
+          { term: "Conciencia fonológica",     def: "Capacidad de identificar y manipular los sonidos del lenguaje oral; predictor clave del aprendizaje lector.",                                                                          url: "https://es.wikipedia.org/wiki/Conciencia_fonol%C3%B3gica" },
+          { term: "Pensamiento divergente",    def: "Capacidad de generar múltiples soluciones ante un problema; componente central de la creatividad.",                                                                                    url: "https://es.wikipedia.org/wiki/Pensamiento_divergente" },
+          { term: "Andamiaje del desarrollo",  def: "Relación de dependencia entre habilidades: algunas capacidades tempranas son prerequisito de otras posteriores.",                                                                     url: "https://es.wikipedia.org/wiki/Zona_de_desarrollo_pr%C3%B3ximo" },
+          { term: "Miopía",                    def: "Trastorno refractivo en que los objetos lejanos se ven borrosos; su prevalencia ha aumentado globalmente, con evidencia que la asocia más al tiempo en interiores que a la pantalla en sí.", url: "https://es.wikipedia.org/wiki/Miop%C3%ADa" },
+          { term: "Sedentarismo",              def: "Comportamiento de bajo gasto energético en posición sentada; el tiempo de pantalla es uno de sus principales correlatos en niños.",                                                    url: "https://es.wikipedia.org/wiki/Sedentarismo" },
+          { term: "Retraso del desarrollo",    def: "Alteración en el ritmo o la secuencia del desarrollo esperado para la edad; puede afectar lenguaje, motricidad, cognición o área socioemocional.",                                    url: "https://es.wikipedia.org/wiki/Trastorno_del_desarrollo" },
+        ]
+      },
+    ];
+
+    const html = sections.map(s => `
+      <div class="glosario-section">
+        <h2 class="glosario-section-title">${escapeHtml(s.title)}</h2>
+        <p class="glosario-section-sub">${escapeHtml(s.subtitle)}</p>
+        <dl class="glosario-list">
+          ${s.terms.map(t => `
+            <div class="glosario-item">
+              <dt class="glosario-term">
+                ${escapeHtml(t.term)}
+                <a class="glosario-link" href="${t.url}" target="_blank" rel="noopener">↗</a>
+              </dt>
+              <dd class="glosario-def">${escapeHtml(t.def)}</dd>
+            </div>
+          `).join("")}
+        </dl>
+      </div>
+    `).join("");
+
+    return `
+      <div class="page-body">
+        <h1 class="page-title">Glosario</h1>
+        <p class="page-sub">Términos técnicos y conceptos clave usados en esta síntesis.</p>
+        ${html}
+      </div>`;
+  }
+
   function renderBibliografia() {
     const q = state.biblioSearch.toLowerCase().trim();
     const f = state.biblioFilter;
