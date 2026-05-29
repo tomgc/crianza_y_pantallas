@@ -7,7 +7,10 @@
       {
         "certainty": "high",
         "text": "La TV de fondo en presencia del bebé reduce significativamente el número de palabras dirigidas y los turnos conversacionales con el cuidador (Brushe et al., 2024, asociaciones medidas con grabaciones de audio LENA en infantes australianos).",
-        "refs": []
+        "refs": [
+          "Brushe2024",
+          "Massaroni2023"
+        ]
       },
       {
         "certainty": "high",
@@ -17,7 +20,9 @@
       {
         "certainty": "medium",
         "text": "No hay evidencia de que el contenido audiovisual a esta edad enseñe lenguaje. Solo la interacción cara a cara con un adulto responsivo lo hace de manera robusta. Las videollamadas con familiares son la excepción documentada en EYSTAG.",
-        "refs": []
+        "refs": [
+          "Strouse2021"
+        ]
       }
     ],
     "chile_note": "En hogares con TV permanentemente encendida, esta es la edad donde la intervención más sencilla y de mayor impacto es apagar la pantalla cuando nadie la está viendo activamente. El estudio chileno *Mil Primeros Días* (UC) observa esta práctica de forma frecuente en hogares con cuidado por abuelos.",
@@ -44,9 +49,13 @@
     "claims": [
       {
         "certainty": "high",
-        "text": "Meta-análisis de Madigan et al. (2020, JAMA Pediatrics): mayor tiempo de pantalla se asocia con menores habilidades lingüísticas. Contenido educativo de alta calidad puede ser ligeramente positivo.",
+        "text": "Meta-análisis de Madigan et al. (2020, JAMA Pediatrics, N=18.905): mayor tiempo de pantalla se asocia con menores habilidades lingüísticas (r=−.14). Sin embargo, cohortes grandes con control de confusores (ELFE, N=13.763; EDEN, N=1.562) muestran que el efecto del tiempo de pantalla per se es débil; lo que predice peores resultados es el contexto, como la TV encendida durante las comidas.",
         "refs": [
-          "Madigan2020"
+          "Madigan2020",
+          "Yang2024",
+          "Martinot2021",
+          "Brushe2024",
+          "Massaroni2023"
         ]
       },
       {
@@ -58,14 +67,17 @@
         "certainty": "medium",
         "text": "Algunas revisiones (Jing et al., 2023; Sticca et al., 2025) encuentran beneficios pequeños para vocabulario cuando el contenido está específicamente diseñado y el adulto media activamente.",
         "refs": [
-          "Karani2022"
+          "Karani2022",
+          "Jing2023",
+          "GagoGalvagno2025"
         ]
       },
       {
         "certainty": "high",
         "text": "El co-visionado con interacción contingente del adulto neutraliza buena parte del efecto negativo (Sundqvist et al., 2021).",
         "refs": [
-          "Sundqvist2021"
+          "Sundqvist2021",
+          "GagoGalvagno2025"
         ]
       },
       {
@@ -73,6 +85,14 @@
         "text": "Cohorte longitudinal Growing Up in New Zealand (N=6.281; Gath et al., 2025): más de 1,5 horas diarias de pantalla a los 2 años predice menor vocabulario y peor comunicación a los 4,5 años, tras ajustar por factores socioeconómicos.",
         "refs": [
           "Gath2025"
+        ]
+      },
+      {
+        "certainty": "high",
+        "text": "Cohortes grandes con control de confusores (EDEN, N=1.562; ELFE, N=13.763) muestran que el tiempo de pantalla per se tiene asociaciones débiles o nulas con el lenguaje; lo que predice peores resultados es el contexto: TV encendida durante las comidas a los 2 años se asocia con peor desarrollo lingüístico a los 3,5 años.",
+        "refs": [
+          "Martinot2021",
+          "Yang2024"
         ]
       }
     ],
@@ -119,20 +139,27 @@
         "certainty": "high",
         "text": "Contenido educativo interactivo (apps bien diseñadas, e-books leídos con un adulto) puede tener efectos pequeños positivos sobre vocabulario y comprensión (Xie et al., 2024; Arabiat et al., 2022).",
         "refs": [
-          "Madigan2020"
+          "Madigan2020",
+          "Jing2023",
+          "Nwachukwu2025"
         ]
       },
       {
         "certainty": "medium",
         "text": "Visualización pasiva extensa, especialmente de contenido fast-paced (videos cortos, cambios visuales constantes), se asocia con menor desarrollo narrativo y atencional (Mallawaarachchi et al., 2024).",
         "refs": [
-          "Mallawaarachchi2024"
+          "Mallawaarachchi2024",
+          "Nwachukwu2025",
+          "Yang2024"
         ]
       },
       {
         "certainty": "medium",
         "text": "El \"video deficit\" persiste hasta cerca de la edad escolar: los niños aprenden menos de un video que de la misma información presentada en persona (Strouse & Samson, 2021).",
-        "refs": []
+        "refs": [
+          "Strouse2021",
+          "Jing2023"
+        ]
       }
     ],
     "andamiaje": {
@@ -206,9 +233,11 @@
         "refs": []
       },
       {
-        "certainty": "low",
-        "text": "Algunas líneas de investigación sugieren que el lenguaje fragmentado de la mensajería podría afectar la producción escrita formal, pero la evidencia es muy preliminar.",
-        "refs": []
+        "certainty": "medium",
+        "text": "La mensajería instantánea no perjudica la escritura formal escolar; estudios experimentales hallan un leve efecto positivo en ortografía, posiblemente porque el uso frecuente incrementa la conciencia ortográfica.",
+        "refs": [
+          "VerheijenSpooren2021"
+        ]
       }
     ],
     "andamiaje": {

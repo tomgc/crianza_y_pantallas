@@ -193,3 +193,29 @@ identificado, etc.) y el paper nuevo la reemplaza:
 Baja: incorporación de evidencia es esporádica (algunos papers por mes),
 no continua. El flujo está pensado para esa cadencia. No requiere
 automatización ni pipeline complejo.
+
+---
+
+## Reglas operativas para prompts a Claude Code
+
+### `set -e` obligatorio en cadenas con validación previa a commit
+
+Todo prompt que encadene validación + build + commit debe abrir con `set -e`:
+
+```bash
+set -e
+# validación
+python3 -c "..."
+# build
+./00_build.sh
+# commit
+git add ...
+git commit -m "..."
+```
+
+**Por qué:** bloques bash separados o encadenados con `;` ignoran códigos de
+salida. Si la validación falla con `SystemExit(1)`, el commit se ejecuta igual.
+Con `set -e`, cualquier exit ≠ 0 aborta la cadena antes del commit.
+
+**Origen:** Bug 2, sesión 4 (traspaso v04). Commit defectuoso `46abaa1`
+commiteó un duplicado porque la validación falló sin detener la cadena.

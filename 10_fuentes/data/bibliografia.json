@@ -594,5 +594,80 @@
     "title": "Sociodemographic Predictors of Changes in Physical Activity, Screen Time, and Sleep among Toddlers and Preschoolers in Chile during the COVID-19 Pandemic",
     "journal": "International Journal of Environmental Research and Public Health 18(1):176. N=3.158 cuidadores de niños 1-5 años, encuesta nacional Chile durante pandemia",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7796176/"
+  },
+  {
+    "id": "GagoGalvagno2025",
+    "group": "recent",
+    "type": "transversal",
+    "authors": "Gago-Galvagno L.G., Elgier A.M., Tabullo A.J., Huaire-Inacio E.J., et al. 2025",
+    "title": "Use of screens, books and adults' interactions on toddler's language and motor skills: A cross-cultural study among 19 Latin American countries from different SES",
+    "journal": "PLOS ONE 20(2):e0314569",
+    "url": "https://doi.org/10.1371/journal.pone.0314569"
+  },
+  {
+    "id": "Jing2023",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Jing M., Ye T., Kirkorian H.L., Mares M.-L. 2023",
+    "title": "Screen media exposure and young children's vocabulary learning and development: A meta-analysis",
+    "journal": "Child Development 94(5):1398–1418",
+    "url": "https://doi.org/10.1111/cdev.13927"
+  },
+  {
+    "id": "Martinot2021",
+    "group": "recent",
+    "type": "cohort",
+    "authors": "Martinot P., Bernard J.Y., Peyre H., De Agostini M., Forhan A., Charles M.-A., Plancoulaine S., Heude B. 2021",
+    "title": "Exposure to screens and children's language development in the EDEN mother–child cohort",
+    "journal": "Scientific Reports 11:11863",
+    "url": "https://doi.org/10.1038/s41598-021-90867-3"
+  },
+  {
+    "id": "Massaroni2023",
+    "group": "recent",
+    "type": "review",
+    "authors": "Massaroni V., Delle Donne V., Marra C., Arcangeli V., Chieffo D.P.R. 2023",
+    "title": "The Relationship between Language and Technology: How Screen Time Affects Language Development in Early Life—A Systematic Review",
+    "journal": "Brain Sciences 14(1):27",
+    "url": "https://doi.org/10.3390/brainsci14010027"
+  },
+  {
+    "id": "Nwachukwu2025",
+    "group": "recent",
+    "type": "review",
+    "authors": "Nwachukwu E.C., Nigam A., Sekar Lakshmisai S., Sakarkar P., Bheemaneni R.S., Malasevskaia I.A. 2025",
+    "title": "Impact of Screen Time on Language Development and Vocabulary Acquisition in Early Childhood: A Systematic Review",
+    "journal": "Cureus 17(11):e97429",
+    "url": "https://doi.org/10.7759/cureus.97429"
+  },
+  {
+    "id": "Strouse2021",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Strouse G.A., Samson J.E. 2021",
+    "title": "Learning From Video: A Meta-Analysis of the Video Deficit in Children Ages 0 to 6 Years",
+    "journal": "Child Development 92(1):e20–e38",
+    "url": "https://doi.org/10.1111/cdev.13429"
+  },
+  {
+    "id": "VerheijenSpooren2021",
+    "group": "recent",
+    "type": "transversal",
+    "authors": "Verheijen L., Spooren W. 2021",
+    "title": "The impact of WhatsApp on Dutch youths' school writing and spelling",
+    "journal": "Journal of Writing Research 13(1):155–191",
+    "url": "https://doi.org/10.17239/jowr-2021.13.01.05"
+  },
+  {
+    "id": "Yang2024",
+    "group": "recent",
+    "featured": true,
+    "type": "cohort",
+    "authors": "Yang S., Saïd M., Peyre H., Ramus F., Taine M., Law E.C., Dufourg M.-N., Heude B., Charles M.-A., Bernard J.Y. 2024",
+    "title": "Associations of screen use with cognitive development in early childhood: the ELFE birth cohort",
+    "journal": "Journal of Child Psychology and Psychiatry 65(5):680–693",
+    "url": "https://doi.org/10.1111/jcpp.13887"
   }
 ]
