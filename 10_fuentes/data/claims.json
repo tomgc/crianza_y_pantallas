@@ -717,22 +717,32 @@
       {
         "certainty": "high",
         "text": "Más tiempo de pantalla se asocia consistentemente con menor duración de sueño nocturno.",
-        "refs": []
+        "refs": [
+          "Janssen2020",
+          "He2025"
+        ]
       },
       {
         "certainty": "high",
         "text": "Pantalla en la hora previa a dormir se asocia con horario de acostarse más tardío y menos sueño total.",
-        "refs": []
+        "refs": [
+          "Carter2016",
+          "Gomes2024"
+        ]
       },
       {
         "certainty": "medium",
         "text": "Intervenciones que reducen tiempo de pantalla muestran mejoras leves en duración del sueño.",
-        "refs": []
+        "refs": [
+          "He2025"
+        ]
       },
       {
         "certainty": "medium",
         "text": "La OMS recomienda 11-14 horas de sueño para niños de 1-2 años y 10-13 horas para 3-4 años, incluyendo siestas.",
-        "refs": []
+        "refs": [
+          "WHO2019"
+        ]
       }
     ],
     "andamiaje": {
@@ -1315,7 +1325,10 @@
       {
         "certainty": "medium",
         "text": "Asociación con ansiedad, depresión emergente e inestabilidad emocional aparece en algunas revisiones.",
-        "refs": []
+        "refs": [
+          "Vasconcellos2025",
+          "SotoRamirez2025"
+        ]
       },
       {
         "certainty": "medium",
