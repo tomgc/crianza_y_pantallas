@@ -718,8 +718,7 @@
         "certainty": "high",
         "text": "Más tiempo de pantalla se asocia consistentemente con menor duración de sueño nocturno.",
         "refs": [
-          "Janssen2020",
-          "He2025"
+          "Janssen2020"
         ]
       },
       {
@@ -733,9 +732,7 @@
       {
         "certainty": "medium",
         "text": "Intervenciones que reducen tiempo de pantalla muestran mejoras leves en duración del sueño.",
-        "refs": [
-          "He2025"
-        ]
+        "refs": []
       },
       {
         "certainty": "medium",
