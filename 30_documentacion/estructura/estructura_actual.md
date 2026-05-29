@@ -1,8 +1,8 @@
 # Estructura del proyecto
 
 - **Raiz:** `/Users/tomgc/Projects/crianza_y_pantallas`
-- **Fecha:** 2026-05-29 10:33:01
-- **Total:** 10 carpetas, 40 archivos
+- **Fecha:** 2026-05-29 12:34:15
+- **Total:** 10 carpetas, 46 archivos
 
 ## Arbol
 
@@ -10,10 +10,10 @@
 ├── 10_fuentes/
 │   ├── data/
 │   │   ├── andamiaje.json    [6.31K]
-│   │   ├── bibliografia.json    [28.69K]
-│   │   ├── claims.json    [74.73K]
+│   │   ├── bibliografia.json    [29.18K]
+│   │   ├── claims.json    [72.52K]
 │   │   ├── metadata.json    [11.58K]
-│   ├── app.js    [33.48K]
+│   ├── app.js    [33.53K]
 │   ├── styles.css    [18.66K]
 │   ├── template.html    [373.00B]
 ├── 20_recursos/
@@ -36,19 +36,25 @@
 │   │   │   ├── 10_prompt_vision.md    [7.15K]
 │   │   │   ├── 11_prompt_dimensiones_nuevas.md    [7.19K]
 │   │   │   ├── README.md    [4.74K]
-│   │   ├── CLAUDE.md    [4.20K]
+│   │   ├── CLAUDE.md    [5.01K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
 │   ├── andamios/
 │   │   ├── extraer_claims.py    [15.31K]
 │   │   ├── wireframe-b-standalone.html    [19.43K]
 │   ├── estructura/
+│   │   ├── 20260529_103300_estructura.md    [2.91K]
 │   │   ├── 20260529_103300_estructura.txt    [2.99K]
-│   │   ├── estructura_actual.txt    [2.99K]
+│   │   ├── 20260529_121440_estructura.md    [3.08K]
+│   │   ├── 20260529_121440_estructura.txt    [3.25K]
+│   │   ├── 20260529_123415_estructura.txt    [3.43K]
+│   │   ├── estructura_actual.md    [3.08K]
+│   │   ├── estructura_actual.txt    [3.43K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
 │   │   ├── traspaso-cierre-v03.md    [85.19K]
 │   │   ├── traspaso-cierre-v04.md    [40.13K]
+│   │   ├── traspaso-cierre-v05.md    [33.31K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
@@ -57,20 +63,20 @@
 ├── 00_build.sh    [1.69K]
 ├── 00_escanear_proyecto.R    [6.26K]
 ├── CLAUDE.md    [40.00B]
-├── README.md    [1.33K]
-├── index.html    [181.05K]
+├── index.html    [179.40K]
+├── README.md    [1.49K]
 ```
 
 ## Conteo por extension
 
 | Extension | Cantidad |
 |-----------|----------|
-| `.md` | 24 |
+| `.md` | 28 |
 | `.html` | 5 |
 | `.json` | 4 |
-| `.txt` | 2 |
-| `.R` | 1 |
+| `.txt` | 4 |
 | `.css` | 1 |
 | `.js` | 1 |
 | `.py` | 1 |
+| `.R` | 1 |
 | `.sh` | 1 |
