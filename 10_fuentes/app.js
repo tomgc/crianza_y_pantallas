@@ -178,9 +178,20 @@
         </div>`;
     });
 
+    const paperCountByDim = {};
+    dims.forEach(d => {
+      const refs = new Set();
+      ages.forEach(a => {
+        const cell = claims[`${d.id}-${a.id}`];
+        if (cell) (cell.claims || []).forEach(c => (c.refs || []).forEach(r => refs.add(r)));
+      });
+      paperCountByDim[d.id] = refs.size;
+    });
+
     // Filas: dimension + 5 celdas
     dims.forEach(d => {
-      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span></div>`;
+      const pc = paperCountByDim[d.id];
+      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];

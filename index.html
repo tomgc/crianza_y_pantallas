@@ -212,6 +212,14 @@ body {
   cursor: default;
 }
 .grid-cell.row-head { align-items: flex-start; justify-content: center; }
+
+.dim-paper-count {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--pencil);
+  margin-top: 2px;
+  display: block;
+}
 .grid-cell.row-head:hover, .grid-cell.col-head:hover { background: var(--bg-soft); }
 
 .grid-cell.col-head {
@@ -3948,9 +3956,20 @@ window.__DATA__ = {
         </div>`;
     });
 
+    const paperCountByDim = {};
+    dims.forEach(d => {
+      const refs = new Set();
+      ages.forEach(a => {
+        const cell = claims[`${d.id}-${a.id}`];
+        if (cell) (cell.claims || []).forEach(c => (c.refs || []).forEach(r => refs.add(r)));
+      });
+      paperCountByDim[d.id] = refs.size;
+    });
+
     // Filas: dimension + 5 celdas
     dims.forEach(d => {
-      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span></div>`;
+      const pc = paperCountByDim[d.id];
+      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
