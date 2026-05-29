@@ -441,6 +441,7 @@ body {
 .page-head { margin-bottom: 20px; }
 .page-title { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
 .page-sub { font-size: 12.5px; color: var(--pencil); }
+.page-body { max-width: 680px; }
 
 /* ── BIBLIOGRAFÍA ───────────────────────────────────────────── */
 .biblio-controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
@@ -4245,9 +4246,9 @@ window.__DATA__ = {
     `).join("");
 
     return `
-      <div class="static-page">
-        <h1 class="static-title">Glosario</h1>
-        <p class="static-sub">Términos técnicos y conceptos clave usados en esta síntesis.</p>
+      <div class="page-body">
+        <h1 class="page-title">Glosario</h1>
+        <p class="page-sub">Términos técnicos y conceptos clave usados en esta síntesis.</p>
         ${html}
       </div>`;
   }

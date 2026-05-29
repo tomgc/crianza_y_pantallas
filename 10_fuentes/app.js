@@ -474,9 +474,9 @@
     `).join("");
 
     return `
-      <div class="static-page">
-        <h1 class="static-title">Glosario</h1>
-        <p class="static-sub">Términos técnicos y conceptos clave usados en esta síntesis.</p>
+      <div class="page-body">
+        <h1 class="page-title">Glosario</h1>
+        <p class="page-sub">Términos técnicos y conceptos clave usados en esta síntesis.</p>
         ${html}
       </div>`;
   }
