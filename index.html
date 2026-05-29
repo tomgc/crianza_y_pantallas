@@ -3978,7 +3978,7 @@ window.__DATA__ = {
     // Filas: dimension + 5 celdas
     dims.forEach(d => {
       const pc = paperCountByDim[d.id];
-      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc})</span>` : ""}</div>`;
+      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
