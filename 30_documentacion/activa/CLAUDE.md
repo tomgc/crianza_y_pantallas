@@ -22,14 +22,15 @@ Sitio único autocontenido (HTML + CSS + JS inline, sin dependencias) que sintet
 ## Convenciones del proyecto
 
 - **Citas en claims:** las referencias se muestran solo como chips `[ref]` navegables a la entrada bibliográfica (poblados desde el array `refs` de cada claim). El texto del claim NO lleva la cita de autor inline `(Autor et al., año)` — esa convención se eliminó en sesión 5 (P-nuevo-B). Los datos metodológicos entre paréntesis (N=, tamaños de muestra) sí se conservan en el texto.
-- **Sistema de certeza:** 3 niveles (alta/media/baja), aplicados via función `C(certainty, text)` en el JS.
+- **Citas institucionales como sujeto:** cuando la fuente es una guía o recomendación institucional (EYSTAG, AAP, OMS, MINEDUC), es aceptable nombrarla como sujeto del enunciado ("EYSTAG recomienda...", "AAP no encontró..."), porque la atribución a un organismo es informativa para el lector. La atribución igual se respalda con el chip `[ref]` correspondiente. Esta excepción NO aplica a estudios empíricos individuales, donde la fuente va solo en el chip.
+- **Sistema de certeza:** 3 niveles (alta/media/baja), definidos en el campo `certainty` de cada claim en `claims.json` y renderizados por `app.js`.
 - **Paleta actual:** fondo `#f7f8fa`, texto `#1a1d24`, acento `#042f4d` (azul marino), cálido secundario `#b07a4a`. Tres tonos del azul marino para los niveles de certeza.
 - **Tipografía:** stack del sistema, 15 px base, line-height 1.65.
 - **Sin dependencias externas:** ni Google Fonts, ni CDN, ni librerías JS, ni imágenes externas. SVG inline si hay íconos.
 
 ## Estado actual
 
-Último handoff: `30_documentacion/traspasos/traspaso-cierre-v04.md`. Revisar siempre el handoff más reciente al inicio de cada sesión.
+Último handoff: `30_documentacion/traspasos/traspaso-cierre-v05.md`. Revisar siempre el handoff más reciente al inicio de cada sesión.
 
 ## Preferencias de trabajo (Tomás)
 
