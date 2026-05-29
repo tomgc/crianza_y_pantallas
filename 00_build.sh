@@ -53,8 +53,17 @@ if os.path.isfile(app_path):
 else:
     app_block = ""
 
+# Construir bloque GLOSARIO si existe glosario-data.js (define window.GLOSARIO)
+glosario_path = os.path.join(fuentes, "glosario-data.js")
+if os.path.isfile(glosario_path):
+    with open(glosario_path, "r", encoding="utf-8") as f:
+        glosario_block = f.read()
+else:
+    glosario_block = ""
+
 tpl = tpl.replace("<!--INJECT_STYLES-->", styles)
 tpl = tpl.replace("<!--INJECT_DATA-->", data_block)
+tpl = tpl.replace("<!--INJECT_GLOSARIO-->", glosario_block)
 tpl = tpl.replace("<!--INJECT_APP-->", app_block)
 print(tpl, end="")
 PYEOF

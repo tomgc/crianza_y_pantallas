@@ -28,11 +28,13 @@
 
   // ── STATE ───────────────────────────────────────────────────
   const state = {
-    view: "matriz",              // matriz | bibliografia | metodologia | limitaciones
+    view: "matriz",              // matriz | bibliografia | glosario | metodologia | limitaciones
     activeCell: null,            // cellId actual mostrado en ficha (null = sin selección)
     selectedAge: "all",          // ageId | "all"
     biblioFilter: "all",         // filterTypes id
-    biblioSearch: ""
+    biblioSearch: "",
+    glosarioSel: null,           // id del término activo en el glosario
+    glosarioTramo: "all"         // tramo filtrado en el índice del glosario
   };
 
   // ── UTILS ───────────────────────────────────────────────────
@@ -75,7 +77,7 @@
   function renderCurrentView() {
     switch (state.view) {
       case "bibliografia": return renderBibliografia();
-      case "glosario":     return renderGlosario();
+      case "glosario":     return renderGlosarioView();
       case "metodologia":  return renderMetodologia();
       case "limitaciones": return renderLimitaciones();
       case "matriz":
@@ -481,6 +483,222 @@
       </div>`;
   }
 
+
+  // ── VISTA: GLOSARIO ─────────────────────────────────────────
+  function renderGlosarioView() {
+    const G = window.GLOSARIO;
+    if (!G) return `<div style="padding:24px;color:var(--pencil)">Datos del glosario no disponibles.</div>`;
+
+    // Inicializar selección si es null
+    if (!state.glosarioSel && G.TERMS.length) {
+      const first = G.TERMS.find(t => (t.cells || []).some(c => c.dim === G.DIMS[0]));
+      state.glosarioSel = first ? first.id : G.TERMS[0].id;
+    }
+
+    return `
+      <div class="gl-body">
+        <div class="gl-index" id="gl-index">
+          ${renderGlosarioIndex(G)}
+        </div>
+        <div class="gl-ficha-pane" id="gl-ficha-pane">
+          ${renderGlosarioFicha(G, state.glosarioSel)}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderGlosarioIndex(G) {
+    const tramo = state.glosarioTramo;
+
+    const tramoOpts = [
+      { value: "all", label: "Todos los tramos" },
+      { value: "0", label: "Lactante · 0–12 meses" },
+      { value: "1", label: "Primera infancia · 1–3 años" },
+      { value: "2", label: "Preescolar · 3–5 años" },
+      { value: "3", label: "Niñez media · 6–8 años" },
+      { value: "4", label: "Preadolescencia · 9–12 años" },
+    ];
+
+    // Agrupar términos por dimensión
+    const byDim = G.DIMS.map(dim => {
+      const seen = new Set();
+      const items = [];
+      G.TERMS.forEach(t => {
+        const cell = (t.cells || []).find(
+          c => c.dim === dim && (tramo === "all" || c.tramo === Number(tramo))
+        );
+        if (cell && !seen.has(t.id)) {
+          seen.add(t.id);
+          items.push({ term: t, cert: cell.cert, chile: cell.chile });
+        }
+      });
+      return { dim, items };
+    }).filter(d => d.items.length);
+
+    const transversal = G.TERMS.filter(t => !t.cells || t.cells.length === 0);
+
+    const dimGroups = byDim.map(({ dim, items }) => {
+      const hasSel = items.some(it => it.term.id === state.glosarioSel);
+      return `
+        <div class="gl-dim-group" data-gl-dim="${escapeHtml(dim)}">
+          <div class="gl-dim-head${hasSel ? " active" : ""}">
+            <span>${escapeHtml(dim)}</span>
+            <span class="gl-dim-count">${items.length}</span>
+          </div>
+          <div class="gl-list">
+            ${items.map(({ term, cert, chile }) => `
+              <button class="gl-item${term.id === state.glosarioSel ? " active" : ""}"
+                      data-gl-term="${escapeHtml(term.id)}">
+                <span class="gl-item-main">
+                  <span class="mini-dot ${cert}"></span>
+                  <span class="gl-item-term">${escapeHtml(term.term.split(" · ")[0].split(" (")[0])}</span>
+                </span>
+                ${chile ? `<span class="cl-mark" title="Nota de contexto chileno">CL</span>` : ""}
+              </button>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    const transGroup = transversal.length ? `
+      <div class="gl-dim-group" data-gl-dim="__transversal">
+        <div class="gl-dim-head soft">Transversal · cómo leer la evidencia</div>
+        <div class="gl-list">
+          ${transversal.map(t => `
+            <button class="gl-item${t.id === state.glosarioSel ? " active" : ""}"
+                    data-gl-term="${escapeHtml(t.id)}">
+              <span class="gl-item-main">
+                ${t.novel ? `<span class="gl-novel-dot"></span>` : ""}
+                <span class="gl-item-term">${escapeHtml(t.term.split(" · ")[0].split(" (")[0])}</span>
+              </span>
+            </button>
+          `).join("")}
+        </div>
+      </div>
+    ` : "";
+
+    return `
+      <div class="gl-index-scroll">
+        <p class="gl-index-intro">
+          El glosario espejado en la matriz: bajo cada dimensión, los conceptos
+          que la tocan. Elige un tramo para ver solo los que aparecen a esa edad.
+        </p>
+        <label class="gl-index-label" for="gl-tramo-sel">Tramo etario</label>
+        <select id="gl-tramo-sel" class="select gl-tramo-sel">
+          ${tramoOpts.map(o => `
+            <option value="${o.value}"${tramo === o.value ? " selected" : ""}>${escapeHtml(o.label)}</option>
+          `).join("")}
+        </select>
+        ${byDim.length === 0 ? `<div class="gl-empty">Ningún concepto mapeado a este tramo todavía.</div>` : ""}
+        ${dimGroups}
+        ${transGroup}
+      </div>
+    `;
+  }
+
+  function renderGlosarioFicha(G, termId) {
+    const term = G.TERMS.find(t => t.id === termId);
+    if (!term) {
+      return `
+        <div class="gl-ficha-empty">
+          Elige un término del índice para ver su ficha: qué significa, por qué
+          importa, en qué celdas de la matriz aparece y qué papers lo sostienen.
+        </div>
+      `;
+    }
+
+    const g = G.GRUPOS[term.grupo];
+    const papers = (term.refs || [])
+      .map(k => G.BIBLIO[k])
+      .filter(Boolean);
+    const related = (term.related || [])
+      .map(id => G.TERMS.find(t => t.id === id))
+      .filter(Boolean);
+
+    // Certeza dominante entre las celdas
+    let headCert = null;
+    if (term.cells && term.cells.length) {
+      if (term.cells.some(c => c.cert === "h"))      headCert = "high";
+      else if (term.cells.some(c => c.cert === "m")) headCert = "medium";
+      else                                            headCert = "low";
+    }
+    const certLabels = { high: "alta", medium: "media", low: "baja" };
+
+    const cellsHtml = (term.cells && term.cells.length) ? `
+      <div class="gl-sec">
+        <div class="gl-sec-label">Dónde aparece en la matriz</div>
+        <div class="gl-cells">
+          ${term.cells.map(c => `
+            <span class="gl-cell-chip">
+              <span class="mini-dot ${c.cert}"></span>
+              <span class="gl-cell-dim">${escapeHtml(c.dim)}</span>
+              <span class="gl-cell-tramo">${escapeHtml(G.TRAMOS[c.tramo])}</span>
+              ${c.chile ? `<span class="cl-mark" title="Nota de contexto chileno">CL</span>` : ""}
+            </span>
+          `).join("")}
+        </div>
+      </div>
+    ` : "";
+
+    const papersHtml = papers.length ? `
+      <div class="gl-sec">
+        <div class="gl-sec-label">En la bibliografía</div>
+        <div class="gl-papers">
+          ${papers.map(p => {
+            const typeLabels = { review:"Revisión", meta:"Meta-análisis", longitudinal:"Longitudinal", guideline:"Guía clínica", law:"Normativa", chilean:"Chile" };
+            return `
+              <a class="gl-paper" href="${escapeHtml(p.url || "")}" target="_blank" rel="noopener">
+                <div class="gl-paper-meta">
+                  <span class="biblio-type type-${escapeHtml(p.type || "")}">${escapeHtml(typeLabels[p.type] || p.type || "")}</span>
+                  <span class="gl-paper-authors">${escapeHtml(p.authors || "")} · ${escapeHtml(String(p.year || ""))}</span>
+                </div>
+                <div class="gl-paper-title">${escapeHtml(p.title || "")}</div>
+                ${p.journal ? `<div class="gl-paper-journal">${escapeHtml(p.journal)} ↗</div>` : ""}
+              </a>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    ` : `<a class="gl-extlink" href="${escapeHtml(term.wiki || "")}" target="_blank" rel="noopener">Definición general en Wikipedia ↗</a>`;
+
+    const relatedHtml = related.length ? `
+      <div class="gl-sec">
+        <div class="gl-sec-label">Conceptos relacionados</div>
+        <div class="gl-related">
+          ${related.map(r => `
+            <button class="gl-rel-chip" data-gl-rel="${escapeHtml(r.id)}">
+              ${escapeHtml(r.term.split(" · ")[0].split(" (")[0])}
+            </button>
+          `).join("")}
+        </div>
+      </div>
+    ` : "";
+
+    return `
+      <div class="gl-ficha">
+        <div class="gl-ficha-chips">
+          <span class="gl-tag ${term.grupo}">${escapeHtml(g.tag)}</span>
+          ${term.novel ? `<span class="gl-novel-chip">Concepto destacado</span>` : ""}
+          ${headCert ? `
+            <span class="gl-ficha-cert">
+              <span class="cdot ${headCert}"></span>certeza ${certLabels[headCert]}
+            </span>
+          ` : ""}
+        </div>
+        <h2 class="gl-ficha-title">${escapeHtml(term.term)}</h2>
+        <p class="gl-def">${escapeHtml(term.def)}</p>
+        <div class="gl-why">
+          <div class="gl-why-label">Por qué importa</div>
+          <p class="gl-why-text">${escapeHtml(term.why)}</p>
+        </div>
+        ${cellsHtml}
+        ${papersHtml}
+        ${relatedHtml}
+      </div>
+    `;
+  }
+
   function renderBibliografia() {
     const q = state.biblioSearch.toLowerCase().trim();
     const f = state.biblioFilter;
@@ -718,6 +936,33 @@
       return;
     }
 
+    // Término del índice del glosario
+    const glTerm = e.target.closest("[data-gl-term]");
+    if (glTerm) {
+      state.glosarioSel = glTerm.dataset.glTerm;
+      const idx = document.getElementById("gl-index");
+      const ficha = document.getElementById("gl-ficha-pane");
+      if (idx)   idx.innerHTML   = renderGlosarioIndex(window.GLOSARIO);
+      if (ficha) ficha.innerHTML = renderGlosarioFicha(window.GLOSARIO, state.glosarioSel);
+      return;
+    }
+
+    // Chip de término relacionado en ficha del glosario
+    const glRel = e.target.closest("[data-gl-rel]");
+    if (glRel) {
+      state.glosarioSel = glRel.dataset.glRel;
+      const idx = document.getElementById("gl-index");
+      const ficha = document.getElementById("gl-ficha-pane");
+      if (idx)   idx.innerHTML   = renderGlosarioIndex(window.GLOSARIO);
+      if (ficha) ficha.innerHTML = renderGlosarioFicha(window.GLOSARIO, state.glosarioSel);
+      // Scroll al término activo en el índice
+      setTimeout(() => {
+        const active = document.querySelector(".gl-item.active");
+        if (active) active.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 30);
+      return;
+    }
+
     // Salto desde popover a entrada de biblio
     const jumpEl = e.target.closest("[data-jump]");
     if (jumpEl) {
@@ -744,6 +989,13 @@
       state.selectedAge = e.target.value;
       const matrizPane = root.querySelector(".matriz-pane");
       if (matrizPane) matrizPane.innerHTML = renderMatrizHelp() + renderMatriz();
+      return;
+    }
+    if (e.target.id === "gl-tramo-sel") {
+      state.glosarioTramo = e.target.value;
+      const idx = document.getElementById("gl-index");
+      if (idx) idx.innerHTML = renderGlosarioIndex(window.GLOSARIO);
+      return;
     }
   }
 
