@@ -132,9 +132,10 @@ body {
   background: var(--bg-soft);
   flex-wrap: wrap;
 }
-.topbar-left { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.topbar-left { display: flex; align-items: flex-start; gap: 18px; flex-wrap: wrap; }
 .brand { font-size: 13.5px; font-weight: 600; color: var(--ink); }
 .brand-sub { color: var(--pencil); font-weight: 400; font-size: 12.5px; }
+.brand-desc { font-size: 11px; color: var(--pencil); font-weight: 400; max-width: 480px; margin: 3px 0 0; line-height: 1.45; }
 .tabs { display: flex; gap: 2px; }
 .tab {
   background: transparent;
@@ -580,6 +581,7 @@ body {
   .topbar { padding: 8px 12px; gap: 8px; }
   .topbar-left { gap: 10px; }
   .brand-sub { display: none; }
+  .brand-desc { display: none; }
   .topbar-right .legend { display: none; }
   .page-title { font-size: 19px; }
   :root { --page-pad-x: 18px; --page-pad-y: 20px; }
@@ -4509,6 +4511,7 @@ window.__DATA__ = {
         <div class="topbar-left">
           <div class="brand">
             Crianza y pantallas <span class="brand-sub">· matriz de evidencia</span>
+            <p class="brand-desc">Un mapa de la evidencia sobre el uso de pantallas en niños y niñas de 0 a 12 años. Sin prescribir ni alarmar, distingue lo bien establecido de lo que es hipótesis o creencia popular, para acompañar con evidencia las decisiones de padres y madres a lo largo de la infancia.</p>
           </div>
           <nav class="tabs" id="tabs">
             ${tabs.map(t => `
