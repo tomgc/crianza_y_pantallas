@@ -91,8 +91,7 @@
       { id: "matriz",       label: "Matriz" },
       { id: "glosario",     label: "Glosario" },
       { id: "bibliografia", label: "Bibliografía" },
-      { id: "metodologia",  label: "Metodología" },
-      { id: "limitaciones", label: "Limitaciones" }
+      { id: "metodologia",  label: "Metodología" }
     ];
 
     const ageOptions = [
@@ -113,10 +112,6 @@
           </nav>
         </div>
         <div class="topbar-right">
-          ${state.view === "matriz" ? `
-            <label class="eyebrow" for="age-sel">Tramo</label>
-            <select id="age-sel" class="select">${ageOptions}</select>
-          ` : ""}
           <span class="legend">
             <span class="cdot high"></span>alta
             <span class="cdot medium"></span>media
@@ -581,16 +576,9 @@
     return `
       <div class="gl-index-scroll">
         <p class="gl-index-intro">
-          El glosario espejado en la matriz: bajo cada dimensión, los conceptos
-          que la tocan. Elige un tramo para ver solo los que aparecen a esa edad.
+          El glosario espejado en la matriz: bajo cada dimensión, los conceptos que la tocan.
         </p>
-        <label class="gl-index-label" for="gl-tramo-sel">Tramo etario</label>
-        <select id="gl-tramo-sel" class="select gl-tramo-sel">
-          ${tramoOpts.map(o => `
-            <option value="${o.value}"${tramo === o.value ? " selected" : ""}>${escapeHtml(o.label)}</option>
-          `).join("")}
-        </select>
-        ${byDim.length === 0 ? `<div class="gl-empty">Ningún concepto mapeado a este tramo todavía.</div>` : ""}
+        ${byDim.length === 0 ? `<div class="gl-empty">Ningún concepto mapeado todavía.</div>` : ""}
         ${dimGroups}
         ${transGroup}
       </div>
@@ -784,8 +772,18 @@
   }
 
   // ── VISTA: METODOLOGÍA Y LIMITACIONES ───────────────────────
-  function renderMetodologia() { return renderTextPage(methodology); }
-  function renderLimitaciones() { return renderTextPage(limitations); }
+  function renderMetodologia() {
+    const metodoSections = (methodology.sections || [])
+      .filter(s => s.heading !== "Decisiones editoriales");
+    const limitSections  = limitations.sections || [];
+    const merged = {
+      title:    "Cómo leemos la evidencia",
+      subtitle: "Criterios, tramos etarios y niveles de certeza que organizan esta síntesis.",
+      sections: [...metodoSections, ...limitSections]
+    };
+    return renderTextPage(merged);
+  }
+  function renderLimitaciones() { return renderMetodologia(); }
 
   function renderTextPage(page) {
     return `

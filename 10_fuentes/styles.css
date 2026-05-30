@@ -739,6 +739,5 @@ body {
 @media (max-width: 960px) {
   .gl-body { grid-template-columns: 1fr; grid-template-rows: minmax(0,42%) minmax(0,58%); }
   .gl-index { border-right: none; border-bottom: 1px solid var(--border); }
-  .gl-ficha-pane { padding: 20px 18px 32px; }
   .gl-ficha-title { font-size: 19px; }
 }
