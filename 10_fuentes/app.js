@@ -128,9 +128,6 @@
     const topbar = root.querySelector(".topbar");
     if (!topbar) return;
     topbar.outerHTML = renderTopBar();
-    // El selector se recrea: restaurar valor
-    const sel = document.getElementById("age-sel");
-    if (sel) sel.value = state.selectedAge;
   }
 
   // ── VISTA: MATRIZ ───────────────────────────────────────────
@@ -782,7 +779,11 @@
       subtitle: "Criterios, tramos etarios y niveles de certeza que organizan esta síntesis.",
       sections: [...metodoSections, ...limitSections]
     };
-    return renderTextPage(merged);
+    return renderTextPage(merged) + `
+      <div class="contact-note">
+        ¿Encuentras un error o quieres sugerir una fuente?
+        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#103;&#111;&#110;&#122;&#97;&#108;&#101;&#122;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="contact-link">Escríbeme.</a>
+      </div>`;
   }
   function renderLimitaciones() { return renderMetodologia(); }
 
@@ -984,18 +985,6 @@
   }
 
   function onRootChange(e) {
-    if (e.target.id === "age-sel") {
-      state.selectedAge = e.target.value;
-      const matrizPane = root.querySelector(".matriz-pane");
-      if (matrizPane) matrizPane.innerHTML = renderMatrizHelp() + renderMatriz();
-      return;
-    }
-    if (e.target.id === "gl-tramo-sel") {
-      state.glosarioTramo = e.target.value;
-      const idx = document.getElementById("gl-index");
-      if (idx) idx.innerHTML = renderGlosarioIndex(window.GLOSARIO);
-      return;
-    }
   }
 
   function onRootInput(e) {
@@ -1038,7 +1027,4 @@
 
   // ── INIT ────────────────────────────────────────────────────
   mount();
-  // Restaurar valor del selector de tramo si la vista inicial es matriz
-  const sel = document.getElementById("age-sel");
-  if (sel) sel.value = state.selectedAge;
 })();
