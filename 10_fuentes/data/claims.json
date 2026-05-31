@@ -15,7 +15,9 @@
       {
         "certainty": "high",
         "text": "El estudio inglés Children of the 2020s reporta que a los 9 meses los bebés pasan en promedio 29 minutos diarios frente a pantallas, con 28% de ellos sin uso diario.",
-        "refs": []
+        "refs": [
+          "Bernardi2023"
+        ]
       },
       {
         "certainty": "medium",
@@ -60,8 +62,10 @@
       },
       {
         "certainty": "high",
-        "text": "En el estudio Children of the 2020s, los problemas de lenguaje a los 2 años aparecen sobre todo cuando el tiempo de pantalla supera aproximadamente 86 minutos diarios.",
-        "refs": []
+        "text": "En el estudio Children of the 2020s, mayor tiempo de pantalla a los 2 años se asocia con menor vocabulario de forma gradual; los niños con más exposición (promedio 5h/día) nombraron el 53% de las palabras de prueba vs. el 65% de los que menos tiempo pasaron frente a pantallas (promedio 44 min/día).",
+        "refs": [
+          "Fish2026"
+        ]
       },
       {
         "certainty": "medium",
@@ -192,12 +196,16 @@
       {
         "certainty": "medium",
         "text": "Mayor tiempo de pantalla recreativa se asocia con menor desempeño en comprensión lectora, pero la magnitud es modesta y se confunde con nivel socioeconómico (estudios OECD PISA, datos comparativos internacionales).",
-        "refs": []
+        "refs": [
+          "OECD2023"
+        ]
       },
       {
         "certainty": "medium",
         "text": "El uso educativo dirigido (e-books, programas de alfabetización) puede ser beneficioso bajo supervisión adulta.",
-        "refs": []
+        "refs": [
+          "Savva2022"
+        ]
       },
       {
         "certainty": "low",
@@ -759,7 +767,9 @@
       {
         "certainty": "medium",
         "text": "Pantalla cerca de la hora de dormir se asocia con menor duración total de sueño en estudios observacionales con bebés.",
-        "refs": []
+        "refs": [
+          "Janssen2020"
+        ]
       }
     ],
     "andamiaje": {
@@ -801,7 +811,9 @@
       {
         "certainty": "medium",
         "text": "Intervenciones que reducen tiempo de pantalla muestran mejoras leves en duración del sueño.",
-        "refs": []
+        "refs": [
+          "Janssen2020"
+        ]
       },
       {
         "certainty": "medium",
@@ -1074,7 +1086,9 @@
       {
         "certainty": "high",
         "text": "CMOs del Reino Unido recomiendan 3 horas diarias de actividad física para menores de 5 años, incluyendo juego activo.",
-        "refs": []
+        "refs": [
+          "CMO2019"
+        ]
       },
       {
         "certainty": "medium",
@@ -1237,7 +1251,9 @@
       {
         "certainty": "medium",
         "text": "La asociación entre pantalla y miopía aparece en estudios transversales pero NO en longitudinales, sugiriendo que probablemente no es causal.",
-        "refs": []
+        "refs": [
+          "Zong2024"
+        ]
       },
       {
         "certainty": "high",
@@ -1452,7 +1468,9 @@
       {
         "certainty": "high",
         "text": "Cyberbullying (más común desde 8-9 años) es factor de riesgo robusto para problemas de salud mental.",
-        "refs": []
+        "refs": [
+          "Lee2026"
+        ]
       }
     ],
     "definitions": [
@@ -1486,7 +1504,9 @@
       {
         "certainty": "high",
         "text": "Asociación robusta entre uso intensivo de redes sociales y problemas de salud mental (depresión, ansiedad, autoestima, imagen corporal), especialmente en niñas (revisiones sistemáticas recientes).",
-        "refs": []
+        "refs": [
+          "Saleem2024"
+        ]
       },
       {
         "certainty": "medium",
@@ -1688,7 +1708,9 @@
       {
         "certainty": "high",
         "text": "Asociación consistente entre tiempo de pantalla y síntomas de TDAH; magnitudes pequeñas a moderadas.",
-        "refs": []
+        "refs": [
+          "LiuH2024"
+        ]
       },
       {
         "certainty": "medium",

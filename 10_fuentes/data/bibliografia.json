@@ -763,5 +763,77 @@
     "title": "Longitudinal associations between digital media use and ADHD symptoms in children and adolescents: a systematic literature review",
     "journal": "European Child & Adolescent Psychiatry 33(8):2503–2526",
     "url": "https://doi.org/10.1007/s00787-022-02130-3"
+  },
+  {
+    "id": "Bernardi2023",
+    "group": "language",
+    "type": "cohort",
+    "authors": "Bernardi F. y col. (UCL/Ipsos). 2023",
+    "title": "Children of the 2020s: first survey of families at age 9 months",
+    "journal": "Department for Education, Reino Unido. Noviembre 2023",
+    "url": "https://www.gov.uk/government/publications/children-of-the-2020s-first-survey-of-families-at-age-9-months"
+  },
+  {
+    "id": "Fish2026",
+    "group": "language",
+    "type": "cohort",
+    "authors": "Fish L. y col. (UCL/Ipsos). 2026",
+    "title": "Children of the 2020s: home learning environment and screen time at age 2",
+    "journal": "Department for Education, Reino Unido. Enero 2026",
+    "url": "https://www.gov.uk/government/publications/children-of-the-2020s-second-survey-of-families-at-age-2"
+  },
+  {
+    "id": "OECD2023",
+    "group": "language",
+    "type": "report",
+    "authors": "OECD. 2023",
+    "title": "PISA 2022 Results (Volume I): The State of Learning and Equity in Education",
+    "journal": "OECD Publishing, Paris",
+    "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html"
+  },
+  {
+    "id": "Savva2022",
+    "group": "language",
+    "type": "meta",
+    "authors": "Savva N. y col. 2022",
+    "title": "Meta-analysis examining the effects of electronic storybooks on language and literacy outcomes for children in grades Pre-K to grade 2",
+    "journal": "Journal of Computer Assisted Learning 38(2):526–564",
+    "url": "https://doi.org/10.1111/jcal.12623"
+  },
+  {
+    "id": "CMO2019",
+    "group": "fisica",
+    "type": "guideline",
+    "authors": "UK Chief Medical Officers. 2019",
+    "title": "UK Chief Medical Officers' Physical Activity Guidelines",
+    "journal": "Department of Health and Social Care, Reino Unido. Septiembre 2019",
+    "url": "https://www.gov.uk/government/publications/physical-activity-guidelines-uk-chief-medical-officers-report"
+  },
+  {
+    "id": "Zong2024",
+    "group": "vision",
+    "type": "meta",
+    "authors": "Zong Z. y col. 2024",
+    "title": "The association between screen time exposure and myopia in children and adolescents: a meta-analysis",
+    "journal": "BMC Public Health 24:1659",
+    "url": "https://doi.org/10.1186/s12889-024-19113-5"
+  },
+  {
+    "id": "Lee2026",
+    "group": "mental",
+    "type": "meta",
+    "authors": "Lee J., Choo H., Zhang Y., Cheung H.S., Zhang Q., Ang R.P. 2026",
+    "title": "Cyberbullying Victimization and Mental Health Symptoms Among Children and Adolescents: A Meta-Analysis of Longitudinal Studies",
+    "journal": "Journal of Interpersonal Violence 41(1-2)",
+    "url": "https://doi.org/10.1177/15248380241313051"
+  },
+  {
+    "id": "Saleem2024",
+    "group": "mental",
+    "type": "review",
+    "authors": "Saleem N., Young P., Yousuf S. 2024",
+    "title": "Exploring the Relationship Between Social Media Use and Symptoms of Depression and Anxiety Among Children and Adolescents: A Systematic Narrative Review",
+    "journal": "Cyberpsychology, Behavior, and Social Networking 27(10)",
+    "url": "https://doi.org/10.1089/cyber.2023.0456"
   }
 ]
