@@ -506,10 +506,10 @@
     "id": "Foreman2024",
     "group": "school",
     "type": "meta",
-    "authors": "Foreman J., Xiong S., Keel S. y col. 2024",
+    "authors": "Zong Z., Zhang Y., Qiao J., Tian Y., Xu S. 2024",
     "title": "The association between screen time exposure and myopia in children and adolescents: a meta-analysis",
-    "journal": "BMC Public Health 24:1881",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/38890613/"
+    "journal": "BMC Public Health 24(1):1625. K=19; OR 2,24 transversales, 2,39 cohortes; computadora OR 8,19",
+    "url": "https://doi.org/10.1186/s12889-024-19113-5"
   },
   {
     "id": "Ha2025",
@@ -872,5 +872,869 @@
     "title": "Children of the 2020s: Cohort overview and baseline findings",
     "journal": "UK Department for Education. Cohorte de nacimiento longitudinal, ~3.000 familias, Reino Unido",
     "url": "https://www.gov.uk/government/collections/children-of-the-2020s-study"
+  },
+  {
+    "id": "Putnick2023",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Putnick D.L., Trinh M.H., Sundaram R., Bell E.M., Ghassabian A., Robinson S.L., Yeung E. 2023",
+    "title": "Displacement of peer play by screen time: associations with toddler development",
+    "journal": "Pediatric Research 93(5):1425–1431. Cohorte Upstate KIDS, N=3.894, mediciones 12–36 meses, ASQ a los 36 meses",
+    "url": "https://doi.org/10.1038/s41390-022-02261-y"
+  },
+  {
+    "id": "Sugiyama2023",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Sugiyama M., Tsuchiya K.J., Okubo Y., et al.; Nishimura T. 2023",
+    "title": "Outdoor Play as a Mitigating Factor in the Association Between Screen Time for Young Children and Neurodevelopmental Outcomes",
+    "journal": "JAMA Pediatrics 177(3):303–310. Hamamatsu Birth Cohort, N=885, pantalla a los 2 años, neurodesarrollo a los 4 años",
+    "url": "https://doi.org/10.1001/jamapediatrics.2022.5356"
+  },
+  {
+    "id": "Bukhalenkova2023",
+    "group": "recent",
+    "type": "review",
+    "authors": "Bukhalenkova D., Almazova O. 2023",
+    "title": "Active screen time and imagination in 5–6-years-old children",
+    "journal": "Frontiers in Psychology 14:1197540. Transversal, N=772 niños 5–6 años, test de imaginación productiva",
+    "url": "https://doi.org/10.3389/fpsyg.2023.1197540"
+  },
+  {
+    "id": "Zeissig2024",
+    "group": "recent",
+    "type": "review",
+    "authors": "Zeißig A., Kansok-Dusche J., Fischer S.M., Moeller J., Bilz L. 2024",
+    "title": "The association between boredom and creativity in educational contexts: A scoping review",
+    "journal": "Review of Education 12(1):e3470. Scoping review, K=19 publicaciones/27 estudios",
+    "url": "https://doi.org/10.1002/rev3.3470"
+  },
+  {
+    "id": "Sapounidis2025",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Sapounidis T., Rapti S., Vaiopoulou J. 2025",
+    "title": "Effects of Educational Robotics on Kindergarteners' Collaboration, Communication, Critical Thinking, and Creativity: A Meta-Analysis",
+    "journal": "Journal of Science Education and Technology 34(1):73–87. K=22 estudios, N=2.192, edad kindergarten",
+    "url": "https://doi.org/10.1007/s10956-024-10149-1"
+  },
+  {
+    "id": "Papadakis2024",
+    "group": "recent",
+    "type": "review",
+    "authors": "Papadakis S. 2024",
+    "title": "Can Preschoolers Learn Computational Thinking and Coding Skills with ScratchJr? A Systematic Literature Review",
+    "journal": "Journal of Educational Computing Research. Revisión sistemática, foco preescolar/kindergarten, ScratchJr",
+    "url": "https://doi.org/10.1177/10567879221076077"
+  },
+  {
+    "id": "Slattery2025",
+    "group": "recent",
+    "type": "review",
+    "authors": "Slattery E.J., et al. 2025",
+    "title": "Assessing the benefits of digital game-based learning with Minecraft in children, adolescents and young adults: A broad systematic review",
+    "journal": "Review of Education 13(1):e70035. K=29 estudios, riesgo de sesgo medio/alto en todos",
+    "url": "https://doi.org/10.1002/rev3.70035"
+  },
+  {
+    "id": "SlatteryRCT2024",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Slattery E.J., Butler D., Marshall K., Barrett M., Hyland N., O'Leary M., McAvinue L.P. 2024",
+    "title": "Effectiveness of a Minecraft Education intervention for improving spatial thinking in primary school children: A mixed methods two-level cluster randomised trial",
+    "journal": "Learning and Instruction 94:102003. ECA, N=885, edad media 11,5 años, Irlanda",
+    "url": "https://doi.org/10.1016/j.learninstruc.2024.102003"
+  },
+  {
+    "id": "Zhang2024",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Zhang Y., Zhu Y. 2024",
+    "title": "Effects of educational robotics on the creativity and problem-solving skills of K-12 students: a meta-analysis",
+    "journal": "Educational Studies 50(6). K=20 estudios, efecto global 0,82, rango K-12",
+    "url": "https://doi.org/10.1080/03055698.2022.2107873"
+  },
+  {
+    "id": "Loudoun2022",
+    "group": "recent",
+    "type": "review",
+    "authors": "Loudoun F.M., Boyle B., Larsson-Lund M., Potenza M.N. 2022",
+    "title": "Children's experiences of play in digital spaces: A scoping review",
+    "journal": "PLOS One 17(8):e0272630. K=31 artículos, corrección publicada 2025",
+    "url": "https://doi.org/10.1371/journal.pone.0272630"
+  },
+  {
+    "id": "Hesketh2026",
+    "group": "recent",
+    "type": "review",
+    "authors": "Hesketh K.R., Dodd H.F. 2026",
+    "title": "Are play and screen time associated with British preschoolers' mental health? Cross-sectional findings from the British Preschool Children's Play Survey",
+    "journal": "BMJ Open 16(1):e105101. Transversal, N=1.066 cuidadores, niños 2–4 años, muestra nacional UK",
+    "url": "https://doi.org/10.1136/bmjopen-2025-105101"
+  },
+  {
+    "id": "Zhang2025",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Zhang J., Zhang Q., Xiao B., Cao Y., Chen Y., Li Y. 2025",
+    "title": "Parental Technoference and Child Problematic Media Use: Meta-Analysis",
+    "journal": "Journal of Medical Internet Research 27:e57636. K=53 estudios, N=60.555, r=0,296",
+    "url": "https://doi.org/10.2196/57636"
+  },
+  {
+    "id": "Leonova2025",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Leonova A., Markin K., Vasilchenko K., Nemtseva E. 2025",
+    "title": "The Impact of Parental Screen Time on Children's Mental Health: Systematic review and meta-analysis",
+    "journal": "European Psychiatry (resumen de congreso). Phubbing parental y síntomas afectivos k=10, r=0,319",
+    "url": "https://doi.org/10.1192/j.eurpsy.2025.452"
+  },
+  {
+    "id": "Hood2021",
+    "group": "recent",
+    "type": "review",
+    "authors": "Hood R., Zabatiero J., Zubrick S.R., Silva D., Straker L. 2021",
+    "title": "The association of mobile touch screen device use with parent-child attachment: a systematic review",
+    "journal": "Ergonomics 64(12). 3 estudios cumplieron criterios; resultados negativos preliminares",
+    "url": "https://doi.org/10.1080/00140139.2021.1948617"
+  },
+  {
+    "id": "Stockdale2020",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Stockdale L.A., Porter C.L., Coyne S.M., et al. 2020",
+    "title": "Infants' response to a mobile phone modified still-face paradigm: Links to maternal behaviors and beliefs regarding technoference",
+    "journal": "Infancy 25(5). Experimental still-face, N=227 díadas, bebés <9 y >9 meses",
+    "url": "https://doi.org/10.1111/infa.12342"
+  },
+  {
+    "id": "Tidemann2022",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Tidemann I.T., Melinder A.M.D. 2022",
+    "title": "Infant behavioural effects of smartphone interrupted parent-infant interaction",
+    "journal": "British Journal of Developmental Psychology 40(3):384–397. Experimental, N=51, bebés 6–12 meses",
+    "url": "https://doi.org/10.1111/bjdp.12416"
+  },
+  {
+    "id": "vandenHeuvel2026",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "van den Heuvel M.I., Mosińska A., Turk E., Alimardani M. 2026",
+    "title": "Maternal technoference decreases brain-to-brain synchrony during mother-infant interaction",
+    "journal": "Scientific Reports. Dual-EEG hyperscanning, N=33 díadas madre-bebé",
+    "url": "https://doi.org/10.1038/s41598-026-37037-5"
+  },
+  {
+    "id": "Chamam2024",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Chamam S., Forcella A., Musio N., Quinodoz F., Dimitrova N. 2024",
+    "title": "Effects of digital and non-digital parental distraction on parent-child interaction and communication",
+    "journal": "Frontiers in Child and Adolescent Psychiatry 3:1330331. Experimental 3 condiciones, N=51 díadas toddler",
+    "url": "https://doi.org/10.3389/frcha.2024.1330331"
+  },
+  {
+    "id": "Mason2024",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Mason E.M., Riccabona T.M., Ventura A.K. 2024",
+    "title": "Technoference in infant feeding: the impact of maternal digital media use during breastfeeding on maternal attention and mother-infant interactions",
+    "journal": "Frontiers in Developmental Psychology 2:1441486. Experimental intra-sujeto, N=25 díadas",
+    "url": "https://doi.org/10.3389/fdpys.2024.1441486"
+  },
+  {
+    "id": "CiminoCerniglia2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Cimino S., Cerniglia L. 2025",
+    "title": "Integrating Screens and Spoons: An Exploratory Study on Digital Technology's Influence on Parent-Child Interactions",
+    "journal": "European Journal of Investigation in Health, Psychology and Education 15(3):36. Observacional, N=174 díadas, codificación SVIA + CBCL",
+    "url": "https://doi.org/10.3390/ejihpe15030036"
+  },
+  {
+    "id": "Linder2021",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Linder L.K., McDaniel B.T., Stockdale L., Coyne S.M. 2021",
+    "title": "The impact of parent and child media use on early parent-infant attachment",
+    "journal": "Infancy 26:551–569. Transversal, N=248, Attachment Q-Sort, 11–26 meses",
+    "url": "https://doi.org/10.1111/infa.12400"
+  },
+  {
+    "id": "Zhao2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Zhao C., Lai X., He J., Du M., Zhao W., Ding N., Tian W., Yu G., Zhang G. 2025",
+    "title": "Parental phubbing influence adolescent internet addiction through parental involvement and parental internet supervision",
+    "journal": "Current Psychology 44(17):14321–14334. Transversal, N=2.082, media 11 años, China",
+    "url": "https://doi.org/10.1007/s12144-025-08176-1"
+  },
+  {
+    "id": "BodrozicSelak2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Bodrožić Selak M., Merkaš M., Žulec Ivanković A. 2025",
+    "title": "Effects of Parents' Smartphone Use on Children's Emotions, Behavior, and Subjective Well-Being",
+    "journal": "European Journal of Investigation in Health, Psychology and Education 15(1):8. Longitudinal 4 olas 2021–2023, N=284, 10–15 años, Croacia",
+    "url": "https://doi.org/10.3390/ejihpe15010008"
+  },
+  {
+    "id": "Roche2026",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Roche E.C., Piper D.J., Strouse G.A., Myers L.J., Zosh J.M., Troseth G.L., Barr R. 2026",
+    "title": "Mutual Sensitivity Between Caregivers Predicts Infant Affective State During Video Chat",
+    "journal": "Infancy. Observacional, N=47 tríadas progenitor-bebé-abuelo",
+    "url": "https://doi.org/10.1111/infa.70068"
+  },
+  {
+    "id": "Neely2026",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Neely L.I., Piper D.J., Myers L.J., Zosh J.M., Strouse G.A., Troseth G.L., Barr R. 2026",
+    "title": "In the Living Room and Across the Screen: Intergenerational Play Between Infants and Grandparents",
+    "journal": "Infancy. Observacional, N=47 tríadas, videollamada Zoom vs presencial",
+    "url": "https://doi.org/10.1111/infa.70065"
+  },
+  {
+    "id": "Chen2024",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Chen Z., Liao X., Yang J., Tian Y., Peng K., Liu X., Li Y. 2024",
+    "title": "Association of screen-based activities and risk of self-harm and suicidal behaviors among young people: A systematic review and meta-analysis of longitudinal studies",
+    "journal": "Psychiatry Research 338:115991. K=13 meta-análisis, N=43.489, rango 10–24 años",
+    "url": "https://doi.org/10.1016/j.psychres.2024.115991"
+  },
+  {
+    "id": "Yoshizawa2026",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Yoshizawa M., Rafeedie J., Tang J.J., et al. 2026",
+    "title": "Screen Time, Child Depression, and Anxiety During the COVID-19 Pandemic: Systematic Review and Meta-Analysis",
+    "journal": "JMIR Pediatrics and Parenting 9:e83228. Contexto pandémico 2020–2023, 0–18 años, I²=95%",
+    "url": "https://doi.org/10.2196/83228"
+  },
+  {
+    "id": "LiL2022",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Li L., Zhang Q., Zhu L., et al. 2022",
+    "title": "Screen time and depression risk: A meta-analysis of cohort studies",
+    "journal": "Frontiers in Psychiatry 13:1058572. K=18 cohortes, N=241.398, RR=1,10 (IC95% 1,05–1,14), I²=82,7%",
+    "url": "https://doi.org/10.3389/fpsyt.2022.1058572"
+  },
+  {
+    "id": "Zhou2024",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Zhou R., Morita N., Ogai Y., Saito T., Zhang X., Yang W., Yang F. 2024",
+    "title": "Meta-Analysis of Internet Gaming Disorder Prevalence: Assessing the Impacts of DSM-5 and ICD-11 Diagnostic Criteria",
+    "journal": "International Journal of Environmental Research and Public Health 21(6):700. K=22, prevalencia IGD 6,7%",
+    "url": "https://doi.org/10.3390/ijerph21060700"
+  },
+  {
+    "id": "Ferguson2024",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Ferguson C.J. 2024",
+    "title": "Do social media experiments prove a link with mental health: A methodological and meta-analytic review",
+    "journal": "Psychology of Popular Media 14(2):201–206. K=27 experimentos, sin efecto promedio de reducción de redes",
+    "url": "https://doi.org/10.1037/ppm0000541"
+  },
+  {
+    "id": "Liu2024",
+    "group": "recent",
+    "type": "review",
+    "authors": "Liu X., Liu J., Flores D.D., McDonald C.C. 2024",
+    "title": "Family factors related to adolescent screen media use and mental health outcomes: A systematic review and recommendation for practices",
+    "journal": "Journal of Adolescence 96:1401–1427. K=32 estudios, 10–17 años, solo 3 longitudinales",
+    "url": "https://doi.org/10.1002/jad.12367"
+  },
+  {
+    "id": "Xiao2025",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Xiao Y., Meng Y., Brown T.T., Keyes K.M., Mann J.J. 2025",
+    "title": "Addictive Screen Use Trajectories and Suicidal Behaviors, Suicidal Ideation, and Mental Health in US Youths",
+    "journal": "JAMA 334(3):219–228. Cohorte ABCD, N=4.285, inicio 10 años, trayectorias 11–15 años, RR uso adictivo creciente=2,14",
+    "url": "https://doi.org/10.1001/jama.2025.7829"
+  },
+  {
+    "id": "Nagata2025a",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Nagata J.M., Otmar C.D., Shim J., et al. 2025",
+    "title": "Social Media Use and Depressive Symptoms During Early Adolescence",
+    "journal": "JAMA Network Open 8(5):e2511704. Cohorte ABCD, 9–13 años, modelos within-person, bidireccionalidad",
+    "url": "https://doi.org/10.1001/jamanetworkopen.2025.11704"
+  },
+  {
+    "id": "Nagata2025b",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Nagata J.M., Shim J., Balasubramanian P., et al. 2025",
+    "title": "Cyberbullying, mental health, and substance use experimentation among early adolescents: a prospective cohort study",
+    "journal": "The Lancet Regional Health – Americas 46:101002. Cohorte ABCD, N=9.799, 11–12 años, 9,4% victimización",
+    "url": "https://doi.org/10.1016/j.lana.2025.101002"
+  },
+  {
+    "id": "Plackett2023",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Plackett R., Sheringham J., Dykxhoorn J. 2023",
+    "title": "The Longitudinal Impact of Social Media Use on UK Adolescents' Mental Health: Longitudinal Observational Study",
+    "journal": "Journal of Medical Internet Research 25:e43213. Cohorte Understanding Society, N=3.228, 10–15 años, UK 2009–2019",
+    "url": "https://doi.org/10.2196/43213"
+  },
+  {
+    "id": "Li2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Li S.H., Batterham P.J., Whitton A.E., et al. 2025",
+    "title": "Cross-sectional and longitudinal associations of screen time with adolescent depression and anxiety",
+    "journal": "British Journal of Clinical Psychology 64(4):873–887. Future Proofing Study, N=4.058, media 13,9 años, Australia",
+    "url": "https://doi.org/10.1111/bjc.12547"
+  },
+  {
+    "id": "Vuorre2021",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Vuorre M., Orben A., Przybylski A.K. 2021",
+    "title": "There Is No Evidence That Associations Between Adolescents' Digital Technology Engagement and Mental Health Problems Have Increased",
+    "journal": "Clinical Psychological Science 9(5):823–835. Tres muestras representativas EE.UU./UK; refuta incremento temporal del efecto",
+    "url": "https://doi.org/10.1177/2167702621994549"
+  },
+  {
+    "id": "Dahlgren2024",
+    "group": "recent",
+    "type": "review",
+    "authors": "Dahlgren C.L., Sundgot-Borgen C., Kvalem I.L., Wennersberg A.-L., Wisting L. 2024",
+    "title": "Further evidence of the association between social media use, eating disorder pathology and appearance ideals and pressure",
+    "journal": "Journal of Eating Disorders 12:34. Transversal, N≈1.500, 16–19 años, Noruega, Instagram/TikTok",
+    "url": "https://doi.org/10.1186/s40337-024-00992-3"
+  },
+  {
+    "id": "Ahmer2025",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Ahmer A., Raza M., Azhar M., Rahman A., das J.K., Jafri S.K. 2025",
+    "title": "A Systematic Review and Meta-Analysis on the Impact of Screen-Time on the Social-Emotional Development of Children Under Five Years",
+    "journal": "Journal of the College of Physicians and Surgeons Pakistan 35(3):351–358. K=12, <5 años, OR=1,24 (IC95% 1,16–1,33)",
+    "url": "https://doi.org/10.29271/jcpsp.2025.03.351"
+  },
+  {
+    "id": "Jia2025",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Jia W., et al. 2025",
+    "title": "The association between screen exposure and social-emotional development in children and adolescents: A meta-analysis",
+    "journal": "Acta Psychologica 261:105818. N=39.620, 124 effect sizes, r=−0,046 competencia socioemocional, r=0,117 problemas conducta",
+    "url": "https://doi.org/10.1016/j.actpsy.2025.105818"
+  },
+  {
+    "id": "Zhang2023",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Zhang J., Dong C., Jiang Y., Zhang Q., Li H., Li Y. 2023",
+    "title": "Parental Phubbing and Child Social-Emotional Adjustment: A Meta-Analysis of Studies Conducted in China",
+    "journal": "Psychology Research and Behavior Management 16:4267–4285. K=42, N=56.275, r internalizantes=0,270, r externalizantes=0,210",
+    "url": "https://doi.org/10.2147/PRBM.S417718"
+  },
+  {
+    "id": "Ophir2023",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Ophir Y., Rosenberg H., Tikochinski R., Dalyot S., Lipshits-Braziler Y. 2023",
+    "title": "Screen Time and Autism Spectrum Disorder: A Systematic Review and Meta-Analysis",
+    "journal": "JAMA Network Open 6(12):e2346775. K=46, N=562.131; asociación pantalla-TEA no suficientemente respaldada",
+    "url": "https://doi.org/10.1001/jamanetworkopen.2023.46775"
+  },
+  {
+    "id": "Vanderloo2025",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Vanderloo L.M., Bourke M., Taylor L.G., Phillips S.M., Loh A., et al. 2025",
+    "title": "Screen Time Among Children and Youth With Disabilities: A Systematic Review and Meta-Analysis",
+    "journal": "Child: Care, Health and Development 51(4):e70136. K=81, 0–17 años, TEA/TDAH/parálisis cerebral, 3,3–3,7 h/día",
+    "url": "https://doi.org/10.1111/cch.70136"
+  },
+  {
+    "id": "Avci2024",
+    "group": "recent",
+    "type": "review",
+    "authors": "Avci H., Baams L., Kretschmer T. 2024",
+    "title": "A Systematic Review of Social Media Use and Adolescent Identity Development",
+    "journal": "Adolescent Research Review. Revisión sistemática, foco ≥13 con algunos preadolescentes",
+    "url": "https://doi.org/10.1007/s40894-024-00251-1"
+  },
+  {
+    "id": "Berg2024",
+    "group": "recent",
+    "type": "review",
+    "authors": "Berg V., Arabiat D., Morelius E., Kervin L., Zgambo M., Robinson S., Jenkins M., Whitehead L. 2024",
+    "title": "Young Children and the Creation of a Digital Identity on Social Networking Sites: Scoping Review",
+    "journal": "JMIR Pediatrics and Parenting 7:e54414. Scoping review, K=27, identidad digital, sharenting",
+    "url": "https://doi.org/10.2196/54414"
+  },
+  {
+    "id": "Wright2024",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Wright M.F. 2024",
+    "title": "The Moderating Effect of Peer Attachment on Associations Between Children's and Adolescents' Cyberbullying Victimization, Bystanding, and Depressive Symptoms",
+    "journal": "International Journal of Environmental Research and Public Health 22(1):8. N=938, longitudinal 6 meses, 4°–5° primaria y secundaria",
+    "url": "https://doi.org/10.3390/ijerph22010008"
+  },
+  {
+    "id": "Gillioz2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Gillioz E., Gentaz E., Lejeune F. 2025",
+    "title": "The effects of screen habits on attentional skills and prosocial behaviors in 6- to 36-month-old toddlers",
+    "journal": "Scientific Reports 15(1):44921. Observacional, N=148, 6–36 meses, Ginebra",
+    "url": "https://doi.org/10.1038/s41598-025-29359-7"
+  },
+  {
+    "id": "Shoshani2021",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Shoshani A., Braverman S., Meirow G. 2021",
+    "title": "Video games and close relations: Attachment and empathy as predictors of children's and adolescents' video game social play and socio-emotional functioning",
+    "journal": "Computers in Human Behavior 114:106578. Transversal, N=1.391, 9–15 años, Israel",
+    "url": "https://doi.org/10.1016/j.chb.2020.106578"
+  },
+  {
+    "id": "Myruski2018",
+    "group": "classic",
+    "type": "longitudinal",
+    "authors": "Myruski S., Gulyayeva O., Birk S., Pérez-Edgar K., Buss K.A., Dennis-Tiwary T.A. 2018",
+    "title": "Digital disruption? Maternal mobile device use is related to infant social-emotional functioning",
+    "journal": "Developmental Science 21(4):e12610. Experimental still-face, N=50, 7–23 meses. Pre-2020, incluido por valor mecanístico",
+    "url": "https://doi.org/10.1111/desc.12610"
+  },
+  {
+    "id": "Rega2023",
+    "group": "recent",
+    "type": "review",
+    "authors": "Rega V., Gioia F., Boursier V. 2023",
+    "title": "Problematic Media Use among Children up to the Age of 10: A Systematic Literature Review",
+    "journal": "International Journal of Environmental Research and Public Health 20(10):5854. K=35, 0–10 años, PMU y problemas conductuales",
+    "url": "https://doi.org/10.3390/ijerph20105854"
+  },
+  {
+    "id": "NamaziSadeghi2024",
+    "group": "recent",
+    "type": "review",
+    "authors": "Namazi S.A., Sadeghi S. 2024",
+    "title": "The immediate impacts of TV programs on preschoolers' executive functions and attention: a systematic review",
+    "journal": "BMC Psychology 12(1):226. K=15, N=1.855, 2–7 años, pacing y contenido fantástico",
+    "url": "https://doi.org/10.1186/s40359-024-01738-1"
+  },
+  {
+    "id": "Neville2021",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Neville R.D., McArthur B.A., Eirich R., Lakes K.D., Madigan S. 2021",
+    "title": "Bidirectional associations between screen time and children's externalizing and internalizing behaviors",
+    "journal": "Journal of Child Psychology and Psychiatry 62(12):1475–1484. RI-CLPM, N=11.194, Growing Up in Ireland, 3–9 años",
+    "url": "https://doi.org/10.1111/jcpp.13425"
+  },
+  {
+    "id": "Descarpentry2024",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Descarpentry A., Melchior M., Galera C., et al. 2024",
+    "title": "High screen time and internalizing and externalizing behaviours among children aged 3 to 14 years during the COVID-19 pandemic in France",
+    "journal": "European Child & Adolescent Psychiatry 33(4):1151–1161. Cohorte EpiCov, N=1.089, 3 olas 2020–2021",
+    "url": "https://doi.org/10.1007/s00787-023-02241-5"
+  },
+  {
+    "id": "Konok2024",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Konok V., Binet M-A., Korom Á., Pogány Á., Miklósi Á., Fitzpatrick C. 2024",
+    "title": "Cure for tantrums? Longitudinal associations between parental digital emotion regulation and children's self-regulatory skills",
+    "journal": "Frontiers in Child and Adolescent Psychiatry 3:1276154. Longitudinal 2 olas, N=265, 3,5–4,5 años",
+    "url": "https://doi.org/10.3389/frcha.2024.1276154"
+  },
+  {
+    "id": "CoyneTantrums2021",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Coyne S.M., Shawcroft J., Gale M., Gentile D.A., Etherington J.T., Holmgren H., Stockdale L. 2021",
+    "title": "Tantrums, toddlers and technology: Temperament, media emotion regulation, and problematic media use in early childhood",
+    "journal": "Computers in Human Behavior 120:106762. Longitudinal, N=269 toddlers 2–3 años",
+    "url": "https://doi.org/10.1016/j.chb.2021.106762"
+  },
+  {
+    "id": "Coyne2022",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Coyne S.M., Rogers A., Shawcroft J., et al. 2022",
+    "title": "Meltdowns and media: Moment-to-moment fluctuations in young children's media use transitions and the role of children's mood states",
+    "journal": "Computers in Human Behavior 136:107360. EMA, N=243, edad media 41 meses",
+    "url": "https://doi.org/10.1016/j.chb.2022.107360"
+  },
+  {
+    "id": "SchmidtPersson2024",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Schmidt-Persson J., Rasmussen M.G.B., Sørensen S.O., et al. 2024",
+    "title": "Screen Media Use and Mental Health of Children and Adolescents: A Secondary Analysis of a Randomized Clinical Trial",
+    "journal": "JAMA Network Open 7(7):e2419881. ECA análisis secundario, N=181, Dinamarca, SDQ d=0,53",
+    "url": "https://doi.org/10.1001/jamanetworkopen.2024.19881"
+  },
+  {
+    "id": "Rhodes2020",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Rhodes S.M., Stewart T.M., Kanevski M. 2020",
+    "title": "Immediate impact of fantastical television content on children's executive functions",
+    "journal": "British Journal of Developmental Psychology 38(2):268–288. ECA, N=80, 5–6 años",
+    "url": "https://doi.org/10.1111/bjdp.12318"
+  },
+  {
+    "id": "Fan2021",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Fan L., Zhan M., Qing W., Gao T., Wang M. 2021",
+    "title": "The Short-Term Impact of Animation on the Executive Function of Children Aged 4 to 7",
+    "journal": "International Journal of Environmental Research and Public Health 18(16):8616. ECA, N=218, 4–7 años; fantasía sí, pacing no",
+    "url": "https://doi.org/10.3390/ijerph18168616"
+  },
+  {
+    "id": "LiH2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Li H., Hsueh Y., Zheng X., Yu H. 2025",
+    "title": "The immediate post-viewing effects of animated fantastical events on the executive function of Chinese kindergarteners with high and low fantasy orientations",
+    "journal": "British Journal of Developmental Psychology 43(4):860–872. ECA eye-tracking, N=102, 5–6 años",
+    "url": "https://doi.org/10.1111/bjdp.12558"
+  },
+  {
+    "id": "Essex2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Essex C., Bedford R., Gliga T., Smith T.J. 2025",
+    "title": "Toddlers Viewing Fantastical Cartoons: Evidence of an Immediate Reduction in Endogenous Control Without an Increase in Stimulus-Driven Exogenous Control",
+    "journal": "Developmental Science 28(3):e70008. ECA, toddlers, UK. N verificar en texto completo",
+    "url": "https://doi.org/10.1111/desc.70008"
+  },
+  {
+    "id": "Kessafoglu2024",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Keşşafoğlu D., Küntay A.C., Uzundağ B.A. 2024",
+    "title": "Immediate and delayed effects of fantastical content on children's executive functions and mental transformation",
+    "journal": "Journal of Experimental Child Psychology 248:106067. ECA 4 condiciones, N=120, 5–6 años; efecto disipa en 10 min",
+    "url": "https://doi.org/10.1016/j.jecp.2024.106067"
+  },
+  {
+    "id": "Neville2024",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Neville R.D., et al. 2024",
+    "title": "Associations Between Changes in 24-Hour Movement Behaviors in Children and Adolescents During the COVID-19 Pandemic: A Systematic Review and Mediation-Based Meta-Analysis",
+    "journal": "Journal of Physical Activity & Health 21(4):323–332. N=18.959, K=26, edad media 11,5 años; pantalla medió 53% de la reducción de AF",
+    "url": "https://doi.org/10.1123/jpah.2023-0346"
+  },
+  {
+    "id": "Boyland2022",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Boyland E., McGale L., Maden M., et al. 2022",
+    "title": "Association of Food and Nonalcoholic Beverage Marketing With Children and Adolescents' Eating Behaviors and Health: A Systematic Review and Meta-analysis",
+    "journal": "JAMA Pediatrics 176(7):e221037. K=96, N=19.372; SMD ingesta=0,25, OR elección=1,77; base guías OMS",
+    "url": "https://doi.org/10.1001/jamapediatrics.2022.1037"
+  },
+  {
+    "id": "ChenYJ2025",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Chen Y.-J., Hu C.-Y., Wu W.-T., et al. 2025",
+    "title": "Association of smartphone overuse and neck pain: a systematic review and meta-analysis",
+    "journal": "Postgraduate Medical Journal 101(1197):620–626. K=7, N=10.715, OR ajustado agrupado=2,34; muestra adultos jóvenes",
+    "url": "https://doi.org/10.1093/postmj/qgae200"
+  },
+  {
+    "id": "Kou2024",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Kou R., Zhang Z., Zhu F., Tang Y., Li Z. 2024",
+    "title": "Effects of Exergaming on executive function and motor ability in children: A systematic review and meta-analysis",
+    "journal": "PLOS One 19(9):e0309462. K=37 ECA, <18 años; SMD motor grueso=0,82, fino=0,71, equilibrio=0,61, CF=0,48",
+    "url": "https://doi.org/10.1371/journal.pone.0309462"
+  },
+  {
+    "id": "HernandezMosqueira2025",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Hernández-Mosqueira J., Pérez-Contreras J., Romero C., et al. 2025",
+    "title": "Effects of Exergaming on Morphological Variables, Biochemical Parameters, and Blood Pressure in Children and Adolescents with Overweight/Obesity: A Systematic Review with Meta-Analysis of Randomized Controlled Trials",
+    "journal": "Children (Basel). K=6 ECA, N=191; grupos chilenos. DOI pendiente verificación — ver PMC12027561",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11763999/"
+  },
+  {
+    "id": "Haghjoo2022",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Haghjoo P., Siri G., Soleimani E., Abbasalizad Farhangi M., Alesaeidi S. 2022",
+    "title": "Screen time increases overweight and obesity risk among adolescents: a systematic review and dose-response meta-analysis",
+    "journal": "BMC Primary Care 23:161. Adolescentes, OR=1,273 (IC95% 1,166–1,390), I²=82,1%",
+    "url": "https://doi.org/10.1186/s12875-022-01761-4"
+  },
+  {
+    "id": "Pedersen2022",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Pedersen J., Rasmussen M.G.B., Sørensen S.O., et al. 2022",
+    "title": "Effects of Limiting Recreational Screen Media Use on Physical Activity and Sleep in Families With Children: A Cluster Randomized Clinical Trial",
+    "journal": "JAMA Pediatrics 176(8):741–749. ECA SCREENS, N=181, 4–14 años, Dinamarca; +44,8 min/día no sedentario",
+    "url": "https://doi.org/10.1001/jamapediatrics.2022.1519"
+  },
+  {
+    "id": "ChenB2020",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Chen B., et al. 2020",
+    "title": "Associations between early-life screen viewing and 24 hour movement behaviours: findings from a longitudinal birth cohort study",
+    "journal": "The Lancet Child & Adolescent Health 4(3):201–209. GUSTO, N=552, pantalla 2–3 años → −13 min/día AFMV a 5,5 años",
+    "url": "https://doi.org/10.1016/S2352-4642(19)30424-9"
+  },
+  {
+    "id": "Pirnes2022",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Pirnes K.P., Kallio J., Hakonen H., et al. 2022",
+    "title": "Physical activity, screen time and the incidence of neck and shoulder pain in school-aged children",
+    "journal": "Scientific Reports 12:10557. Cohorte longitudinal 2 años, N=970, 10–15 años, Finlandia",
+    "url": "https://doi.org/10.1038/s41598-022-14612-0"
+  },
+  {
+    "id": "Wang2024",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Wang Y., et al. 2024",
+    "title": "Isotemporal Substitution Effects of Daily Time Use on Cardiorespiratory Fitness of Children in the OptiChild Study: A Mediation Analysis with Diet Quality",
+    "journal": "Nutrients 16(16):2788. N=1.131, 8–10 años, China; 30 min pantalla→AFMV mejora CF. PMID pendiente verificación",
+    "url": "https://doi.org/10.3390/nu16162788"
+  },
+  {
+    "id": "Yuan2024",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Yuan R., Zhang J., Song P., Qin L. 2024",
+    "title": "The relationship between screen time and gross motor movement: A cross-sectional study of pre-school aged left-behind children in China",
+    "journal": "PLOS One 19(4):e0296862. Transversal, N=817, 3–6 años, TGMD-3, β=−0,689 SD/unidad pantalla",
+    "url": "https://doi.org/10.1371/journal.pone.0296862"
+  },
+  {
+    "id": "Velazquez2025",
+    "group": "recent",
+    "type": "review",
+    "authors": "Velázquez M.C., García S.V., Salto D.J., et al. 2025",
+    "title": "Uso de pantallas y actividad física en niños y niñas menores de 6 años: ¿qué ha cambiado después de la pandemia de COVID-19?",
+    "journal": "Boletín Médico del Hospital Infantil de México 82(6):375. Transversal, N=883, <6 años, Buenos Aires, pandemia vs pospandemia",
+    "url": "https://doi.org/10.24875/BMHIM.25000057"
+  },
+  {
+    "id": "Li2020",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Li C., Cheng G., Sha T., Cheng W., Yan Y. 2020",
+    "title": "The Relationships between Screen Use and Health Indicators among Infants, Toddlers, and Preschoolers: A Meta-Analysis and Systematic Review",
+    "journal": "International Journal of Environmental Research and Public Health 17(19):7324. K=80, 0–7 años; pantallas pequeñas más relevantes que TV para sueño",
+    "url": "https://doi.org/10.3390/ijerph17197324"
+  },
+  {
+    "id": "Emond2021",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Emond J.A., O'Malley A.J., Neelon B., et al. 2021",
+    "title": "Associations between daily screen time and sleep in a racially and socioeconomically diverse sample of US infants: a prospective cohort study",
+    "journal": "BMJ Open 11(6):e044525. Cohorte Nurture, N=558, 3–12 meses; 1h pantalla → ~20 min menos sueño nocturno a 12 meses",
+    "url": "https://doi.org/10.1136/bmjopen-2020-044525"
+  },
+  {
+    "id": "Pickard2024",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Pickard H., Chu P., Essex C., et al. 2024",
+    "title": "Toddler Screen Use Before Bed and Its Effect on Sleep and Attention: A Randomized Clinical Trial",
+    "journal": "JAMA Pediatrics 178(12):1270–1279. ECA piloto PASTI, N=105, 16–30 meses; eficiencia sueño d=0,56",
+    "url": "https://doi.org/10.1001/jamapediatrics.2024.3997"
+  },
+  {
+    "id": "Cheung2017",
+    "group": "classic",
+    "type": "review",
+    "authors": "Cheung C.H.M., Bedford R., Saez De Urabain I.R., Karmiloff-Smith A., Smith T.J. 2017",
+    "title": "Daily touchscreen use in infants and toddlers is associated with reduced sleep and delayed sleep onset",
+    "journal": "Scientific Reports 7:46104. Transversal, N=715, 6–36 meses. Ancla pre-2020: −15 min sueño total/h de tablet",
+    "url": "https://doi.org/10.1038/srep46104"
+  },
+  {
+    "id": "Hiltunen2021",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Hiltunen P., Leppänen M.H., Ray C., et al. 2021",
+    "title": "Relationship between screen time and sleep among Finnish preschool children: results from the DAGIS study",
+    "journal": "Sleep Medicine 77:75–81. Transversal, N=736, 3–6 años, Finlandia; +1h pantalla → 11 min retraso acostarse, 10 min menos sueño",
+    "url": "https://doi.org/10.1016/j.sleep.2020.11.008"
+  },
+  {
+    "id": "CarrascoMarin2022",
+    "group": "recent",
+    "type": "review",
+    "authors": "Carrasco-Marín F., Petermann-Rocha F., Martorell M., et al. 2022",
+    "title": "Physical Fitness, Screen Time and Sleep Habits According to Obesity Levels in Schoolchildren: Findings from the Health Survey of the Extreme South of Chile",
+    "journal": "International Journal of Environmental Research and Public Health 19(20):13690. Transversal, N=583, 9–15 años, Punta Arenas, Chile",
+    "url": "https://doi.org/10.3390/ijerph192013690"
+  },
+  {
+    "id": "Akacem2018",
+    "group": "classic",
+    "type": "longitudinal",
+    "authors": "Akacem L.D., Wright K.P. Jr, LeBourgeois M.K. 2018",
+    "title": "Sensitivity of the circadian system to evening bright light in preschool-age children",
+    "journal": "Physiological Reports 6(5):e13617. Experimental, n=10, 4,3 años; ~88% supresión melatonina con 1000 lux. Ancla pre-2020 por trazabilidad del dato",
+    "url": "https://doi.org/10.14814/phy2.13617"
+  },
+  {
+    "id": "Hartstein2025",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Hartstein L.E., Wright K.P. Jr, Diniz Behn C., Stowe S.R., LeBourgeois M.K. 2025",
+    "title": "The Circadian Response to Evening Light Spectra in Early Childhood: Preliminary Insights",
+    "journal": "Journal of Biological Rhythms 40(2):184–195. Experimental cruzado, n=10, 3–6 años; CCT alta suprime más melatonina (56,3% vs 23,9%)",
+    "url": "https://doi.org/10.1177/07487304241311652"
+  },
+  {
+    "id": "Guedes2024",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Guedes J., da Costa Neto A.B., Fernandes B.F., et al. 2024",
+    "title": "Myopia Prevalence in Latin American Children and Adolescents: A Systematic Review and Meta-Analysis",
+    "journal": "Cureus 16(6):e63482. K=24, N=165.721, LATAM, prevalencia 8,61% (IC95% 5,22–13,87%)",
+    "url": "https://doi.org/10.7759/cureus.63482"
+  },
+  {
+    "id": "LiDan2024",
+    "group": "recent",
+    "featured": true,
+    "type": "meta",
+    "authors": "Li D., Min S., Li X. 2024",
+    "title": "Is Spending More Time Outdoors Able to Prevent and Control Myopia in Children and Adolescents? A Meta-Analysis",
+    "journal": "Ophthalmic Research 67(1):393–404. K=8, N=12.922; OR 0,53 incidencia; dosis-respuesta 7/16,3/27h=OR 0,80/0,47/0,31",
+    "url": "https://doi.org/10.1159/000539229"
+  },
+  {
+    "id": "Dhakal2022",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Dhakal R., Shah R., Huntjens B., Verkicharla P.K., Lawrenson J.G. 2022",
+    "title": "Time spent outdoors as an intervention for myopia prevention and control in children: an overview of systematic reviews",
+    "journal": "Ophthalmic and Physiological Optics 42(3):545–558. Overview K=7 revisiones, N=63.920; incidencia sí, progresión contradictoria",
+    "url": "https://doi.org/10.1111/opo.12945"
+  },
+  {
+    "id": "Song2026",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Song F., Liu Y., Zhao Z., et al. 2026",
+    "title": "Clinical manifestations, prevalence, and risk factors of asthenopia: a systematic review and meta-analysis",
+    "journal": "Journal of Global Health 16:04053. K=63; prevalencia astenopía 51%; escolares COVID 45–64%",
+    "url": "https://doi.org/10.7189/jogh.16.04053"
+  },
+  {
+    "id": "Mataftsi2023",
+    "group": "recent",
+    "type": "review",
+    "authors": "Mataftsi A., Seliniotaki A.K., Moutzouri S., et al. 2023",
+    "title": "Digital eye strain in young screen users: A systematic review",
+    "journal": "Preventive Medicine 170:107493. K=10, GRADE; filtros luz azul sin evidencia de prevenir DES",
+    "url": "https://doi.org/10.1016/j.ypmed.2023.107493"
+  },
+  {
+    "id": "Ashby2025",
+    "group": "recent",
+    "type": "review",
+    "authors": "Ashby R., Harb E.N., Ostrin L.A., et al. 2025",
+    "title": "IMI: The Role of Light in Refractive Development and Myopia: Evidence from Animal and Human Studies",
+    "journal": "Investigative Ophthalmology & Visual Science 66(15):5. White paper IMI; mecanismo dopamina retinal en modelos animales; traslación humana incompleta",
+    "url": "https://doi.org/10.1167/iovs.66.15.5"
+  },
+  {
+    "id": "Abounoori2022",
+    "group": "recent",
+    "type": "meta",
+    "authors": "Abounoori M., Aghajani A., Chaibakhsh S., et al. 2022",
+    "title": "Paediatric myopia shift during the COVID-19 pandemic home quarantine: a systematic review and meta-analysis",
+    "journal": "BMJ Paediatrics Open 6(1):e001755. K=10; diferencia SER 0,15 D, p=0,58 (no significativo agrupado)",
+    "url": "https://doi.org/10.1136/bmjpo-2022-001755"
+  },
+  {
+    "id": "Hu2021",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Hu Y., Zhao F., Ding X., et al. 2021",
+    "title": "Rates of Myopia Development in Young Chinese Schoolchildren During the Outbreak of COVID-19",
+    "journal": "JAMA Ophthalmology 139(10):1115–1121. Cohorte, N=2.114, 7,76 años, Guangzhou; incidencia miopía duplicada durante COVID",
+    "url": "https://doi.org/10.1001/jamaophthalmol.2021.3563"
+  },
+  {
+    "id": "JingLi2025",
+    "group": "recent",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Li J. 2025",
+    "title": "The association between smartphone use and myopia progression in children: a prospective cohort study",
+    "journal": "BMC Pediatrics 25:378. Cohorte 24m, N=523, 6–14 años, cicloplejía; 0,66 D/año >4h vs 0,32 D/año <2h",
+    "url": "https://doi.org/10.1186/s12887-025-05715-4"
+  },
+  {
+    "id": "Yang2020",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Yang G.Y., Huang L.H., Schmid K.L., et al. 2020",
+    "title": "Associations Between Screen Exposure in Early Life and Myopia amongst Chinese Preschoolers",
+    "journal": "International Journal of Environmental Research and Public Health 17(3):1056. Transversal, N=26.433, 2–7 años; primer año PR 4,02",
+    "url": "https://doi.org/10.3390/ijerph17031056"
+  },
+  {
+    "id": "Matsumura2022",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Matsumura S., Dannoue K., Kawakami M., et al. 2022",
+    "title": "Prevalence of Myopia and Its Associated Factors Among Japanese Preschool Children",
+    "journal": "Frontiers in Public Health 10:901480. Transversal biometría objetiva, N=457, 4–6 años; pantalla >1h → mayor longitud axial β=0,14",
+    "url": "https://doi.org/10.3389/fpubh.2022.901480"
+  },
+  {
+    "id": "Zhu2026",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Zhu Y., Chen H., Lin S., et al. 2026",
+    "title": "Objective Monitoring of Tablet Use–Related Optical Exposure and Its Association With Axial Length in Preschool Children: Cross-Sectional Intelligent Monitoring Study",
+    "journal": "JMIR Human Factors 13:e79266. Transversal, N=199, 3–6 años; monitoreo objetivo tablet; brillo ambiental β=−0,13",
+    "url": "https://doi.org/10.2196/79266"
   }
 ]
