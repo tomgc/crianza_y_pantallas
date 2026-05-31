@@ -1,8 +1,8 @@
 # Estructura del proyecto
 
 - **Raiz:** `/Users/tomgc/Projects/crianza_y_pantallas`
-- **Fecha:** 2026-05-31 09:39:58
-- **Total:** 10 carpetas, 59 archivos
+- **Fecha:** 2026-05-31 10:03:19
+- **Total:** 10 carpetas, 62 archivos
 
 ## Arbol
 
@@ -55,9 +55,11 @@
 │   │   ├── 20260529_123415_estructura.txt    [3.43K]
 │   │   ├── 20260530_223311_estructura.md    [3.84K]
 │   │   ├── 20260530_223311_estructura.txt    [4.01K]
+│   │   ├── 20260531_093957_estructura.md    [4.02K]
 │   │   ├── 20260531_093957_estructura.txt    [4.19K]
-│   │   ├── estructura_actual.md    [3.84K]
-│   │   ├── estructura_actual.txt    [4.19K]
+│   │   ├── 20260531_100319_estructura.txt    [4.37K]
+│   │   ├── estructura_actual.md    [4.02K]
+│   │   ├── estructura_actual.txt    [4.37K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -68,6 +70,7 @@
 │   │   ├── traspaso-cierre-v07.md    [34.52K]
 │   │   ├── traspaso-cierre-v08.md    [28.79K]
 │   │   ├── traspaso-cierre-v09.md    [42.24K]
+│   │   ├── traspaso-cierre-v10.md    [38.42K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
@@ -84,9 +87,9 @@
 
 | Extension | Cantidad |
 |-----------|----------|
-| `.md` | 35 |
+| `.md` | 37 |
+| `.txt` | 7 |
 | `.html` | 6 |
-| `.txt` | 6 |
 | `.json` | 4 |
 | `.js` | 3 |
 | `.R` | 1 |
