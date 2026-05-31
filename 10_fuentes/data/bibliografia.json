@@ -835,5 +835,42 @@
     "title": "Exploring the Relationship Between Social Media Use and Symptoms of Depression and Anxiety Among Children and Adolescents: A Systematic Narrative Review",
     "journal": "Cyberpsychology, Behavior, and Social Networking 27(10)",
     "url": "https://doi.org/10.1089/cyber.2023.0456"
+  },
+  {
+    "id": "Anderson2007",
+    "group": "classic",
+    "type": "review",
+    "authors": "Anderson D.R., Pempek T.A. 2007",
+    "title": "Television and Very Young Children",
+    "journal": "American Behavioral Scientist 48(5):505–522. Revisión sobre TV de fondo y desarrollo en menores de 2 años",
+    "url": "https://doi.org/10.1177/0002764204271506"
+  },
+  {
+    "id": "Christakis2004",
+    "group": "classic",
+    "type": "longitudinal",
+    "authors": "Christakis D.A., Zimmerman F.J., DiGiuseppe D.L., McCarty C.A. 2004",
+    "title": "Early Television Exposure and Subsequent Attentional Problems in Children",
+    "journal": "Pediatrics 113(4):708–713. Cohorte NLSY, n=1.278, exposición TV 1–3 años → déficit atencional a los 7",
+    "url": "https://doi.org/10.1542/peds.113.4.708"
+  },
+  {
+    "id": "Coyne2021",
+    "group": "recent",
+    "type": "longitudinal",
+    "authors": "Coyne S.M., Shawcroft J., Gale M., Gentile D.A., Stockdale L., Warburton W. 2021",
+    "title": "Parental Digital Emotion Regulation: Associations with Child Screen Time and Socioemotional Development",
+    "journal": "Computers in Human Behavior 125:106866. Cohorte longitudinal, n=300 familias",
+    "url": "https://doi.org/10.1016/j.chb.2021.106866"
+  },
+  {
+    "id": "ChildrenOf2020s",
+    "group": "anchor",
+    "featured": true,
+    "type": "longitudinal",
+    "authors": "Equipo Children of the 2020s. 2024",
+    "title": "Children of the 2020s: Cohort overview and baseline findings",
+    "journal": "UK Department for Education. Cohorte de nacimiento longitudinal, ~3.000 familias, Reino Unido",
+    "url": "https://www.gov.uk/government/collections/children-of-the-2020s-study"
   }
 ]

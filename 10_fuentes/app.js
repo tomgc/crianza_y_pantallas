@@ -596,7 +596,7 @@
 
     const g = G.GRUPOS[term.grupo];
     const papers = (term.refs || [])
-      .map(k => G.BIBLIO[k])
+      .map(k => biblioById[k])
       .filter(Boolean);
     const related = (term.related || [])
       .map(id => G.TERMS.find(t => t.id === id))

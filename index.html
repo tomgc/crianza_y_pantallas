@@ -1861,6 +1861,43 @@ window.__DATA__ = {
       "title": "Exploring the Relationship Between Social Media Use and Symptoms of Depression and Anxiety Among Children and Adolescents: A Systematic Narrative Review",
       "journal": "Cyberpsychology, Behavior, and Social Networking 27(10)",
       "url": "https://doi.org/10.1089/cyber.2023.0456"
+    },
+    {
+      "id": "Anderson2007",
+      "group": "classic",
+      "type": "review",
+      "authors": "Anderson D.R., Pempek T.A. 2007",
+      "title": "Television and Very Young Children",
+      "journal": "American Behavioral Scientist 48(5):505–522. Revisión sobre TV de fondo y desarrollo en menores de 2 años",
+      "url": "https://doi.org/10.1177/0002764204271506"
+    },
+    {
+      "id": "Christakis2004",
+      "group": "classic",
+      "type": "longitudinal",
+      "authors": "Christakis D.A., Zimmerman F.J., DiGiuseppe D.L., McCarty C.A. 2004",
+      "title": "Early Television Exposure and Subsequent Attentional Problems in Children",
+      "journal": "Pediatrics 113(4):708–713. Cohorte NLSY, n=1.278, exposición TV 1–3 años → déficit atencional a los 7",
+      "url": "https://doi.org/10.1542/peds.113.4.708"
+    },
+    {
+      "id": "Coyne2021",
+      "group": "recent",
+      "type": "longitudinal",
+      "authors": "Coyne S.M., Shawcroft J., Gale M., Gentile D.A., Stockdale L., Warburton W. 2021",
+      "title": "Parental Digital Emotion Regulation: Associations with Child Screen Time and Socioemotional Development",
+      "journal": "Computers in Human Behavior 125:106866. Cohorte longitudinal, n=300 familias",
+      "url": "https://doi.org/10.1016/j.chb.2021.106866"
+    },
+    {
+      "id": "ChildrenOf2020s",
+      "group": "anchor",
+      "featured": true,
+      "type": "longitudinal",
+      "authors": "Equipo Children of the 2020s. 2024",
+      "title": "Children of the 2020s: Cohort overview and baseline findings",
+      "journal": "UK Department for Education. Cohorte de nacimiento longitudinal, ~3.000 familias, Reino Unido",
+      "url": "https://www.gov.uk/government/collections/children-of-the-2020s-study"
     }
   ],
   "claims": {
@@ -4312,82 +4349,6 @@ window.__DATA__ = {
    ─────────────────────────────────────────────────────────────── */
 (function () {
 
-  // ── Bibliografía referenciada ────────────────────────────────
-  // type: review · meta · longitudinal · guideline · law · chilean
-  const BIBLIO = {
-    madigan2020: {
-      authors: "Madigan, McArthur, Anhorn et al.",
-      year: 2020,
-      title: "Associations Between Screen Use and Child Language Skills",
-      journal: "JAMA Pediatrics",
-      type: "meta",
-      url: "https://doi.org/10.1001/jamapediatrics.2020.0327",
-    },
-    children2020s: {
-      authors: "Equipo Children of the 2020s",
-      year: 2024,
-      title: "Cohorte longitudinal de nacimiento (Reino Unido)",
-      journal: "UK Dept. for Education",
-      type: "longitudinal",
-      url: "https://www.gov.uk/government/collections/children-of-the-2020s-study",
-    },
-    jing2023: {
-      authors: "Jing, Liu, Zhang et al.",
-      year: 2023,
-      title: "Screen media use and educational content quality in early childhood",
-      journal: "Review",
-      type: "review",
-      url: "https://doi.org/10.1016/j.edurev.2023.100534",
-    },
-    sundqvist2021: {
-      authors: "Sundqvist, Koch, Birberg-Thornberg et al.",
-      year: 2021,
-      title: "Co-viewing and contingent talk during screen use",
-      journal: "Infant Behavior & Development",
-      type: "longitudinal",
-      url: "https://doi.org/10.1016/j.infbeh.2021.101595",
-    },
-    aap2026: {
-      authors: "American Academy of Pediatrics",
-      year: 2026,
-      title: "Media and children: the 5 Cs framework",
-      journal: "Pediatrics",
-      type: "guideline",
-      url: "https://publications.aap.org/pediatrics/article/157/1/e2025071223/",
-    },
-    pder2021: {
-      authors: "Coyne, Shawcroft, Gale et al.",
-      year: 2021,
-      title: "Parental Digital Emotion Regulation (PDER)",
-      journal: "Computers in Human Behavior",
-      type: "longitudinal",
-      url: "https://doi.org/10.1016/j.chb.2021.106866",
-    },
-    christakis2004: {
-      authors: "Christakis, Zimmerman, DiGiuseppe et al.",
-      year: 2004,
-      title: "Early Television Exposure and Subsequent Attentional Problems",
-      journal: "Pediatrics",
-      type: "longitudinal",
-      url: "https://doi.org/10.1542/peds.113.4.708",
-    },
-    anderson2007: {
-      authors: "Anderson & Pempek",
-      year: 2007,
-      title: "Television and Very Young Children (background TV)",
-      journal: "American Behavioral Scientist",
-      type: "review",
-      url: "https://doi.org/10.1177/0002764204271506",
-    },
-    foreman2017: {
-      authors: "Foreman, Salim, Praveen et al.",
-      year: 2021,
-      title: "Association between digital smart device use and myopia",
-      journal: "The Lancet Digital Health",
-      type: "meta",
-      url: "https://doi.org/10.1016/S2589-7500(21)00135-7",
-    },
-  };
 
   // ── Dimensiones de la matriz (orden canónico) ─────────────────
   const DIMS = [
@@ -4416,7 +4377,7 @@ window.__DATA__ = {
         { dim: "Socio-emocional", tramo: 1, cert: "m" },
         { dim: "Lenguaje", tramo: 1, cert: "m" },
       ],
-      refs: ["pder2021", "sundqvist2021"],
+      refs: ["Coyne2021", "Sundqvist2021"],
       related: ["pder", "tv-fondo", "corregulacion"],
       wiki: "https://en.wikipedia.org/wiki/Technoference",
     },
@@ -4431,7 +4392,7 @@ window.__DATA__ = {
         { dim: "Lenguaje", tramo: 1, cert: "h" },
         { dim: "Cognición", tramo: 1, cert: "m" },
       ],
-      refs: ["madigan2020", "aap2026"],
+      refs: ["Madigan2020", "AAP2026"],
       related: ["co-visionado", "andamiaje", "tv-fondo"],
       wiki: "https://en.wikipedia.org/wiki/Video_deficit_effect",
     },
@@ -4445,7 +4406,7 @@ window.__DATA__ = {
         { dim: "Lenguaje", tramo: 1, cert: "h", chile: true },
         { dim: "Cognición", tramo: 1, cert: "m" },
       ],
-      refs: ["anderson2007", "madigan2020"],
+      refs: ["Anderson2007", "Madigan2020"],
       related: ["technoference", "video-deficit", "co-visionado"],
       wiki: "https://en.wikipedia.org/wiki/Background_television",
     },
@@ -4460,7 +4421,7 @@ window.__DATA__ = {
         { dim: "Comportamiento", tramo: 2, cert: "m" },
         { dim: "Salud mental", tramo: 2, cert: "l" },
       ],
-      refs: ["christakis2004", "jing2023"],
+      refs: ["Christakis2004", "Jing2023"],
       related: ["funcion-ejecutiva", "tiempo-recreativo"],
       wiki: "https://en.wikipedia.org/wiki/Attention_span",
     },
@@ -4475,7 +4436,7 @@ window.__DATA__ = {
         { dim: "Lenguaje", tramo: 2, cert: "m" },
         { dim: "Cognición", tramo: 2, cert: "m" },
       ],
-      refs: ["sundqvist2021", "jing2023"],
+      refs: ["Sundqvist2021", "Jing2023"],
       related: ["video-deficit", "tv-fondo", "5cs"],
       wiki: "https://es.wikipedia.org/wiki/Mediaci%C3%B3n_parental_de_medios",
     },
@@ -4489,7 +4450,7 @@ window.__DATA__ = {
         { dim: "Socio-emocional", tramo: 1, cert: "m" },
         { dim: "Vínculo", tramo: 1, cert: "h" },
       ],
-      refs: ["pder2021"],
+      refs: ["Coyne2021"],
       related: ["pder", "apego", "technoference"],
       wiki: "https://es.wikipedia.org/wiki/Autorregulaci%C3%B3n_emocional",
     },
@@ -4504,7 +4465,7 @@ window.__DATA__ = {
         { dim: "Salud mental", tramo: 2, cert: "l" },
         { dim: "Comportamiento", tramo: 2, cert: "m" },
       ],
-      refs: ["pder2021"],
+      refs: ["Coyne2021"],
       related: ["corregulacion", "technoference", "tiempo-recreativo"],
       wiki: "https://doi.org/10.1016/j.chb.2021.106866",
     },
@@ -4518,7 +4479,7 @@ window.__DATA__ = {
         { dim: "Comportamiento", tramo: 3, cert: "h" },
         { dim: "Salud mental", tramo: 4, cert: "m" },
       ],
-      refs: ["aap2026"],
+      refs: ["AAP2026"],
       related: ["co-visionado", "tiempo-recreativo"],
       wiki: "https://publications.aap.org/pediatrics/article/157/1/e2025071223/",
     },
@@ -4533,7 +4494,7 @@ window.__DATA__ = {
         { dim: "Sueño", tramo: 3, cert: "h" },
         { dim: "Salud mental", tramo: 4, cert: "m" },
       ],
-      refs: ["aap2026"],
+      refs: ["AAP2026"],
       related: ["sedentarismo", "5cs", "fast-paced"],
       wiki: "https://es.wikipedia.org/wiki/Tiempo_de_pantalla",
     },
@@ -4557,7 +4518,7 @@ window.__DATA__ = {
       def: "Método estadístico que combina los resultados de múltiples estudios independientes para estimar un efecto global con mayor precisión.",
       why: "Sostiene casi todas las celdas de certeza alta de la matriz; es la evidencia más fuerte disponible.",
       cells: [],
-      refs: ["madigan2020", "foreman2017"],
+      refs: ["Madigan2020", "Foreman2021"],
       related: ["certeza", "cohorte"],
       wiki: "https://es.wikipedia.org/wiki/Metaan%C3%A1lisis",
     },
@@ -4568,7 +4529,7 @@ window.__DATA__ = {
       def: "Diseño que sigue a un grupo de personas durante años para observar cómo cambian ciertas variables en el tiempo.",
       why: "Permite ver si la pantalla precede al efecto y no solo coincide con él: acerca a la causalidad sin probarla.",
       cells: [],
-      refs: ["children2020s", "sundqvist2021"],
+      refs: ["ChildrenOf2020s", "Sundqvist2021"],
       related: ["transversal", "meta-analisis", "certeza"],
       wiki: "https://es.wikipedia.org/wiki/Estudio_de_cohorte",
     },
@@ -4595,7 +4556,7 @@ window.__DATA__ = {
         { dim: "Cognición", tramo: 2, cert: "m" },
         { dim: "Comportamiento", tramo: 3, cert: "m" },
       ],
-      refs: ["christakis2004"],
+      refs: ["Christakis2004"],
       related: ["fast-paced", "andamiaje"],
       wiki: "https://es.wikipedia.org/wiki/Funci%C3%B3n_ejecutiva",
     },
@@ -4609,7 +4570,7 @@ window.__DATA__ = {
         { dim: "Vínculo", tramo: 0, cert: "m" },
         { dim: "Vínculo", tramo: 1, cert: "h" },
       ],
-      refs: ["pder2021"],
+      refs: ["Coyne2021"],
       related: ["technoference", "corregulacion"],
       wiki: "https://es.wikipedia.org/wiki/Teor%C3%ADa_del_apego",
     },
@@ -4624,7 +4585,7 @@ window.__DATA__ = {
         { dim: "Sueño", tramo: 3, cert: "h" },
         { dim: "Sueño", tramo: 4, cert: "h" },
       ],
-      refs: ["children2020s"],
+      refs: ["ChildrenOf2020s"],
       related: ["tiempo-recreativo"],
       wiki: "https://es.wikipedia.org/wiki/Ritmo_circadiano",
     },
@@ -4638,7 +4599,7 @@ window.__DATA__ = {
         { dim: "Lenguaje", tramo: 2, cert: "m" },
         { dim: "Lenguaje", tramo: 3, cert: "m" },
       ],
-      refs: ["madigan2020"],
+      refs: ["Madigan2020"],
       related: ["video-deficit", "andamiaje"],
       wiki: "https://es.wikipedia.org/wiki/Conciencia_fonol%C3%B3gica",
     },
@@ -4666,7 +4627,7 @@ window.__DATA__ = {
         { dim: "Lenguaje", tramo: 1, cert: "h" },
         { dim: "Cognición", tramo: 2, cert: "m" },
       ],
-      refs: ["children2020s"],
+      refs: ["ChildrenOf2020s"],
       related: ["funcion-ejecutiva", "conciencia-fonologica", "video-deficit"],
       wiki: "https://es.wikipedia.org/wiki/Zona_de_desarrollo_pr%C3%B3ximo",
     },
@@ -4680,7 +4641,7 @@ window.__DATA__ = {
         { dim: "Visión", tramo: 3, cert: "h" },
         { dim: "Visión", tramo: 4, cert: "h" },
       ],
-      refs: ["foreman2017"],
+      refs: ["Foreman2021"],
       related: ["sedentarismo"],
       wiki: "https://es.wikipedia.org/wiki/Miop%C3%ADa",
     },
@@ -4694,7 +4655,7 @@ window.__DATA__ = {
         { dim: "Actividad física", tramo: 3, cert: "h", chile: true },
         { dim: "Actividad física", tramo: 4, cert: "h" },
       ],
-      refs: ["foreman2017"],
+      refs: ["Foreman2021"],
       related: ["tiempo-recreativo", "miopia"],
       wiki: "https://es.wikipedia.org/wiki/Sedentarismo",
     },
@@ -4708,7 +4669,7 @@ window.__DATA__ = {
         { dim: "Lenguaje", tramo: 1, cert: "m" },
         { dim: "Cognición", tramo: 1, cert: "m" },
       ],
-      refs: ["madigan2020", "children2020s"],
+      refs: ["Madigan2020", "ChildrenOf2020s"],
       related: ["andamiaje", "video-deficit"],
       wiki: "https://es.wikipedia.org/wiki/Trastorno_del_desarrollo",
     },
@@ -4742,7 +4703,7 @@ window.__DATA__ = {
     chilean: "Chile",
   };
 
-  window.GLOSARIO = { BIBLIO, DIMS, TRAMOS, TERMS, GRUPOS, TYPE_LABEL };
+  window.GLOSARIO = { DIMS, TRAMOS, TERMS, GRUPOS, TYPE_LABEL };
 })();
 
 </script>
@@ -5346,7 +5307,7 @@ window.__DATA__ = {
 
     const g = G.GRUPOS[term.grupo];
     const papers = (term.refs || [])
-      .map(k => G.BIBLIO[k])
+      .map(k => biblioById[k])
       .filter(Boolean);
     const related = (term.related || [])
       .map(id => G.TERMS.find(t => t.id === id))
