@@ -202,7 +202,8 @@
       {
         "certainty": "low",
         "text": "No hay evidencia robusta de que la pantalla \"atrofie\" la comprensión lectora; el mecanismo más probable es el desplazamiento del tiempo de lectura.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -230,7 +231,8 @@
       {
         "certainty": "medium",
         "text": "Mayor uso de pantalla recreativa se asocia con menos tiempo de lectura por placer, pero la asociación con habilidades lingüísticas específicas no está bien cuantificada.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
@@ -266,7 +268,8 @@
       {
         "certainty": "low",
         "text": "Hipótesis de \"entrenamiento atencional negativo\": la pantalla acostumbra al bebé a niveles de estimulación altos, dificultando luego la atención a estímulos lentos. No demostrada de forma robusta en lactantes.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -373,7 +376,8 @@
       {
         "certainty": "high",
         "text": "Co-visionado con interacción adulta mejora resultados cognitivos comparado con uso solitario.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -430,12 +434,14 @@
       {
         "certainty": "medium",
         "text": "El uso de pantalla en el aula (educativo y dirigido) puede ser beneficioso bajo supervisión; resultados dependen fuertemente del propósito y diseño.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "La restricción de celulares en aula por sí sola no mejora bienestar mental ni resultados académicos, según un ensayo controlado en escuelas inglesas.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -479,17 +485,20 @@
       {
         "certainty": "high",
         "text": "Multitarea con medios (varias pantallas o pantalla + tarea académica simultánea) se asocia con peor memoria de trabajo y peor desempeño académico en estudios longitudinales (varias cohortes en EE.UU. y Europa).",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "El uso intensivo de redes sociales aparece como factor de riesgo para problemas atencionales tipo TDAH a los 18 meses de seguimiento.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "Algunas habilidades visuoespaciales pueden beneficiarse de videojuegos (revisiones meta-analíticas en niños mayores y adolescentes).",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -540,7 +549,8 @@
       {
         "certainty": "low",
         "text": "Los efectos directos del uso de pantalla del bebé sobre su desarrollo socio-emocional están menos estudiados a esta edad: la mayor parte del tiempo el bebé no usa pantalla, sino que está expuesto a la de los adultos.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -636,7 +646,8 @@
       {
         "certainty": "low",
         "text": "La hipótesis de que la pantalla \"atrofia\" la empatía en preescolares no tiene respaldo robusto. Lo que sí está documentado: el uso solitario desplaza juego con otros niños, que es donde la empatía se entrena.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -664,12 +675,14 @@
       {
         "certainty": "medium",
         "text": "Uso intensivo de pantalla recreativa se asocia con menos tiempo de juego con pares y peor competencia social (varias revisiones en niños 6-12 años).",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "Los videojuegos cooperativos pueden tener efectos prosociales modestos; los competitivos con contenido violento se asocian con más agresividad inmediata (Ferguson et al., revisiones meta-analíticas).",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -697,12 +710,14 @@
       {
         "certainty": "high",
         "text": "El uso intensivo de redes sociales en preadolescencia se asocia con peor autoestima, más síntomas depresivos y problemas de imagen corporal, particularmente en niñas.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "El efecto no es uniforme: depende del tipo de uso (pasivo vs activo), del contenido (comparativo vs creativo), y de factores individuales (autoestima previa, apoyo parental).",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -738,7 +753,8 @@
       {
         "certainty": "medium",
         "text": "Exposición a luz azul nocturna podría retrasar la secreción de melatonina, aunque los estudios específicos en lactantes son escasos.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
@@ -844,7 +860,8 @@
       {
         "certainty": "medium",
         "text": "La asociación entre pantalla y trastornos del sueño (pesadillas, despertares) es menos consistente que con duración.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -935,12 +952,14 @@
       {
         "certainty": "high",
         "text": "Las redes sociales y mensajería tienen un efecto adicional vía estimulación social y FOMO (fear of missing out).",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "Intervenciones que eliminan pantalla del dormitorio en preadolescentes muestran mejoras consistentes en duración del sueño.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -969,7 +988,8 @@
       {
         "certainty": "low",
         "text": "No hay evidencia robusta de que la pantalla afecte directamente el desarrollo motor grueso en lactantes. El mecanismo plausible es indirecto: menos tiempo de exploración activa.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
@@ -1042,12 +1062,14 @@
       {
         "certainty": "medium",
         "text": "Asociaciones débiles entre pantalla y motricidad fina: pantallas táctiles podrían tener pequeños beneficios para destreza fina.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "Para motricidad gruesa la evidencia es mixta: el efecto principal es por desplazamiento del juego activo, no por la pantalla en sí.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -1087,7 +1109,8 @@
       {
         "certainty": "high",
         "text": "Mayor tiempo de pantalla se asocia con mayor índice de masa corporal y obesidad en escolares, con magnitudes moderadas y mecanismos plausibles (sedentarismo, snacking, publicidad de alimentos).",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -1132,12 +1155,14 @@
       {
         "certainty": "high",
         "text": "Niños y preadolescentes con mayor pantalla tienen menos probabilidad de cumplir las recomendaciones de actividad física.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
         "text": "Asociación robusta entre pantalla y obesidad/sobrepeso en este grupo etario.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1159,7 +1184,8 @@
       {
         "certainty": "low",
         "text": "No hay evidencia robusta de que la pantalla en lactantes afecte el desarrollo visual estructural. La preocupación es más teórica que demostrada.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "low",
@@ -1188,7 +1214,8 @@
       {
         "certainty": "low",
         "text": "No hay estudios robustos de pantalla y desarrollo visual en esta edad.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1215,7 +1242,8 @@
       {
         "certainty": "high",
         "text": "El factor protector más robusto contra miopía es el tiempo al aire libre, no la ausencia de pantalla.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1244,7 +1272,8 @@
       {
         "certainty": "high",
         "text": "El tiempo al aire libre (al menos 2 horas diarias) es el factor protector más robusto contra el desarrollo y progresión de miopía.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -1286,7 +1315,8 @@
       {
         "certainty": "high",
         "text": "Recomendación universal: tiempo al aire libre y pausas regulares (regla 20-20-20).",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -1315,7 +1345,8 @@
       {
         "certainty": "low",
         "text": "No hay evidencia directa de pantallas y salud mental en lactantes; los efectos en regulación emocional están cubiertos en la dimensión socio-emocional.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1385,7 +1416,8 @@
       {
         "certainty": "medium",
         "text": "Contenido violento o sobreestimulante se asocia con peores resultados emocionales; contenido prosocial neutral o positivo.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1459,7 +1491,8 @@
       {
         "certainty": "medium",
         "text": "La causalidad sigue discutida (Haidt vs Orben et al.), pero la magnitud de la asociación es relevante y consistente entre estudios.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -1500,7 +1533,8 @@
       {
         "certainty": "low",
         "text": "Los efectos directos del uso de pantalla del bebé en autorregulación son difíciles de aislar a esta edad.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1522,7 +1556,8 @@
       {
         "certainty": "high",
         "text": "Marco conceptual: la pantalla regula a corto plazo pero no enseña. La corregulación con un adulto sí enseña.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
@@ -1608,12 +1643,14 @@
       {
         "certainty": "medium",
         "text": "El co-visionado con adulto activo neutraliza buena parte del efecto negativo.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "low",
         "text": "No hay evidencia robusta de daño \"permanente\" por uso ocasional como regulador. La preocupación es por uso sistemático.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "featured_studies": [
@@ -1656,12 +1693,14 @@
       {
         "certainty": "medium",
         "text": "Causalidad incierta: niños con tendencia a TDAH podrían buscar más pantalla, no al revés. El ciclo es probablemente bidireccional.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
         "text": "Los videojuegos de acción de alta velocidad muestran asociaciones más fuertes con problemas atencionales que el video pasivo.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1696,7 +1735,8 @@
       {
         "certainty": "medium",
         "text": "No hay consenso en su clasificación como trastorno, pero la OMS reconoce \"trastorno por uso de videojuegos\" en CIE-11.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1725,7 +1765,8 @@
       {
         "certainty": "medium",
         "text": "Asociación entre uso parental de pantalla y características de apego (seguridad, evitación) reportada pero con limitaciones metodológicas.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "high",
@@ -1761,7 +1802,8 @@
       {
         "certainty": "medium",
         "text": "Tecnointerferencia parental sigue siendo un factor relevante; menos estudiada que en lactantes.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
@@ -1803,7 +1845,8 @@
       {
         "certainty": "low",
         "text": "Estudios específicos sobre apego y pantalla en preescolares son escasos.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1831,7 +1874,8 @@
       {
         "certainty": "low",
         "text": "Vínculo parental sigue siendo factor protector general para uso saludable de pantalla, pero estudios específicos son escasos.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1859,12 +1903,14 @@
       {
         "certainty": "medium",
         "text": "Familias con mayor comunicación abierta sobre uso de pantalla tienen niños con menos uso problemático.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "low",
         "text": "No hay marcos teóricos específicos consolidados sobre pantalla y apego en preadolescencia.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1886,12 +1932,14 @@
       {
         "certainty": "low",
         "text": "No hay evidencia robusta de que la pantalla en lactantes \"atrofie\" capacidades creativas posteriores.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "El mecanismo plausible es indirecto: tiempo de pantalla desplaza juego activo y exploración, que son la base sensoriomotora.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -1920,7 +1968,8 @@
       {
         "certainty": "medium",
         "text": "Mayor tiempo de pantalla solitaria se asocia con menos juego simbólico, principalmente por desplazamiento.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
@@ -1976,7 +2025,8 @@
       {
         "certainty": "low",
         "text": "La hipótesis \"más pantalla → menos creatividad\" en preescolares es plausible por encadenamiento (pantalla → menos juego libre → menos práctica de pensamiento divergente) pero no demostrada directamente.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "low",
@@ -2017,12 +2067,14 @@
       {
         "certainty": "low",
         "text": "Asociaciones entre pantalla y creatividad en escolares son escasas; el mecanismo principal sigue siendo desplazamiento de juego libre.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "Algunos videojuegos creativos (sandbox, Minecraft) pueden fomentar creatividad técnica y narrativa bajo condiciones específicas.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
@@ -2050,12 +2102,14 @@
       {
         "certainty": "low",
         "text": "Algunos usos de pantalla (creación de contenido, programación, música, edición de video) pueden ser explícitamente creativos. La evidencia sobre su impacto en creatividad general es escasa.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       },
       {
         "certainty": "medium",
         "text": "Consumo pasivo de redes sociales se asocia con menos producción creativa, asociación correlacional.",
-        "refs": []
+        "refs": [],
+        "no_ref": true
       }
     ],
     "andamiaje": {
