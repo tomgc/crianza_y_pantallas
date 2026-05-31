@@ -1,8 +1,8 @@
 # Estructura del proyecto
 
 - **Raiz:** `/Users/tomgc/Projects/crianza_y_pantallas`
-- **Fecha:** 2026-05-31 10:03:19
-- **Total:** 10 carpetas, 62 archivos
+- **Fecha:** 2026-05-31 19:40:53
+- **Total:** 11 carpetas, 79 archivos
 
 ## Arbol
 
@@ -10,35 +10,44 @@
 ├── 10_fuentes/
 │   ├── data/
 │   │   ├── andamiaje.json    [6.31K]
-│   │   ├── bibliografia.json    [32.83K]
-│   │   ├── claims.json    [77.55K]
+│   │   ├── bibliografia.json    [80.05K]
+│   │   ├── claims.json    [108.68K]
 │   │   ├── metadata.json    [11.58K]
 │   ├── app.js    [44.36K]
-│   ├── glosario-data.js    [19.13K]
+│   ├── glosario-data.js    [16.38K]
 │   ├── styles.css    [26.35K]
-│   ├── template.html    [917.00B]
+│   ├── template.html    [2.29K]
 ├── 20_recursos/
 │   ├── README.md    [1015.00B]
 ├── 30_documentacion/
 │   ├── activa/
 │   │   ├── prompts_busqueda/
 │   │   │   ├── 01_prompt_creatividad.md    [7.34K]
+│   │   │   ├── 01_resultados_prompt_creatividad.md    [24.28K]
 │   │   │   ├── 02_prompt_vinculo.md    [7.46K]
+│   │   │   ├── 02_resultados_prompt_vinculo.md    [26.29K]
 │   │   │   ├── 03_prompt_salud_mental.md    [7.60K]
+│   │   │   ├── 03_resultados_prompt_salud_mental.md    [28.25K]
 │   │   │   ├── 04_prompt_socioemocional.md    [7.35K]
+│   │   │   ├── 04_resultados_prompt_socioemocional.md    [21.92K]
 │   │   │   ├── 05_prompt_comportamiento.md    [7.66K]
+│   │   │   ├── 05_resultados_prompt_comportamiento.md    [22.83K]
 │   │   │   ├── 06_prompt_cognicion.md    [7.44K]
+│   │   │   ├── 06_resultados_codigo_prompt_cognicion.md    [12.09K]
 │   │   │   ├── 06_resultados_prompt_cognicion.md    [21.65K]
 │   │   │   ├── 07_prompt_fisica.md    [7.21K]
+│   │   │   ├── 07_resultados_prompt_fisica.md    [25.09K]
 │   │   │   ├── 08_prompt_lenguaje.md    [7.08K]
 │   │   │   ├── 08_resultados_codigo_prompt_lenguaje.md    [9.54K]
 │   │   │   ├── 08_resultados_prompt_lenguaje.md    [24.11K]
 │   │   │   ├── 09_prompt_sueno.md    [7.41K]
-│   │   │   ├── 09_resultados_codigo_prompt_cognicion.md    [12.09K]
+│   │   │   ├── 09_resultados_prompt_sueno.md    [21.94K]
 │   │   │   ├── 10_prompt_vision.md    [7.15K]
+│   │   │   ├── 10_resultados_prompt_vision.md    [27.32K]
 │   │   │   ├── 11_prompt_dimensiones_nuevas.md    [7.19K]
-│   │   │   ├── README.md    [4.74K]
+│   │   │   ├── README.md    [4.73K]
 │   │   ├── CLAUDE.md    [5.51K]
+│   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
 │   ├── andamios/
 │   │   ├── Glosario.html    [13.28K]
@@ -57,9 +66,15 @@
 │   │   ├── 20260530_223311_estructura.txt    [4.01K]
 │   │   ├── 20260531_093957_estructura.md    [4.02K]
 │   │   ├── 20260531_093957_estructura.txt    [4.19K]
+│   │   ├── 20260531_100319_estructura.md    [4.20K]
 │   │   ├── 20260531_100319_estructura.txt    [4.37K]
-│   │   ├── estructura_actual.md    [4.02K]
-│   │   ├── estructura_actual.txt    [4.37K]
+│   │   ├── 20260531_125949_estructura.md    [4.39K]
+│   │   ├── 20260531_125949_estructura.txt    [4.57K]
+│   │   ├── 20260531_193753_estructura.md    [5.22K]
+│   │   ├── 20260531_193753_estructura.txt    [5.40K]
+│   │   ├── 20260531_194053_estructura.txt    [5.53K]
+│   │   ├── estructura_actual.md    [5.22K]
+│   │   ├── estructura_actual.txt    [5.53K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -71,29 +86,33 @@
 │   │   ├── traspaso-cierre-v08.md    [28.79K]
 │   │   ├── traspaso-cierre-v09.md    [42.24K]
 │   │   ├── traspaso-cierre-v10.md    [38.42K]
+│   │   ├── traspaso-cierre-v11.md    [36.54K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
 │   │   ├── prompt-claude-design_v2.md    [7.55K]
 │   │   ├── sintesis_eystag_pantallas_menores_5_v1.html    [33.24K]
+├── assets/
+│   ├── og-image.png    [41.69K]
 ├── 00_build.sh    [2.03K]
 ├── 00_escanear_proyecto.R    [6.26K]
 ├── CLAUDE.md    [40.00B]
 ├── README.md    [1.49K]
-├── index.html    [226.64K]
+├── index.html    [306.20K]
 ```
 
 ## Conteo por extension
 
 | Extension | Cantidad |
 |-----------|----------|
-| `.md` | 37 |
-| `.txt` | 7 |
-| `.html` | 6 |
+| `.md` | 49 |
+| `.txt` | 10 |
+| `.html` | 7 |
 | `.json` | 4 |
 | `.js` | 3 |
 | `.R` | 1 |
 | `.css` | 1 |
 | `.jsx` | 1 |
+| `.png` | 1 |
 | `.py` | 1 |
 | `.sh` | 1 |
