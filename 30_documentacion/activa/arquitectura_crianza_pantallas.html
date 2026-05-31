@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquitectura — Crianza y Pantallas</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy:   #042f4d;
+  --blue:   #2a6496;
+  --yellow: #c9a227;
+  --gray:   #6a7280;
+  --green:  #3e7a32;
+  --bg-navy: #eaf0f6;
+  --bg-yellow: #fdf8ec;
+  --bg-green: #eef5ec;
+  --borde:  #d4dce4;
+  --ff: 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --mono: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  --r: 7px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+body {
+  font-family: var(--ff);
+  background: #f4f6f8;
+  color: #1a1a1a;
+  padding: 48px 24px 64px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pg { max-width: 960px; margin: 0 auto; }
+
+/* ── Header ── */
+.hdr { text-align: center; margin-bottom: 44px; }
+.hdr h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; color: var(--navy); }
+.hdr p { font-size: 12.5px; color: var(--gray); margin-top: 5px; }
+
+/* ── Section label ── */
+.lbl {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* ── Cards row ── */
+.row { display: flex; gap: 12px; margin-bottom: 0; }
+.row--3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.row--4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+.row--2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* ── Card ── */
+.c {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: var(--r);
+  padding: 13px 15px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--borde);
+}
+.c--navy   { border-top-color: var(--navy); }
+.c--blue   { border-top-color: var(--blue); }
+.c--yellow { border-top-color: var(--yellow); }
+.c--green  { border-top-color: var(--green); }
+.c--gray   { border-top-color: var(--gray); }
+
+.c .t {
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.c .d {
+  font-size: 11px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+.c .d strong { color: #444; font-weight: 600; }
+.c .d code {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  background: #f0f2f5;
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: #555;
+}
+
+/* ── Badge ── */
+.bg {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  vertical-align: middle;
+  line-height: 1.4;
+}
+.bg--json   { background: #e6eefa; color: #3b6aae; }
+.bg--js     { background: #fdf3e2; color: #a06d24; }
+.bg--html   { background: #fde8e8; color: #a03030; }
+.bg--sh     { background: #eef5ec; color: var(--green); }
+.bg--css    { background: #f0eaf8; color: #6148a0; }
+.bg--md     { background: #f0f2f5; color: #555; }
+
+/* ── File pill ── */
+.fp {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  background: #f0f2f5;
+  border: 1px solid #e0e4e9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ── Arrow ── */
+.fl { padding: 7px 0; }
+.fl-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; padding: 7px 0; }
+.fl-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; padding: 7px 0; }
+.fl-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 7px 0; }
+.arr { display: flex; justify-content: center; }
+.arr-inner { display: flex; flex-direction: column; align-items: center; }
+.arr-line { width: 2px; height: 14px; background: #c8d2dc; }
+.arr-tip {
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #c8d2dc;
+}
+
+/* ── Build block (full width) ── */
+.build-wrap {
+  background: var(--navy);
+  border-radius: var(--r);
+  padding: 18px 20px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(4,47,77,0.18);
+}
+.build-wrap .t {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.build-wrap .d {
+  font-size: 11px;
+  color: #b3bac4;
+  line-height: 1.7;
+}
+.build-wrap .d code {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  background: rgba(255,255,255,0.1);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: #e0e8f0;
+}
+.build-wrap .d strong { color: #eaf0f6; font-weight: 600; }
+
+.build-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+.bs {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 5px;
+  padding: 9px 11px;
+}
+.bs .n {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #7a9ab8;
+  margin-bottom: 3px;
+}
+.bs .v {
+  font-size: 11px;
+  font-weight: 600;
+  color: #eaf0f6;
+}
+.bs .s {
+  font-size: 10px;
+  color: #8aacbf;
+  margin-top: 2px;
+  line-height: 1.5;
+  font-family: var(--mono);
+}
+
+/* ── Output ── */
+.out-wrap {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: var(--r);
+  padding: 16px 20px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--green);
+}
+.out-wrap .t {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.out-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.os {
+  display: flex;
+  flex-direction: column;
+}
+.os .n { font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #aaa; }
+.os .v { font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1.2; }
+.os .s { font-size: 10.5px; color: var(--gray); }
+
+/* ── Deploy ── */
+.deploy-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 0;
+}
+.dep {
+  flex: 1;
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: var(--r);
+  padding: 11px 14px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--gray);
+}
+.dep .t { font-size: 12px; font-weight: 700; margin-bottom: 2px; }
+.dep .d { font-size: 10.5px; color: var(--gray); line-height: 1.6; }
+
+/* ── Exec block ── */
+.exec {
+  background: #1a2530;
+  color: #c9d6e0;
+  border-radius: var(--r);
+  padding: 16px 20px;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.9;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.exec .cm { color: #5c7a8a; }
+.exec .fn { color: #7eb8d4; }
+.exec .str { color: #a3c478; }
+.exec .kw { color: #cc99cd; }
+
+/* ── Legend ── */
+.legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--borde);
+}
+.lg { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--gray); }
+.lg-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+
+.fn-note {
+  text-align: center;
+  font-size: 10.5px;
+  color: #bbb;
+  margin-top: 14px;
+}
+
+/* ── Merge SVG ── */
+.merge-svg { display: block; margin: 0 auto; overflow: visible; }
+</style>
+</head>
+<body>
+<div class="pg">
+
+  <!-- Header -->
+  <div class="hdr">
+    <h1>Crianza y Pantallas — Arquitectura del sitio</h1>
+    <p>Pipeline estático: fuentes JSON + JS/CSS + template → build → index.html → GitHub Pages</p>
+  </div>
+
+  <!-- ═══ 1. FUENTES DE DATOS ═══ -->
+  <div class="lbl">① Fuentes de datos (10_fuentes/data/)</div>
+  <div class="row--4">
+    <div class="c c--navy">
+      <div class="t"><span class="fp">claims.json</span> <span class="bg bg--json">JSON</span></div>
+      <div class="d">
+        <strong>78 KB · 50 celdas · 139 afirmaciones</strong><br>
+        10 dimensiones × 5 tramos etarios<br>
+        Campos: <code>text</code> <code>certainty</code> <code>refs</code> <code>no_ref</code><br>
+        54 claims <code>no_ref:true</code> · 0 pendientes reales
+      </div>
+    </div>
+    <div class="c c--navy">
+      <div class="t"><span class="fp">bibliografia.json</span> <span class="bg bg--json">JSON</span></div>
+      <div class="d">
+        <strong>91 entradas bibliográficas</strong><br>
+        Campos: <code>id</code> <code>type</code> <code>group</code> <code>authors</code> <code>title</code> <code>url</code><br>
+        Tipos: meta · cohort · review · guideline · report<br>
+        Grupos: anchor · recent · language · sleep · vision · mental…
+      </div>
+    </div>
+    <div class="c c--navy">
+      <div class="t"><span class="fp">metadata.json</span> <span class="bg bg--json">JSON</span></div>
+      <div class="d">
+        <strong>Configuración del sitio</strong><br>
+        Etiquetas de dimensiones y tramos<br>
+        Textos de UI (tabs, headers, intro)<br>
+        Notas metodológicas por celda
+      </div>
+    </div>
+    <div class="c c--navy">
+      <div class="t"><span class="fp">andamiaje.json</span> <span class="bg bg--json">JSON</span></div>
+      <div class="d">
+        <strong>Prompts de búsqueda bibliográfica</strong><br>
+        Referencia para incorporar nueva evidencia<br>
+        No se inyecta en el build
+      </div>
+    </div>
+  </div>
+
+  <!-- arrows -->
+  <div class="fl-4">
+    <div class="arr"><div class="arr-inner"><div class="arr-line"></div><div class="arr-tip"></div></div></div>
+    <div class="arr"><div class="arr-inner"><div class="arr-line"></div><div class="arr-tip"></div></div></div>
+    <div class="arr"><div class="arr-inner"><div class="arr-line"></div><div class="arr-tip"></div></div></div>
+    <div class="arr"></div>
+  </div>
+
+  <!-- ═══ 2. FUENTES DE CÓDIGO ═══ -->
+  <div class="lbl">② Fuentes de código (10_fuentes/)</div>
+  <div class="row--3">
+    <div class="c c--blue">
+      <div class="t"><span class="fp">app.js</span> <span class="bg bg--js">JS</span></div>
+      <div class="d">
+        <strong>44 KB · lógica completa de la app</strong><br>
+        IIFE · render de matriz, fichas, glosario, bibliografía<br>
+        Chips <code>[ref]</code> · popovers bibliográficos<br>
+        Filtros, búsqueda, navegación por tabs<br>
+        Sticky controls (móvil ≤960px)
+      </div>
+    </div>
+    <div class="c c--blue">
+      <div class="t"><span class="fp">styles.css</span> <span class="bg bg--css">CSS</span></div>
+      <div class="d">
+        <strong>26 KB · sistema visual completo</strong><br>
+        Variables <code>--navy</code> <code>--yellow</code> <code>--cert-high/med/low</code><br>
+        Dots de certeza (●◑○) · responsive 2-col → 1-col<br>
+        Dark mode preparado · animaciones de ficha
+      </div>
+    </div>
+    <div class="c c--blue">
+      <div class="t"><span class="fp">glosario-data.js</span> <span class="bg bg--js">JS</span></div>
+      <div class="d">
+        <strong>19 KB · 22 términos del glosario</strong><br>
+        Definiciones, ejemplos, contexto por término<br>
+        9 entradas bibliográficas propias (<code>window.GLOSARIO.BIBLIO</code>)<br>
+        Inyectado como bloque separado en el build
+      </div>
+    </div>
+  </div>
+
+  <!-- arrows -->
+  <div class="fl-3">
+    <div class="arr"><div class="arr-inner"><div class="arr-line"></div><div class="arr-tip"></div></div></div>
+    <div class="arr"><div class="arr-inner"><div class="arr-line"></div><div class="arr-tip"></div></div></div>
+    <div class="arr"><div class="arr-inner"><div class="arr-line"></div><div class="arr-tip"></div></div></div>
+  </div>
+
+  <!-- ═══ 3. TEMPLATE ═══ -->
+  <div class="lbl">③ Shell HTML (10_fuentes/)</div>
+  <div class="row">
+    <div class="c c--yellow" style="flex:1">
+      <div class="t"><span class="fp">template.html</span> <span class="bg bg--html">HTML</span></div>
+      <div class="d">
+        <strong>Shell estático con 4 marcadores de inyección</strong><br>
+        <code>&lt;!--INJECT_STYLES--&gt;</code> → contenido de <code>styles.css</code><br>
+        <code>&lt;!--INJECT_DATA--&gt;</code> → JSONs envueltos en <code>window.__DATA__</code><br>
+        <code>&lt;!--INJECT_GLOSARIO--&gt;</code> → contenido de <code>glosario-data.js</code><br>
+        <code>&lt;!--INJECT_APP--&gt;</code> → contenido de <code>app.js</code><br>
+        Meta tags SEO · Open Graph · Twitter Card · canonical
+      </div>
+    </div>
+  </div>
+
+  <!-- merge arrow -->
+  <svg class="merge-svg" viewBox="0 0 960 42" width="100%" height="42" style="display:block;margin:4px auto 4px;">
+    <line x1="120" y1="0" x2="120" y2="18" stroke="#c8d2dc" stroke-width="2"/>
+    <line x1="480" y1="0" x2="480" y2="18" stroke="#c8d2dc" stroke-width="2"/>
+    <line x1="840" y1="0" x2="840" y2="18" stroke="#c8d2dc" stroke-width="2"/>
+    <line x1="120" y1="18" x2="840" y2="18" stroke="#c8d2dc" stroke-width="2"/>
+    <line x1="480" y1="18" x2="480" y2="36" stroke="#c8d2dc" stroke-width="2"/>
+    <polygon points="475,36 485,36 480,42" fill="#c8d2dc"/>
+    <text x="480" y="13" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#bbb" letter-spacing="0.5">sed reemplaza marcadores con contenido real</text>
+  </svg>
+
+  <!-- ═══ 4. BUILD ═══ -->
+  <div class="lbl">④ Build (00_build.sh)</div>
+  <div class="build-wrap">
+    <div class="t">
+      <span class="fp" style="background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.15);color:#eaf0f6">00_build.sh</span>
+      <span class="bg bg--sh">Shell</span>
+    </div>
+    <div class="d">
+      Script bash reproducible · sin dependencias externas · output único <strong>index.html</strong><br>
+      Punto de entrada canónico del proyecto — el único comando que se ejecuta para publicar
+    </div>
+    <div class="build-steps">
+      <div class="bs">
+        <div class="n">Paso 1</div>
+        <div class="v">Leer JSONs</div>
+        <div class="s">claims.json<br>bibliografia.json<br>metadata.json</div>
+      </div>
+      <div class="bs">
+        <div class="n">Paso 2</div>
+        <div class="v">Envolver datos</div>
+        <div class="s">window.__DATA__<br>= {claims, biblio,<br>metadata}</div>
+      </div>
+      <div class="bs">
+        <div class="n">Paso 3</div>
+        <div class="v">Inyectar en template</div>
+        <div class="s">4 marcadores<br>reemplazados con<br>sed en orden</div>
+      </div>
+      <div class="bs">
+        <div class="n">Paso 4</div>
+        <div class="v">Escribir output</div>
+        <div class="s">index.html<br>~232 KB<br>standalone</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- arrow -->
+  <div class="fl">
+    <div class="arr"><div class="arr-inner"><div class="arr-line"></div><div class="arr-tip"></div></div></div>
+  </div>
+
+  <!-- ═══ 5. OUTPUT ═══ -->
+  <div class="lbl">⑤ Artefacto de salida (raíz del repo)</div>
+  <div class="out-wrap">
+    <div class="t">
+      <span class="fp">index.html</span>
+      <span class="bg bg--html">HTML</span>
+      <span style="font-size:11px;color:var(--gray);font-weight:400">— archivo único autocontenido, sin dependencias externas</span>
+    </div>
+    <div style="font-size:11px;color:var(--gray);line-height:1.7">
+      CSS inline · datos JSON embebidos en <code>window.__DATA__</code> · JS inline · sin CDN · sin build server · sin framework
+    </div>
+    <div class="out-stats">
+      <div class="os">
+        <span class="n">Tamaño</span>
+        <span class="v">232 KB</span>
+        <span class="s">~5 800 líneas</span>
+      </div>
+      <div class="os">
+        <span class="n">Celdas</span>
+        <span class="v">50</span>
+        <span class="s">10 × 5</span>
+      </div>
+      <div class="os">
+        <span class="n">Claims</span>
+        <span class="v">139</span>
+        <span class="s">91 refs · 54 no_ref</span>
+      </div>
+      <div class="os">
+        <span class="n">Bibliografía</span>
+        <span class="v">91</span>
+        <span class="s">entradas</span>
+      </div>
+      <div class="os">
+        <span class="n">Glosario</span>
+        <span class="v">22</span>
+        <span class="s">términos</span>
+      </div>
+      <div class="os">
+        <span class="n">Vistas</span>
+        <span class="v">4</span>
+        <span class="s">Matriz · Glosario · Bibliografía · Metodología</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- arrow -->
+  <div class="fl">
+    <div class="arr"><div class="arr-inner"><div class="arr-line"></div><div class="arr-tip"></div></div></div>
+  </div>
+
+  <!-- ═══ 6. DEPLOY ═══ -->
+  <div class="lbl">⑥ Deploy (GitHub Pages)</div>
+  <div class="deploy-row">
+    <div class="dep" style="border-top-color:var(--navy)">
+      <div class="t">Repo: main branch</div>
+      <div class="d">
+        <code>git push origin main</code><br>
+        GitHub Pages sirve desde la raíz<br>
+        Deploy automático en ~2 min
+      </div>
+    </div>
+    <div class="dep" style="border-top-color:var(--blue)">
+      <div class="t">URL pública</div>
+      <div class="d">
+        tomgc.github.io/crianza_y_pantallas/<br>
+        HTTPS · sin servidor · archivos estáticos<br>
+        og:image desde <code>assets/og-image.png</code>
+      </div>
+    </div>
+    <div class="dep" style="border-top-color:var(--gray)">
+      <div class="t">Documentación</div>
+      <div class="d">
+        Traspasos en <code>30_documentacion/traspasos/</code><br>
+        Escáner en <code>30_documentacion/estructura/</code><br>
+        Prompts en <code>30_documentacion/activa/</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ EXEC ═══ -->
+  <div class="exec">
+    <span class="cm"># ── Build y deploy normal ──────────────────────────────────────────</span><br>
+    <span class="fn">./00_build.sh</span>                      <span class="cm"># genera index.html desde fuentes</span><br>
+    <span class="fn">git add</span> index.html <span class="kw">&amp;&amp;</span> <span class="fn">git commit</span> <span class="str">-m "..."</span> <span class="kw">&amp;&amp;</span> <span class="fn">git push</span>   <span class="cm"># publica</span><br>
+    <br>
+    <span class="cm"># ── Edición de contenido (sin tocar JS/CSS) ────────────────────────</span><br>
+    <span class="cm">#   Editar  10_fuentes/data/claims.json        → afirmaciones + refs</span><br>
+    <span class="cm">#   Editar  10_fuentes/data/bibliografia.json   → entradas bibliográficas</span><br>
+    <span class="cm">#   Editar  10_fuentes/data/metadata.json       → etiquetas y textos de UI</span><br>
+    <span class="cm">#   → correr ./00_build.sh para regenerar index.html</span><br>
+    <br>
+    <span class="cm"># ── Edición de lógica o estilos ────────────────────────────────────</span><br>
+    <span class="cm">#   Editar  10_fuentes/app.js         → lógica de la app</span><br>
+    <span class="cm">#   Editar  10_fuentes/styles.css      → estilos</span><br>
+    <span class="cm">#   Editar  10_fuentes/template.html   → shell HTML (meta tags, marcadores)</span><br>
+    <span class="cm">#   → correr ./00_build.sh para regenerar index.html</span><br>
+    <span class="cm">#   ⚠️  NUNCA editar index.html directamente — se sobreescribe en cada build</span>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="lg"><div class="lg-dot" style="background:var(--navy)"></div> Datos (JSON)</div>
+    <div class="lg"><div class="lg-dot" style="background:var(--blue)"></div> Código (JS / CSS)</div>
+    <div class="lg"><div class="lg-dot" style="background:var(--yellow)"></div> Template (HTML shell)</div>
+    <div class="lg"><div class="lg-dot" style="background:var(--green)"></div> Output compilado</div>
+    <div class="lg"><div class="lg-dot" style="background:var(--gray)"></div> Deploy / Documentación</div>
+  </div>
+
+  <div class="fn-note">
+    Crianza y Pantallas v11 · tomgc.github.io/crianza_y_pantallas · build reproducible — 00_build.sh
+  </div>
+
+</div>
+</body></html>
