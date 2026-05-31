@@ -62,7 +62,7 @@ con los IDs de papers ya presentes en `bibliografia.json`. Esta lista
 **debe actualizarse después de cada batch integrado** en el repo. El
 flujo:
 
-1. Después de commitear un batch nuevo en `refactor/modular-build`, abrir
+1. Después de commitear un batch nuevo en `main`, abrir
    cada uno de los 11 archivos de prompt.
 2. Refrescar la sección "Lo que ya tenemos integrado en el corpus" con
    los IDs vigentes.
@@ -97,12 +97,12 @@ semanas, según disponibilidad y tamaño del batch resultante.
 
 ## Documentos relacionados del proyecto
 
-- `50_documentacion/activa/flujo_incorporacion_evidencia.md` — protocolo
+- `30_documentacion/activa/flujo_incorporacion_evidencia.md` — protocolo
   del proceso completo (qué hace Tomás, qué hace la sesión web, qué hace
   Claude Code).
 - `10_fuentes/data/bibliografia.json` — corpus bibliográfico actual.
 - `10_fuentes/data/claims.json` — corpus de claims actual.
 - `10_fuentes/data/metadata.json` — taxonomías (dimensiones, tramos,
   groups, types).
-- `50_documentacion/traspasos/traspaso-cierre-v04.md` — primer cierre de
+- `30_documentacion/traspasos/traspaso-cierre-v04.md` — primer cierre de
   sesión que usó estos prompts como entregable.
