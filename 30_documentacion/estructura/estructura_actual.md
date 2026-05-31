@@ -1,8 +1,8 @@
 # Estructura del proyecto
 
 - **Raiz:** `/Users/tomgc/Projects/crianza_y_pantallas`
-- **Fecha:** 2026-05-29 12:34:15
-- **Total:** 10 carpetas, 46 archivos
+- **Fecha:** 2026-05-31 09:39:58
+- **Total:** 10 carpetas, 59 archivos
 
 ## Arbol
 
@@ -10,12 +10,13 @@
 ├── 10_fuentes/
 │   ├── data/
 │   │   ├── andamiaje.json    [6.31K]
-│   │   ├── bibliografia.json    [29.18K]
-│   │   ├── claims.json    [72.52K]
+│   │   ├── bibliografia.json    [32.83K]
+│   │   ├── claims.json    [77.55K]
 │   │   ├── metadata.json    [11.58K]
-│   ├── app.js    [33.53K]
-│   ├── styles.css    [18.66K]
-│   ├── template.html    [373.00B]
+│   ├── app.js    [44.36K]
+│   ├── glosario-data.js    [19.13K]
+│   ├── styles.css    [26.35K]
+│   ├── template.html    [917.00B]
 ├── 20_recursos/
 │   ├── README.md    [1015.00B]
 ├── 30_documentacion/
@@ -33,50 +34,63 @@
 │   │   │   ├── 08_resultados_codigo_prompt_lenguaje.md    [9.54K]
 │   │   │   ├── 08_resultados_prompt_lenguaje.md    [24.11K]
 │   │   │   ├── 09_prompt_sueno.md    [7.41K]
+│   │   │   ├── 09_resultados_codigo_prompt_cognicion.md    [12.09K]
 │   │   │   ├── 10_prompt_vision.md    [7.15K]
 │   │   │   ├── 11_prompt_dimensiones_nuevas.md    [7.19K]
 │   │   │   ├── README.md    [4.74K]
-│   │   ├── CLAUDE.md    [5.01K]
+│   │   ├── CLAUDE.md    [5.51K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
 │   ├── andamios/
+│   │   ├── Glosario.html    [13.28K]
 │   │   ├── extraer_claims.py    [15.31K]
+│   │   ├── glosario-app.jsx    [15.08K]
+│   │   ├── glosario-data.js    [19.13K]
 │   │   ├── wireframe-b-standalone.html    [19.43K]
 │   ├── estructura/
 │   │   ├── 20260529_103300_estructura.md    [2.91K]
 │   │   ├── 20260529_103300_estructura.txt    [2.99K]
 │   │   ├── 20260529_121440_estructura.md    [3.08K]
 │   │   ├── 20260529_121440_estructura.txt    [3.25K]
+│   │   ├── 20260529_123415_estructura.md    [3.26K]
 │   │   ├── 20260529_123415_estructura.txt    [3.43K]
-│   │   ├── estructura_actual.md    [3.08K]
-│   │   ├── estructura_actual.txt    [3.43K]
+│   │   ├── 20260530_223311_estructura.md    [3.84K]
+│   │   ├── 20260530_223311_estructura.txt    [4.01K]
+│   │   ├── 20260531_093957_estructura.txt    [4.19K]
+│   │   ├── estructura_actual.md    [3.84K]
+│   │   ├── estructura_actual.txt    [4.19K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
 │   │   ├── traspaso-cierre-v03.md    [85.19K]
 │   │   ├── traspaso-cierre-v04.md    [40.13K]
 │   │   ├── traspaso-cierre-v05.md    [33.31K]
+│   │   ├── traspaso-cierre-v06.md    [39.18K]
+│   │   ├── traspaso-cierre-v07.md    [34.52K]
+│   │   ├── traspaso-cierre-v08.md    [28.79K]
+│   │   ├── traspaso-cierre-v09.md    [42.24K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
 │   │   ├── prompt-claude-design_v2.md    [7.55K]
 │   │   ├── sintesis_eystag_pantallas_menores_5_v1.html    [33.24K]
-├── 00_build.sh    [1.69K]
+├── 00_build.sh    [2.03K]
 ├── 00_escanear_proyecto.R    [6.26K]
 ├── CLAUDE.md    [40.00B]
-├── index.html    [179.40K]
 ├── README.md    [1.49K]
+├── index.html    [226.64K]
 ```
 
 ## Conteo por extension
 
 | Extension | Cantidad |
 |-----------|----------|
-| `.md` | 28 |
-| `.html` | 5 |
+| `.md` | 35 |
+| `.html` | 6 |
+| `.txt` | 6 |
 | `.json` | 4 |
-| `.txt` | 4 |
-| `.css` | 1 |
-| `.js` | 1 |
-| `.py` | 1 |
+| `.js` | 3 |
 | `.R` | 1 |
+| `.css` | 1 |
+| `.jsx` | 1 |
+| `.py` | 1 |
 | `.sh` | 1 |
