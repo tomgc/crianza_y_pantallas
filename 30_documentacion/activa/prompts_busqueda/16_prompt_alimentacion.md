@@ -1,0 +1,156 @@
+# Prompt de búsqueda bibliográfica — Alimentación y pantallas en niños de 0 a 12 años
+
+## CONTEXTO
+
+Estoy construyendo una síntesis crítica de evidencia científica sobre crianza y pantallas en niños de 0 a 12 años, con anclaje en evidencia 2020-2026. El sitio organiza los hallazgos en una matriz de 15 dimensiones del desarrollo × 5 tramos etarios:
+
+- Tramos etarios: `lactante` (0-12 meses), `primera-infancia` (1-3 años), `preescolar` (3-5 años), `ninez-media` (6-8 años), `preadolescencia` (9-12 años).
+
+Necesito que actúes como agente especializado en revisión bibliográfica. Tu output será procesado posteriormente para integrar al corpus existente del sitio, así que la calidad y rastreabilidad de las referencias es lo más importante.
+
+## VENTANA TEMPORAL
+
+- Rango principal: **2020 a 2026 inclusive**.
+- Excepción declarada: documentos institucionales fundacionales (AAP, OMS, OECD, UNICEF, ministerios) anteriores a 2020 son aceptables solo si funcionan como anchor normativo aún citado en la literatura actual. Marcarlos explícitamente como "anchor pre-2020".
+
+## CALIDAD DE EVIDENCIA — JERARQUÍA
+
+Prioriza en este orden:
+
+1. Meta-análisis y revisiones sistemáticas de alta calidad (PRISMA-compliant, idealmente Cochrane).
+2. Cohortes longitudinales prospectivas con N > 1.000.
+3. Ensayos controlados aleatorizados (raros en este campo).
+4. Estudios transversales grandes (N > 5.000) con análisis multivariado y control de confusores.
+5. Documentos institucionales recientes (AAP 2024-2026, OMS post-2019, ministerios).
+6. Revisiones de alcance (scoping reviews) — incluir solo si no hay revisión sistemática equivalente.
+
+**Descarta** estudios pequeños transversales (N < 500) sin justificación metodológica especial. **Descarta** opiniones, comentarios editoriales, notas de prensa.
+
+## REGLAS ANTI-ALUCINACIÓN (críticas)
+
+Tres bugs específicos detectados en agentes anteriores que NO debes reproducir:
+
+1. **NO inventes autoría.** Si no puedes verificar el primer autor directamente desde PubMed, DOI o el journal, **omite el paper**. Es preferible un output de 7 papers verificados que 15 con autoría posiblemente alucinada.
+
+2. **NO infieras DOIs.** Cada paper debe traer un DOI o PMID que resuelva a la página correcta. Si no encuentras el identificador, declara `URL: NO VERIFICABLE` y márcalo como bandera.
+
+3. **NO reescribas hallazgos.** Si vas a citar un dato cuantitativo (N, effect size, OR, %), debe venir literal del abstract o del paper. Si parafraseas, declara que es paráfrasis. No inventes cifras que "suenan plausibles".
+
+## CONOCIMIENTO DEL CORPUS EXISTENTE
+
+El sitio ya integró los siguientes 189 papers. Si te encuentras con uno de estos, **NO lo propongas como nuevo**: márcalo como "ya integrado, propongo nuevas tributaciones si aplica".
+
+```
+Abounoori2022, Akacem2018, Ahmer2025, Anderson2007, Ashby2025,
+Avci2024, Bakht2025, Bal2024, Berg2024, BodrozicSelak2025,
+Boyland2022, Bukhalenkova2023, Bustamante2023, CarrascoMarin2022,
+Carter2016, Chamam2024, Chen2024, ChenB2020, ChenYJ2025,
+Cheung2017, ChildrenOf2020s, Christakis2004, CiminoCerniglia2025,
+CoyneTantrums2021, Coyne2021, Coyne2022, Dahlgren2024,
+Descarpentry2024, Dhakal2022, Dutra2025, Eirich2022,
+Emond2021, Essex2025, EYSTAG2026, Fan2021, Ferguson2024,
+Fitzpatrick2024, Foreman2021, Foreman2024, Gath2025,
+Gillioz2025, Gomes2024, Guedes2024, Ha2025, Haghjoo2022,
+Hartstein2025, He2025, HernandezMosqueira2025, Hesketh2026,
+Hiltunen2021, Hood2021, Hu2021, Janssen2020, Jia2025,
+JingLi2025, Jusiene2024, Karani2022, Kessafoglu2024,
+Konok2024, Kou2024, Lai2025, Leonova2025, LiDan2024,
+LiH2025, LiL2022, Li2020, Li2025, Linder2021,
+Liu2024, LlanosMerin2024, Loudoun2022, Madigan2020,
+Mallawaarachchi2024, Mason2024, Mataftsi2023, Matsumura2022,
+MINEDUC2026, Mori2026, Myruski2018, Nagata2025a, Nagata2025b,
+NamaziSadeghi2024, Neely2026, Neville2021, Neville2024,
+NSF2024, ObservatorioNutricional2025, Ophir2023, PaezHerrera2025,
+Papadakis2024, Pearson2018, Pedersen2022, Pickard2024,
+Pirnes2022, Plackett2023, Putnick2023, Rega2023, Rhodes2020,
+Roche2026, SanchezMiguel2024, Sanders2024, Sapounidis2025,
+SchmidtPersson2024, Shoshani2021, Slattery2025, SlatteryRCT2024,
+Song2026, SotoRamirez2025, Sticca2025, Stockdale2020,
+Sugiyama2023, Tidemann2022, ToledoVargas2025, UNICEF2024,
+vandenHeuvel2026, Vanderloo2025, Vasconcellos2025, Velazquez2025,
+Vuorre2021, Wang2024, WHO2019, Wright2024, Xiao2025,
+Yang2020, Yoshizawa2026, Yuan2024, Zeissig2024, Zhang2023,
+Zhang2024, Zhang2025, Zhao2025, Zhou2024, Zhu2026, Zong2024
+```
+
+(Esta lista puede no estar al día; cuando dudes, márcalo.)
+
+## DIMENSIÓN ESPECÍFICA: ALIMENTACIÓN Y PANTALLAS (`alimentacion`)
+
+Buscar evidencia científica reciente (2020-2026) sobre la relación entre el uso de pantallas y los hábitos alimentarios en niños de 0 a 12 años, con foco en dos mecanismos principales: **marketing digital de alimentos no saludables** dirigido a niños, y **alimentación distraída** (comer frente a pantallas).
+
+**Nota conceptual importante:** esta dimensión es **distinta de la obesidad/sedentarismo** que ya cubre la dimensión `fisica`. El mecanismo aquí es conductual y regulatorio, no de balance energético por inactividad. Los claims deben centrarse en:
+- Cómo el marketing digital altera las preferencias y elecciones alimentarias del niño.
+- Cómo comer frente a pantallas reduce la regulación interna del apetito (señales de saciedad).
+- Exposición a contenido de alimentos no saludables y su efecto en demandas al cuidador.
+
+No duplicar claims de obesidad/IMC que corresponden a `fisica`. Sí incluir IMC si es el desenlace medido de una intervención sobre marketing o ingesta distraída.
+
+### Sub-temas a cubrir
+
+1. **Marketing digital de alimentos.** Exposición de niños a publicidad de alimentos no saludables en plataformas digitales (YouTube, apps, juegos); efecto sobre preferencias, elecciones y consumo; regulación publicitaria y su eficacia.
+2. **Alimentación distraída (distracted eating).** Comer frente a pantallas y su efecto en la regulación interna del apetito; señales de saciedad ignoradas; sobreingesta calórica medida.
+3. **Advergaming y marketing encubierto.** Juegos diseñados para promover marcas de alimentos; exposición en niños; efecto en reconocimiento de marca y consumo.
+4. **Preferencias alimentarias y demandas al cuidador.** Cómo la exposición a contenido de alimentos en pantallas genera demandas de compra y presión en el hogar.
+5. **Lactancia y uso de pantallas.** Evidencia sobre si el uso de pantallas del cuidador durante la alimentación (especialmente lactancia) afecta la duración de la lactancia o la calidad de la interacción alimentaria.
+6. **Intervenciones de alfabetización alimentaria-mediática.** Programas que combinan educación nutricional con análisis crítico de publicidad; eficacia en primaria.
+7. **Contexto latinoamericano.** Regulación de marketing infantil en Chile y LATAM; evidencia de exposición y efecto en población local.
+
+### Lo que ya tenemos integrado (no proponer como nuevos)
+
+Los siguientes papers ya están en el corpus con tributación a `fisica` — no los propongas como nuevos, pero sí señala si tributan también a `alimentacion`:
+
+- **Boyland2022**: ya integrado, tributa a actividad física. Verificar si su contenido cubre también marketing alimentario digital (probable solapamiento).
+- **ObservatorioNutricional2025**: ya integrado; cubre contexto chileno incluyendo hábitos alimentarios.
+
+### Anchors verificados del prompt 11 (semillas de búsqueda)
+
+Estos papers tienen DOI/PMID verificado y deben incluirse si no están ya en el corpus:
+
+- **Boyland et al. 2025** — meta-análisis, British Journal of Nutrition. Marketing alimentario, elección de alimentos no saludables OR=2,45 (IC95% 1,41–4,27); consumo SMD=0,311 (IC95% 0,185–0,437). DOI: 10.1017/S0007114524000102 (PMID 40518855). ⚠️ Verificar si es el mismo que `Boyland2022` ya integrado o una publicación distinta.
+- **Meta-análisis "ver televisión mientras se come"** — Nutrients 2025, PMC11722569. Complementario al anterior sobre ingesta distraída.
+
+### Foco específico de novedad
+
+Estamos particularmente cortos en:
+
+- Evidencia para **tramos tempranos** (0-3 años): efecto de pantallas en la interacción alimentaria cuidador-bebé (especialmente alimentación responsiva y lactancia).
+- **Plataformas digitales específicas**: la mayoría de la literatura es de televisión; evidencia de YouTube, TikTok, apps y videojuegos como canales de marketing es más reciente y escasa.
+- **Evidencia latinoamericana** sobre exposición a marketing digital de alimentos y su efecto en niños chilenos o de la región.
+- **Intervenciones regulatorias**: eficacia de leyes de etiquetado y restricción de publicidad infantil (como la Ley de Alimentos chilena) sobre la exposición digital.
+
+## FORMATO DE RESPUESTA
+
+Para cada paper devuelve este bloque markdown, en este orden estricto. No agregues secciones. No omitas campos. Si un campo no aplica, escribe "No aplica" con justificación de una línea.
+
+```markdown
+### [ApellidoPrimerAutorAño]
+
+**Cita completa:** Apellido N., Apellido N., et al. AÑO. Título completo. Journal volumen(número):páginas.
+
+**Tipo:** meta-análisis / revisión sistemática / scoping review / cohorte longitudinal / transversal / ECA / guía oficial / norma jurídica / reporte técnico.
+
+**Muestra:** N=XX.XXX participantes. K estudios incluidos (si aplica). Rango etario X-Y años. País/región.
+
+**Hallazgo central (literal o paráfrasis declarada):** [3-5 líneas. Si hay cifras, son del abstract verbatim. Si parafraseas, declarar "(paráfrasis)".]
+
+**Tributa a la dimensión `alimentacion`, tramos etarios:**
+- `[tramo-etario]` con certeza **alta/media/baja**. Justificación: [una línea sobre por qué encaja en ese tramo].
+- [repetir si tributa a más de un tramo etario]
+
+**Banderas metodológicas o de aplicabilidad:**
+- [bandera 1: heterogeneidad, sesgo de selección, dependencia de autoreporte, contexto cultural específico, etc.]
+- [bandera 2 si aplica]
+
+**¿Probablemente ya integrado en el corpus?** Sí / No / Posible (justificar en una línea).
+
+**URL/DOI:** https://doi.org/... o PubMed PMID.
+
+---
+```
+
+## OUTPUT FINAL ESPERADO
+
+10-15 papers de la calidad especificada, cada uno con el bloque markdown completo, ordenados por **calidad de evidencia** (meta-análisis y revisiones primero, luego longitudinales, luego transversales, institucionales al final).
+
+Al cierre, dame una **sección de "vacíos de evidencia detectados"**: 2-4 áreas dentro de la dimensión que están sub-investigadas o que tienen evidencia contradictoria, en 2-3 líneas cada una.
