@@ -1,8 +1,8 @@
 ============================================================
  ESTRUCTURA DEL PROYECTO
  Raiz: /Users/tomgc/Projects/crianza_y_pantallas
- Fecha: 2026-05-31 19:40:53
- Total: 11 carpetas, 78 archivos
+ Fecha: 2026-05-31 20:36:21
+ Total: 11 carpetas, 82 archivos
 ============================================================
 
 ├── 10_fuentes/
@@ -43,15 +43,16 @@
 │   │   │   ├── 10_prompt_vision.md    [7.15K]
 │   │   │   ├── 10_resultados_prompt_vision.md    [27.32K]
 │   │   │   ├── 11_prompt_dimensiones_nuevas.md    [7.19K]
+│   │   │   ├── 11_resultados_prompt_dimensiones_nuevas.md    [22.92K]
 │   │   │   ├── README.md    [4.73K]
-│   │   ├── CLAUDE.md    [5.51K]
 │   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
+│   │   ├── CLAUDE.md    [5.51K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
 │   ├── andamios/
-│   │   ├── Glosario.html    [13.28K]
 │   │   ├── extraer_claims.py    [15.31K]
 │   │   ├── glosario-app.jsx    [15.08K]
 │   │   ├── glosario-data.js    [19.13K]
+│   │   ├── Glosario.html    [13.28K]
 │   │   ├── wireframe-b-standalone.html    [19.43K]
 │   ├── estructura/
 │   │   ├── 20260529_103300_estructura.md    [2.91K]
@@ -70,8 +71,10 @@
 │   │   ├── 20260531_125949_estructura.txt    [4.57K]
 │   │   ├── 20260531_193753_estructura.md    [5.22K]
 │   │   ├── 20260531_193753_estructura.txt    [5.40K]
-│   │   ├── estructura_actual.md    [5.22K]
-│   │   ├── estructura_actual.txt    [5.40K]
+│   │   ├── 20260531_194053_estructura.md    [5.35K]
+│   │   ├── 20260531_194053_estructura.txt    [5.53K]
+│   │   ├── estructura_actual.md    [5.35K]
+│   │   ├── estructura_actual.txt    [5.53K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -84,6 +87,7 @@
 │   │   ├── traspaso-cierre-v09.md    [42.24K]
 │   │   ├── traspaso-cierre-v10.md    [38.42K]
 │   │   ├── traspaso-cierre-v11.md    [36.54K]
+│   │   ├── traspaso-cierre-v12.md    [38.52K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
@@ -94,21 +98,21 @@
 ├── 00_build.sh    [2.03K]
 ├── 00_escanear_proyecto.R    [6.26K]
 ├── CLAUDE.md    [40.00B]
-├── README.md    [1.49K]
 ├── index.html    [306.20K]
+├── README.md    [1.49K]
 
 ============================================================
  CONTEO POR EXTENSION
 ============================================================
 
-  .md               49
-  .txt               9
+  .md               52
+  .txt              10
   .html              7
   .json              4
   .js                3
-  .R                 1
   .css               1
   .jsx               1
   .png               1
   .py                1
+  .R                 1
   .sh                1
