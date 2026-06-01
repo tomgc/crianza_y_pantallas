@@ -218,15 +218,15 @@
             Crianza y pantallas <span class="brand-sub">· matriz de evidencia</span>
             <p class="brand-desc">Un mapa de la evidencia sobre el uso de pantallas en niños y niñas de 0 a 12 años. Sin prescribir ni alarmar, distingue lo bien establecido de lo que es hipótesis o creencia popular, para acompañar con evidencia las decisiones de padres y madres a lo largo de la infancia.</p>
           </div>
-          <nav class="tabs" id="tabs">
-            ${tabs.map(t => `
-              <button class="tab ${t.id === state.view ? "active" : ""}" data-tab="${t.id}">${t.label}</button>
-            `).join("")}
-          </nav>
         </div>
+        <nav class="tabs" id="tabs">
+          ${tabs.map(t => `
+            <button class="tab ${t.id === state.view ? "active" : ""}" data-tab="${t.id}">${t.label}</button>
+          `).join("")}
+        </nav>
         <div class="topbar-right">
           <span class="legend">
-            <span class="cdot high"></span>alta
+            <span class="legend-label">Certeza</span><span class="cdot high"></span>alta
             <span class="cdot medium"></span>media
             <span class="cdot low"></span>baja
           </span>

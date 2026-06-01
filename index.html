@@ -149,7 +149,7 @@ body {
 .topbar-left { display: flex; align-items: flex-start; gap: 18px; flex-wrap: wrap; }
 .brand { font-size: 13.5px; font-weight: 600; color: var(--ink); }
 .brand-sub { color: var(--pencil); font-weight: 400; font-size: 12.5px; }
-.brand-desc { font-size: 11px; color: var(--pencil); font-weight: 400; max-width: 480px; margin: 3px 0 0; line-height: 1.45; }
+.brand-desc { font-size: 11px; color: var(--pencil); font-weight: 400; max-width: 680px; margin: 3px 0 0; line-height: 1.45; }
 .tabs { display: flex; gap: 2px; }
 .tab {
   background: transparent;
@@ -171,8 +171,10 @@ body {
 .topbar-right {
   display: flex; align-items: center; gap: 12px;
   font-size: 11.5px; color: var(--pencil);
+  align-self: flex-end;
 }
 .topbar-right .legend { display: inline-flex; align-items: center; gap: 6px; }
+.legend-label { font-size: 11px; color: var(--pencil); margin-right: 4px; }
 .topbar-right .legend .cdot { margin-left: 4px; }
 
 /* ── LAYOUT MATRIZ + FICHA ──────────────────────────────────── */
@@ -7440,15 +7442,15 @@ window.__DATA__ = {
             Crianza y pantallas <span class="brand-sub">· matriz de evidencia</span>
             <p class="brand-desc">Un mapa de la evidencia sobre el uso de pantallas en niños y niñas de 0 a 12 años. Sin prescribir ni alarmar, distingue lo bien establecido de lo que es hipótesis o creencia popular, para acompañar con evidencia las decisiones de padres y madres a lo largo de la infancia.</p>
           </div>
-          <nav class="tabs" id="tabs">
-            ${tabs.map(t => `
-              <button class="tab ${t.id === state.view ? "active" : ""}" data-tab="${t.id}">${t.label}</button>
-            `).join("")}
-          </nav>
         </div>
+        <nav class="tabs" id="tabs">
+          ${tabs.map(t => `
+            <button class="tab ${t.id === state.view ? "active" : ""}" data-tab="${t.id}">${t.label}</button>
+          `).join("")}
+        </nav>
         <div class="topbar-right">
           <span class="legend">
-            <span class="cdot high"></span>alta
+            <span class="legend-label">Certeza</span><span class="cdot high"></span>alta
             <span class="cdot medium"></span>media
             <span class="cdot low"></span>baja
           </span>
