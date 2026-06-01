@@ -1,19 +1,19 @@
 ============================================================
  ESTRUCTURA DEL PROYECTO
  Raiz: /Users/tomgc/Projects/crianza_y_pantallas
- Fecha: 2026-06-01 08:49:43
- Total: 11 carpetas, 94 archivos
+ Fecha: 2026-06-01 10:47:45
+ Total: 11 carpetas, 99 archivos
 ============================================================
 
 ├── 10_fuentes/
 │   ├── data/
 │   │   ├── andamiaje.json    [6.31K]
 │   │   ├── bibliografia.json    [105.53K]
-│   │   ├── claims.json    [135.80K]
+│   │   ├── claims.json    [142.68K]
 │   │   ├── metadata.json    [12.37K]
-│   ├── app.js    [44.43K]
+│   ├── app.js    [60.78K]
 │   ├── glosario-data.js    [16.38K]
-│   ├── styles.css    [26.35K]
+│   ├── styles.css    [27.32K]
 │   ├── template.html    [2.29K]
 ├── 20_recursos/
 │   ├── README.md    [1015.00B]
@@ -55,8 +55,10 @@
 │   │   │   ├── 16_prompt_alimentacion.md    [10.48K]
 │   │   │   ├── 16_resultados_prompt_alimentacion.md    [30.82K]
 │   │   │   ├── README.md    [4.73K]
+│   │   ├── 17_prompt_definiciones_dimensiones.md    [11.58K]
 │   │   ├── CLAUDE.md    [5.51K]
 │   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
+│   │   ├── definiciones_dimensiones.md    [17.62K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
 │   ├── andamios/
 │   │   ├── Glosario.html    [13.28K]
@@ -85,8 +87,10 @@
 │   │   ├── 20260531_194053_estructura.txt    [5.53K]
 │   │   ├── 20260531_203621_estructura.md    [5.61K]
 │   │   ├── 20260531_203621_estructura.txt    [5.79K]
-│   │   ├── estructura_actual.md    [5.61K]
-│   │   ├── estructura_actual.txt    [5.79K]
+│   │   ├── 20260601_084943_estructura.md    [6.43K]
+│   │   ├── 20260601_084943_estructura.txt    [6.61K]
+│   │   ├── estructura_actual.md    [6.43K]
+│   │   ├── estructura_actual.txt    [6.61K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -100,6 +104,7 @@
 │   │   ├── traspaso-cierre-v10.md    [38.42K]
 │   │   ├── traspaso-cierre-v11.md    [36.54K]
 │   │   ├── traspaso-cierre-v12.md    [38.52K]
+│   │   ├── traspaso-cierre-v13.md    [36.06K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
@@ -111,14 +116,14 @@
 ├── 00_escanear_proyecto.R    [6.26K]
 ├── CLAUDE.md    [40.00B]
 ├── README.md    [1.49K]
-├── index.html    [362.12K]
+├── index.html    [386.45K]
 
 ============================================================
  CONTEO POR EXTENSION
 ============================================================
 
-  .md               63
-  .txt              11
+  .md               67
+  .txt              12
   .html              7
   .json              4
   .js                3
