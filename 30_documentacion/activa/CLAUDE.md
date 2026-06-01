@@ -30,7 +30,7 @@ Sitio único autocontenido (HTML + CSS + JS inline, sin dependencias) que sintet
 
 ## Estado actual
 
-Último handoff: `30_documentacion/traspasos/traspaso-cierre-v10.md`. Revisar siempre el handoff más reciente al inicio de cada sesión.
+Último handoff: `30_documentacion/traspasos/traspaso-cierre-v15.md`. Revisar siempre el handoff más reciente al inicio de cada sesión.
 
 ## Preferencias de trabajo (Tomás)
 

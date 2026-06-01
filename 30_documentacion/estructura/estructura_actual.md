@@ -1,8 +1,8 @@
 # Estructura del proyecto
 
 - **Raiz:** `/Users/tomgc/Projects/crianza_y_pantallas`
-- **Fecha:** 2026-06-01 10:47:45
-- **Total:** 11 carpetas, 100 archivos
+- **Fecha:** 2026-06-01 13:37:18
+- **Total:** 11 carpetas, 109 archivos
 
 ## Arbol
 
@@ -13,48 +13,48 @@
 │   │   ├── bibliografia.json    [105.53K]
 │   │   ├── claims.json    [142.68K]
 │   │   ├── metadata.json    [12.37K]
-│   ├── app.js    [60.78K]
+│   ├── app.js    [60.81K]
 │   ├── glosario-data.js    [16.38K]
-│   ├── styles.css    [27.32K]
+│   ├── styles.css    [27.42K]
 │   ├── template.html    [2.29K]
 ├── 20_recursos/
 │   ├── README.md    [1015.00B]
 ├── 30_documentacion/
 │   ├── activa/
 │   │   ├── prompts_busqueda/
-│   │   │   ├── 01_prompt_creatividad.md    [7.34K]
+│   │   │   ├── 01_prompt_creatividad.md    [9.98K]
 │   │   │   ├── 01_resultados_prompt_creatividad.md    [24.28K]
-│   │   │   ├── 02_prompt_vinculo.md    [7.46K]
+│   │   │   ├── 02_prompt_vinculo.md    [10.09K]
 │   │   │   ├── 02_resultados_prompt_vinculo.md    [26.29K]
-│   │   │   ├── 03_prompt_salud_mental.md    [7.60K]
+│   │   │   ├── 03_prompt_salud_mental.md    [10.24K]
 │   │   │   ├── 03_resultados_prompt_salud_mental.md    [28.25K]
-│   │   │   ├── 04_prompt_socioemocional.md    [7.35K]
+│   │   │   ├── 04_prompt_socioemocional.md    [9.99K]
 │   │   │   ├── 04_resultados_prompt_socioemocional.md    [21.92K]
-│   │   │   ├── 05_prompt_comportamiento.md    [7.66K]
+│   │   │   ├── 05_prompt_comportamiento.md    [10.30K]
 │   │   │   ├── 05_resultados_prompt_comportamiento.md    [22.83K]
-│   │   │   ├── 06_prompt_cognicion.md    [7.44K]
+│   │   │   ├── 06_prompt_cognicion.md    [10.08K]
 │   │   │   ├── 06_resultados_codigo_prompt_cognicion.md    [12.09K]
 │   │   │   ├── 06_resultados_prompt_cognicion.md    [21.65K]
-│   │   │   ├── 07_prompt_fisica.md    [7.21K]
+│   │   │   ├── 07_prompt_fisica.md    [9.85K]
 │   │   │   ├── 07_resultados_prompt_fisica.md    [25.09K]
-│   │   │   ├── 08_prompt_lenguaje.md    [7.08K]
+│   │   │   ├── 08_prompt_lenguaje.md    [9.71K]
 │   │   │   ├── 08_resultados_codigo_prompt_lenguaje.md    [9.54K]
 │   │   │   ├── 08_resultados_prompt_lenguaje.md    [24.11K]
-│   │   │   ├── 09_prompt_sueno.md    [7.41K]
+│   │   │   ├── 09_prompt_sueno.md    [10.05K]
 │   │   │   ├── 09_resultados_prompt_sueno.md    [21.94K]
-│   │   │   ├── 10_prompt_vision.md    [7.15K]
+│   │   │   ├── 10_prompt_vision.md    [9.79K]
 │   │   │   ├── 10_resultados_prompt_vision.md    [27.32K]
-│   │   │   ├── 11_prompt_dimensiones_nuevas.md    [7.19K]
+│   │   │   ├── 11_prompt_dimensiones_nuevas.md    [9.83K]
 │   │   │   ├── 11_resultados_prompt_dimensiones_nuevas.md    [22.92K]
-│   │   │   ├── 12_prompt_co_regulacion.md    [9.70K]
+│   │   │   ├── 12_prompt_co_regulacion.md    [11.20K]
 │   │   │   ├── 12_resultados_prompt_co_regulacion.md    [20.31K]
-│   │   │   ├── 13_prompt_alfabetizacion.md    [10.08K]
+│   │   │   ├── 13_prompt_alfabetizacion.md    [11.57K]
 │   │   │   ├── 13_resultados_prompt_alfabetizacion.md    [23.12K]
-│   │   │   ├── 14_prompt_privacidad.md    [9.76K]
+│   │   │   ├── 14_prompt_privacidad.md    [11.25K]
 │   │   │   ├── 14_resultados_prompt_privacidad.md    [25.14K]
-│   │   │   ├── 15_prompt_cyberbullying.md    [10.05K]
+│   │   │   ├── 15_prompt_cyberbullying.md    [11.54K]
 │   │   │   ├── 15_resultados_prompt_cyberbullying.md    [24.37K]
-│   │   │   ├── 16_prompt_alimentacion.md    [10.48K]
+│   │   │   ├── 16_prompt_alimentacion.md    [11.97K]
 │   │   │   ├── 16_resultados_prompt_alimentacion.md    [30.82K]
 │   │   │   ├── README.md    [4.73K]
 │   │   ├── 17_prompt_definiciones_dimensiones.md    [11.58K]
@@ -91,9 +91,17 @@
 │   │   ├── 20260531_203621_estructura.txt    [5.79K]
 │   │   ├── 20260601_084943_estructura.md    [6.43K]
 │   │   ├── 20260601_084943_estructura.txt    [6.61K]
+│   │   ├── 20260601_104745_estructura.md    [6.75K]
 │   │   ├── 20260601_104745_estructura.txt    [6.92K]
-│   │   ├── estructura_actual.md    [6.43K]
-│   │   ├── estructura_actual.txt    [6.92K]
+│   │   ├── 20260601_121758_estructura.md    [6.93K]
+│   │   ├── 20260601_121758_estructura.txt    [7.10K]
+│   │   ├── 20260601_124651_estructura.md    [7.06K]
+│   │   ├── 20260601_124651_estructura.txt    [7.23K]
+│   │   ├── 20260601_132639_estructura.md    [7.18K]
+│   │   ├── 20260601_132639_estructura.txt    [7.36K]
+│   │   ├── 20260601_133717_estructura.txt    [7.48K]
+│   │   ├── estructura_actual.md    [7.18K]
+│   │   ├── estructura_actual.txt    [7.48K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -108,6 +116,7 @@
 │   │   ├── traspaso-cierre-v11.md    [36.54K]
 │   │   ├── traspaso-cierre-v12.md    [38.52K]
 │   │   ├── traspaso-cierre-v13.md    [36.06K]
+│   │   ├── traspaso-cierre-v14.md    [27.28K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
@@ -118,16 +127,16 @@
 ├── 00_build.sh    [2.03K]
 ├── 00_escanear_proyecto.R    [6.26K]
 ├── CLAUDE.md    [40.00B]
-├── README.md    [1.49K]
-├── index.html    [386.45K]
+├── README.md    [1.52K]
+├── index.html    [386.58K]
 ```
 
 ## Conteo por extension
 
 | Extension | Cantidad |
 |-----------|----------|
-| `.md` | 67 |
-| `.txt` | 13 |
+| `.md` | 72 |
+| `.txt` | 17 |
 | `.html` | 7 |
 | `.json` | 4 |
 | `.js` | 3 |
