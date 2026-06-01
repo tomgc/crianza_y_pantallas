@@ -234,8 +234,10 @@ body {
   cursor: default;
 }
 .grid-cell.row-head { align-items: flex-start; justify-content: center; flex-direction: column; }
+.grid-cell.row-head[data-dim-id] { cursor: pointer; }
 .dim-paper-count { font-size: 10px; font-weight: 400; color: var(--pencil); margin-top: 2px; }
-.grid-cell.row-head:hover, .grid-cell.col-head:hover { background: var(--bg-soft); }
+.grid-cell.row-head[data-dim-id]:hover { background: var(--accent-soft); }
+.grid-cell.row-head:not([data-dim-id]):hover, .grid-cell.col-head:hover { background: var(--bg-soft); }
 
 .grid-cell.col-head {
   text-align: center;
@@ -256,6 +258,27 @@ body {
   box-shadow: inset 0 0 0 2px var(--c-high);
 }
 .grid-cell.active:hover { background: var(--highlight); }
+
+.grid-cell.row-head.dim-active {
+  background: var(--highlight);
+  box-shadow: inset 0 0 0 2px var(--c-high);
+}
+.grid-cell.row-head.dim-active:hover { background: var(--highlight); }
+
+/* ── Ficha de dimensión ─────────────────────────────────────── */
+.dim-ficha-links {
+  margin-top: 16px;
+}
+.dim-ficha-link {
+  display: block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+}
+.dim-ficha-link:last-child { border-bottom: none; }
+.dim-ficha-link:hover { color: var(--ink); text-decoration: underline; }
 
 .cell-head {
   display: flex;
@@ -812,48 +835,8 @@ body {
 }
 .contact-link:hover { color: var(--ink); }
 
-/* ── TOOLTIP DE DIMENSIÓN ─────────────────────────────────────── */
-.dim-tooltip {
-  position: absolute;
-  z-index: 200;
-  background: var(--ink);
-  color: #fff;
-  border-radius: 8px;
-  padding: 12px 14px;
-  font-size: 12px;
-  line-height: 1.55;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
-  pointer-events: auto;
-}
-.dim-tooltip-text {
-  margin-bottom: 10px;
-}
-.dim-tooltip-links {
-  border-top: 1px solid rgba(255,255,255,0.15);
-  padding-top: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.dim-tooltip-links-label {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 2px;
-}
-.dim-tooltip-links a {
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  font-size: 11px;
-}
-.dim-tooltip-links a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-@media (max-width: 600px) {
-  .dim-tooltip { display: none; }
-}
+
+
 
 </style>
 </head>
@@ -7254,6 +7237,7 @@ window.__DATA__ = {
   const state = {
     view: "matriz",              // matriz | bibliografia | glosario | metodologia | limitaciones
     activeCell: null,            // cellId actual mostrado en ficha (null = sin selección)
+    activeDim: null,             // dimId cuya definición se muestra en ficha (null = sin selección)
     selectedAge: "all",          // ageId | "all"
     biblioFilter: "all",         // filterTypes id
     biblioSearch: "",
@@ -7526,7 +7510,8 @@ window.__DATA__ = {
       const pc = paperCountByDim[d.id];
       const dimDesc = DIM_DESCRIPTIONS[d.id];
       const tooltipAttr = dimDesc ? ` data-dim-id="${escapeHtml(d.id)}"` : "";
-      html += `<div class="grid-cell row-head"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
+      const dimActive = state.activeDim === d.id ? " dim-active" : "";
+      html += `<div class="grid-cell row-head${dimActive}"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
@@ -8152,40 +8137,39 @@ window.__DATA__ = {
     `;
   }
 
-  // ── POPOVER DE REFERENCIA ───────────────────────────────────
-  // ── TOOLTIP DE DIMENSIÓN ────────────────────────────────────
-  function showDimTooltip(dimId, anchorEl) {
-    closeDimTooltip();
+  // ── FICHA DE DIMENSIÓN ──────────────────────────────────────
+  function renderFichaDim(dimId) {
     const desc = DIM_DESCRIPTIONS[dimId];
-    if (!desc) return;
-    const tip = document.createElement("div");
-    tip.className = "dim-tooltip";
-    tip.dataset.dimId = dimId;
+    const dim  = dims.find(d => d.id === dimId) || { label: dimId };
+    if (!desc) return renderFicha(null);
     const linksHtml = (desc.links || []).map(l =>
-      `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.label)}</a>`
+      `<a class="dim-ficha-link" href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.label)}</a>`
     ).join("");
-    tip.innerHTML = `
-      <div class="dim-tooltip-text">${escapeHtml(desc.text)}</div>
-      ${linksHtml ? `<div class="dim-tooltip-links"><span class="dim-tooltip-links-label">Leer más</span>${linksHtml}</div>` : ""}
+    return `
+      <div class="ficha">
+        <div class="eyebrow">Dimensión</div>
+        <div class="ficha-chips">
+          <span class="age-chip">${escapeHtml(dim.label)}</span>
+        </div>
+        <p class="ficha-intro">${escapeHtml(desc.text)}</p>
+        ${linksHtml ? `
+          <div class="dim-ficha-links">
+            <div class="eyebrow" style="margin-bottom:6px;">Leer más</div>
+            ${linksHtml}
+          </div>` : ""}
+      </div>
     `;
-    document.body.appendChild(tip);
-    positionDimTooltip(tip, anchorEl);
   }
 
-  function positionDimTooltip(tip, anchor) {
-    const r = anchor.getBoundingClientRect();
-    const tipW = 300;
-    const pad = 8;
-    let left = r.right + pad;
-    if (left + tipW > window.innerWidth - 8) left = Math.max(8, r.left - tipW - pad);
-    let top = r.top + window.scrollY;
-    const maxTop = window.scrollY + window.innerHeight - tip.offsetHeight - 16;
-    if (top > maxTop) top = maxTop;
-    tip.style.cssText = `position:absolute;left:${left}px;top:${top}px;width:${tipW}px;`;
-  }
 
-  function closeDimTooltip() {
-    document.querySelectorAll(".dim-tooltip").forEach(el => el.remove());
+  // ── FICHA DE DIMENSIÓN (clic en row-head) ───────────────────
+  function openDimFicha(dimId) {
+    state.activeDim = dimId;
+    state.activeCell = null;
+    const matrizPane = root.querySelector(".matriz-pane");
+    const fichaPane  = root.querySelector("#ficha-pane");
+    if (matrizPane) matrizPane.innerHTML = renderMatrizHelp() + renderMatriz();
+    if (fichaPane)  fichaPane.innerHTML  = renderFichaDim(dimId);
   }
 
   function showRefPopover(refId, anchorEl) {
@@ -8232,17 +8216,9 @@ window.__DATA__ = {
     root.addEventListener("change", onRootChange);
     document.addEventListener("click", onDocClick, true);
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") { closePopover(); closeDimTooltip(); }
+      if (e.key === "Escape") { closePopover(); }
     });
-    // Search input se enlaza por delegación con "input" event
     root.addEventListener("input", onRootInput);
-    // Tooltip de dimensión
-    root.addEventListener("mouseover", (e) => {
-      const rh = e.target.closest(".grid-cell.row-head[data-dim-id]");
-      if (rh) showDimTooltip(rh.dataset.dimId, rh);
-      else closeDimTooltip();
-    });
-    root.addEventListener("mouseleave", () => closeDimTooltip(), true);
   }
 
   function onRootClick(e) {
@@ -8252,6 +8228,13 @@ window.__DATA__ = {
       state.view = tab.dataset.tab;
       closePopover();
       rerenderView();
+      return;
+    }
+
+    // Clic en label de dimensión → ficha de definición
+    const rowHead = e.target.closest(".grid-cell.row-head[data-dim-id]");
+    if (rowHead) {
+      openDimFicha(rowHead.dataset.dimId);
       return;
     }
 
@@ -8400,8 +8383,6 @@ window.__DATA__ = {
 
   function onDocClick(e) {
     // Cerrar popover si se hace click fuera
-    if (e.target.closest(".dim-tooltip")) return;
-    closeDimTooltip();
     if (e.target.closest(".ref-popover")) return;
     if (e.target.closest(".ref[data-refid]")) return;
     closePopover();

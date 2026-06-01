@@ -30,6 +30,7 @@
   const state = {
     view: "matriz",              // matriz | bibliografia | glosario | metodologia | limitaciones
     activeCell: null,            // cellId actual mostrado en ficha (null = sin selección)
+    activeDim: null,             // dimId cuya definición se muestra en ficha (null = sin selección)
     selectedAge: "all",          // ageId | "all"
     biblioFilter: "all",         // filterTypes id
     biblioSearch: "",
@@ -302,7 +303,8 @@
       const pc = paperCountByDim[d.id];
       const dimDesc = DIM_DESCRIPTIONS[d.id];
       const tooltipAttr = dimDesc ? ` data-dim-id="${escapeHtml(d.id)}"` : "";
-      html += `<div class="grid-cell row-head"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
+      const dimActive = state.activeDim === d.id ? " dim-active" : "";
+      html += `<div class="grid-cell row-head${dimActive}"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
@@ -928,40 +930,39 @@
     `;
   }
 
-  // ── POPOVER DE REFERENCIA ───────────────────────────────────
-  // ── TOOLTIP DE DIMENSIÓN ────────────────────────────────────
-  function showDimTooltip(dimId, anchorEl) {
-    closeDimTooltip();
+  // ── FICHA DE DIMENSIÓN ──────────────────────────────────────
+  function renderFichaDim(dimId) {
     const desc = DIM_DESCRIPTIONS[dimId];
-    if (!desc) return;
-    const tip = document.createElement("div");
-    tip.className = "dim-tooltip";
-    tip.dataset.dimId = dimId;
+    const dim  = dims.find(d => d.id === dimId) || { label: dimId };
+    if (!desc) return renderFicha(null);
     const linksHtml = (desc.links || []).map(l =>
-      `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.label)}</a>`
+      `<a class="dim-ficha-link" href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.label)}</a>`
     ).join("");
-    tip.innerHTML = `
-      <div class="dim-tooltip-text">${escapeHtml(desc.text)}</div>
-      ${linksHtml ? `<div class="dim-tooltip-links"><span class="dim-tooltip-links-label">Leer más</span>${linksHtml}</div>` : ""}
+    return `
+      <div class="ficha">
+        <div class="eyebrow">Dimensión</div>
+        <div class="ficha-chips">
+          <span class="age-chip">${escapeHtml(dim.label)}</span>
+        </div>
+        <p class="ficha-intro">${escapeHtml(desc.text)}</p>
+        ${linksHtml ? `
+          <div class="dim-ficha-links">
+            <div class="eyebrow" style="margin-bottom:6px;">Leer más</div>
+            ${linksHtml}
+          </div>` : ""}
+      </div>
     `;
-    document.body.appendChild(tip);
-    positionDimTooltip(tip, anchorEl);
   }
 
-  function positionDimTooltip(tip, anchor) {
-    const r = anchor.getBoundingClientRect();
-    const tipW = 300;
-    const pad = 8;
-    let left = r.right + pad;
-    if (left + tipW > window.innerWidth - 8) left = Math.max(8, r.left - tipW - pad);
-    let top = r.top + window.scrollY;
-    const maxTop = window.scrollY + window.innerHeight - tip.offsetHeight - 16;
-    if (top > maxTop) top = maxTop;
-    tip.style.cssText = `position:absolute;left:${left}px;top:${top}px;width:${tipW}px;`;
-  }
 
-  function closeDimTooltip() {
-    document.querySelectorAll(".dim-tooltip").forEach(el => el.remove());
+  // ── FICHA DE DIMENSIÓN (clic en row-head) ───────────────────
+  function openDimFicha(dimId) {
+    state.activeDim = dimId;
+    state.activeCell = null;
+    const matrizPane = root.querySelector(".matriz-pane");
+    const fichaPane  = root.querySelector("#ficha-pane");
+    if (matrizPane) matrizPane.innerHTML = renderMatrizHelp() + renderMatriz();
+    if (fichaPane)  fichaPane.innerHTML  = renderFichaDim(dimId);
   }
 
   function showRefPopover(refId, anchorEl) {
@@ -1008,17 +1009,9 @@
     root.addEventListener("change", onRootChange);
     document.addEventListener("click", onDocClick, true);
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") { closePopover(); closeDimTooltip(); }
+      if (e.key === "Escape") { closePopover(); }
     });
-    // Search input se enlaza por delegación con "input" event
     root.addEventListener("input", onRootInput);
-    // Tooltip de dimensión
-    root.addEventListener("mouseover", (e) => {
-      const rh = e.target.closest(".grid-cell.row-head[data-dim-id]");
-      if (rh) showDimTooltip(rh.dataset.dimId, rh);
-      else closeDimTooltip();
-    });
-    root.addEventListener("mouseleave", () => closeDimTooltip(), true);
   }
 
   function onRootClick(e) {
@@ -1028,6 +1021,13 @@
       state.view = tab.dataset.tab;
       closePopover();
       rerenderView();
+      return;
+    }
+
+    // Clic en label de dimensión → ficha de definición
+    const rowHead = e.target.closest(".grid-cell.row-head[data-dim-id]");
+    if (rowHead) {
+      openDimFicha(rowHead.dataset.dimId);
       return;
     }
 
@@ -1176,8 +1176,6 @@
 
   function onDocClick(e) {
     // Cerrar popover si se hace click fuera
-    if (e.target.closest(".dim-tooltip")) return;
-    closeDimTooltip();
     if (e.target.closest(".ref-popover")) return;
     if (e.target.closest(".ref[data-refid]")) return;
     closePopover();
