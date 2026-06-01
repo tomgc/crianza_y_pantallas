@@ -262,7 +262,7 @@
     const ageLabel = ageSel === "all" ? null : (ages.find(a => a.id === ageSel) || {}).label;
     return `
       <div class="matriz-help">
-        10 dimensiones × 5 tramos etarios — clic en cualquier celda carga su ficha a la derecha.
+        15 dimensiones × 5 tramos etarios — clic en cualquier celda carga su ficha a la derecha.
         ${ageLabel ? `Mostrando <b>${escapeHtml(ageLabel)}</b>; otras edades atenuadas como contexto.` : ""}
       </div>
     `;

@@ -6,8 +6,8 @@ Matriz interactiva de evidencia científica sobre el efecto de las pantallas en 
 
 ## Contenido
 
-- **Matriz 10 × 5** — 10 dominios del desarrollo × 5 tramos etarios (50 celdas navegables).
-- **Bibliografía** — 65 entradas con popovers navegables (formato `[ref]`).
+- **Matriz 15 × 5** — 15 dimensiones del desarrollo y la crianza digital × 5 tramos etarios (72 celdas con evidencia).
+- **Bibliografía** — 250 entradas con popovers navegables (formato `[ref]`).
 - **Andamiaje** — cascadas de evidencia entre celdas relacionadas.
 - **Glosario** — 22 términos clave del desarrollo infantil.
 
