@@ -1,8 +1,8 @@
 # Estructura del proyecto
 
 - **Raiz:** `/Users/tomgc/Projects/crianza_y_pantallas`
-- **Fecha:** 2026-06-01 13:37:18
-- **Total:** 11 carpetas, 109 archivos
+- **Fecha:** 2026-06-01 16:42:11
+- **Total:** 11 carpetas, 80 archivos
 
 ## Arbol
 
@@ -13,9 +13,9 @@
 │   │   ├── bibliografia.json    [105.53K]
 │   │   ├── claims.json    [142.68K]
 │   │   ├── metadata.json    [12.37K]
-│   ├── app.js    [60.81K]
+│   ├── app.js    [61.56K]
 │   ├── glosario-data.js    [16.38K]
-│   ├── styles.css    [27.42K]
+│   ├── styles.css    [28.31K]
 │   ├── template.html    [2.29K]
 ├── 20_recursos/
 │   ├── README.md    [1015.00B]
@@ -69,39 +69,8 @@
 │   │   ├── glosario-data.js    [19.13K]
 │   │   ├── wireframe-b-standalone.html    [19.43K]
 │   ├── estructura/
-│   │   ├── 20260529_103300_estructura.md    [2.91K]
-│   │   ├── 20260529_103300_estructura.txt    [2.99K]
-│   │   ├── 20260529_121440_estructura.md    [3.08K]
-│   │   ├── 20260529_121440_estructura.txt    [3.25K]
-│   │   ├── 20260529_123415_estructura.md    [3.26K]
-│   │   ├── 20260529_123415_estructura.txt    [3.43K]
-│   │   ├── 20260530_223311_estructura.md    [3.84K]
-│   │   ├── 20260530_223311_estructura.txt    [4.01K]
-│   │   ├── 20260531_093957_estructura.md    [4.02K]
-│   │   ├── 20260531_093957_estructura.txt    [4.19K]
-│   │   ├── 20260531_100319_estructura.md    [4.20K]
-│   │   ├── 20260531_100319_estructura.txt    [4.37K]
-│   │   ├── 20260531_125949_estructura.md    [4.39K]
-│   │   ├── 20260531_125949_estructura.txt    [4.57K]
-│   │   ├── 20260531_193753_estructura.md    [5.22K]
-│   │   ├── 20260531_193753_estructura.txt    [5.40K]
-│   │   ├── 20260531_194053_estructura.md    [5.35K]
-│   │   ├── 20260531_194053_estructura.txt    [5.53K]
-│   │   ├── 20260531_203621_estructura.md    [5.61K]
-│   │   ├── 20260531_203621_estructura.txt    [5.79K]
-│   │   ├── 20260601_084943_estructura.md    [6.43K]
-│   │   ├── 20260601_084943_estructura.txt    [6.61K]
-│   │   ├── 20260601_104745_estructura.md    [6.75K]
-│   │   ├── 20260601_104745_estructura.txt    [6.92K]
-│   │   ├── 20260601_121758_estructura.md    [6.93K]
-│   │   ├── 20260601_121758_estructura.txt    [7.10K]
-│   │   ├── 20260601_124651_estructura.md    [7.06K]
-│   │   ├── 20260601_124651_estructura.txt    [7.23K]
-│   │   ├── 20260601_132639_estructura.md    [7.18K]
-│   │   ├── 20260601_132639_estructura.txt    [7.36K]
-│   │   ├── 20260601_133717_estructura.txt    [7.48K]
-│   │   ├── estructura_actual.md    [7.18K]
-│   │   ├── estructura_actual.txt    [7.48K]
+│   │   ├── estructura_actual.md    [5.49K]
+│   │   ├── estructura_actual.txt    [5.73K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -117,6 +86,8 @@
 │   │   ├── traspaso-cierre-v12.md    [38.52K]
 │   │   ├── traspaso-cierre-v13.md    [36.06K]
 │   │   ├── traspaso-cierre-v14.md    [27.28K]
+│   │   ├── traspaso-cierre-v15.md    [21.42K]
+│   │   ├── traspaso-cierre-v16.md    [29.32K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
@@ -125,18 +96,17 @@
 ├── assets/
 │   ├── og-image.png    [41.69K]
 ├── 00_build.sh    [2.03K]
-├── 00_escanear_proyecto.R    [6.26K]
+├── 00_escanear_proyecto.R    [6.61K]
 ├── CLAUDE.md    [40.00B]
 ├── README.md    [1.52K]
-├── index.html    [386.58K]
+├── index.html    [388.22K]
 ```
 
 ## Conteo por extension
 
 | Extension | Cantidad |
 |-----------|----------|
-| `.md` | 72 |
-| `.txt` | 17 |
+| `.md` | 59 |
 | `.html` | 7 |
 | `.json` | 4 |
 | `.js` | 3 |
@@ -146,3 +116,4 @@
 | `.png` | 1 |
 | `.py` | 1 |
 | `.sh` | 1 |
+| `.txt` | 1 |

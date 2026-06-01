@@ -33,6 +33,8 @@ ROOT <- rprojroot::find_root(
 
 # ---- Configuración ----------------------------------------------------------
 EXCLUIR        <- c(".git", ".claude", "node_modules", ".Rproj.user", ".quarto")
+# Snapshots timestamped del propio escáner: no contarlos ni listarlos (se conservan los alias estructura_actual.*).
+PATRON_ESCANER <- "[0-9]{8}_[0-9]{6}_estructura\\.(md|txt)$"
 INCLUIR_ARCHIVO <- FALSE  # Cambiar a TRUE para incluir _archivo/ en el escaneo.
 
 # ---- Función: formatear tamaño legible --------------------------------------
@@ -47,6 +49,7 @@ formato_tamano <- function(bytes) {
 construir_arbol <- function(ruta_base, prefijo = "") {
   items <- dir_ls(ruta_base, all = FALSE)
   items <- items[!basename(items) %in% EXCLUIR]
+  items <- items[!grepl(PATRON_ESCANER, basename(items))]
   if (!INCLUIR_ARCHIVO) items <- items[basename(items) != "_archivo"]
 
   # Carpetas primero, luego archivos; alfabéticamente dentro de cada grupo.
@@ -75,6 +78,7 @@ construir_arbol <- function(ruta_base, prefijo = "") {
 conteo_extensiones <- function(ruta_base) {
   todos <- dir_ls(ruta_base, recurse = TRUE, type = "file", all = FALSE)
   todos <- todos[!grepl(paste(EXCLUIR, collapse = "|"), todos)]
+  todos <- todos[!grepl(PATRON_ESCANER, todos)]
   if (!INCLUIR_ARCHIVO) todos <- todos[!grepl("_archivo/", todos)]
 
   exts            <- tools::file_ext(todos)
@@ -91,6 +95,7 @@ generar_contenido <- function(ruta_base, formato = "txt") {
   todos_archivos  <- dir_ls(ruta_base, recurse = TRUE, type = "file",      all = FALSE)
   todas_carpetas  <- dir_ls(ruta_base, recurse = TRUE, type = "directory", all = FALSE)
   todos_archivos  <- todos_archivos[!grepl(paste(EXCLUIR, collapse = "|"), todos_archivos)]
+  todos_archivos  <- todos_archivos[!grepl(PATRON_ESCANER, todos_archivos)]
   todas_carpetas  <- todas_carpetas[!grepl(paste(EXCLUIR, collapse = "|"), todas_carpetas)]
   if (!INCLUIR_ARCHIVO) {
     todos_archivos <- todos_archivos[!grepl("_archivo/", todos_archivos)]
