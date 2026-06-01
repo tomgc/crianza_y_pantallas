@@ -61,3 +61,28 @@ El proceso para incorporar papers, meta-análisis o cualquier evidencia bibliogr
 - `30_documentacion/activa/prompts_busqueda/` — 11 prompts modulares autocontenidos (uno por dimensión) listos para usar con agentes IA externos. Ver `README.md` dentro de esa carpeta para orden de uso y reglas operativas.
 
 Roles: Tomás detecta y aprueba; Claude analiza y entrega código; Claude Code ejecuta cambios.
+
+## Política no_ref
+
+Claims con `"no_ref": true` son aceptables cuando:
+1. **Mecanísticos/interpretativos**: explican un mecanismo plausible sin ser hallazgo empírico citable (ej. "el mecanismo es desplazamiento de juego activo").
+2. **Ausencia de evidencia**: documentan que la evidencia directa no existe o es escasa (ej. "no hay estudios robustos en lactantes sobre X").
+3. **Remisión entre dimensiones**: redirigen al lector a otra dimensión donde el tema está cubierto.
+4. **Gap en la literatura**: señalan vacíos teóricos o empíricos reconocidos.
+
+Claims con no_ref justificados al 2026-06-01:
+- lenguaje-ninez-media[2]: mecanismo de desplazamiento (no hallazgo empírico citable)
+- lenguaje-preadolescencia[0]: asociación no bien cuantificada — afirmación sobre estado de la evidencia
+- cognicion-lactante[1]: hipótesis no demostrada en lactantes — ausencia de evidencia robusta
+- cognicion-preescolar[2]: co-visionado beneficioso — consenso implícito sin paper único citable
+- cognicion-ninez-media[1]: dependencia del propósito/diseño — afirmación sobre heterogeneidad de la evidencia
+- fisica-lactante[0]: mecanismo indirecto motor — no hallazgo empírico citable
+- salud-mental-lactante[0]: remisión a dimensión socioemocional
+- salud-mental-preescolar[1]: (pendiente de verificación de ref)
+- comportamiento-ninez-media[2]: videojuegos pace vs pasivo — no hay meta-análisis reciente específico
+- vinculo-preescolar[1]: gap en la literatura — escasez de estudios reconocida
+- vinculo-preadolescencia[1]: gap teórico — ausencia de marcos consolidados
+- creatividad-lactante[0]: ausencia de evidencia robusta
+- creatividad-lactante[1]: mecanismo de desplazamiento — no hallazgo empírico citable
+- creatividad-ninez-media[0]: mecanismo de desplazamiento — evidencia escasa
+- creatividad-preadolescencia[1]: asociación correlacional sin paper específico sobre producción creativa

@@ -447,9 +447,8 @@
       },
       {
         "certainty": "medium",
-        "text": "La restricción de celulares en aula por sí sola no mejora bienestar mental ni resultados académicos, según un ensayo controlado en escuelas inglesas.",
-        "refs": [],
-        "no_ref": true
+        "text": "La restricción de celulares en aula por sí sola no mejora bienestar mental ni resultados académicos, según un estudio observacional en escuelas inglesas.",
+        "refs": ["Goodyear2025"]
       },
       {
         "certainty": "high",
@@ -493,20 +492,17 @@
       {
         "certainty": "high",
         "text": "Multitarea con medios (varias pantallas o pantalla + tarea académica simultánea) se asocia con peor memoria de trabajo y peor desempeño académico en estudios longitudinales (varias cohortes en EE.UU. y Europa).",
-        "refs": [],
-        "no_ref": true
+        "refs": ["Ra2018"]
       },
       {
         "certainty": "medium",
         "text": "El uso intensivo de redes sociales aparece como factor de riesgo para problemas atencionales tipo TDAH a los 18 meses de seguimiento.",
-        "refs": [],
-        "no_ref": true
+        "refs": ["Ra2018"]
       },
       {
         "certainty": "medium",
         "text": "Algunas habilidades visuoespaciales pueden beneficiarse de videojuegos (revisiones meta-analíticas en niños mayores y adolescentes).",
-        "refs": [],
-        "no_ref": true
+        "refs": ["SmithBasak2023"]
       },
       {
         "certainty": "high",
