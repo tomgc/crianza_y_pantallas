@@ -34,7 +34,8 @@
     "law":          { "label": "Norma jurídica",       "cls": "type-law" },
     "chilean":      { "label": "Evidencia chilena",    "cls": "type-chilean" },
     "theory":       { "label": "Marco teórico",        "cls": "" },
-    "survey":       { "label": "Encuesta nacional",    "cls": "" }
+    "survey":       { "label": "Encuesta nacional",    "cls": "" },
+    "report":       { "label": "Reporte institucional", "cls": "" }
   },
   "biblioGroups": [
     { "id": "anchor",     "label": "Documento anclaje (0–5 años)" },
@@ -47,7 +48,12 @@
     { "id": "chile",      "label": "Evidencia y guías chilenas" },
     { "id": "intl",       "label": "Guías internacionales" },
     { "id": "theory",     "label": "Marcos teóricos del desarrollo" },
-    { "id": "context",    "label": "Contexto y tendencias" }
+    { "id": "context",    "label": "Contexto y tendencias" },
+    { "id": "language",   "label": "Lenguaje y alfabetización digital" },
+    { "id": "mental",     "label": "Salud mental" },
+    { "id": "classic",    "label": "Estudios fundacionales" },
+    { "id": "fisica",     "label": "Actividad física y motricidad" },
+    { "id": "vision",     "label": "Visión" }
   ],
   "filterTypes": [
     { "id": "all",          "label": "Todas" },

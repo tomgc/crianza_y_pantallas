@@ -1736,5 +1736,615 @@
     "title": "Objective Monitoring of Tablet Use–Related Optical Exposure and Its Association With Axial Length in Preschool Children: Cross-Sectional Intelligent Monitoring Study",
     "journal": "JMIR Human Factors 13:e79266. Transversal, N=199, 3–6 años; monitoreo objetivo tablet; brillo ambiental β=−0,13",
     "url": "https://doi.org/10.2196/79266"
+  },
+  {
+    "id": "Giovanelli2025",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Flaibam Giovanelli J., Soares da Silva L., Abadio de Oliveira W., Scatena A., Ferreira Semolini F., Monezi Andrade A.L. 2025",
+    "title": "Mediación parental en el uso de pantallas por niños y adolescentes: una revisión sistemática de la literatura",
+    "journal": "Ciencias Psicológicas 19(1):e4130",
+    "url": "https://doi.org/10.22235/cp.v19i1.4130"
+  },
+  {
+    "id": "Coyne2023",
+    "group": "recent",
+    "featured": false,
+    "type": "longitudinal",
+    "authors": "Coyne S.M., Rogers A., Holmgren H.G., Booth M.A. 2023",
+    "title": "Masters of Media: A longitudinal study of parental media efficacy, media monitoring, and child problematic media use across early childhood in the United States",
+    "journal": "Journal of Children and Media 17(3):318–335",
+    "url": "https://doi.org/10.1080/17482798.2023.2200958"
+  },
+  {
+    "id": "Raj2023",
+    "group": "recent",
+    "featured": false,
+    "type": "longitudinal",
+    "authors": "Raj D., Ahmad N., Mohd Zulkefli N.A., Lim P.Y. 2023",
+    "title": "Stop and Play Digital Health Education Intervention for Reducing Excessive Screen Time Among Preschoolers From Low Socioeconomic Families: Cluster Randomized Controlled Trial",
+    "journal": "Journal of Medical Internet Research 25:e40955",
+    "url": "https://doi.org/10.2196/40955"
+  },
+  {
+    "id": "MartinCardaba2024",
+    "group": "school",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Martín-Cárdaba M.Á., Martínez Díaz M.V., Lafuente Pérez P., García Castro J. 2024",
+    "title": "Smartphone Ownership, Minors' Well-being, and Parental Mediation Strategies. An Analysis in the Context of Social Media Influencers",
+    "journal": "Journal of Youth and Adolescence 53(10):2202–2218",
+    "url": "https://doi.org/10.1007/s10964-024-02013-7"
+  },
+  {
+    "id": "Jusiene2025",
+    "group": "recent",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Jusienė R., Breidokienė R., Baukienė E., Rakickienė L. 2025",
+    "title": "Emotional Reactivity and Behavioral Problems in Preschoolers: The Interplay of Parental Stress, Media-Related Coping, and Child Screen Time",
+    "journal": "Children 12(2):188",
+    "url": "https://doi.org/10.3390/children12020188"
+  },
+  {
+    "id": "Wang2022",
+    "group": "recent",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Wang X., Wu Y., Yao C., Wu X., Ruan Y., Ye S. 2022",
+    "title": "Correlates of preschoolers' screen time in China: parental factors",
+    "journal": "BMC Pediatrics 22:368",
+    "url": "https://doi.org/10.1186/s12887-022-03443-7"
+  },
+  {
+    "id": "Krantz2026",
+    "group": "recent",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Krantz S., Kirkvaag N.M.W., Svanholm S., Arvidsson L. 2026",
+    "title": "Digital mediation, parental self-efficacy and social context: a cross-sectional study on parents in Sweden",
+    "journal": "BMC Public Health 26:1246",
+    "url": "https://doi.org/10.1186/s12889-026-27351-y"
+  },
+  {
+    "id": "Moreno2024",
+    "group": "intl",
+    "featured": false,
+    "type": "guideline",
+    "authors": "Moreno M.A., Radesky J., Walsh M.C., Tomopoulos S. 2024",
+    "title": "The Family Media Plan",
+    "journal": "Pediatrics 154(6):e2024067417",
+    "url": "https://doi.org/10.1542/peds.2024-067417"
+  },
+  {
+    "id": "Cho2025",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Cho H., Carpenter C.J., Li W. 2025",
+    "title": "Media literacy interventions: meta-analytic review of 40 years of research",
+    "journal": "Human Communication Research 51(2):57–79",
+    "url": "https://doi.org/10.1093/hcr/hqaf004"
+  },
+  {
+    "id": "Huang2024",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Huang G., Jia W., Yu W. 2024",
+    "title": "Media Literacy Interventions Improve Resilience to Misinformation: A Meta-Analytic Investigation of Overall Effect and Moderating Factors",
+    "journal": "Communication Research (online first, 04-10-2024)",
+    "url": "https://doi.org/10.1177/00936502241288103"
+  },
+  {
+    "id": "Ye2022",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Ye J., Lai X., Wong G.K.-W. 2022",
+    "title": "The transfer effects of computational thinking: A systematic review with meta-analysis and qualitative synthesis",
+    "journal": "Journal of Computer Assisted Learning 38(6):1620–1638",
+    "url": "https://doi.org/10.1111/jcal.12723"
+  },
+  {
+    "id": "Lei2020",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Lei H., Chiu M.M., Li F., Wang X., Geng Y.J. 2020",
+    "title": "Computational thinking and academic achievement: A meta-analysis among students",
+    "journal": "Children and Youth Services Review 118:105439",
+    "url": "https://doi.org/10.1016/j.childyouth.2020.105439"
+  },
+  {
+    "id": "Vaiopoulou2025",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Vaiopoulou J., et al. 2025",
+    "title": "Effects of Educational Robotics on Kindergarteners' Collaboration, Communication, Critical Thinking, and Creativity: A Meta-Analysis",
+    "journal": "Journal of Science Education and Technology 34(1):73–87",
+    "url": "https://doi.org/10.1007/s10956-024-10149-1"
+  },
+  {
+    "id": "AlonsoGarcia2024",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Alonso-García S., Rodríguez-Fuentes A.-V., Ramos Navas-Parejo M., Victoria-Maldonado J.-J. 2024",
+    "title": "Enhancing computational thinking in early childhood education with educational robotics: A meta-analysis",
+    "journal": "Heliyon 10(13):e33249",
+    "url": "https://doi.org/10.1016/j.heliyon.2024.e33249"
+  },
+  {
+    "id": "Godaert2022",
+    "group": "school",
+    "featured": false,
+    "type": "review",
+    "authors": "Godaert E., Aesaert K., Voogt J., van Braak J. 2022",
+    "title": "Assessment of students' digital competences in primary school: a systematic review",
+    "journal": "Education and Information Technologies 27(7):9953–10011",
+    "url": "https://doi.org/10.1007/s10639-022-11020-9"
+  },
+  {
+    "id": "LiuSAGE2024",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Liu S., Reynolds B.L., Thomas N., Soyoof A. 2024",
+    "title": "The Use of Digital Technologies to Develop Young Children's Language and Literacy Skills: A Systematic Review",
+    "journal": "SAGE Open 14(1)",
+    "url": "https://doi.org/10.1177/21582440241230850"
+  },
+  {
+    "id": "ElGemayel2025",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "El Gemayel S.M., Flewitt R., Goodall J. 2025",
+    "title": "0-3-Year-old children's digital language and literacy practices at home: A scoping review of the literature",
+    "journal": "Journal of Early Childhood Literacy (online first)",
+    "url": "https://doi.org/10.1177/14687984251388333"
+  },
+  {
+    "id": "LopezLopez2025",
+    "group": "chile",
+    "featured": false,
+    "type": "review",
+    "authors": "López López K.E. 2025",
+    "title": "Competencias digitales en estudiantes de educación básica. Revisión sistemática",
+    "journal": "Revista Tribunal 5(12):667–682",
+    "url": "https://doi.org/10.59659/revistatribunal.v5i12.230"
+  },
+  {
+    "id": "Maertens2025",
+    "group": "recent",
+    "featured": false,
+    "type": "longitudinal",
+    "authors": "Maertens R., et al. 2025",
+    "title": "Psychological booster shots targeting memory increase long-term resistance against misinformation",
+    "journal": "Nature Communications 16",
+    "url": "https://doi.org/10.1038/s41467-025-57205-x"
+  },
+  {
+    "id": "Maertens2021",
+    "group": "recent",
+    "featured": false,
+    "type": "longitudinal",
+    "authors": "Maertens R., Roozenbeek J., Basol M., van der Linden S. 2021",
+    "title": "Long-Term Effectiveness of Inoculation Against Misinformation: Three Longitudinal Experiments",
+    "journal": "Journal of Experimental Psychology: Applied 27(1):1–16",
+    "url": "https://doi.org/10.1037/xap0000315"
+  },
+  {
+    "id": "QuinonezPech2020",
+    "group": "chile",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Quiñonez Pech S.H., Zapata González A., Canto Herrera P.J. 2020",
+    "title": "Competencia digital en niños de educación básica del sureste de México",
+    "journal": "RICSH Revista Iberoamericana de las Ciencias Sociales y Humanísticas 9(17):289–311",
+    "url": "https://doi.org/10.23913/ricsh.v9i17.199"
+  },
+  {
+    "id": "Fry2025",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Fry D., Krzeczkowska A., Ren J., Lu M., Fang X.; Into the Light Index Study Group. 2025",
+    "title": "Prevalence estimates and nature of online child sexual exploitation and abuse: a systematic review and meta-analysis",
+    "journal": "The Lancet Child & Adolescent Health 9(3):184–193",
+    "url": "https://doi.org/10.1016/S2352-4642(24)00329-8"
+  },
+  {
+    "id": "Mori2023",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Mori C., Park J., Racine N., Ganshorn H., Hartwick C., Madigan S. 2023",
+    "title": "Exposure to sexual content and problematic sexual behaviors in children and adolescents: a systematic review and meta-analysis",
+    "journal": "Child Abuse & Neglect 143:106255",
+    "url": "https://doi.org/10.1016/j.chiabu.2023.106255"
+  },
+  {
+    "id": "Sutton2024",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Sutton S., Finkelhor D. 2024",
+    "title": "Perpetrators' identity in online crimes against children: a meta-analysis",
+    "journal": "Trauma, Violence, & Abuse 25(3):1756–1768",
+    "url": "https://doi.org/10.1177/15248380231194072"
+  },
+  {
+    "id": "Zgambo2025",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Zgambo M., Anyango E., Arabiat D.H., Ngune I., Mörelius E., Zhang M., Whitehead L.C. 2025",
+    "title": "Effect of digital safety interventions on parental practices in safeguarding children's digital activities: systematic review and meta-analysis",
+    "journal": "JMIR Pediatrics and Parenting 8:e70745",
+    "url": "https://doi.org/10.2196/70745"
+  },
+  {
+    "id": "Schittenhelm2024",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Schittenhelm C., Kops M., Moosburner M., Fischer S.M., Wachs S. 2024",
+    "title": "Cybergrooming victimization among young people: a systematic review of prevalence rates, risk factors, and outcomes",
+    "journal": "Adolescent Research Review 10:169–200",
+    "url": "https://doi.org/10.1007/s40894-024-00248-w"
+  },
+  {
+    "id": "Moosburner2025",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Moosburner M., Weber C., Kuban T., Wachs S., Schmidt A.F., Etzler S., Rettenberger M. 2025",
+    "title": "Understanding cybergrooming: a systematic review of perpetrator characteristics, strategies, and types",
+    "journal": "Trauma, Violence, & Abuse (publicación en línea)",
+    "url": "https://doi.org/10.1177/15248380251316223"
+  },
+  {
+    "id": "RayHenry2025",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Ray A., Henry N. 2025",
+    "title": "Sextortion: a scoping review",
+    "journal": "Trauma, Violence, & Abuse 26(1):138–155",
+    "url": "https://doi.org/10.1177/15248380241277271"
+  },
+  {
+    "id": "Tosuntas2024",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Tosuntaş Ş.B., et al. 2024",
+    "title": "Sharenting: a systematic review of the empirical literature",
+    "journal": "Journal of Family Theory & Review (publicación en línea)",
+    "url": "https://doi.org/10.1111/jftr.12566"
+  },
+  {
+    "id": "Finkelhor2021",
+    "group": "school",
+    "featured": false,
+    "type": "review",
+    "authors": "Finkelhor D., Walsh K., Jones L., Mitchell K., Collier A. 2021",
+    "title": "Youth internet safety education: aligning programs with the evidence base",
+    "journal": "Trauma, Violence, & Abuse 22(5):1233–1247",
+    "url": "https://doi.org/10.1177/1524838020916257"
+  },
+  {
+    "id": "Finkelhor2022",
+    "group": "school",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Finkelhor D., Turner H., Colburn D. 2022",
+    "title": "Prevalence of online sexual offenses against children in the US",
+    "journal": "JAMA Network Open 5(10):e2234471",
+    "url": "https://doi.org/10.1001/jamanetworkopen.2022.34471"
+  },
+  {
+    "id": "deMeloBarreto2025",
+    "group": "recent",
+    "featured": false,
+    "type": "transversal",
+    "authors": "de Melo Barreto Á.P., de Moura C.S., Cunha M.J.S., Mannan H., D'Angelo M.F.S.V., Libório M.P. 2025",
+    "title": "Mapping of vulnerability factors of Brazilian adolescents on the internet",
+    "journal": "Child Indicators Research 18(4):1657–1683",
+    "url": "https://doi.org/10.1007/s12187-025-10254-6"
+  },
+  {
+    "id": "DisruptingHarmBrasil2026",
+    "group": "intl",
+    "featured": false,
+    "type": "report",
+    "authors": "ECPAT, INTERPOL y UNICEF. 2026",
+    "title": "Disrupting Harm in Brazil: evidence on technology-facilitated child sexual exploitation and abuse",
+    "journal": "Safe Online (reporte institucional)",
+    "url": "https://www.unicef.org/brazil/relatorios/disrupting-harm-brazil-2026"
+  },
+  {
+    "id": "WeProtect2023",
+    "group": "intl",
+    "featured": false,
+    "type": "report",
+    "authors": "WeProtect Global Alliance. 2023",
+    "title": "Global Threat Assessment 2023",
+    "journal": "WeProtect Global Alliance (reporte institucional)",
+    "url": "https://www.weprotect.org/global-threat-assessment-23/"
+  },
+  {
+    "id": "ThornNCMEC2024",
+    "group": "intl",
+    "featured": false,
+    "type": "report",
+    "authors": "Thorn y National Center for Missing & Exploited Children (NCMEC). 2024",
+    "title": "Trends in financial sextortion: an investigation of sextortion reports in NCMEC CyberTipline data",
+    "journal": "Thorn/NCMEC (reporte institucional)",
+    "url": "https://www.thorn.org/research/library/financial-sextortion/"
+  },
+  {
+    "id": "Li2024",
+    "group": "mental",
+    "featured": false,
+    "type": "meta",
+    "authors": "Li C., Wang P., Martin-Moratinos M., et al. 2024",
+    "title": "Traditional bullying and cyberbullying in the digital age and its associated mental health problems in children and adolescents: a meta-analysis",
+    "journal": "European Child & Adolescent Psychiatry 33:2895–2909",
+    "url": "https://doi.org/10.1007/s00787-022-02128-x"
+  },
+  {
+    "id": "Kasturiratna2024",
+    "group": "mental",
+    "featured": false,
+    "type": "review",
+    "authors": "Kasturiratna K.T.A.S., Hartanto A., Chen C.H.Y., Tong E.M.W., Majeed N.M. 2024",
+    "title": "Umbrella review of meta-analyses on the risk factors, protective factors, consequences and interventions of cyberbullying victimization",
+    "journal": "Nature Human Behaviour 9(1):101–132",
+    "url": "https://doi.org/10.1038/s41562-024-02011-6"
+  },
+  {
+    "id": "Marciano2020",
+    "group": "mental",
+    "featured": false,
+    "type": "meta",
+    "authors": "Marciano L., Schulz P.J., Camerini A.-L. 2020",
+    "title": "Cyberbullying Perpetration and Victimization in Youth: A Meta-Analysis of Longitudinal Studies",
+    "journal": "Journal of Computer-Mediated Communication 25(2):163–181",
+    "url": "https://doi.org/10.1093/jcmc/zmz031"
+  },
+  {
+    "id": "Grama2024",
+    "group": "mental",
+    "featured": false,
+    "type": "meta",
+    "authors": "Grama D.I., Georgescu R.D., Coşa I.M., Dobrean A. 2024",
+    "title": "Parental Risk and Protective Factors Associated with Bullying Victimization in Children and Adolescents: A Systematic Review and Meta-analysis",
+    "journal": "Clinical Child and Family Psychology Review 27(3):627–657",
+    "url": "https://doi.org/10.1007/s10567-024-00473-8"
+  },
+  {
+    "id": "Polanin2022",
+    "group": "school",
+    "featured": false,
+    "type": "meta",
+    "authors": "Polanin J.R., Espelage D.L., Grotpeter J.K., Ingram K., Michaelson L., Spinney E., Valido A., El Sheikh A., Torgal C., Robinson L. 2022",
+    "title": "A Systematic Review and Meta-analysis of Interventions to Decrease Cyberbullying Perpetration and Victimization",
+    "journal": "Prevention Science 23(3):439–454",
+    "url": "https://doi.org/10.1007/s11121-021-01259-y"
+  },
+  {
+    "id": "Chen2023",
+    "group": "school",
+    "featured": false,
+    "type": "meta",
+    "authors": "Chen Q., Chan K.L., Guo S., Chen M., Lo C.K.M., Ip P. 2023",
+    "title": "Effectiveness of Digital Health Interventions in Reducing Bullying and Cyberbullying: A Meta-Analysis",
+    "journal": "Trauma, Violence, & Abuse 24(3):1986–2002",
+    "url": "https://doi.org/10.1177/15248380221082090"
+  },
+  {
+    "id": "Chen2024b",
+    "group": "school",
+    "featured": false,
+    "type": "meta",
+    "authors": "Chen Q., Lin W., Wu Q., Chan K.L. 2024",
+    "title": "The Effectiveness of Interventions on Bullying and Cyberbullying Bystander: A Meta-Analysis",
+    "journal": "Trauma, Violence, & Abuse (publicación anticipada en línea)",
+    "url": "https://doi.org/10.1177/15248380241297362"
+  },
+  {
+    "id": "Nagata2025c",
+    "group": "mental",
+    "featured": false,
+    "type": "longitudinal",
+    "authors": "Nagata J.M., Shim J., Balasubramanian P., et al. 2025",
+    "title": "Cyberbullying, mental health, and substance use experimentation among early adolescents: a prospective cohort study",
+    "journal": "The Lancet Regional Health – Americas 46:101002",
+    "url": "https://doi.org/10.1016/j.lana.2025.101002"
+  },
+  {
+    "id": "Sidera2021",
+    "group": "school",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Sidera F., Serrat E., Rostan C. 2021",
+    "title": "Effects of Cybervictimization on the Mental Health of Primary School Students",
+    "journal": "Frontiers in Public Health 9:588209",
+    "url": "https://doi.org/10.3389/fpubh.2021.588209"
+  },
+  {
+    "id": "Sorrentino2023",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Sorrentino A., Sulla F., Santamato M., di Furia M., Toto G.A., Monacis L. 2023",
+    "title": "Has the COVID-19 Pandemic Affected Cyberbullying and Cybervictimization Prevalence among Children and Adolescents? A Systematic Review",
+    "journal": "International Journal of Environmental Research and Public Health 20(10):5825",
+    "url": "https://doi.org/10.3390/ijerph20105825"
+  },
+  {
+    "id": "Malta2024",
+    "group": "chile",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Malta D.C., Souza J.B., et al. 2024",
+    "title": "Cyberbullying among Brazilian schoolchildren: data from the National Student Health Survey, 2019",
+    "journal": "Ciência & Saúde Coletiva 29(9):e19572023",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39194122/"
+  },
+  {
+    "id": "WHO-HBSC2024",
+    "group": "intl",
+    "featured": false,
+    "type": "report",
+    "authors": "Cosma A., Molcho M., Pickett W. 2024",
+    "title": "A focus on adolescent peer violence and bullying in Europe, central Asia and Canada. Health Behaviour in School-aged Children international report from the 2021/2022 survey. Volume 2",
+    "journal": "WHO Regional Office for Europe (reporte institucional)",
+    "url": "https://www.who.int/europe/news/item/27-03-2024-one-in-six-school-aged-children-experiences-cyberbullying--finds-new-who-europe-study"
+  },
+  {
+    "id": "Boyland2025",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Boyland E., Muc M., Coates A., Ells L., Halford J.C.G., Hill Z., Maden M., Matu J., Maynard M.J., Rodgers J., Targett V., Tatlow-Golden M., Young M., Jones A. 2025",
+    "title": "Food marketing, eating and health outcomes in children and adults: a systematic review and meta-analysis",
+    "journal": "British Journal of Nutrition 133(6):781–805",
+    "url": "https://doi.org/10.1017/S0007114524000102"
+  },
+  {
+    "id": "Garg2025",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Garg D., Smith E., Attuquayefio T. 2025",
+    "title": "Watching Television While Eating Increases Food Intake: A Systematic Review and Meta-Analysis of Experimental Studies",
+    "journal": "Nutrients 17(1):166",
+    "url": "https://doi.org/10.3390/nu17010166"
+  },
+  {
+    "id": "Evans2023",
+    "group": "recent",
+    "featured": false,
+    "type": "meta",
+    "authors": "Evans R.K., Christiansen P., Finlay A., Jones A., Maden M., Boyland E. 2023",
+    "title": "A systematic review and meta-analysis of the effect of digital game-based or influencer food and non-alcoholic beverage marketing on children and adolescents: Exploring hierarchy of effects outcomes",
+    "journal": "Obesity Reviews 24(12):e13630",
+    "url": "https://doi.org/10.1111/obr.13630"
+  },
+  {
+    "id": "McCarthy2022",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "Mc Carthy C.M., de Vries R., Mackenbach J.D. 2022",
+    "title": "The influence of unhealthy food and beverage marketing through social media and advergaming on diet-related outcomes in children—A systematic review",
+    "journal": "Obesity Reviews 23(6):e13441",
+    "url": "https://doi.org/10.1111/obr.13441"
+  },
+  {
+    "id": "Matos2026",
+    "group": "recent",
+    "featured": false,
+    "type": "review",
+    "authors": "de Paula Matos J., Caldeira T.C.M., Claro R.M., Duarte C.K., Horta P.M. 2026",
+    "title": "Mandatory Regulation of Food Marketing Directed at Children and Adolescents Within the Digital Context: A Systematic Scoping Review",
+    "journal": "Obesity Reviews 27(6):e70076",
+    "url": "https://doi.org/10.1111/obr.70076"
+  },
+  {
+    "id": "Smith2020",
+    "group": "recent",
+    "featured": false,
+    "type": "longitudinal",
+    "authors": "Smith R., Kelly B., Yeatman H., Moore C., Baur L., King L., Boyland E., Chapman K., Hughes C., Bauman A. 2020",
+    "title": "Advertising Placement in Digital Game Design Influences Children's Choices of Advertised Snacks: A Randomized Trial",
+    "journal": "Journal of the Academy of Nutrition and Dietetics 120(3):404–413",
+    "url": "https://doi.org/10.1016/j.jand.2019.07.017"
+  },
+  {
+    "id": "Mulligan2025",
+    "group": "recent",
+    "featured": false,
+    "type": "longitudinal",
+    "authors": "Mulligan C., Remedios L., Ramsay T., Pauzé E., Bagnato M., Potvin Kent M. 2025",
+    "title": "The impact of brand advertising on children's food preferences and behavioural intentions: an experimental study",
+    "journal": "Public Health Nutrition 28(1):e90",
+    "url": "https://doi.org/10.1017/S1368980025000369"
+  },
+  {
+    "id": "Ventura2023",
+    "group": "recent",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Ventura A.K., Hart C.N., Phelan S., Jelalian E., Wing R.R. 2023",
+    "title": "Associations Between Technology Use, Responsive Feeding, and Child Temperament Among Prior Prenatal Intervention Participants",
+    "journal": "Journal of Developmental & Behavioral Pediatrics 44(4):e315–e321",
+    "url": "https://doi.org/10.1097/DBP.0000000000001174"
+  },
+  {
+    "id": "Jensen2021",
+    "group": "chile",
+    "featured": false,
+    "type": "longitudinal",
+    "authors": "Jensen M.L., Dillman Carpentier F., Adair L., Corvalán C., Popkin B.M., Taillie L.S. 2021",
+    "title": "Examining Chile's unique food marketing policy: TV advertising and dietary intake in preschool children, a pre- and post- policy study",
+    "journal": "Pediatric Obesity 16(4):e12735",
+    "url": "https://doi.org/10.1111/ijpo.12735"
+  },
+  {
+    "id": "DillmanCarpentier2020",
+    "group": "chile",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Dillman Carpentier F.R., Correa T., Reyes M., Taillie L.S. 2020",
+    "title": "Evaluating the impact of Chile's marketing regulation of unhealthy foods and beverages: pre-school and adolescent children's changes in exposure to food advertising on television",
+    "journal": "Public Health Nutrition 23(4):747–755",
+    "url": "https://doi.org/10.1017/S1368980019003355"
+  },
+  {
+    "id": "FlemingMilici2025",
+    "group": "recent",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Fleming-Milici F., Gershman H., Agresta H.O., McCann M., Harris J. 2025",
+    "title": "Young Children's (Aged 3 to 8 Years) Food and Beverage Brand Exposure on YouTube and YouTube Kids: An Observational Study and Content Analysis",
+    "journal": "Journal of the Academy of Nutrition and Dietetics (Epub 25 jun 2025)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40578480/"
+  },
+  {
+    "id": "Kenney2024",
+    "group": "recent",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Kenney E.L., Mozaffarian R.S., Norris J., Fleming-Milici F., Bleich S.N. 2024",
+    "title": "Estimating Young Children's Exposure to Food and Beverage Marketing on Mobile Devices",
+    "journal": "Current Developments in Nutrition (Epub 6 nov 2024)",
+    "url": "https://doi.org/10.1016/j.cdnut.2024.104505"
+  },
+  {
+    "id": "Nieto2023",
+    "group": "chile",
+    "featured": false,
+    "type": "transversal",
+    "authors": "Nieto C., Espinosa F., Valero-Morales I., Boyland E., Potvin Kent M., Tatlow-Golden M., Ortiz-Panozo E., Barquera S. 2023",
+    "title": "Digital food and beverage marketing appealing to children and adolescents: An emerging challenge in Mexico",
+    "journal": "Pediatric Obesity 18(7):e13036",
+    "url": "https://doi.org/10.1111/ijpo.13036"
+  },
+  {
+    "id": "WHO2023",
+    "group": "intl",
+    "featured": false,
+    "type": "guideline",
+    "authors": "World Health Organization. 2023",
+    "title": "Policies to protect children from the harmful impact of food marketing: WHO guideline",
+    "journal": "World Health Organization. ISBN 9789240075412",
+    "url": "https://www.who.int/publications/i/item/9789240075412"
   }
 ]

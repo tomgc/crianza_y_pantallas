@@ -2467,49 +2467,348 @@
     }
   },
   "co-regulacion-lactante": {
-    "claims": []
+    "claims": [
+      {
+        "text": "El plan familiar de medios (AAP Family Media Plan) cubre desde el nacimiento: incluye zonas libres de pantalla, tiempos sin dispositivos y co-uso adaptado al estadio del desarrollo. Los propios autores señalan que el uso de medios de los cuidadores puede desviar la atención del compromiso verbal y emocional con el bebé.",
+        "certainty": "medium",
+        "refs": [
+          "Moreno2024"
+        ]
+      }
+    ]
   },
   "co-regulacion-primera-infancia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "La autoeficacia mediática parental temprana predice longitudinalmente menor uso problemático de medios en el niño. El monitoreo restrictivo también se asocia a menor uso problemático en el tiempo.",
+        "certainty": "high",
+        "refs": [
+          "Coyne2023"
+        ]
+      },
+      {
+        "text": "El estrés parental se asocia con mayor tiempo de pantalla infantil: el 35,2% de los padres usa pantallas como estrategia de afrontamiento emocional. El distrés parental predice reactividad emocional en el niño de forma directa e indirecta vía mayor tiempo de pantalla.",
+        "certainty": "high",
+        "refs": [
+          "Jusiene2025"
+        ]
+      },
+      {
+        "text": "El co-uso y la selección de contenido educativo por el cuidador se asocian a mejores desenlaces de vocabulario. Los medios educativos correlacionan con desarrollo del lenguaje (r=0,17) mientras que la exposición naturalista sin mediación no muestra asociación global.",
+        "certainty": "high",
+        "refs": [
+          "Jing2023"
+        ]
+      }
+    ]
   },
   "co-regulacion-preescolar": {
-    "claims": []
+    "claims": [
+      {
+        "text": "Una intervención ECA (N=352 díadas madre–hijo, 3–4 años) redujo el tiempo de pantalla infantil en 202 min/semana a los 3 meses (β=−202,29; IC95% −224,48 a −180,10) y aumentó la autoeficacia materna (β=1,59). La autoeficacia parental digital es la variable más claramente modificable por intervención.",
+        "certainty": "high",
+        "refs": [
+          "Raj2023"
+        ]
+      },
+      {
+        "text": "El tiempo de pantalla del padre predice el tiempo de pantalla del preescolar con relación dosis-efecto, incluso controlando factores maternos. Las reglas inconsistentes del hogar y la accesibilidad a dispositivos son factores de riesgo adicionales.",
+        "certainty": "high",
+        "refs": [
+          "Wang2022"
+        ]
+      },
+      {
+        "text": "La autoeficacia parental, el idioma materno y las redes de apoyo social configuran las estrategias de mediación digital. Cuidadores con lengua no nativa y redes de apoyo limitadas ejercen mediación más intensa, lo que sugiere que las intervenciones deben considerar el contexto sociocultural.",
+        "certainty": "medium",
+        "refs": [
+          "Krantz2026"
+        ]
+      }
+    ]
   },
   "co-regulacion-ninez-media": {
-    "claims": []
+    "claims": [
+      {
+        "text": "La mediación parental activa y restrictiva son factores protectores frente al uso excesivo de internet y la dependencia de videojuegos. Las estrategias de mediación activa muestran efecto protector en salud mental, aunque la evidencia proviene mayoritariamente de diseños transversales.",
+        "certainty": "medium",
+        "refs": [
+          "Giovanelli2025"
+        ]
+      },
+      {
+        "text": "El plan familiar de medios (AAP) recomienda reglas consistentes, co-visionado y zonas libres de pantalla para toda la niñez, adaptando las estrategias al estadio del desarrollo.",
+        "certainty": "high",
+        "refs": [
+          "Moreno2024"
+        ]
+      }
+    ]
   },
   "co-regulacion-preadolescencia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "En preadolescentes con dispositivo propio, el efecto protector de la mediación parental activa se diluye significativamente. La tenencia de dispositivo propio se asocia a mayor malestar psicológico, uso problemático e imitación de conductas de riesgo de influencers.",
+        "certainty": "high",
+        "refs": [
+          "MartinCardaba2024"
+        ]
+      },
+      {
+        "text": "La mediación activa y restrictiva protegen frente al ciberacoso en preadolescentes, pero su eficacia disminuye cuando el menor posee acceso autónomo a dispositivos. La transición hacia la autorregulación del propio niño requiere estrategias distintas a las de tramos más tempranos.",
+        "certainty": "medium",
+        "refs": [
+          "Giovanelli2025",
+          "MartinCardaba2024"
+        ]
+      }
+    ]
   },
   "alfabetizacion-lactante": {
-    "claims": []
+    "claims": [
+      {
+        "text": "Las prácticas de lenguaje y alfabetización digital en el hogar de menores de 3 años están sub-investigadas: existe escasez de estudios observacionales y longitudinales que definan qué capacita a esta edad.",
+        "certainty": "high",
+        "refs": [
+          "ElGemayel2025"
+        ]
+      },
+      {
+        "text": "El uso de tecnologías digitales (e-books, apps) para promover lenguaje y alfabetización emergente en lactantes documenta prácticas existentes, pero la eficacia de las intervenciones permanece incierta por falta de diseños experimentales.",
+        "certainty": "medium",
+        "refs": [
+          "LiuSAGE2024"
+        ]
+      }
+    ]
   },
   "alfabetizacion-primera-infancia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "Algunos programas de robótica educativa inician antes de los 3 años con impacto sobre el pensamiento computacional, aunque la mayor parte de la evidencia se concentra en preescolar.",
+        "certainty": "medium",
+        "refs": [
+          "AlonsoGarcia2024"
+        ]
+      },
+      {
+        "text": "El uso de tecnologías digitales para promover lenguaje y alfabetización emergente en niños de 1–3 años documenta diversas prácticas, pero la eficacia experimental es incierta. El campo requiere diseños longitudinales.",
+        "certainty": "high",
+        "refs": [
+          "LiuSAGE2024"
+        ]
+      }
+    ]
   },
   "alfabetizacion-preescolar": {
-    "claims": []
+    "claims": [
+      {
+        "text": "La robótica educativa en kindergarten mejora la colaboración (g=0,875), la comunicación (g=0,481), el pensamiento crítico (g=0,561) y la creatividad (g=0,511). Los efectos son consistentes entre estudios, aunque se requieren estudios de mayor duración.",
+        "certainty": "high",
+        "refs": [
+          "Vaiopoulou2025"
+        ]
+      },
+      {
+        "text": "Las intervenciones de robótica en educación infantil impactan significativamente el pensamiento computacional. Los marcos curriculares europeos recientes incorporan alfabetización digital y pensamiento computacional desde los primeros años.",
+        "certainty": "high",
+        "refs": [
+          "AlonsoGarcia2024"
+        ]
+      }
+    ]
   },
   "alfabetizacion-ninez-media": {
-    "claims": []
+    "claims": [
+      {
+        "text": "Las intervenciones de alfabetización mediática producen efectos positivos en conocimiento, actitudes y comportamiento en escolares, sin decaimiento sustancial entre medición inmediata y seguimiento. Los efectos son más fuertes para resultados de conocimiento que de comportamiento.",
+        "certainty": "medium",
+        "refs": [
+          "Cho2025"
+        ]
+      },
+      {
+        "text": "El pensamiento computacional se correlaciona positivamente con el logro académico (r=0,288), con la asociación más fuerte en primaria que en secundaria. Transfiere a matemáticas, ciencias, ingeniería y humanidades.",
+        "certainty": "high",
+        "refs": [
+          "Lei2020"
+        ]
+      },
+      {
+        "text": "Las intervenciones de pensamiento computacional en primaria muestran efecto de transferencia significativo a otras áreas disciplinares. Los mejores resultados se obtienen con currículos integrados.",
+        "certainty": "medium",
+        "refs": [
+          "Ye2022"
+        ]
+      },
+      {
+        "text": "La evaluación de competencias digitales en primaria privilegia 'información y alfabetización de datos' y 'creación de contenido', descuidando 'uso seguro y responsable' y 'resolución de problemas'. El área de seguridad digital está sistemáticamente sub-medida.",
+        "certainty": "high",
+        "refs": [
+          "Godaert2022"
+        ]
+      },
+      {
+        "text": "Estudios latinoamericanos reportan que entre el 67% y el 78% de los estudiantes de primaria presentan competencias digitales deficientes. La evidencia regional se basa en muestras pequeñas (N<500) sin estándares comunes de medición.",
+        "certainty": "medium",
+        "refs": [
+          "QuinonezPech2020",
+          "LopezLopez2025"
+        ]
+      }
+    ]
   },
   "alfabetizacion-preadolescencia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "Intervenciones de alfabetización mediática mejoran la resiliencia a la desinformación (d=0,60), el discernimiento de noticias falsas (d=0,76) y reducen su difusión (d=1,04) en muestras predominantemente adultas y universitarias. La transferencia de estos efectos a preadolescentes de 9–12 años es conceptualmente plausible pero no ha sido demostrada empíricamente de forma directa.",
+        "certainty": "medium",
+        "refs": [
+          "Huang2024"
+        ]
+      },
+      {
+        "text": "Los efectos de inoculación contra desinformación pueden mantenerse durante al menos tres meses con refuerzos de memoria; sin refuerzo decaen en semanas. Esta evidencia proviene de muestras adultas. La versión junior del juego Bad News existe para 8–10 años pero no fue evaluada en estos experimentos longitudinales.",
+        "certainty": "medium",
+        "refs": [
+          "Maertens2025",
+          "Maertens2021"
+        ]
+      },
+      {
+        "text": "Las intervenciones de alfabetización mediática producen efectos positivos y estables en conocimiento mediático. La entrega presencial muestra efectos mayores que la online.",
+        "certainty": "medium",
+        "refs": [
+          "Cho2025"
+        ]
+      },
+      {
+        "text": "La evaluación de competencias digitales en primaria superior revela vacíos sistemáticos en 'uso seguro y responsable' y 'resolución de problemas' del marco DigComp. Las habilidades técnicas están mejor evaluadas que el pensamiento crítico sobre contenidos.",
+        "certainty": "high",
+        "refs": [
+          "Godaert2022"
+        ]
+      }
+    ]
   },
   "privacidad-lactante": {
-    "claims": []
+    "claims": [
+      {
+        "text": "El sharenting —la práctica de los cuidadores de compartir imágenes y datos del niño en redes sociales— afecta a lactantes sin agencia digital propia. Una revisión sistemática de 61 estudios documenta sus implicancias para la privacidad presente y futura del menor, incluyendo la construcción de una huella digital sin consentimiento.",
+        "certainty": "high",
+        "refs": [
+          "Tosuntas2024"
+        ]
+      }
+    ]
   },
   "privacidad-primera-infancia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "El sharenting en la primera infancia construye una identidad digital del niño antes de que pueda consentirla. La evidencia documenta dilemas en redes sociales, perspectivas de los propios niños sobre su privacidad y factores que predicen las prácticas de los cuidadores.",
+        "certainty": "high",
+        "refs": [
+          "Tosuntas2024"
+        ]
+      }
+    ]
   },
   "privacidad-preescolar": {
-    "claims": []
+    "claims": [
+      {
+        "text": "Las intervenciones de seguridad digital dirigidas a cuidadores de niños de 3–12 años mejoran el conocimiento y las prácticas parentales (Hedges g=−0,47 en ECAs). Sin embargo, ningún meta-análisis demuestra que estas intervenciones reduzcan la victimización sexual real: la brecha entre conocimiento declarado y reducción efectiva de daño es el vacío más crítico del campo.",
+        "certainty": "medium",
+        "refs": [
+          "Zgambo2025"
+        ]
+      },
+      {
+        "text": "El sharenting afecta a preescolares sin agencia digital propia, generando una huella digital que puede comprometer su privacidad futura. La prevalencia del sharenting es creciente aunque los estudios sobre daño concreto son mayoritariamente cualitativos.",
+        "certainty": "medium",
+        "refs": [
+          "Tosuntas2024"
+        ]
+      }
+    ]
   },
   "privacidad-ninez-media": {
-    "claims": []
+    "claims": [
+      {
+        "text": "El reporte de material de abuso sexual infantil (CSAM) creció un 87% desde 2019, con más de 32 millones de reportes globales. Las imágenes autogeneradas de niños de 7–10 años aumentaron un 360% entre 2020 y 2022. Estas cifras son datos administrativos de reportes, no prevalencia poblacional.",
+        "certainty": "medium",
+        "refs": [
+          "WeProtect2023"
+        ]
+      },
+      {
+        "text": "La exposición a contenido sexual en línea se asocia con mayor riesgo de comportamientos sexuales problemáticos en niños y adolescentes (rango etario desde 4,74 años). Los autores la identifican como factor de riesgo relevante dada la ubicuidad del acceso tecnológico.",
+        "certainty": "medium",
+        "refs": [
+          "Mori2023"
+        ]
+      },
+      {
+        "text": "La mayoría de los programas de seguridad online para jóvenes enseñan reglas con débil base empírica. La mejora en conocimiento declarado no equivale a reducción de victimización real; los programas deben alinearse con principios de prevención basada en evidencia.",
+        "certainty": "medium",
+        "refs": [
+          "Finkelhor2021"
+        ]
+      },
+      {
+        "text": "Las intervenciones de seguridad digital para cuidadores producen efecto significativo en la reducción del tiempo de pantalla infantil (Hedges g=−0,47 en ECAs). El conocimiento y las actitudes parentales mejoran, aunque los desenlaces de victimización sexual real no fueron medidos.",
+        "certainty": "medium",
+        "refs": [
+          "Zgambo2025"
+        ]
+      }
+    ]
   },
   "privacidad-preadolescencia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "La prevalencia mundial de explotación y abuso sexual online de menores (OCSEA) en el último año es del 8,1% (IC95% 4,9–13,0), con subtipos que incluyen solicitud online (12,5%), imágenes no consensuales (12,6%), explotación sexual (4,7%) y sextorsión (3,5%). La mayoría de los estudios incluidos miden adolescentes; la aplicabilidad estricta a 9–12 años requiere cautela.",
+        "certainty": "medium",
+        "refs": [
+          "Fry2025"
+        ]
+      },
+      {
+        "text": "El cybergrooming afecta a personas desde los 5 años, con tasas de prevalencia de entre el 10% y el 20% para periodos de hasta un año. Los factores de riesgo documentados incluyen tiempo online, número de plataformas usadas y menor supervisión parental.",
+        "certainty": "medium",
+        "refs": [
+          "Schittenhelm2024"
+        ]
+      },
+      {
+        "text": "El 68% de los perpetradores de delitos online contra menores son conocidos o familiares (IC95% 62–75%), y el 44% son menores de 18 años (IC95% 28–60%). Este hallazgo cuestiona el marco de 'stranger danger' y orienta la prevención hacia el entorno cercano del niño.",
+        "certainty": "medium",
+        "refs": [
+          "Sutton2024"
+        ]
+      },
+      {
+        "text": "Las conversaciones en plataformas de videojuegos pueden escalar a situaciones de grooming en 19 segundos, con un tiempo medio de grooming de 45 minutos. En Brasil, 1 de cada 5 adolescentes de 12–17 años (19%) reportó haber sido víctima de explotación sexual facilitada por tecnología en el último año.",
+        "certainty": "medium",
+        "refs": [
+          "WeProtect2023",
+          "DisruptingHarmBrasil2026"
+        ]
+      },
+      {
+        "text": "La sextorsión financiera muestra crecimiento acelerado: NCMEC recibió 26.718 reportes en 2023 frente a 10.731 en 2022. Afecta predominantemente a adolescentes varones de 14–17 años; la aplicabilidad directa a preadolescentes de 9–12 es limitada.",
+        "certainty": "medium",
+        "refs": [
+          "ThornNCMEC2024"
+        ]
+      },
+      {
+        "text": "En EE.UU., el 5,4% de los jóvenes reportó grooming online por adultos antes de los 18 años, y el 3,5% reportó sextorsión. La edad de mayor vulnerabilidad fue 13–17 años; la aplicabilidad al tramo 9–12 es inferida, no medida directamente.",
+        "certainty": "medium",
+        "refs": [
+          "Finkelhor2022"
+        ]
+      }
+    ]
   },
   "cyberbullying-lactante": {
     "claims": []
@@ -2521,24 +2820,213 @@
     "claims": []
   },
   "cyberbullying-ninez-media": {
-    "claims": []
+    "claims": [
+      {
+        "text": "La cybervictimización en primaria (8–12 años) se asocia con peor salud mental. La mayoría de los cibervíctimas también sufren bullying tradicional presencial, lo que confunde la estimación de efectos aislados. Este estudio es uno de los pocos que aborda específicamente primaria controlando bullying presencial.",
+        "certainty": "high",
+        "refs": [
+          "Sidera2021"
+        ]
+      },
+      {
+        "text": "Los factores parentales protectores —calidez, monitoreo, mediación activa— se asocian a menor cybervictimización (r=−0,11; IC95% −0,15 a −0,08), y los factores de riesgo parentales se asocian a mayor exposición (r=0,16). Los effect sizes son pequeños pero consistentes a través de 158 estudios y más de un millón de participantes.",
+        "certainty": "medium",
+        "refs": [
+          "Grama2024"
+        ]
+      },
+      {
+        "text": "La asociación longitudinal entre victimización por cyberbullying y síntomas de salud mental fue débilmente positiva y consistente a lo largo del tiempo. La victimización aumenta progresivamente desde 6,4% en 6º grado hasta 11,6% en 10º grado.",
+        "certainty": "medium",
+        "refs": [
+          "Lee2026"
+        ]
+      }
+    ]
   },
   "cyberbullying-preadolescencia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "La tasa media de victimización por cyberbullying en niños y adolescentes es del 11,10% (IC95% 9,12–13,44%), con variación entre 2% y 72% según región. El cyberbullying es menos prevalente que el bullying tradicional pero altamente correlacionado con él.",
+        "certainty": "medium",
+        "refs": [
+          "Li2024"
+        ]
+      },
+      {
+        "text": "La victimización por cyberbullying a los 11–12 años se asocia prospectivamente con mayores odds de experimentación con alcohol (AOR 1,98; IC95% 1,53–2,57), nicotina (AOR 3,37; IC95% 2,16–5,26) y cannabis (AOR 4,65; IC95% 2,46–8,77) un año después, además de síntomas depresivos y conductas suicidas.",
+        "certainty": "high",
+        "refs": [
+          "Nagata2025c"
+        ]
+      },
+      {
+        "text": "El cyberbullying muestra efectos longitudinales recíprocos: la perpetración predice problemas externalizantes y la victimización constituye factor de riesgo de problemas internalizantes (depresión, ansiedad). La relación bidireccional víctima-agresor es un hallazgo consistente en estudios longitudinales.",
+        "certainty": "medium",
+        "refs": [
+          "Marciano2020"
+        ]
+      },
+      {
+        "text": "El apoyo familiar y el monitoreo parental se asocian a menor cybervictimización (mediana r=−0,08; rango −0,18 a 0,01) y los entornos familiares adversos a mayor exposición (mediana r=0,20; rango 0,16 a 0,24). Ningún factor individual produce protección grande; se requieren enfoques multinivel.",
+        "certainty": "medium",
+        "refs": [
+          "Kasturiratna2024"
+        ]
+      },
+      {
+        "text": "Los programas escolares reducen significativamente la perpetración (g=−0,18; IC95% −0,28 a −0,09) y la victimización (g=−0,13; IC95% −0,21 a −0,05) de cyberbullying. Un programa general de prevención de violencia tuvo la misma probabilidad de ser efectivo que uno específico de cyberbullying.",
+        "certainty": "medium",
+        "refs": [
+          "Polanin2022"
+        ]
+      },
+      {
+        "text": "El 15% de adolescentes de 11 años reportó haber sido víctima de cyberbullying (15% varones, 16% mujeres), con pico de victimización en varones a los 11 años. El cyberbullying aumentó desde 2018 mientras el bullying escolar tradicional se mantuvo estable.",
+        "certainty": "high",
+        "refs": [
+          "WHO-HBSC2024"
+        ]
+      },
+      {
+        "text": "En Brasil, el 13,2% (IC95% 12,8–13,7) de los escolares reportó cyberbullying, con mayor prevalencia en mujeres (16,2%) y menor con supervisión parental (RP=0,78). Nota: rango etario 13–17 años, por encima del tramo objetivo.",
+        "certainty": "medium",
+        "refs": [
+          "Malta2024"
+        ]
+      }
+    ]
   },
   "alimentacion-lactante": {
-    "claims": []
+    "claims": [
+      {
+        "text": "El uso de medios digitales de la madre durante la lactancia aumenta las interrupciones de su atención al bebé (3,7 vs. 1,7 por minuto en condición control, p<0,001) y reduce el tiempo enfocada en el lactante (52,5% vs. 83,9%, p<0,001). La menor atención materna se asocia con menor sensibilidad a las señales del bebé (p=0,03).",
+        "certainty": "high",
+        "refs": [
+          "Mason2024"
+        ]
+      }
+    ]
   },
   "alimentacion-primera-infancia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "Las madres que usaron pantallas durante las comidas de niños de ~19 meses mostraron menor respuesta a las señales de saciedad del niño (2,0 vs. 3,4; p=0,001). Mayor afectividad negativa del niño se asoció con mayor probabilidad de uso de pantallas por la madre durante la comida (OR=4,80; IC95% 1,21–19,03).",
+        "certainty": "high",
+        "refs": [
+          "Ventura2023"
+        ]
+      },
+      {
+        "text": "La OMS recomienda regulación obligatoria del marketing de alimentos altos en grasas, azúcar y sal dirigido a niños desde el nacimiento, declarando que este marketing tiene impacto perjudicial sobre las elecciones alimentarias, las solicitudes de compra y el desarrollo de normas alimentarias en los niños.",
+        "certainty": "medium",
+        "refs": [
+          "WHO2023"
+        ]
+      }
+    ]
   },
   "alimentacion-preescolar": {
-    "claims": []
+    "claims": [
+      {
+        "text": "El 36% de los niños de 3–5 años estuvo expuesto a contenido de marcas de alimentos al ver videos en YouTube o YouTube Kids, con una media de 4,1 exposiciones. En YouTube Kids, diseñado para niños, el 36% de los niños tuvo exposición, frente al 60% en YouTube general.",
+        "certainty": "high",
+        "refs": [
+          "FlemingMilici2025"
+        ]
+      },
+      {
+        "text": "Tras la regulación chilena de marketing alimentario, la exposición de preescolares a publicidad de alimentos 'altos en' disminuyó significativamente en televisión de señal abierta y de cable. La reducción no fue completa; la regulación digital sigue siendo insuficiente.",
+        "certainty": "high",
+        "refs": [
+          "DillmanCarpentier2020"
+        ]
+      },
+      {
+        "text": "En niños de 4–6 años, tanto la exposición a publicidad de alimentos como el consumo de alimentos 'altos en' disminuyeron significativamente tras la implementación de la Ley chilena (p<0,01). Sin embargo, los cambios en consumo no fueron significativamente mediados por los cambios en exposición publicitaria.",
+        "certainty": "high",
+        "refs": [
+          "Jensen2021"
+        ]
+      },
+      {
+        "text": "Ver televisión mientras se come aumenta la ingesta en la comida siguiente (g=0,30; IC95% 0,03–0,57), aunque el efecto en la ingesta inmediata no fue significativo (g=0,10; IC95% −0,01–0,21). El mecanismo es la interferencia con las señales internas de saciedad.",
+        "certainty": "medium",
+        "refs": [
+          "Garg2025"
+        ]
+      }
+    ]
   },
   "alimentacion-ninez-media": {
-    "claims": []
+    "claims": [
+      {
+        "text": "El marketing de alimentos no saludables aumenta la elección de alimentos no saludables (OR=2,45; IC95% 1,41–4,27) y el consumo (SMD=0,311; IC95% 0,185–0,437) en niños. Los efectos son consistentes a través de múltiples medios, incluyendo el ecosistema digital.",
+        "certainty": "medium",
+        "refs": [
+          "Boyland2025"
+        ]
+      },
+      {
+        "text": "El marketing digital de alimentos vía advergaming e influencers se asocia con actitudes más positivas (OR=1,74; IC95% 1,355–2,232) y mayor consumo (SMD=0,37; IC95% 0,219–0,529) en niños de 4–18 años. La publicidad en redes sociales y videojuegos diseñados para niños es el formato de mayor crecimiento.",
+        "certainty": "medium",
+        "refs": [
+          "Evans2023"
+        ]
+      },
+      {
+        "text": "El marketing a través de redes sociales y advergaming tiene efecto significativo sobre conductas de demanda de compra (pester behavior), elección y consumo de alimentos en niños. La mayoría de los estudios presentan alto riesgo de sesgo metodológico.",
+        "certainty": "medium",
+        "refs": [
+          "McCarthy2022"
+        ]
+      },
+      {
+        "text": "La publicidad con video recompensado dentro de juegos digitales modifica la elección de snacks en niños de 7–12 años en un ECA. La condición de video con recompensa tuvo mayor impacto que el control, el banner y el advergame.",
+        "certainty": "high",
+        "refs": [
+          "Smith2020"
+        ]
+      },
+      {
+        "text": "El 75% de los niños de 6–8 años estuvo expuesto a marcas de alimentos en YouTube, con una media de 8,7 exposiciones. Más de la mitad de las marcas provino de empresas adheridas a la auto-regulación publicitaria infantil, lo que sugiere que los compromisos voluntarios son insuficientes.",
+        "certainty": "high",
+        "refs": [
+          "FlemingMilici2025"
+        ]
+      },
+      {
+        "text": "En México, el 69,5% de los niños y adolescentes estuvo expuesto a marketing digital de alimentos, con una mediana de 2,7 exposiciones por hora. Más del 90% de los productos promocionados no estaría permitido para publicidad infantil según los perfiles nutricionales de referencia.",
+        "certainty": "medium",
+        "refs": [
+          "Nieto2023"
+        ]
+      }
+    ]
   },
   "alimentacion-preadolescencia": {
-    "claims": []
+    "claims": [
+      {
+        "text": "El marketing de alimentos no saludables tiene efecto significativo sobre la elección (OR=2,45; IC95% 1,41–4,27) y el consumo (SMD=0,311; IC95% 0,185–0,437) en niños y adultos. La heterogeneidad es alta (I²=93,1% en elección), lo que refleja la diversidad de formatos y contextos de exposición.",
+        "certainty": "medium",
+        "refs": [
+          "Boyland2025"
+        ]
+      },
+      {
+        "text": "En preadolescentes de 9–12 años, la publicidad de productos familiares tuvo mayor impacto total (media 3,57) que la publicidad de marca familiar (2,88), de marca no familiar (3,24) o de producto no familiar (3,09; p<0,001). Este hallazgo es relevante para regulaciones que excluyen la publicidad de 'marca'.",
+        "certainty": "high",
+        "refs": [
+          "Mulligan2025"
+        ]
+      },
+      {
+        "text": "La regulación obligatoria del marketing de alimentos en el entorno digital sigue siendo incompleta en la mayoría de los países. Las medidas regulatorias existentes no están plenamente alineadas con las recomendaciones de OMS y UNICEF, especialmente en el canal digital.",
+        "certainty": "medium",
+        "refs": [
+          "Matos2026"
+        ]
+      }
+    ]
   }
 }
