@@ -2475,7 +2475,10 @@
           "Moreno2024"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Disponibilidad del cuidador",
+    "intro": "La co-regulación comienza desde el nacimiento: el cuidador que responde de forma contingente enseña al bebé que sus señales tienen efecto. Las pantallas del adulto interrumpen esa contingencia antes de que el bebé tenga herramientas propias para calmarse."
   },
   "co-regulacion-primera-infancia": {
     "claims": [
@@ -2500,7 +2503,10 @@
           "Jing2023"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Pantalla como calmante",
+    "intro": "Entre 1 y 3 años el niño empieza a internalizar estrategias de regulación imitando al cuidador. Usar la pantalla como sustituto del acompañamiento emocional reemplaza el andamio en lugar de construirlo."
   },
   "co-regulacion-preescolar": {
     "claims": [
@@ -2525,7 +2531,10 @@
           "Krantz2026"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Modelado y autoeficacia",
+    "intro": "En preescolar el niño observa cómo el adulto maneja sus propias emociones. La autoeficacia parental —sentirse capaz de acompañar sin recurrir a la pantalla— es el predictor más consistente de una co-regulación efectiva."
   },
   "co-regulacion-ninez-media": {
     "claims": [
@@ -2543,7 +2552,10 @@
           "Moreno2024"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Transición a la autorregulación",
+    "intro": "Entre los 6 y 9 años la co-regulación externa debería ir cediendo paso a la autorregulación interna. El uso de pantallas como regulador emocional habitual puede ralentizar esa transición."
   },
   "co-regulacion-preadolescencia": {
     "claims": [
@@ -2562,7 +2574,10 @@
           "MartinCardaba2024"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Estrés parental y conflicto",
+    "intro": "El estrés parental asociado al uso de pantallas del hijo —restricciones, negociaciones, conflicto— es en sí mismo un factor que deteriora la calidad de la co-regulación en esta etapa."
   },
   "alfabetizacion-lactante": {
     "claims": [
@@ -2580,7 +2595,10 @@
           "LiuSAGE2024"
         ]
       }
-    ]
+    ],
+    "certainty": "low",
+    "summary": "Sin evidencia directa",
+    "intro": "No existe evidencia de alfabetización digital en lactantes. El foco en este tramo es proteger el tiempo de interacción cara a cara, que es la base de todas las habilidades cognitivas posteriores."
   },
   "alfabetizacion-primera-infancia": {
     "claims": [
@@ -2598,7 +2616,10 @@
           "LiuSAGE2024"
         ]
       }
-    ]
+    ],
+    "certainty": "low",
+    "summary": "Bases pre-digitales",
+    "intro": "La alfabetización digital se construye sobre habilidades pre-digitales: atención sostenida, comprensión narrativa y pensamiento causal. En este tramo la prioridad es consolidar esas bases, no la exposición tecnológica."
   },
   "alfabetizacion-preescolar": {
     "claims": [
@@ -2616,7 +2637,10 @@
           "AlonsoGarcia2024"
         ]
       }
-    ]
+    ],
+    "certainty": "low",
+    "summary": "Primeras interacciones guiadas",
+    "intro": "Con acompañamiento adulto pueden introducirse interacciones digitales simples. La evidencia de intervenciones formales en este tramo es escasa; lo que sí se sabe es que el andamiaje del adulto es indispensable."
   },
   "alfabetizacion-ninez-media": {
     "claims": [
@@ -2656,7 +2680,10 @@
           "LopezLopez2025"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Pensamiento crítico digital",
+    "intro": "Es el tramo donde la alfabetización digital muestra efectos más claros. Intervenciones de evaluación de credibilidad y detección de desinformación producen tamaños de efecto moderados-altos (d=0,60–0,76) en estudios controlados."
   },
   "alfabetizacion-preadolescencia": {
     "claims": [
@@ -2689,7 +2716,10 @@
           "Godaert2022"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Autonomía y pensamiento computacional",
+    "intro": "En preadolescencia la alfabetización digital incluye producción de contenido, privacidad activa y pensamiento computacional. Las habilidades adquiridas transfieren a razonamiento lógico general, no solo al ámbito digital."
   },
   "privacidad-lactante": {
     "claims": [
@@ -2700,7 +2730,10 @@
           "Tosuntas2024"
         ]
       }
-    ]
+    ],
+    "certainty": "low",
+    "summary": "Riesgo por sharenting",
+    "intro": "Los lactantes no tienen agencia digital, pero su huella comienza antes de nacer. El riesgo principal es el sharenting —publicación de imágenes por cuidadores— que genera datos permanentes sin consentimiento posible."
   },
   "privacidad-primera-infancia": {
     "claims": [
@@ -2711,7 +2744,10 @@
           "Tosuntas2024"
         ]
       }
-    ]
+    ],
+    "certainty": "low",
+    "summary": "Datos sin consentimiento",
+    "intro": "Las apps y plataformas usadas en este tramo recolectan datos conductuales y biométricos. El niño no comprende el concepto de privacidad; la protección depende enteramente del adulto y de los marcos regulatorios."
   },
   "privacidad-preescolar": {
     "claims": [
@@ -2729,7 +2765,10 @@
           "Tosuntas2024"
         ]
       }
-    ]
+    ],
+    "certainty": "low",
+    "summary": "Primeras nociones de límites",
+    "intro": "Hacia los 4–5 años pueden introducirse nociones muy simples de información privada. La evidencia de programas de prevención en este tramo es limitada; el foco sigue siendo la supervisión activa del adulto."
   },
   "privacidad-ninez-media": {
     "claims": [
@@ -2761,7 +2800,10 @@
           "Zgambo2025"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Grooming y contacto no seguro",
+    "intro": "Con acceso independiente a dispositivos aumenta el riesgo de contacto con adultos desconocidos. El grooming y la explotación sexual en línea (OCSEA) son más frecuentes de lo que los padres estiman; la mayoría de víctimas son mayores de 10 años."
   },
   "privacidad-preadolescencia": {
     "claims": [
@@ -2808,7 +2850,10 @@
           "Finkelhor2022"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Exposición sexual y reputación digital",
+    "intro": "La preadolescencia concentra la mayor incidencia de OCSEA (8,1% en estudios globales). La gestión de la reputación digital —qué se comparte, con quién y con qué consecuencias— emerge como competencia crítica en este tramo."
   },
   "cyberbullying-lactante": {
     "claims": []
@@ -2842,7 +2887,10 @@
           "Lee2026"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Inicio con dispositivo propio",
+    "intro": "El cyberbullying emerge cuando los niños acceden a dispositivos propios y plataformas de pares, típicamente alrededor de los 9–10 años. La evidencia en niñez media es menor que en preadolescencia; el factor protector más consistente es el monitoreo parental."
   },
   "cyberbullying-preadolescencia": {
     "claims": [
@@ -2895,7 +2943,10 @@
           "Malta2024"
         ]
       }
-    ]
+    ],
+    "certainty": "high",
+    "summary": "Pico de victimización",
+    "intro": "El 15% de adolescentes de 11 años reporta haber sido víctima de cyberbullying (datos OMS/HBSC 2024). Los programas escolares reducen significativamente tanto la perpetración como la victimización; ningún factor individual produce protección grande por sí solo."
   },
   "alimentacion-lactante": {
     "claims": [
@@ -2906,7 +2957,10 @@
           "Mason2024"
         ]
       }
-    ]
+    ],
+    "certainty": "high",
+    "summary": "Atención materna interrumpida",
+    "intro": "El uso de dispositivos durante la lactancia interrumpe la atención del cuidador y reduce la sensibilidad a las señales del bebé. La alimentación temprana es también un ritual de vínculo; la pantalla interfiere con ambas funciones simultáneamente."
   },
   "alimentacion-primera-infancia": {
     "claims": [
@@ -2924,7 +2978,10 @@
           "WHO2023"
         ]
       }
-    ]
+    ],
+    "certainty": "high",
+    "summary": "Señales de saciedad ignoradas",
+    "intro": "Las pantallas durante las comidas reducen la capacidad del cuidador de responder a las señales de saciedad del niño. El patrón se establece temprano y tiene alta persistencia: los hábitos alimentarios de los 2–3 años predicen los de la edad escolar."
   },
   "alimentacion-preescolar": {
     "claims": [
@@ -2956,7 +3013,10 @@
           "Garg2025"
         ]
       }
-    ]
+    ],
+    "certainty": "high",
+    "summary": "Marketing y alimentación distraída",
+    "intro": "En preescolar operan dos mecanismos en paralelo: la alimentación frente a pantalla interfiere con las señales internas de saciedad, y la exposición a marketing digital de alimentos 'altos en' comienza a moldear preferencias alimentarias."
   },
   "alimentacion-ninez-media": {
     "claims": [
@@ -3002,7 +3062,10 @@
           "Nieto2023"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Advergaming y elección de alimentos",
+    "intro": "El marketing digital —especialmente advergaming e influencers— tiene efectos medibles sobre la elección y el consumo de alimentos no saludables en este tramo. El 75% de niños de 6–8 años estuvo expuesto a marcas de alimentos en YouTube en una semana típica."
   },
   "alimentacion-preadolescencia": {
     "claims": [
@@ -3027,6 +3090,9 @@
           "Matos2026"
         ]
       }
-    ]
+    ],
+    "certainty": "medium",
+    "summary": "Regulación insuficiente",
+    "intro": "La regulación del marketing digital de alimentos sigue siendo incompleta en la mayoría de los países, incluido Chile. Los compromisos voluntarios de la industria no han demostrado reducir la exposición en el canal digital."
   }
 }

@@ -788,3 +788,46 @@ body {
   margin-left: 4px;
 }
 .contact-link:hover { color: var(--ink); }
+
+/* ── TOOLTIP DE DIMENSIÓN ─────────────────────────────────────── */
+.dim-tooltip {
+  position: absolute;
+  z-index: 200;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.55;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+  pointer-events: auto;
+}
+.dim-tooltip-text {
+  margin-bottom: 10px;
+}
+.dim-tooltip-links {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dim-tooltip-links-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2px;
+}
+.dim-tooltip-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 11px;
+}
+.dim-tooltip-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .dim-tooltip { display: none; }
+}

@@ -810,6 +810,49 @@ body {
 }
 .contact-link:hover { color: var(--ink); }
 
+/* ── TOOLTIP DE DIMENSIÓN ─────────────────────────────────────── */
+.dim-tooltip {
+  position: absolute;
+  z-index: 200;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.55;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+  pointer-events: auto;
+}
+.dim-tooltip-text {
+  margin-bottom: 10px;
+}
+.dim-tooltip-links {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dim-tooltip-links-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2px;
+}
+.dim-tooltip-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 11px;
+}
+.dim-tooltip-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .dim-tooltip { display: none; }
+}
+
 </style>
 </head>
 <body>
@@ -5851,7 +5894,10 @@ window.__DATA__ = {
             "Moreno2024"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Disponibilidad del cuidador",
+      "intro": "La co-regulación comienza desde el nacimiento: el cuidador que responde de forma contingente enseña al bebé que sus señales tienen efecto. Las pantallas del adulto interrumpen esa contingencia antes de que el bebé tenga herramientas propias para calmarse."
     },
     "co-regulacion-primera-infancia": {
       "claims": [
@@ -5876,7 +5922,10 @@ window.__DATA__ = {
             "Jing2023"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Pantalla como calmante",
+      "intro": "Entre 1 y 3 años el niño empieza a internalizar estrategias de regulación imitando al cuidador. Usar la pantalla como sustituto del acompañamiento emocional reemplaza el andamio en lugar de construirlo."
     },
     "co-regulacion-preescolar": {
       "claims": [
@@ -5901,7 +5950,10 @@ window.__DATA__ = {
             "Krantz2026"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Modelado y autoeficacia",
+      "intro": "En preescolar el niño observa cómo el adulto maneja sus propias emociones. La autoeficacia parental —sentirse capaz de acompañar sin recurrir a la pantalla— es el predictor más consistente de una co-regulación efectiva."
     },
     "co-regulacion-ninez-media": {
       "claims": [
@@ -5919,7 +5971,10 @@ window.__DATA__ = {
             "Moreno2024"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Transición a la autorregulación",
+      "intro": "Entre los 6 y 9 años la co-regulación externa debería ir cediendo paso a la autorregulación interna. El uso de pantallas como regulador emocional habitual puede ralentizar esa transición."
     },
     "co-regulacion-preadolescencia": {
       "claims": [
@@ -5938,7 +5993,10 @@ window.__DATA__ = {
             "MartinCardaba2024"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Estrés parental y conflicto",
+      "intro": "El estrés parental asociado al uso de pantallas del hijo —restricciones, negociaciones, conflicto— es en sí mismo un factor que deteriora la calidad de la co-regulación en esta etapa."
     },
     "alfabetizacion-lactante": {
       "claims": [
@@ -5956,7 +6014,10 @@ window.__DATA__ = {
             "LiuSAGE2024"
           ]
         }
-      ]
+      ],
+      "certainty": "low",
+      "summary": "Sin evidencia directa",
+      "intro": "No existe evidencia de alfabetización digital en lactantes. El foco en este tramo es proteger el tiempo de interacción cara a cara, que es la base de todas las habilidades cognitivas posteriores."
     },
     "alfabetizacion-primera-infancia": {
       "claims": [
@@ -5974,7 +6035,10 @@ window.__DATA__ = {
             "LiuSAGE2024"
           ]
         }
-      ]
+      ],
+      "certainty": "low",
+      "summary": "Bases pre-digitales",
+      "intro": "La alfabetización digital se construye sobre habilidades pre-digitales: atención sostenida, comprensión narrativa y pensamiento causal. En este tramo la prioridad es consolidar esas bases, no la exposición tecnológica."
     },
     "alfabetizacion-preescolar": {
       "claims": [
@@ -5992,7 +6056,10 @@ window.__DATA__ = {
             "AlonsoGarcia2024"
           ]
         }
-      ]
+      ],
+      "certainty": "low",
+      "summary": "Primeras interacciones guiadas",
+      "intro": "Con acompañamiento adulto pueden introducirse interacciones digitales simples. La evidencia de intervenciones formales en este tramo es escasa; lo que sí se sabe es que el andamiaje del adulto es indispensable."
     },
     "alfabetizacion-ninez-media": {
       "claims": [
@@ -6032,7 +6099,10 @@ window.__DATA__ = {
             "LopezLopez2025"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Pensamiento crítico digital",
+      "intro": "Es el tramo donde la alfabetización digital muestra efectos más claros. Intervenciones de evaluación de credibilidad y detección de desinformación producen tamaños de efecto moderados-altos (d=0,60–0,76) en estudios controlados."
     },
     "alfabetizacion-preadolescencia": {
       "claims": [
@@ -6065,7 +6135,10 @@ window.__DATA__ = {
             "Godaert2022"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Autonomía y pensamiento computacional",
+      "intro": "En preadolescencia la alfabetización digital incluye producción de contenido, privacidad activa y pensamiento computacional. Las habilidades adquiridas transfieren a razonamiento lógico general, no solo al ámbito digital."
     },
     "privacidad-lactante": {
       "claims": [
@@ -6076,7 +6149,10 @@ window.__DATA__ = {
             "Tosuntas2024"
           ]
         }
-      ]
+      ],
+      "certainty": "low",
+      "summary": "Riesgo por sharenting",
+      "intro": "Los lactantes no tienen agencia digital, pero su huella comienza antes de nacer. El riesgo principal es el sharenting —publicación de imágenes por cuidadores— que genera datos permanentes sin consentimiento posible."
     },
     "privacidad-primera-infancia": {
       "claims": [
@@ -6087,7 +6163,10 @@ window.__DATA__ = {
             "Tosuntas2024"
           ]
         }
-      ]
+      ],
+      "certainty": "low",
+      "summary": "Datos sin consentimiento",
+      "intro": "Las apps y plataformas usadas en este tramo recolectan datos conductuales y biométricos. El niño no comprende el concepto de privacidad; la protección depende enteramente del adulto y de los marcos regulatorios."
     },
     "privacidad-preescolar": {
       "claims": [
@@ -6105,7 +6184,10 @@ window.__DATA__ = {
             "Tosuntas2024"
           ]
         }
-      ]
+      ],
+      "certainty": "low",
+      "summary": "Primeras nociones de límites",
+      "intro": "Hacia los 4–5 años pueden introducirse nociones muy simples de información privada. La evidencia de programas de prevención en este tramo es limitada; el foco sigue siendo la supervisión activa del adulto."
     },
     "privacidad-ninez-media": {
       "claims": [
@@ -6137,7 +6219,10 @@ window.__DATA__ = {
             "Zgambo2025"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Grooming y contacto no seguro",
+      "intro": "Con acceso independiente a dispositivos aumenta el riesgo de contacto con adultos desconocidos. El grooming y la explotación sexual en línea (OCSEA) son más frecuentes de lo que los padres estiman; la mayoría de víctimas son mayores de 10 años."
     },
     "privacidad-preadolescencia": {
       "claims": [
@@ -6184,7 +6269,10 @@ window.__DATA__ = {
             "Finkelhor2022"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Exposición sexual y reputación digital",
+      "intro": "La preadolescencia concentra la mayor incidencia de OCSEA (8,1% en estudios globales). La gestión de la reputación digital —qué se comparte, con quién y con qué consecuencias— emerge como competencia crítica en este tramo."
     },
     "cyberbullying-lactante": {
       "claims": []
@@ -6218,7 +6306,10 @@ window.__DATA__ = {
             "Lee2026"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Inicio con dispositivo propio",
+      "intro": "El cyberbullying emerge cuando los niños acceden a dispositivos propios y plataformas de pares, típicamente alrededor de los 9–10 años. La evidencia en niñez media es menor que en preadolescencia; el factor protector más consistente es el monitoreo parental."
     },
     "cyberbullying-preadolescencia": {
       "claims": [
@@ -6271,7 +6362,10 @@ window.__DATA__ = {
             "Malta2024"
           ]
         }
-      ]
+      ],
+      "certainty": "high",
+      "summary": "Pico de victimización",
+      "intro": "El 15% de adolescentes de 11 años reporta haber sido víctima de cyberbullying (datos OMS/HBSC 2024). Los programas escolares reducen significativamente tanto la perpetración como la victimización; ningún factor individual produce protección grande por sí solo."
     },
     "alimentacion-lactante": {
       "claims": [
@@ -6282,7 +6376,10 @@ window.__DATA__ = {
             "Mason2024"
           ]
         }
-      ]
+      ],
+      "certainty": "high",
+      "summary": "Atención materna interrumpida",
+      "intro": "El uso de dispositivos durante la lactancia interrumpe la atención del cuidador y reduce la sensibilidad a las señales del bebé. La alimentación temprana es también un ritual de vínculo; la pantalla interfiere con ambas funciones simultáneamente."
     },
     "alimentacion-primera-infancia": {
       "claims": [
@@ -6300,7 +6397,10 @@ window.__DATA__ = {
             "WHO2023"
           ]
         }
-      ]
+      ],
+      "certainty": "high",
+      "summary": "Señales de saciedad ignoradas",
+      "intro": "Las pantallas durante las comidas reducen la capacidad del cuidador de responder a las señales de saciedad del niño. El patrón se establece temprano y tiene alta persistencia: los hábitos alimentarios de los 2–3 años predicen los de la edad escolar."
     },
     "alimentacion-preescolar": {
       "claims": [
@@ -6332,7 +6432,10 @@ window.__DATA__ = {
             "Garg2025"
           ]
         }
-      ]
+      ],
+      "certainty": "high",
+      "summary": "Marketing y alimentación distraída",
+      "intro": "En preescolar operan dos mecanismos en paralelo: la alimentación frente a pantalla interfiere con las señales internas de saciedad, y la exposición a marketing digital de alimentos 'altos en' comienza a moldear preferencias alimentarias."
     },
     "alimentacion-ninez-media": {
       "claims": [
@@ -6378,7 +6481,10 @@ window.__DATA__ = {
             "Nieto2023"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Advergaming y elección de alimentos",
+      "intro": "El marketing digital —especialmente advergaming e influencers— tiene efectos medibles sobre la elección y el consumo de alimentos no saludables en este tramo. El 75% de niños de 6–8 años estuvo expuesto a marcas de alimentos en YouTube en una semana típica."
     },
     "alimentacion-preadolescencia": {
       "claims": [
@@ -6403,7 +6509,10 @@ window.__DATA__ = {
             "Matos2026"
           ]
         }
-      ]
+      ],
+      "certainty": "medium",
+      "summary": "Regulación insuficiente",
+      "intro": "La regulación del marketing digital de alimentos sigue siendo incompleta en la mayoría de los países, incluido Chile. Los compromisos voluntarios de la industria no han demostrado reducir la exposición en el canal digital."
     }
   },
   "metadata": {
@@ -7167,6 +7276,118 @@ window.__DATA__ = {
 
   const certLetter = (c) => c === "high" ? "h" : c === "medium" ? "m" : "l";
 
+
+  // ── DIMENSIONES: DEFINICIONES Y RECURSOS PARA HOVER ────────────
+  const DIM_DESCRIPTIONS = {
+    "lenguaje": {
+      text: "El lenguaje es el andamio de todo aprendizaje posterior. En los primeros años se construye casi exclusivamente a través de la interacción cara a cara: turnos de habla, contacto visual y respuesta contingente del cuidador. Las pantallas actúan principalmente por desplazamiento: cuando hay TV de fondo o un adulto mirando el teléfono, el niño recibe menos palabras y menos intercambios conversacionales. El vocabulario consolidado antes de los 5 años predice la comprensión lectora, el rendimiento escolar y la autorregulación en la adolescencia.",
+      links: [
+        { label: "AAP – Tiempo de pantalla en bebés", url: "https://www.aap.org/en/patient-care/media-and-children/center-of-excellence-on-social-media-and-youth-mental-health/qa-portal/qa-portal-library/qa-portal-library-questions/screen-time-for-infants/" },
+        { label: "AEPED – Cerebro infantil y pantallas", url: "https://www.aeped.es/enfamilia/salud-en-familia/cerebro-infantil-y-pantallas" },
+        { label: "OMS – Crecer sanos: sentarse menos y jugar más", url: "https://www.who.int/es/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more" }
+      ]
+    },
+    "cognicion": {
+      text: "Las funciones ejecutivas —atención sostenida, memoria de trabajo y control de impulsos— son el núcleo de la cognición infantil y la base del aprendizaje escolar. La evidencia muestra que el factor crítico no es cuántas horas de pantalla, sino qué tipo: el contenido acelerado (videos cortos, cambios visuales rápidos) se asocia a peor función ejecutiva incluso tras exposiciones breves. El contenido lento, narrativo o interactivo con un adulto tiene efectos neutros o positivos. Las funciones ejecutivas consolidadas en la infancia predicen el logro académico y la salud mental en la adultez.",
+      links: [
+        { label: "Frontiers – Tiempo de pantalla y función ejecutiva (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7643631/" },
+        { label: "BMC Psychology – TV y funciones ejecutivas en preescolar (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11044375/" },
+        { label: "Boletín de Pediatría – Niños, pantallas y desarrollo cognitivo (ES)", url: "https://boletindepediatria.org/boletin/article/view/1905" }
+      ]
+    },
+    "creatividad": {
+      text: "La creatividad infantil se construye en el juego libre no estructurado: el espacio donde el niño inventa reglas, transforma objetos y ensaya roles sin un guion externo. Las pantallas compiten directamente con ese tiempo. No es que el contenido digital sea incompatible con la creatividad, sino que desplaza las horas de exploración autónoma que son su materia prima. La capacidad de generar ideas, tolerar la ambigüedad y resolver problemas de forma flexible —habilidades críticas del siglo XXI— se ejercitan principalmente jugando sin pantalla.",
+      links: [
+        { label: "AEPED – Juego y juguetes", url: "https://enfamilia.aeped.es/vida-sana/juego-juguetes" },
+        { label: "OMS – Crecer sanos: sentarse menos y jugar más", url: "https://www.who.int/es/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more" }
+      ]
+    },
+    "socioemocional": {
+      text: "El desarrollo socioemocional abarca el reconocimiento de emociones propias y ajenas, la empatía y la capacidad de relacionarse con pares y adultos. Estas habilidades se aprenden fundamentalmente en la interacción cara a cara, donde el niño lee expresiones, tonos de voz y señales corporales en tiempo real. Las pantallas actúan por dos vías: desplazan tiempo de interacción directa, y exponen al niño a modelos de conducta social. Las competencias socioemocionales consolidadas en la infancia predicen la salud mental, el éxito relacional y el rendimiento laboral en la adultez.",
+      links: [
+        { label: "UNICEF Uruguay – Tecnología en la primera infancia", url: "https://www.unicef.org/uruguay/crianza/digital/uso-de-la-tecnologia-en-la-primera-infancia-que-saber" },
+        { label: "Coyne et al. 2023 – Pantallas, regulación emocional y empatía (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10570398/" }
+      ]
+    },
+    "comportamiento": {
+      text: "El comportamiento infantil —irritabilidad, impulsividad, agresividad o dificultades para seguir normas— está asociado de forma consistente con el uso de pantallas en la literatura científica. La magnitud es pequeña pero robusta: a mayor tiempo de pantalla, mayores problemas conductuales tanto externalizantes como internalizantes. La causalidad es bidireccional: los niños con más dificultades regulatorias también reciben más pantallas como calmante. La regulación conductual en la infancia es prerrequisito del funcionamiento social y académico.",
+      links: [
+        { label: "Eirich & Madigan et al. 2022 – Metaanálisis comportamiento y pantallas (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8928099/" },
+        { label: "AEPED – Cerebro infantil y pantallas", url: "https://www.aeped.es/enfamilia/salud-en-familia/cerebro-infantil-y-pantallas" }
+      ]
+    },
+    "vinculo": {
+      text: "El vínculo de apego se construye en los primeros meses a través de la sincronía entre el bebé y su cuidador: miradas, respuestas contingentes y presencia sostenida. Las pantallas del adulto —no solo las del niño— interrumpen esa sincronía. El phubbing parental (mirar el teléfono en presencia del bebé) reduce la sensibilidad del cuidador y la calidad del intercambio emocional. Un apego seguro temprano es la base de la regulación emocional, la exploración del entorno y la salud mental a lo largo de toda la vida.",
+      links: [
+        { label: "UNICEF Uruguay – Tecnología en la primera infancia", url: "https://www.unicef.org/uruguay/crianza/digital/uso-de-la-tecnologia-en-la-primera-infancia-que-saber" },
+        { label: "Coyne et al. 2023 – Pantallas y vínculo cuidador-niño (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10570398/" }
+      ]
+    },
+    "co-regulacion": {
+      text: "La co-regulación es el proceso por el cual el cuidador acompaña al niño a manejar emociones intensas hasta que este puede hacerlo por sí solo. Es el andamio desde el que emerge la autorregulación autónoma. Las pantallas interfieren de dos formas: reducen la disponibilidad del adulto para co-regular, y se usan como calmante que evita el aprendizaje en lugar de facilitarlo. La autoeficacia parental —sentirse capaz de acompañar sin recurrir al dispositivo— es la palanca interventiva más consistente en la evidencia.",
+      links: [
+        { label: "Radesky et al. 2023 – Dispositivos para calmar y reactividad emocional (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9857453/" },
+        { label: "Frontiers 2024 – Pantallas, rabietas y autorregulación", url: "https://www.frontiersin.org/journals/child-and-adolescent-psychiatry/articles/10.3389/frcha.2024.1276154/full" }
+      ]
+    },
+    "salud-mental": {
+      text: "La salud mental infantil abarca el bienestar emocional, la ausencia de síntomas ansiosos o depresivos y la capacidad de funcionar en el entorno cotidiano. La relación con las pantallas es más robusta en preadolescentes —especialmente con el uso de redes sociales— y más indirecta en niños pequeños, donde opera principalmente vía afectación del sueño y el vínculo. La salud mental en la infancia es condición habilitante para el aprendizaje, las relaciones sociales y la productividad en la adultez.",
+      links: [
+        { label: "AAP HealthyChildren – Redes sociales y salud mental", url: "https://www.healthychildren.org/Spanish/family-life/Media/Paginas/social-media-and-your-childs-mental-health-what-research-says.aspx" },
+        { label: "UNICEF – Salud mental de adolescentes y redes sociales", url: "https://www.unicef.org/parenting/mental-health/social-media-teens" }
+      ]
+    },
+    "alfabetizacion": {
+      text: "La alfabetización digital es la capacidad de usar la tecnología de forma crítica, segura y creativa: evaluar contenidos, reconocer desinformación y desenvolverse en entornos digitales con autonomía creciente. Se construye sobre habilidades pre-digitales (atención, comprensión narrativa, pensamiento causal) y madura principalmente en la niñez media y la preadolescencia. Las intervenciones de evaluación de credibilidad muestran efectos moderados-altos en estudios controlados. Es condición para la participación ciudadana y el mundo laboral del siglo XXI.",
+      links: [
+        { label: "UNESCO – Alfabetización mediática e informacional (ES)", url: "https://www.unesco.org/es/articles/curso-internacional-de-alfabetizacion-mediatica-e-informacional-para-reguladores-iberoamericanos" },
+        { label: "Common Sense Media (portal en español)", url: "https://www.commonsensemedia.org/es" }
+      ]
+    },
+    "privacidad": {
+      text: "La privacidad y seguridad digital abarca los riesgos de exposición a contactos no seguros, contenido inapropiado y recolección de datos personales. En los primeros años el riesgo principal es el sharenting —la huella digital que generan los adultos sobre el niño—. Con el acceso a dispositivos propios (~9-10 años) emerge el riesgo de contacto no seguro y explotación sexual en línea (OCSEA), con una prevalencia global estimada en 8,1%. Comprender y gestionar estos riesgos es parte del desarrollo de la autonomía segura.",
+      links: [
+        { label: "UNICEF Argentina – El grooming es un delito", url: "https://www.unicef.org/argentina/el-grooming-es-un-delito" },
+        { label: "INTERPOL – Disrupting Harm (protección de menores)", url: "https://www.interpol.int/es/Delitos/Delitos-contra-menores/Proyectos-para-proteger-a-los-ninos/Disrupting-Harm-neutralizar-el-dano" },
+        { label: "ICMEC/UNICEF – Abuso sexual infantil en línea (PDF)", url: "https://cdn.icmec.org/wp-content/uploads/2020/09/Estudo-Legislativo-ICMEC_UNICEF-ES.pdf" }
+      ]
+    },
+    "cyberbullying": {
+      text: "El cyberbullying es el acoso y la agresión entre pares mediados por plataformas digitales. Emerge principalmente cuando los niños acceden a dispositivos propios (~10 años); antes de esa edad la evidencia es escasa o inexistente. El 15% de los adolescentes de 11 años reporta haber sido víctima (OMS/HBSC 2024). Sus efectos sobre la salud mental y la trayectoria escolar pueden ser duraderos. Los programas escolares de prevención reducen significativamente tanto la victimización como la perpetración.",
+      links: [
+        { label: "IS4K/INCIBE – Ciberacoso escolar (ES)", url: "https://www.is4k.es/necesitas-saber/ciberacoso-escolar" }
+      ]
+    },
+    "sueno": {
+      text: "El sueño de calidad es necesario para la consolidación de la memoria, la regulación emocional y el crecimiento físico en todos los tramos de la infancia. Las pantallas lo afectan por dos mecanismos: desplazan horas de sueño (el niño se duerme más tarde) y la luz azul de las pantallas retrasa la secreción de melatonina. El uso de dispositivos en el dormitorio es el factor de riesgo más consistente en la literatura. Una hora de pantalla antes de dormir reduce significativamente la duración y la calidad del sueño.",
+      links: [
+        { label: "AEPED – Sueño en niños y dispositivos electrónicos", url: "https://enfamilia.aeped.es/noticias/sueno-en-ninos-dispositivos-electronicos" },
+        { label: "Sleep Research Society – Niños, preadolescentes y pantallas (PDF, ES)", url: "https://www.sleepresearchsociety.org/wp-content/uploads/2021/12/Kids-Tweens-Teens-and-Screens-Spanish.pdf" }
+      ]
+    },
+    "fisica": {
+      text: "La actividad física regular en la infancia es base del desarrollo motor, la salud metabólica y el bienestar psicológico. Las pantallas compiten directamente con el tiempo activo: el mecanismo principal no es el contenido sino el desplazamiento. Cada hora frente a una pantalla es una hora menos de movimiento, juego al aire libre o deporte. La OMS recomienda cero tiempo sedentario de pantalla para menores de 1 año y menos de 1 hora para niños de 2 a 4 años. El tiempo al aire libre tiene además un efecto protector independiente sobre la visión.",
+      links: [
+        { label: "OMS – Crecer sanos: sentarse menos y jugar más", url: "https://www.who.int/es/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more" },
+        { label: "OMS – Actividad física (ficha técnica)", url: "https://www.who.int/es/news-room/fact-sheets/detail/physical-activity" }
+      ]
+    },
+    "alimentacion": {
+      text: "Las pantallas afectan la alimentación por dos vías: la alimentación distraída interfiere con las señales internas de saciedad del niño, y el marketing digital de alimentos no saludables moldea sus preferencias desde edades muy tempranas. El 75% de niños de 6-8 años estuvo expuesto a marcas de alimentos en YouTube en una semana típica. Los hábitos alimentarios que se forman en la infancia tienen alta persistencia en la adultez. La regulación del marketing digital de alimentos sigue siendo insuficiente en la mayoría de los países.",
+      links: [
+        { label: "AAP HealthyChildren – Comer frente a una pantalla no es saludable (ES)", url: "https://www.healthychildren.org/Spanish/family-life/Media/Paginas/Food-and-TV-Not-a-Healthy-Mix.aspx" },
+        { label: "UNICEF LACRO – Marketing digital de alimentos dirigido a niños (PDF)", url: "https://www.unicef.org/lac/media/42141/file/Reporte-marketing-digital-esp.pdf" }
+      ]
+    },
+    "vision": {
+      text: "El tiempo prolongado frente a pantallas, especialmente en interiores y a distancias cortas, se asocia con el desarrollo y la progresión de la miopía. El factor protector con más evidencia no es limitar las pantallas per se, sino aumentar el tiempo al aire libre (mínimo 2 horas diarias): la luz natural regula el crecimiento del ojo independientemente del uso de pantallas. La miopía en la infancia tiende a progresar hasta la adultez; detectarla y manejarla temprano reduce el riesgo de complicaciones visuales graves.",
+      links: [
+        { label: "AAO – Control de la miopía en los niños (ES)", url: "https://www.aao.org/salud-ocular/enfermedades/control-de-la-miop%C3%ADa-en-los-ni%C3%B1os" },
+        { label: "AAO – Uso de pantalla para los niños (ES)", url: "https://www.aao.org/salud-ocular/consejos/uso-de-pantalla-para-los-ninos" }
+      ]
+    }
+  };
+
   // ── MOUNT ───────────────────────────────────────────────────
   const root = document.getElementById("app");
   if (!root) return;
@@ -7301,7 +7522,9 @@ window.__DATA__ = {
     // Filas: dimension + 5 celdas
     dims.forEach(d => {
       const pc = paperCountByDim[d.id];
-      html += `<div class="grid-cell row-head"><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
+      const dimDesc = DIM_DESCRIPTIONS[d.id];
+      const tooltipAttr = dimDesc ? ` data-dim-id="${escapeHtml(d.id)}"` : "";
+      html += `<div class="grid-cell row-head"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
@@ -7928,6 +8151,41 @@ window.__DATA__ = {
   }
 
   // ── POPOVER DE REFERENCIA ───────────────────────────────────
+  // ── TOOLTIP DE DIMENSIÓN ────────────────────────────────────
+  function showDimTooltip(dimId, anchorEl) {
+    closeDimTooltip();
+    const desc = DIM_DESCRIPTIONS[dimId];
+    if (!desc) return;
+    const tip = document.createElement("div");
+    tip.className = "dim-tooltip";
+    tip.dataset.dimId = dimId;
+    const linksHtml = (desc.links || []).map(l =>
+      `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.label)}</a>`
+    ).join("");
+    tip.innerHTML = `
+      <div class="dim-tooltip-text">${escapeHtml(desc.text)}</div>
+      ${linksHtml ? `<div class="dim-tooltip-links"><span class="dim-tooltip-links-label">Leer más</span>${linksHtml}</div>` : ""}
+    `;
+    document.body.appendChild(tip);
+    positionDimTooltip(tip, anchorEl);
+  }
+
+  function positionDimTooltip(tip, anchor) {
+    const r = anchor.getBoundingClientRect();
+    const tipW = 300;
+    const pad = 8;
+    let left = r.right + pad;
+    if (left + tipW > window.innerWidth - 8) left = Math.max(8, r.left - tipW - pad);
+    let top = r.top + window.scrollY;
+    const maxTop = window.scrollY + window.innerHeight - tip.offsetHeight - 16;
+    if (top > maxTop) top = maxTop;
+    tip.style.cssText = `position:absolute;left:${left}px;top:${top}px;width:${tipW}px;`;
+  }
+
+  function closeDimTooltip() {
+    document.querySelectorAll(".dim-tooltip").forEach(el => el.remove());
+  }
+
   function showRefPopover(refId, anchorEl) {
     closePopover();
     const b = biblioById[refId];
@@ -7972,10 +8230,17 @@ window.__DATA__ = {
     root.addEventListener("change", onRootChange);
     document.addEventListener("click", onDocClick, true);
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closePopover();
+      if (e.key === "Escape") { closePopover(); closeDimTooltip(); }
     });
     // Search input se enlaza por delegación con "input" event
     root.addEventListener("input", onRootInput);
+    // Tooltip de dimensión
+    root.addEventListener("mouseover", (e) => {
+      const rh = e.target.closest(".grid-cell.row-head[data-dim-id]");
+      if (rh) showDimTooltip(rh.dataset.dimId, rh);
+      else closeDimTooltip();
+    });
+    root.addEventListener("mouseleave", () => closeDimTooltip(), true);
   }
 
   function onRootClick(e) {
@@ -8133,6 +8398,8 @@ window.__DATA__ = {
 
   function onDocClick(e) {
     // Cerrar popover si se hace click fuera
+    if (e.target.closest(".dim-tooltip")) return;
+    closeDimTooltip();
     if (e.target.closest(".ref-popover")) return;
     if (e.target.closest(".ref[data-refid]")) return;
     closePopover();
