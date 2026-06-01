@@ -167,6 +167,25 @@
     }
   };
 
+  // ── DIMENSIONES: BLOQUES TEMÁTICOS (D-visual) ───────────────
+  const DIM_BLOCKS = {
+    "lenguaje":       "bloque-cognitivo",
+    "cognicion":      "bloque-cognitivo",
+    "creatividad":    "bloque-cognitivo",
+    "socioemocional": "bloque-socioemocional",
+    "comportamiento": "bloque-socioemocional",
+    "vinculo":        "bloque-socioemocional",
+    "co-regulacion":  "bloque-socioemocional",
+    "alfabetizacion": "bloque-digital",
+    "privacidad":     "bloque-digital",
+    "cyberbullying":  "bloque-digital",
+    "salud-mental":   "bloque-bienestar",
+    "sueno":          "bloque-bienestar",
+    "fisica":         "bloque-bienestar",
+    "alimentacion":   "bloque-bienestar",
+    "vision":         "bloque-bienestar"
+  };
+
   // ── MOUNT ───────────────────────────────────────────────────
   const root = document.getElementById("app");
   if (!root) return;
@@ -252,7 +271,7 @@
           ${renderMatriz()}
         </div>
         <aside class="ficha-pane" id="ficha-pane">
-          ${renderFicha(state.activeCell)}
+          ${state.activeDim ? renderFichaDim(state.activeDim) : renderFicha(state.activeCell)}
         </aside>
       </div>
     `;
@@ -303,8 +322,9 @@
       const pc = paperCountByDim[d.id];
       const dimDesc = DIM_DESCRIPTIONS[d.id];
       const tooltipAttr = dimDesc ? ` data-dim-id="${escapeHtml(d.id)}"` : "";
+      const bloqueClass = DIM_BLOCKS[d.id] ? ` ${DIM_BLOCKS[d.id]}` : "";
       const dimActive = state.activeDim === d.id ? " dim-active" : "";
-      html += `<div class="grid-cell row-head${dimActive}"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
+      html += `<div class="grid-cell row-head${bloqueClass}${dimActive}"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
@@ -930,6 +950,7 @@
     `;
   }
 
+  // ── POPOVER DE REFERENCIA ───────────────────────────────────
   // ── FICHA DE DIMENSIÓN ──────────────────────────────────────
   function renderFichaDim(dimId) {
     const desc = DIM_DESCRIPTIONS[dimId];
@@ -954,8 +975,6 @@
     `;
   }
 
-
-  // ── FICHA DE DIMENSIÓN (clic en row-head) ───────────────────
   function openDimFicha(dimId) {
     state.activeDim = dimId;
     state.activeCell = null;
@@ -1037,6 +1056,7 @@
       const cid = cellEl.dataset.cellid;
       if (claims[cid]) {
         state.activeCell = cid;
+        state.activeDim = null;
         // Re-render solo de la matriz (para active class) y de la ficha
         const matrizPane = root.querySelector(".matriz-pane");
         const fichaPane  = root.querySelector("#ficha-pane");

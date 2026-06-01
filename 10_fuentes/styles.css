@@ -245,9 +245,7 @@ body {
 .grid-cell.row-head.dim-active:hover { background: var(--highlight); }
 
 /* ── Ficha de dimensión ─────────────────────────────────────── */
-.dim-ficha-links {
-  margin-top: 16px;
-}
+.dim-ficha-links { margin-top: 16px; }
 .dim-ficha-link {
   display: block;
   color: var(--accent);
@@ -814,5 +812,19 @@ body {
 }
 .contact-link:hover { color: var(--ink); }
 
+/* ── BLOQUES TEMÁTICOS D-visual ───────────────────────────────── */
+.grid-cell.row-head.bloque-cognitivo      { background: #eef4fb; }
+.grid-cell.row-head.bloque-socioemocional { background: #f0f7f0; }
+.grid-cell.row-head.bloque-digital        { background: #f5f0fb; }
+.grid-cell.row-head.bloque-bienestar      { background: #fdf4ee; }
 
+.grid-cell.row-head.bloque-cognitivo:hover,      .grid-cell.row-head.bloque-cognitivo.dim-active      { background: #daeaf7; }
+.grid-cell.row-head.bloque-socioemocional:hover, .grid-cell.row-head.bloque-socioemocional.dim-active  { background: #d8efd8; }
+.grid-cell.row-head.bloque-digital:hover,        .grid-cell.row-head.bloque-digital.dim-active         { background: #ebe0f7; }
+.grid-cell.row-head.bloque-bienestar:hover,      .grid-cell.row-head.bloque-bienestar.dim-active       { background: #fae3d0; }
+
+.bloque-cognitivo.dim-active,
+.bloque-socioemocional.dim-active,
+.bloque-digital.dim-active,
+.bloque-bienestar.dim-active { box-shadow: inset 0 0 0 2px var(--c-high); }
 

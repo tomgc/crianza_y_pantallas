@@ -266,9 +266,7 @@ body {
 .grid-cell.row-head.dim-active:hover { background: var(--highlight); }
 
 /* ── Ficha de dimensión ─────────────────────────────────────── */
-.dim-ficha-links {
-  margin-top: 16px;
-}
+.dim-ficha-links { margin-top: 16px; }
 .dim-ficha-link {
   display: block;
   color: var(--accent);
@@ -835,7 +833,21 @@ body {
 }
 .contact-link:hover { color: var(--ink); }
 
+/* ── BLOQUES TEMÁTICOS D-visual ───────────────────────────────── */
+.grid-cell.row-head.bloque-cognitivo      { background: #eef4fb; }
+.grid-cell.row-head.bloque-socioemocional { background: #f0f7f0; }
+.grid-cell.row-head.bloque-digital        { background: #f5f0fb; }
+.grid-cell.row-head.bloque-bienestar      { background: #fdf4ee; }
 
+.grid-cell.row-head.bloque-cognitivo:hover,      .grid-cell.row-head.bloque-cognitivo.dim-active      { background: #daeaf7; }
+.grid-cell.row-head.bloque-socioemocional:hover, .grid-cell.row-head.bloque-socioemocional.dim-active  { background: #d8efd8; }
+.grid-cell.row-head.bloque-digital:hover,        .grid-cell.row-head.bloque-digital.dim-active         { background: #ebe0f7; }
+.grid-cell.row-head.bloque-bienestar:hover,      .grid-cell.row-head.bloque-bienestar.dim-active       { background: #fae3d0; }
+
+.bloque-cognitivo.dim-active,
+.bloque-socioemocional.dim-active,
+.bloque-digital.dim-active,
+.bloque-bienestar.dim-active { box-shadow: inset 0 0 0 2px var(--c-high); }
 
 
 </style>
@@ -7374,6 +7386,25 @@ window.__DATA__ = {
     }
   };
 
+  // ── DIMENSIONES: BLOQUES TEMÁTICOS (D-visual) ───────────────
+  const DIM_BLOCKS = {
+    "lenguaje":       "bloque-cognitivo",
+    "cognicion":      "bloque-cognitivo",
+    "creatividad":    "bloque-cognitivo",
+    "socioemocional": "bloque-socioemocional",
+    "comportamiento": "bloque-socioemocional",
+    "vinculo":        "bloque-socioemocional",
+    "co-regulacion":  "bloque-socioemocional",
+    "alfabetizacion": "bloque-digital",
+    "privacidad":     "bloque-digital",
+    "cyberbullying":  "bloque-digital",
+    "salud-mental":   "bloque-bienestar",
+    "sueno":          "bloque-bienestar",
+    "fisica":         "bloque-bienestar",
+    "alimentacion":   "bloque-bienestar",
+    "vision":         "bloque-bienestar"
+  };
+
   // ── MOUNT ───────────────────────────────────────────────────
   const root = document.getElementById("app");
   if (!root) return;
@@ -7459,7 +7490,7 @@ window.__DATA__ = {
           ${renderMatriz()}
         </div>
         <aside class="ficha-pane" id="ficha-pane">
-          ${renderFicha(state.activeCell)}
+          ${state.activeDim ? renderFichaDim(state.activeDim) : renderFicha(state.activeCell)}
         </aside>
       </div>
     `;
@@ -7510,8 +7541,9 @@ window.__DATA__ = {
       const pc = paperCountByDim[d.id];
       const dimDesc = DIM_DESCRIPTIONS[d.id];
       const tooltipAttr = dimDesc ? ` data-dim-id="${escapeHtml(d.id)}"` : "";
+      const bloqueClass = DIM_BLOCKS[d.id] ? ` ${DIM_BLOCKS[d.id]}` : "";
       const dimActive = state.activeDim === d.id ? " dim-active" : "";
-      html += `<div class="grid-cell row-head${dimActive}"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
+      html += `<div class="grid-cell row-head${bloqueClass}${dimActive}"${tooltipAttr}><span>${escapeHtml(d.label)}</span>${pc > 0 ? `<span class="dim-paper-count">(${pc} ${pc === 1 ? "referencia" : "referencias"})</span>` : ""}</div>`;
       ages.forEach(a => {
         const cid = `${d.id}-${a.id}`;
         const cell = claims[cid];
@@ -8137,6 +8169,7 @@ window.__DATA__ = {
     `;
   }
 
+  // ── POPOVER DE REFERENCIA ───────────────────────────────────
   // ── FICHA DE DIMENSIÓN ──────────────────────────────────────
   function renderFichaDim(dimId) {
     const desc = DIM_DESCRIPTIONS[dimId];
@@ -8161,8 +8194,6 @@ window.__DATA__ = {
     `;
   }
 
-
-  // ── FICHA DE DIMENSIÓN (clic en row-head) ───────────────────
   function openDimFicha(dimId) {
     state.activeDim = dimId;
     state.activeCell = null;
@@ -8244,6 +8275,7 @@ window.__DATA__ = {
       const cid = cellEl.dataset.cellid;
       if (claims[cid]) {
         state.activeCell = cid;
+        state.activeDim = null;
         // Re-render solo de la matriz (para active class) y de la ficha
         const matrizPane = root.querySelector(".matriz-pane");
         const fichaPane  = root.querySelector("#ficha-pane");
