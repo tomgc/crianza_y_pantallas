@@ -7,16 +7,21 @@
     { "id": "preadolescencia", "label": "Preadolescencia", "range": "9–12 años" }
   ],
   "dimensions": [
-    { "id": "lenguaje", "label": "Lenguaje" },
-    { "id": "cognicion", "label": "Cognición y atención" },
+    { "id": "lenguaje",       "label": "Lenguaje" },
+    { "id": "cognicion",      "label": "Cognición y atención" },
+    { "id": "creatividad",    "label": "Creatividad y juego" },
     { "id": "socioemocional", "label": "Socio-emocional" },
-    { "id": "sueno", "label": "Sueño" },
-    { "id": "fisica", "label": "Actividad física y motricidad" },
-    { "id": "vision", "label": "Visión" },
-    { "id": "salud-mental", "label": "Salud mental" },
     { "id": "comportamiento", "label": "Comportamiento y autorregulación" },
-    { "id": "vinculo", "label": "Vínculo y apego" },
-    { "id": "creatividad", "label": "Creatividad y juego" }
+    { "id": "vinculo",        "label": "Vínculo y apego" },
+    { "id": "co-regulacion",  "label": "Crianza digital y co-regulación" },
+    { "id": "salud-mental",   "label": "Salud mental" },
+    { "id": "alfabetizacion", "label": "Alfabetización digital" },
+    { "id": "privacidad",     "label": "Privacidad y seguridad digital" },
+    { "id": "cyberbullying",  "label": "Cyberbullying y violencia entre pares" },
+    { "id": "sueno",          "label": "Sueño" },
+    { "id": "fisica",         "label": "Actividad física y motricidad" },
+    { "id": "alimentacion",   "label": "Alimentación y pantallas" },
+    { "id": "vision",         "label": "Visión" }
   ],
   "certaintyLabels": { "high": "Alta", "medium": "Media", "low": "Baja" },
   "biblioTypes": {

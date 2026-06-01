@@ -196,7 +196,7 @@
         const isActive = cid === state.activeCell;
         const cls = ["grid-cell", "data-cell", dimmed ? "dimmed" : "", isActive ? "active" : ""].filter(Boolean).join(" ");
 
-        if (!cell) {
+        if (!cell || !(cell.claims && cell.claims.length)) {
           html += `<div class="${cls}" data-cellid="${cid}"><div class="cell-empty">—</div></div>`;
           return;
         }
@@ -222,7 +222,7 @@
 
   // ── FICHA DE CELDA ──────────────────────────────────────────
   function renderFicha(cellId) {
-    if (!cellId || !claims[cellId]) {
+    if (!cellId || !claims[cellId] || !claims[cellId].claims?.length) {
       return `
         <div class="ficha-empty">
           <div class="eyebrow">Ficha activa</div>

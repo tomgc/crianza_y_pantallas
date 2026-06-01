@@ -5231,6 +5231,81 @@ window.__DATA__ = {
         ],
         "downstream": []
       }
+    },
+    "co-regulacion-lactante": {
+      "claims": []
+    },
+    "co-regulacion-primera-infancia": {
+      "claims": []
+    },
+    "co-regulacion-preescolar": {
+      "claims": []
+    },
+    "co-regulacion-ninez-media": {
+      "claims": []
+    },
+    "co-regulacion-preadolescencia": {
+      "claims": []
+    },
+    "alfabetizacion-lactante": {
+      "claims": []
+    },
+    "alfabetizacion-primera-infancia": {
+      "claims": []
+    },
+    "alfabetizacion-preescolar": {
+      "claims": []
+    },
+    "alfabetizacion-ninez-media": {
+      "claims": []
+    },
+    "alfabetizacion-preadolescencia": {
+      "claims": []
+    },
+    "privacidad-lactante": {
+      "claims": []
+    },
+    "privacidad-primera-infancia": {
+      "claims": []
+    },
+    "privacidad-preescolar": {
+      "claims": []
+    },
+    "privacidad-ninez-media": {
+      "claims": []
+    },
+    "privacidad-preadolescencia": {
+      "claims": []
+    },
+    "cyberbullying-lactante": {
+      "claims": []
+    },
+    "cyberbullying-primera-infancia": {
+      "claims": []
+    },
+    "cyberbullying-preescolar": {
+      "claims": []
+    },
+    "cyberbullying-ninez-media": {
+      "claims": []
+    },
+    "cyberbullying-preadolescencia": {
+      "claims": []
+    },
+    "alimentacion-lactante": {
+      "claims": []
+    },
+    "alimentacion-primera-infancia": {
+      "claims": []
+    },
+    "alimentacion-preescolar": {
+      "claims": []
+    },
+    "alimentacion-ninez-media": {
+      "claims": []
+    },
+    "alimentacion-preadolescencia": {
+      "claims": []
     }
   },
   "metadata": {
@@ -5271,24 +5346,12 @@ window.__DATA__ = {
         "label": "Cognición y atención"
       },
       {
+        "id": "creatividad",
+        "label": "Creatividad y juego"
+      },
+      {
         "id": "socioemocional",
         "label": "Socio-emocional"
-      },
-      {
-        "id": "sueno",
-        "label": "Sueño"
-      },
-      {
-        "id": "fisica",
-        "label": "Actividad física y motricidad"
-      },
-      {
-        "id": "vision",
-        "label": "Visión"
-      },
-      {
-        "id": "salud-mental",
-        "label": "Salud mental"
       },
       {
         "id": "comportamiento",
@@ -5299,8 +5362,40 @@ window.__DATA__ = {
         "label": "Vínculo y apego"
       },
       {
-        "id": "creatividad",
-        "label": "Creatividad y juego"
+        "id": "co-regulacion",
+        "label": "Crianza digital y co-regulación"
+      },
+      {
+        "id": "salud-mental",
+        "label": "Salud mental"
+      },
+      {
+        "id": "alfabetizacion",
+        "label": "Alfabetización digital"
+      },
+      {
+        "id": "privacidad",
+        "label": "Privacidad y seguridad digital"
+      },
+      {
+        "id": "cyberbullying",
+        "label": "Cyberbullying y violencia entre pares"
+      },
+      {
+        "id": "sueno",
+        "label": "Sueño"
+      },
+      {
+        "id": "fisica",
+        "label": "Actividad física y motricidad"
+      },
+      {
+        "id": "alimentacion",
+        "label": "Alimentación y pantallas"
+      },
+      {
+        "id": "vision",
+        "label": "Visión"
       }
     ],
     "certaintyLabels": {
@@ -6092,7 +6187,7 @@ window.__DATA__ = {
         const isActive = cid === state.activeCell;
         const cls = ["grid-cell", "data-cell", dimmed ? "dimmed" : "", isActive ? "active" : ""].filter(Boolean).join(" ");
 
-        if (!cell) {
+        if (!cell || !(cell.claims && cell.claims.length)) {
           html += `<div class="${cls}" data-cellid="${cid}"><div class="cell-empty">—</div></div>`;
           return;
         }
@@ -6118,7 +6213,7 @@ window.__DATA__ = {
 
   // ── FICHA DE CELDA ──────────────────────────────────────────
   function renderFicha(cellId) {
-    if (!cellId || !claims[cellId]) {
+    if (!cellId || !claims[cellId] || !claims[cellId].claims?.length) {
       return `
         <div class="ficha-empty">
           <div class="eyebrow">Ficha activa</div>

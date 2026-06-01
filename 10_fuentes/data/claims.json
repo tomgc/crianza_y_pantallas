@@ -2465,5 +2465,80 @@
       ],
       "downstream": []
     }
+  },
+  "co-regulacion-lactante": {
+    "claims": []
+  },
+  "co-regulacion-primera-infancia": {
+    "claims": []
+  },
+  "co-regulacion-preescolar": {
+    "claims": []
+  },
+  "co-regulacion-ninez-media": {
+    "claims": []
+  },
+  "co-regulacion-preadolescencia": {
+    "claims": []
+  },
+  "alfabetizacion-lactante": {
+    "claims": []
+  },
+  "alfabetizacion-primera-infancia": {
+    "claims": []
+  },
+  "alfabetizacion-preescolar": {
+    "claims": []
+  },
+  "alfabetizacion-ninez-media": {
+    "claims": []
+  },
+  "alfabetizacion-preadolescencia": {
+    "claims": []
+  },
+  "privacidad-lactante": {
+    "claims": []
+  },
+  "privacidad-primera-infancia": {
+    "claims": []
+  },
+  "privacidad-preescolar": {
+    "claims": []
+  },
+  "privacidad-ninez-media": {
+    "claims": []
+  },
+  "privacidad-preadolescencia": {
+    "claims": []
+  },
+  "cyberbullying-lactante": {
+    "claims": []
+  },
+  "cyberbullying-primera-infancia": {
+    "claims": []
+  },
+  "cyberbullying-preescolar": {
+    "claims": []
+  },
+  "cyberbullying-ninez-media": {
+    "claims": []
+  },
+  "cyberbullying-preadolescencia": {
+    "claims": []
+  },
+  "alimentacion-lactante": {
+    "claims": []
+  },
+  "alimentacion-primera-infancia": {
+    "claims": []
+  },
+  "alimentacion-preescolar": {
+    "claims": []
+  },
+  "alimentacion-ninez-media": {
+    "claims": []
+  },
+  "alimentacion-preadolescencia": {
+    "claims": []
   }
 }
