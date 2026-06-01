@@ -1,17 +1,17 @@
 ============================================================
  ESTRUCTURA DEL PROYECTO
  Raiz: /Users/tomgc/Projects/crianza_y_pantallas
- Fecha: 2026-05-31 20:36:21
- Total: 11 carpetas, 82 archivos
+ Fecha: 2026-06-01 08:49:43
+ Total: 11 carpetas, 94 archivos
 ============================================================
 
 ├── 10_fuentes/
 │   ├── data/
 │   │   ├── andamiaje.json    [6.31K]
-│   │   ├── bibliografia.json    [80.05K]
-│   │   ├── claims.json    [108.68K]
-│   │   ├── metadata.json    [11.58K]
-│   ├── app.js    [44.36K]
+│   │   ├── bibliografia.json    [105.53K]
+│   │   ├── claims.json    [135.80K]
+│   │   ├── metadata.json    [12.37K]
+│   ├── app.js    [44.43K]
 │   ├── glosario-data.js    [16.38K]
 │   ├── styles.css    [26.35K]
 │   ├── template.html    [2.29K]
@@ -44,15 +44,25 @@
 │   │   │   ├── 10_resultados_prompt_vision.md    [27.32K]
 │   │   │   ├── 11_prompt_dimensiones_nuevas.md    [7.19K]
 │   │   │   ├── 11_resultados_prompt_dimensiones_nuevas.md    [22.92K]
+│   │   │   ├── 12_prompt_co_regulacion.md    [9.70K]
+│   │   │   ├── 12_resultados_prompt_co_regulacion.md    [20.31K]
+│   │   │   ├── 13_prompt_alfabetizacion.md    [10.08K]
+│   │   │   ├── 13_resultados_prompt_alfabetizacion.md    [23.12K]
+│   │   │   ├── 14_prompt_privacidad.md    [9.76K]
+│   │   │   ├── 14_resultados_prompt_privacidad.md    [25.14K]
+│   │   │   ├── 15_prompt_cyberbullying.md    [10.05K]
+│   │   │   ├── 15_resultados_prompt_cyberbullying.md    [24.37K]
+│   │   │   ├── 16_prompt_alimentacion.md    [10.48K]
+│   │   │   ├── 16_resultados_prompt_alimentacion.md    [30.82K]
 │   │   │   ├── README.md    [4.73K]
-│   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
 │   │   ├── CLAUDE.md    [5.51K]
+│   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
 │   ├── andamios/
+│   │   ├── Glosario.html    [13.28K]
 │   │   ├── extraer_claims.py    [15.31K]
 │   │   ├── glosario-app.jsx    [15.08K]
 │   │   ├── glosario-data.js    [19.13K]
-│   │   ├── Glosario.html    [13.28K]
 │   │   ├── wireframe-b-standalone.html    [19.43K]
 │   ├── estructura/
 │   │   ├── 20260529_103300_estructura.md    [2.91K]
@@ -73,8 +83,10 @@
 │   │   ├── 20260531_193753_estructura.txt    [5.40K]
 │   │   ├── 20260531_194053_estructura.md    [5.35K]
 │   │   ├── 20260531_194053_estructura.txt    [5.53K]
-│   │   ├── estructura_actual.md    [5.35K]
-│   │   ├── estructura_actual.txt    [5.53K]
+│   │   ├── 20260531_203621_estructura.md    [5.61K]
+│   │   ├── 20260531_203621_estructura.txt    [5.79K]
+│   │   ├── estructura_actual.md    [5.61K]
+│   │   ├── estructura_actual.txt    [5.79K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -98,21 +110,21 @@
 ├── 00_build.sh    [2.03K]
 ├── 00_escanear_proyecto.R    [6.26K]
 ├── CLAUDE.md    [40.00B]
-├── index.html    [306.20K]
 ├── README.md    [1.49K]
+├── index.html    [362.12K]
 
 ============================================================
  CONTEO POR EXTENSION
 ============================================================
 
-  .md               52
-  .txt              10
+  .md               63
+  .txt              11
   .html              7
   .json              4
   .js                3
+  .R                 1
   .css               1
   .jsx               1
   .png               1
   .py                1
-  .R                 1
   .sh                1
