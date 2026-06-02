@@ -77,9 +77,7 @@ Claims con no_ref justificados al 2026-06-01:
 - cognicion-preescolar[2]: co-visionado beneficioso — consenso implícito sin paper único citable
 - cognicion-ninez-media[1]: dependencia del propósito/diseño — afirmación sobre heterogeneidad de la evidencia
 - fisica-lactante[0]: mecanismo indirecto motor — no hallazgo empírico citable
-- salud-mental-lactante[0]: remisión a dimensión socioemocional
-- salud-mental-preescolar[1]: (pendiente de verificación de ref)
-- comportamiento-ninez-media[2]: videojuegos pace vs pasivo — no hay meta-análisis reciente específico
+- salud-mental-lactante[0]: remisión a dimensión socioemocional- comportamiento-ninez-media[2]: videojuegos pace vs pasivo — no hay meta-análisis reciente específico
 - vinculo-preescolar[1]: gap en la literatura — escasez de estudios reconocida
 - vinculo-preadolescencia[1]: gap teórico — ausencia de marcos consolidados
 - creatividad-lactante[0]: ausencia de evidencia robusta

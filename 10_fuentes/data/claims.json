@@ -1557,8 +1557,7 @@
       {
         "certainty": "medium",
         "text": "Contenido violento o sobreestimulante se asocia con peores resultados emocionales; contenido prosocial neutral o positivo.",
-        "refs": [],
-        "no_ref": true
+        "refs": ["Christakis2013"]
       }
     ],
     "andamiaje": {
