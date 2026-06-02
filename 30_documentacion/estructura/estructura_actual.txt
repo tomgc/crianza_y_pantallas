@@ -1,14 +1,14 @@
 ============================================================
  ESTRUCTURA DEL PROYECTO
  Raiz: /Users/tomgc/Projects/crianza_y_pantallas
- Fecha: 2026-06-02 09:07:39
- Total: 11 carpetas, 84 archivos
+ Fecha: 2026-06-02 10:34:53
+ Total: 12 carpetas, 87 archivos
 ============================================================
 
 ├── 10_fuentes/
 │   ├── data/
 │   │   ├── andamiaje.json    [6.31K]
-│   │   ├── bibliografia.json    [108.13K]
+│   │   ├── bibliografia.json    [108.14K]
 │   │   ├── claims.json    [142.71K]
 │   │   ├── metadata.json    [12.37K]
 │   ├── app.js    [61.66K]
@@ -16,6 +16,9 @@
 │   ├── styles.css    [28.31K]
 │   ├── template.html    [2.29K]
 ├── 20_recursos/
+│   ├── papers/
+│   │   ├── Maertens2021.pdf    [3.07M]
+│   │   ├── README.md    [744.00B]
 │   ├── README.md    [1015.00B]
 ├── 30_documentacion/
 │   ├── activa/
@@ -56,19 +59,19 @@
 │   │   │   ├── 16_resultados_prompt_alimentacion.md    [30.82K]
 │   │   │   ├── README.md    [4.73K]
 │   │   ├── 17_prompt_definiciones_dimensiones.md    [11.58K]
-│   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
 │   │   ├── CLAUDE.md    [7.33K]
+│   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
 │   │   ├── definiciones_dimensiones.md    [17.62K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
 │   ├── andamios/
+│   │   ├── Glosario.html    [13.28K]
 │   │   ├── extraer_claims.py    [15.31K]
 │   │   ├── glosario-app.jsx    [15.08K]
 │   │   ├── glosario-data.js    [19.13K]
-│   │   ├── Glosario.html    [13.28K]
 │   │   ├── wireframe-b-standalone.html    [19.43K]
 │   ├── estructura/
-│   │   ├── estructura_actual.md    [5.69K]
-│   │   ├── estructura_actual.txt    [5.93K]
+│   │   ├── estructura_actual.md    [5.87K]
+│   │   ├── estructura_actual.txt    [6.12K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -88,6 +91,7 @@
 │   │   ├── traspaso-cierre-v16.md    [29.32K]
 │   │   ├── traspaso-cierre-v17.md    [31.95K]
 │   │   ├── traspaso-cierre-v18.md    [29.85K]
+│   │   ├── traspaso-cierre-v19.md    [27.53K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
@@ -100,21 +104,22 @@
 ├── 00_escanear_proyecto.R    [6.61K]
 ├── 00_generar_og_image.py    [5.60K]
 ├── CLAUDE.md    [40.00B]
-├── index.html    [391.05K]
 ├── README.md    [1.52K]
+├── index.html    [391.05K]
 
 ============================================================
  CONTEO POR EXTENSION
 ============================================================
 
-  .md               61
+  .md               63
   .html              8
   .json              4
   .js                3
   .py                2
+  .R                 1
   .css               1
   .jsx               1
+  .pdf               1
   .png               1
-  .R                 1
   .sh                1
   .txt               1
