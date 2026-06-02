@@ -1,7 +1,7 @@
 # Estructura del proyecto
 
 - **Raiz:** `/Users/tomgc/Projects/crianza_y_pantallas`
-- **Fecha:** 2026-06-02 09:05:33
+- **Fecha:** 2026-06-02 09:07:40
 - **Total:** 11 carpetas, 84 archivos
 
 ## Arbol
@@ -58,15 +58,15 @@
 │   │   │   ├── 16_resultados_prompt_alimentacion.md    [30.82K]
 │   │   │   ├── README.md    [4.73K]
 │   │   ├── 17_prompt_definiciones_dimensiones.md    [11.58K]
-│   │   ├── CLAUDE.md    [7.33K]
 │   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
+│   │   ├── CLAUDE.md    [7.33K]
 │   │   ├── definiciones_dimensiones.md    [17.62K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
 │   ├── andamios/
-│   │   ├── Glosario.html    [13.28K]
 │   │   ├── extraer_claims.py    [15.31K]
 │   │   ├── glosario-app.jsx    [15.08K]
 │   │   ├── glosario-data.js    [19.13K]
+│   │   ├── Glosario.html    [13.28K]
 │   │   ├── wireframe-b-standalone.html    [19.43K]
 │   ├── estructura/
 │   │   ├── estructura_actual.md    [5.69K]
@@ -102,8 +102,8 @@
 ├── 00_escanear_proyecto.R    [6.61K]
 ├── 00_generar_og_image.py    [5.60K]
 ├── CLAUDE.md    [40.00B]
-├── README.md    [1.52K]
 ├── index.html    [391.05K]
+├── README.md    [1.52K]
 ```
 
 ## Conteo por extension
@@ -115,9 +115,9 @@
 | `.json` | 4 |
 | `.js` | 3 |
 | `.py` | 2 |
-| `.R` | 1 |
 | `.css` | 1 |
 | `.jsx` | 1 |
 | `.png` | 1 |
+| `.R` | 1 |
 | `.sh` | 1 |
 | `.txt` | 1 |
