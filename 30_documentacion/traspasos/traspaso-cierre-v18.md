@@ -33,12 +33,13 @@ La sesión 18 completó los pendientes bibliográficos y visuales que quedaban a
 
 **Qué no funciona / deuda conocida:**
 - `Essex2025`: `type: longitudinal` es incorrecto para un experimento intra-sujetos. Deuda documentada — agregar tipo `experimental` requiere 2 archivos (`metadata.biblioTypes` + `typeLabels` hardcodeado en `app.js`).
-- `Essex2025` → bug preexistente en `typeLabels` de app.js: 5 tipos válidos (`transversal`, `cohort`, `theory`, `survey`, `report`) no tienen entrada en el objeto hardcodeado → se muestran en crudo en la vista de bib.
+- `typeLabels` en app.js: 5 tipos (`transversal`, `cohort`, `theory`, `survey`, `report`) completados en esta misma sesión (commit `ee3e575`). Resuelto.
 - Spot-check general de bib: los casos Hernández/Essex sugieren que puede haber más entradas con diseño mal caracterizado. No iniciado.
 
 **Qué cambió respecto a v17:**
-- `bibliografia.json`: Christakis2013 agregado (253→254); Essex2025 journal corregido.
-- `claims.json`: `salud-mental-preescolar[1]` → `refs: ["Christakis2013"]`, `no_ref` removido.
+- `bibliografia.json`: Christakis2013 agregado (253→254); Baumgartner2014 agregado (254→255); Essex2025 journal corregido.
+- `claims.json`: `salud-mental-preescolar[1]` → `refs: ["Christakis2013"]`, `no_ref` removido; `cognicion-preadolescencia[0]` → `refs: ["Baumgartner2014"]` (Ra2018 removido).
+- `app.js`: `typeLabels` completado de 6 a 11 tipos (transversal, cohort, theory, survey, report).
 - `CLAUDE.md`: lista no_ref actualizada (15→14; removida línea salud-mental-preescolar[1]).
 - `assets/og-image.png`: actualizada a 15×5 con bandas D-visual y certeza real.
 - `assets/og-image.html`: fuente HTML del generador.
