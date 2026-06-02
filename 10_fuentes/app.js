@@ -768,7 +768,7 @@
         <div class="gl-sec-label">En la bibliografía</div>
         <div class="gl-papers">
           ${papers.map(p => {
-            const typeLabels = { review:"Revisión", meta:"Meta-análisis", longitudinal:"Longitudinal", guideline:"Guía clínica", law:"Normativa", chilean:"Chile" };
+            const typeLabels = { review:"Revisión", meta:"Meta-análisis", longitudinal:"Longitudinal", guideline:"Guía clínica", law:"Normativa", chilean:"Chile", transversal:"Transversal", cohort:"Cohorte", theory:"Marco teórico", survey:"Encuesta", report:"Reporte" };
             return `
               <a class="gl-paper" href="${escapeHtml(p.url || "")}" target="_blank" rel="noopener">
                 <div class="gl-paper-meta">

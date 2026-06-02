@@ -1635,6 +1635,15 @@ window.__DATA__ = {
       "url": "https://onlinelibrary.wiley.com/doi/10.1002/pdi3.70002"
     },
     {
+      "id": "Baumgartner2014",
+      "group": "recent",
+      "type": "transversal",
+      "authors": "Baumgartner S.E., Weeda W.D., van der Heijden L.L., Huizinga M. 2014",
+      "title": "The Relationship Between Media Multitasking and Executive Function in Early Adolescents",
+      "journal": "Journal of Early Adolescence 34(8):1120–1144. N=523 adolescentes 11–15 años. Mide working memory, shifting e inhibición con Digit Span, Eriksen Flankers, Dots-Triangles.",
+      "url": "https://doi.org/10.1177/0272431614523133"
+    },
+    {
       "id": "Gath2025",
       "group": "recent",
       "type": "longitudinal",
@@ -3947,7 +3956,7 @@ window.__DATA__ = {
           "certainty": "high",
           "text": "Multitarea con medios (varias pantallas o pantalla + tarea académica simultánea) se asocia con peor memoria de trabajo y peor desempeño académico en estudios longitudinales (varias cohortes en EE.UU. y Europa).",
           "refs": [
-            "Ra2018"
+            "Baumgartner2014"
           ]
         },
         {
@@ -8028,7 +8037,7 @@ window.__DATA__ = {
         <div class="gl-sec-label">En la bibliografía</div>
         <div class="gl-papers">
           ${papers.map(p => {
-            const typeLabels = { review:"Revisión", meta:"Meta-análisis", longitudinal:"Longitudinal", guideline:"Guía clínica", law:"Normativa", chilean:"Chile" };
+            const typeLabels = { review:"Revisión", meta:"Meta-análisis", longitudinal:"Longitudinal", guideline:"Guía clínica", law:"Normativa", chilean:"Chile", transversal:"Transversal", cohort:"Cohorte", theory:"Marco teórico", survey:"Encuesta", report:"Reporte" };
             return `
               <a class="gl-paper" href="${escapeHtml(p.url || "")}" target="_blank" rel="noopener">
                 <div class="gl-paper-meta">
