@@ -1,17 +1,17 @@
 ============================================================
  ESTRUCTURA DEL PROYECTO
  Raiz: /Users/tomgc/Projects/crianza_y_pantallas
- Fecha: 2026-06-01 16:42:10
- Total: 11 carpetas, 80 archivos
+ Fecha: 2026-06-02 09:05:33
+ Total: 11 carpetas, 84 archivos
 ============================================================
 
 ├── 10_fuentes/
 │   ├── data/
 │   │   ├── andamiaje.json    [6.31K]
-│   │   ├── bibliografia.json    [105.53K]
-│   │   ├── claims.json    [142.68K]
+│   │   ├── bibliografia.json    [108.13K]
+│   │   ├── claims.json    [142.71K]
 │   │   ├── metadata.json    [12.37K]
-│   ├── app.js    [61.56K]
+│   ├── app.js    [61.66K]
 │   ├── glosario-data.js    [16.38K]
 │   ├── styles.css    [28.31K]
 │   ├── template.html    [2.29K]
@@ -56,7 +56,7 @@
 │   │   │   ├── 16_resultados_prompt_alimentacion.md    [30.82K]
 │   │   │   ├── README.md    [4.73K]
 │   │   ├── 17_prompt_definiciones_dimensiones.md    [11.58K]
-│   │   ├── CLAUDE.md    [5.51K]
+│   │   ├── CLAUDE.md    [7.33K]
 │   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
 │   │   ├── definiciones_dimensiones.md    [17.62K]
 │   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
@@ -67,8 +67,8 @@
 │   │   ├── glosario-data.js    [19.13K]
 │   │   ├── wireframe-b-standalone.html    [19.43K]
 │   ├── estructura/
-│   │   ├── estructura_actual.md    [5.49K]
-│   │   ├── estructura_actual.txt    [5.73K]
+│   │   ├── estructura_actual.md    [5.69K]
+│   │   ├── estructura_actual.txt    [5.93K]
 │   ├── traspasos/
 │   │   ├── traspaso-cierre-v01.md    [64.53K]
 │   │   ├── traspaso-cierre-v02.md    [11.82K]
@@ -86,31 +86,35 @@
 │   │   ├── traspaso-cierre-v14.md    [27.28K]
 │   │   ├── traspaso-cierre-v15.md    [21.42K]
 │   │   ├── traspaso-cierre-v16.md    [29.32K]
+│   │   ├── traspaso-cierre-v17.md    [31.95K]
+│   │   ├── traspaso-cierre-v18.md    [29.85K]
 │   ├── versiones/
 │   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
 │   │   ├── prompt-claude-design_v1.md    [6.09K]
 │   │   ├── prompt-claude-design_v2.md    [7.55K]
 │   │   ├── sintesis_eystag_pantallas_menores_5_v1.html    [33.24K]
 ├── assets/
-│   ├── og-image.png    [41.69K]
+│   ├── og-image.html    [6.26K]
+│   ├── og-image.png    [50.33K]
 ├── 00_build.sh    [2.03K]
 ├── 00_escanear_proyecto.R    [6.61K]
+├── 00_generar_og_image.py    [5.60K]
 ├── CLAUDE.md    [40.00B]
 ├── README.md    [1.52K]
-├── index.html    [388.22K]
+├── index.html    [391.05K]
 
 ============================================================
  CONTEO POR EXTENSION
 ============================================================
 
-  .md               59
-  .html              7
+  .md               61
+  .html              8
   .json              4
   .js                3
+  .py                2
   .R                 1
   .css               1
   .jsx               1
   .png               1
-  .py                1
   .sh                1
   .txt               1
