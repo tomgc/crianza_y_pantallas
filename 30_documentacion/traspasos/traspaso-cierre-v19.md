@@ -64,7 +64,7 @@ La sesión 19 completó el spot-check bibliográfico (Pendiente 3 de v18), sanea
 #### Cambio 3: Corrección de traspasos v17 y v18
 - **Archivo(s) afectado(s):** `30_documentacion/traspasos/traspaso-cierre-v17.md`, `30_documentacion/traspasos/traspaso-cierre-v18.md`
 - **Categoría temática:** Documentación
-- **Qué se hizo:** v17: modelo `Opus 4.8` → `Opus 4.8` (3×). v18: modelo (4×), conteos 254→255 bib, 3→4 commits, Baumgartner2014 y typeLabels marcados como resueltos, pendientes stale removidos, D-hover corregido, README corregido.
+- **Qué se hizo:** v17: modelo `Sonnet 4.6` → `Opus 4.8` (3×). v18: modelo (4×), conteos 254→255 bib, 3→4 commits, Baumgartner2014 y typeLabels marcados como resueltos, pendientes stale removidos, D-hover corregido, README corregido.
 - **Commit:** `de6c571`
 
 #### Cambio 4: 20_recursos/papers/ — infraestructura de PDFs versionados
