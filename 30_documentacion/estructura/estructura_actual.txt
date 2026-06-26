@@ -1,126 +1,134 @@
-============================================================
- ESTRUCTURA DEL PROYECTO
- Raiz: /Users/tomgc/Projects/crianza_y_pantallas
- Fecha: 2026-06-26 17:24:18
- Total: 12 carpetas, 87 archivos
-============================================================
+ESCANEO DE ESTRUCTURA — crianza_y_pantallas
+Raiz   : /Users/tomgc/Projects/crianza_y_pantallas
+Fecha  : 2026-06-26 17:38:25
+Totales: 13 carpetas, 100 archivos
 
+crianza_y_pantallas/
+├── .claude/
+│   ├── launch.json  (197)
+│   └── settings.local.json  (1.28K)
 ├── 10_fuentes/
 │   ├── data/
-│   │   ├── andamiaje.json    [6.31K]
-│   │   ├── bibliografia.json    [108.14K]
-│   │   ├── claims.json    [142.71K]
-│   │   ├── metadata.json    [12.37K]
-│   ├── app.js    [61.66K]
-│   ├── glosario-data.js    [16.38K]
-│   ├── styles.css    [28.22K]
-│   ├── styles.css.bak    [28.22K]
-│   ├── template.html    [2.29K]
+│   │   ├── andamiaje.json  (6.31K)
+│   │   ├── bibliografia.json  (108K)
+│   │   ├── claims.json  (143K)
+│   │   └── metadata.json  (12.4K)
+│   ├── app.js  (61.7K)
+│   ├── glosario-data.js  (16.4K)
+│   ├── styles.css  (28.2K)
+│   └── template.html  (2.29K)
 ├── 20_recursos/
 │   ├── papers/
-│   │   ├── Maertens2021.pdf    [3.07M]
-│   │   ├── README.md    [744.00B]
-│   ├── README.md    [1015.00B]
+│   │   ├── Maertens2021.pdf  (3.07M)
+│   │   └── README.md  (744)
+│   ├── .gitignore  (20)
+│   └── README.md  (1015)
 ├── 30_documentacion/
 │   ├── activa/
 │   │   ├── prompts_busqueda/
-│   │   │   ├── 01_prompt_creatividad.md    [9.98K]
-│   │   │   ├── 01_resultados_prompt_creatividad.md    [24.28K]
-│   │   │   ├── 02_prompt_vinculo.md    [10.09K]
-│   │   │   ├── 02_resultados_prompt_vinculo.md    [26.29K]
-│   │   │   ├── 03_prompt_salud_mental.md    [10.24K]
-│   │   │   ├── 03_resultados_prompt_salud_mental.md    [28.25K]
-│   │   │   ├── 04_prompt_socioemocional.md    [9.99K]
-│   │   │   ├── 04_resultados_prompt_socioemocional.md    [21.92K]
-│   │   │   ├── 05_prompt_comportamiento.md    [10.30K]
-│   │   │   ├── 05_resultados_prompt_comportamiento.md    [22.83K]
-│   │   │   ├── 06_prompt_cognicion.md    [10.08K]
-│   │   │   ├── 06_resultados_codigo_prompt_cognicion.md    [12.09K]
-│   │   │   ├── 06_resultados_prompt_cognicion.md    [21.65K]
-│   │   │   ├── 07_prompt_fisica.md    [9.85K]
-│   │   │   ├── 07_resultados_prompt_fisica.md    [25.09K]
-│   │   │   ├── 08_prompt_lenguaje.md    [9.71K]
-│   │   │   ├── 08_resultados_codigo_prompt_lenguaje.md    [9.54K]
-│   │   │   ├── 08_resultados_prompt_lenguaje.md    [24.11K]
-│   │   │   ├── 09_prompt_sueno.md    [10.05K]
-│   │   │   ├── 09_resultados_prompt_sueno.md    [21.94K]
-│   │   │   ├── 10_prompt_vision.md    [9.79K]
-│   │   │   ├── 10_resultados_prompt_vision.md    [27.32K]
-│   │   │   ├── 11_prompt_dimensiones_nuevas.md    [9.83K]
-│   │   │   ├── 11_resultados_prompt_dimensiones_nuevas.md    [22.92K]
-│   │   │   ├── 12_prompt_co_regulacion.md    [11.20K]
-│   │   │   ├── 12_resultados_prompt_co_regulacion.md    [20.31K]
-│   │   │   ├── 13_prompt_alfabetizacion.md    [11.57K]
-│   │   │   ├── 13_resultados_prompt_alfabetizacion.md    [23.12K]
-│   │   │   ├── 14_prompt_privacidad.md    [11.25K]
-│   │   │   ├── 14_resultados_prompt_privacidad.md    [25.14K]
-│   │   │   ├── 15_prompt_cyberbullying.md    [11.54K]
-│   │   │   ├── 15_resultados_prompt_cyberbullying.md    [24.37K]
-│   │   │   ├── 16_prompt_alimentacion.md    [11.97K]
-│   │   │   ├── 16_resultados_prompt_alimentacion.md    [30.82K]
-│   │   │   ├── README.md    [4.73K]
-│   │   ├── 17_prompt_definiciones_dimensiones.md    [11.58K]
-│   │   ├── arquitectura_crianza_pantallas.html    [19.65K]
-│   │   ├── definiciones_dimensiones.md    [17.62K]
-│   │   ├── flujo_incorporacion_evidencia.md    [6.65K]
+│   │   │   ├── 01_prompt_creatividad.md  (9.98K)
+│   │   │   ├── 01_resultados_prompt_creatividad.md  (24.3K)
+│   │   │   ├── 02_prompt_vinculo.md  (10.1K)
+│   │   │   ├── 02_resultados_prompt_vinculo.md  (26.3K)
+│   │   │   ├── 03_prompt_salud_mental.md  (10.2K)
+│   │   │   ├── 03_resultados_prompt_salud_mental.md  (28.2K)
+│   │   │   ├── 04_prompt_socioemocional.md  (9.99K)
+│   │   │   ├── 04_resultados_prompt_socioemocional.md  (21.9K)
+│   │   │   ├── 05_prompt_comportamiento.md  (10.3K)
+│   │   │   ├── 05_resultados_prompt_comportamiento.md  (22.8K)
+│   │   │   ├── 06_prompt_cognicion.md  (10.1K)
+│   │   │   ├── 06_resultados_codigo_prompt_cognicion.md  (12.1K)
+│   │   │   ├── 06_resultados_prompt_cognicion.md  (21.6K)
+│   │   │   ├── 07_prompt_fisica.md  (9.85K)
+│   │   │   ├── 07_resultados_prompt_fisica.md  (25.1K)
+│   │   │   ├── 08_prompt_lenguaje.md  (9.71K)
+│   │   │   ├── 08_resultados_codigo_prompt_lenguaje.md  (9.54K)
+│   │   │   ├── 08_resultados_prompt_lenguaje.md  (24.1K)
+│   │   │   ├── 09_prompt_sueno.md  (10K)
+│   │   │   ├── 09_resultados_prompt_sueno.md  (21.9K)
+│   │   │   ├── 10_prompt_vision.md  (9.79K)
+│   │   │   ├── 10_resultados_prompt_vision.md  (27.3K)
+│   │   │   ├── 11_prompt_dimensiones_nuevas.md  (9.83K)
+│   │   │   ├── 11_resultados_prompt_dimensiones_nuevas.md  (22.9K)
+│   │   │   ├── 12_prompt_co_regulacion.md  (11.2K)
+│   │   │   ├── 12_resultados_prompt_co_regulacion.md  (20.3K)
+│   │   │   ├── 13_prompt_alfabetizacion.md  (11.6K)
+│   │   │   ├── 13_resultados_prompt_alfabetizacion.md  (23.1K)
+│   │   │   ├── 14_prompt_privacidad.md  (11.2K)
+│   │   │   ├── 14_resultados_prompt_privacidad.md  (25.1K)
+│   │   │   ├── 15_prompt_cyberbullying.md  (11.5K)
+│   │   │   ├── 15_resultados_prompt_cyberbullying.md  (24.4K)
+│   │   │   ├── 16_prompt_alimentacion.md  (12K)
+│   │   │   ├── 16_resultados_prompt_alimentacion.md  (30.8K)
+│   │   │   └── README.md  (4.73K)
+│   │   ├── 17_prompt_definiciones_dimensiones.md  (11.6K)
+│   │   ├── arquitectura_crianza_pantallas.html  (19.6K)
+│   │   ├── definiciones_dimensiones.md  (17.6K)
+│   │   └── flujo_incorporacion_evidencia.md  (6.65K)
 │   ├── andamios/
-│   │   ├── extraer_claims.py    [15.31K]
-│   │   ├── glosario-app.jsx    [15.08K]
-│   │   ├── glosario-data.js    [19.13K]
-│   │   ├── Glosario.html    [13.28K]
-│   │   ├── wireframe-b-standalone.html    [19.43K]
+│   │   ├── .gitkeep  (0)
+│   │   ├── extraer_claims.py  (15.3K)
+│   │   ├── glosario-app.jsx  (15.1K)
+│   │   ├── glosario-data.js  (19.1K)
+│   │   ├── Glosario.html  (13.3K)
+│   │   └── wireframe-b-standalone.html  (19.4K)
 │   ├── estructura/
-│   │   ├── estructura_actual.md    [5.87K]
-│   │   ├── estructura_actual.txt    [6.12K]
+│   │   ├── 20260602_103453_estructura.md  (5.87K)
+│   │   ├── 20260602_103453_estructura.txt  (6.12K)
+│   │   ├── 20260626_172418_estructura.md  (5.89K)
+│   │   ├── 20260626_172418_estructura.txt  (6.14K)
+│   │   ├── estructura_actual.md  (5.89K)
+│   │   └── estructura_actual.txt  (6.14K)
 │   ├── traspasos/
-│   │   ├── traspaso-cierre-v01.md    [64.53K]
-│   │   ├── traspaso-cierre-v02.md    [11.82K]
-│   │   ├── traspaso-cierre-v03.md    [85.19K]
-│   │   ├── traspaso-cierre-v04.md    [40.13K]
-│   │   ├── traspaso-cierre-v05.md    [33.31K]
-│   │   ├── traspaso-cierre-v06.md    [39.18K]
-│   │   ├── traspaso-cierre-v07.md    [34.52K]
-│   │   ├── traspaso-cierre-v08.md    [28.79K]
-│   │   ├── traspaso-cierre-v09.md    [42.24K]
-│   │   ├── traspaso-cierre-v10.md    [38.42K]
-│   │   ├── traspaso-cierre-v11.md    [36.54K]
-│   │   ├── traspaso-cierre-v12.md    [38.52K]
-│   │   ├── traspaso-cierre-v13.md    [36.06K]
-│   │   ├── traspaso-cierre-v14.md    [27.28K]
-│   │   ├── traspaso-cierre-v15.md    [21.42K]
-│   │   ├── traspaso-cierre-v16.md    [29.32K]
-│   │   ├── traspaso-cierre-v17.md    [31.95K]
-│   │   ├── traspaso-cierre-v18.md    [30.00K]
-│   │   ├── traspaso-cierre-v19.md    [27.53K]
+│   │   ├── traspaso-cierre-v01.md  (64.5K)
+│   │   ├── traspaso-cierre-v02.md  (11.8K)
+│   │   ├── traspaso-cierre-v03.md  (85.2K)
+│   │   ├── traspaso-cierre-v04.md  (40.1K)
+│   │   ├── traspaso-cierre-v05.md  (33.3K)
+│   │   ├── traspaso-cierre-v06.md  (39.2K)
+│   │   ├── traspaso-cierre-v07.md  (34.5K)
+│   │   ├── traspaso-cierre-v08.md  (28.8K)
+│   │   ├── traspaso-cierre-v09.md  (42.2K)
+│   │   ├── traspaso-cierre-v10.md  (38.4K)
+│   │   ├── traspaso-cierre-v11.md  (36.5K)
+│   │   ├── traspaso-cierre-v12.md  (38.5K)
+│   │   ├── traspaso-cierre-v13.md  (36.1K)
+│   │   ├── traspaso-cierre-v14.md  (27.3K)
+│   │   ├── traspaso-cierre-v15.md  (21.4K)
+│   │   ├── traspaso-cierre-v16.md  (29.3K)
+│   │   ├── traspaso-cierre-v17.md  (32K)
+│   │   ├── traspaso-cierre-v18.md  (30K)
+│   │   ├── traspaso-cierre-v19.md  (27.5K)
+│   │   └── traspaso-cierre-v20.md  (15.8K)
 │   ├── versiones/
-│   │   ├── pantallas-infancia-matriz_v2.html    [130.99K]
-│   │   ├── prompt-claude-design_v1.md    [6.09K]
-│   │   ├── prompt-claude-design_v2.md    [7.55K]
-│   │   ├── sintesis_eystag_pantallas_menores_5_v1.html    [33.24K]
+│   │   ├── pantallas-infancia-matriz_v2.html  (131K)
+│   │   ├── prompt-claude-design_v1.md  (6.09K)
+│   │   ├── prompt-claude-design_v2.md  (7.55K)
+│   │   └── sintesis_eystag_pantallas_menores_5_v1.html  (33.2K)
+│   └── .DS_Store  (6K)
 ├── assets/
-│   ├── og-image.html    [6.26K]
-│   ├── og-image.png    [50.33K]
-├── 00_build.sh    [2.03K]
-├── 00_escanear_proyecto.R    [6.61K]
-├── 00_generar_og_image.py    [5.60K]
-├── CLAUDE.md    [9.28K]
-├── index.html    [390.96K]
-├── README.md    [1.52K]
+│   ├── og-image.html  (6.26K)
+│   └── og-image.png  (50.3K)
+├── .DS_Store  (6K)
+├── .gitignore  (384)
+├── 00_build.sh  (2.03K)
+├── 00_escanear_proyecto.R  (9.21K)
+├── 00_generar_og_image.py  (5.6K)
+├── CLAUDE.md  (9.28K)
+├── index.html  (391K)
+└── README.md  (1.52K)
 
-============================================================
- CONTEO POR EXTENSION
-============================================================
-
-  .md               62
-  .html              8
-  .json              4
-  .js                3
-  .py                2
-  .bak               1
-  .css               1
-  .jsx               1
-  .pdf               1
-  .png               1
-  .R                 1
-  .sh                1
-  .txt               1
+Conteo por extension:
+  md                 67
+  html               8
+  json               6
+  (sin extension)    5
+  js                 3
+  txt                3
+  py                 2
+  css                1
+  jsx                1
+  pdf                1
+  png                1
+  r                  1
+  sh                 1

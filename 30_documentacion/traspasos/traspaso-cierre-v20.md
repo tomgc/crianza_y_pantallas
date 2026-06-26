@@ -2,7 +2,7 @@
 
 - **Versión de traspaso:** v20
 - **Fecha:** 2026-06-26
-- **Sesión:** 20 — CLAUDE.md consolidado; residuos v18 corregidos; 4 prompts de búsqueda no_ref; tipografía unificada y responsividad ampliada.
+- **Sesión:** 20 — CLAUDE.md consolidado; residuos v18 corregidos; 4 prompts de búsqueda no_ref; tipografía unificada; escáner actualizado.
 - **Modelo utilizado:** Claude Sonnet 4.6
 - **Entorno:** Web (HTML/CSS/JS estático, GitHub Pages)
 
@@ -10,34 +10,36 @@
 
 ## 1. Resumen ejecutivo
 
-La sesión 20 abordó cuatro bloques. Primero, consolidación del CLAUDE.md: el stub de la raíz (de otro proyecto) fue reemplazado por un CLAUDE.md unificado y actualizado para Crianza y Pantallas, y el `30_documentacion/activa/CLAUDE.md` fue eliminado. Segundo, cierre de deuda documental: los residuos stale del traspaso v18 (typeLabels listado como deuda abierta y delta incompleto) fueron corregidos con str_replace quirúrgico. Tercero, avance en el no_ref-review: los 14 claims `no_ref: true` fueron auditados; 10 confirmados sin observación y 4 identificados como candidatos a búsqueda bibliográfica — se generaron 4 prompts de búsqueda autocontenidos listos para usar. Cuarto, mejora UI: escala tipográfica racionalizada de 11 a 6 niveles (+1–1.5px en promedio) y `--content-width` ampliado de 700 a 860px, con panel ficha aumentado a 420px y nuevo breakpoint a 1100px. Todo publicado en `origin/main` (`a11b717`).
+La sesión 20 abordó cinco bloques. Primero, consolidación del CLAUDE.md: el stub de la raíz fue reemplazado por un CLAUDE.md unificado y actualizado, y el `30_documentacion/activa/CLAUDE.md` fue eliminado. Segundo, cierre de deuda documental: residuos stale del traspaso v18 corregidos con str_replace quirúrgico. Tercero, avance en el no_ref-review: los 14 claims auditados; 10 confirmados sin observación, 4 con búsqueda pendiente — 4 prompts generados. Cuarto, mejora UI: escala tipográfica de 11 a 6 niveles (+1–1.5px) y `--content-width` ampliado de 700 a 860px. Quinto, escáner actualizado: reemplazado por versión con escritura atómica, poda automática (retención 2 sellos) y marcadores de raíz adaptados; snapshots históricos limpiados manualmente. Todo publicado en `origin/main` (`baa2d84`).
 
 ---
 
 ## 2. Estado al cierre
 
 **Funciona:**
-- Sitio publicado en https://tomgc.github.io/crianza_y_pantallas/ (commit `a11b717`).
+- Sitio publicado en https://tomgc.github.io/crianza_y_pantallas/ (commit `baa2d84`).
 - Corpus: 255 bib / 240 claims / 14 no_ref / 0 huérfanos / 0 duplicados.
-- CLAUDE.md unificado en raíz (7573363), `30_documentacion/activa/CLAUDE.md` eliminado.
-- Traspaso v18 corregido (commit `94c2032` → amendeado a `7573363`).
-- Tipografía: 6 niveles estandarizados, body 14px, celdas 11.5px, ficha-title 18px.
+- CLAUDE.md unificado en raíz; `30_documentacion/activa/CLAUDE.md` eliminado.
+- Traspaso v18 corregido.
+- Tipografía: 6 niveles, body 14px, celdas 11.5px, ficha-title 18px.
 - `--content-width`: 860px; panel ficha: 420px.
+- Escáner: escritura atómica, poda automática a 2 sellos, funcionando.
+- Working tree limpio, `origin/main` sincronizado.
 
 **Pendiente / deuda conocida:**
-- `10_fuentes/styles.css.bak` sin commitear (dejar o borrar manualmente).
-- 4 claims no_ref con búsqueda bibliográfica pendiente (prompts generados, no ejecutados aún).
+- 4 claims no_ref con búsqueda bibliográfica pendiente (prompts generados, no ejecutados).
 - `comportamiento-ninez-media[2]`: claim posiblemente reformulable según resultado de búsqueda.
 - `creatividad-preadolescencia[1]`: dirección del claim a confirmar con evidencia.
 - CNTV2023: entrada bib huérfana, decisión de integración diferida.
 - Spot-check bib grupos `school`, `chile`, `intl`: diferido desde v19.
-- Bug `typeLabels` en `app.js` (~L771): resuelto (11/11 tipos). Deuda cerrada.
 
 **Delta respecto a v19:**
-- `CLAUDE.md` (raíz): reemplazado completamente (+195 líneas).
+- `CLAUDE.md` (raíz): reemplazado (+195 líneas).
 - `30_documentacion/activa/CLAUDE.md`: eliminado (−86 líneas).
 - `30_documentacion/traspasos/traspaso-cierre-v18.md`: 2 correcciones quirúrgicas.
 - `10_fuentes/styles.css`: 194 cambios de valores tipográficos y de layout.
+- `00_escanear_proyecto.R`: reemplazado por versión con escritura atómica y poda.
+- `30_documentacion/estructura/`: snapshots históricos limpiados; 2 sellos retenidos.
 - `index.html`: regenerado por build.
 
 ---
@@ -46,44 +48,37 @@ La sesión 20 abordó cuatro bloques. Primero, consolidación del CLAUDE.md: el 
 
 ### Cambio 1 — Corrección de residuos stale en traspaso v18
 - **Archivos:** `30_documentacion/traspasos/traspaso-cierre-v18.md`
-- **Categoría:** Documentación / deuda documental
-- **Qué:** Dos str_replace quirúrgicos: (1) typeLabels listado como deuda abierta → marcado como resuelto en sesión 18 (commit `ee3e575`); (2) delta vs v17 incompleto → agregados Baumgartner2014 y typeLabels al listado de cambios.
-- **Por qué:** El v18 fue escrito con información parcial; los residuos creaban inconsistencia entre el resumen ejecutivo y el delta.
-- **Verificación:** Ambos patrones confirmados únicos antes del replace; resultado verificado post-replace.
-- **Commit:** `7573363` (amendeado junto con CLAUDE.md).
+- **Categoría:** Documentación
+- **Qué:** typeLabels marcado como resuelto; delta vs v17 completado con Baumgartner2014 y typeLabels.
+- **Commit:** `7573363`.
 
 ### Cambio 2 — Consolidación de CLAUDE.md en la raíz
 - **Archivos:** `CLAUDE.md` (raíz, modificado), `30_documentacion/activa/CLAUDE.md` (eliminado)
 - **Categoría:** Documentación / gobernanza del repo
-- **Qué:** Reemplazado el stub de raíz (copiado de otro proyecto, con secciones irrelevantes: datos personales NNA, R, ramas+PR) por un CLAUDE.md unificado específico para Crianza y Pantallas. Eliminado el `activa/CLAUDE.md` redundante.
-- **Contenido del nuevo CLAUDE.md:** idioma/estilo, descripción del proyecto, estructura del repo, convención de build, flujo Git, reglas de datos (metadata.json, claims.json, bibliografia.json, app.js, template.html, papers/), assert de integridad copiable, convenciones del sitio, política no_ref actualizada (14 claims, estado 2026-06-02), archivos de referencia.
-- **Verificación:** Claude Code lo internalizó correctamente ("8 reglas activas, idioma tuteo, sin voseo").
+- **Qué:** Stub de otro proyecto reemplazado por CLAUDE.md unificado para Crianza y Pantallas. Contiene: idioma/estilo, descripción, estructura, build, Git, reglas de datos, assert, convenciones, política no_ref (14 claims), archivos de referencia.
+- **Verificación:** Claude Code internalizó correctamente ("8 reglas activas, idioma tuteo, sin voseo").
 - **Commit:** `7573363`.
 
-### Cambio 3 — Auditoría no_ref (sin cambios en corpus)
-- **Archivos:** ninguno modificado
+### Cambio 3 — Auditoría no_ref + 4 prompts de búsqueda
+- **Archivos:** ninguno modificado en el corpus
 - **Categoría:** Editorial / bibliografía
-- **Qué:** Revisión de los 14 claims `no_ref: true` contra los 4 criterios de la política. 10 confirmados sin observación. 4 identificados como candidatos a búsqueda:
-  - `cognicion-preescolar[2]`: co-visionado — posiblemente citable.
-  - `cognicion-ninez-media[1]`: tecnología educativa — posiblemente citable.
-  - `comportamiento-ninez-media[2]`: videojuegos acción vs. video pasivo — comparación sin soporte directo confirmado.
-  - `creatividad-preadolescencia[1]`: redes pasivas y creatividad — dirección a confirmar.
-- **Resultado:** 4 prompts de búsqueda generados como archivos temporales (no versionados).
+- **Qué:** 14 claims auditados; 10 confirmados. 4 prompts generados como archivos temporales (no versionados):
+  - `busqueda_covisionado_preescolar.md` → `cognicion-preescolar[2]`
+  - `busqueda_tecnedu_ninez_media.md` → `cognicion-ninez-media[1]`
+  - `busqueda_videojuegos_atencion.md` → `comportamiento-ninez-media[2]`
+  - `busqueda_redes_creatividad_preadolescencia.md` → `creatividad-preadolescencia[1]`
 
 ### Cambio 4 — Escala tipográfica y responsividad
-- **Archivos:** `10_fuentes/styles.css`, `index.html` (regenerado)
-- **Categoría:** UI/UX / tipografía / layout
-- **Qué:** Racionalización de 11 tamaños tipográficos a 6 niveles estandarizados. Ampliación del espacio disponible.
-- **Escala nueva:**
-  - XS: 11–11.5px (chips, rangos, conteos, leyendas)
-  - S: 12–12.5px (evidencia, defs, chile-body, popovers, meta-bib)
-  - M: 13–13.5px (tabs, select, intro ficha, bib-title, gl-item, search)
-  - Base: 14px (body, text-section-content)
-  - L: 15px (brand, section-titles, gl-def)
-  - XL: 18px / 23px (ficha-title / page-title)
-- **Layout:** `--content-width` 700→860px; panel ficha 380→420px; nuevo breakpoint 1100px; móvil `--content-width: 100%`.
-- **Verificación:** Build exitoso, revisión visual aprobada por Tomás.
+- **Archivos:** `10_fuentes/styles.css`, `index.html`
+- **Categoría:** UI/UX
+- **Qué:** 11 tamaños → 6 niveles (+1–1.5px). `--content-width` 700→860px, ficha 380→420px, breakpoint 1100px. Build verificado, aprobado visualmente.
 - **Commit:** `a11b717`.
+
+### Cambio 5 — Escáner actualizado + limpieza de snapshots
+- **Archivos:** `00_escanear_proyecto.R`, `30_documentacion/estructura/`
+- **Categoría:** Infraestructura / documentación
+- **Qué:** Escáner reemplazado por versión con escritura atómica, poda automática (retención 2 sellos), marcadores de raíz `00_build.sh` + `index.html`, ruta `30_documentacion/estructura`. Snapshots históricos (~30 pares) limpiados manualmente; quedaron 2 sellos. Poda automática verificada en primera corrida post-reemplazo.
+- **Commit:** `baa2d84`.
 
 ---
 
@@ -95,24 +90,30 @@ Ninguno.
 
 ## 5. Aprendizajes y restricciones descubiertas
 
-### R1 — Mecánica de descarga de archivos
-Tomás reemplaza archivos manualmente desde el link de descarga. No generar comandos `cp ~/Downloads/...`. Indicar solo que descargue y reemplace; luego correr el build.
+### R1 — Archivos: Tomás reemplaza manualmente
+No generar comandos `cp ~/Downloads/...`. Indicar que descargue y reemplace; luego ejecutar build o script.
 
-### R2 — Claude Code vosea por defecto
-Claude Code revierte a voseo si no se le instruye explícitamente. Incluir la regla en el mensaje de apertura cuando se inicie sesión en Claude Code. (Agregado a memoria del Project.)
+### R2 — `head -n -2` no funciona en macOS/BSD
+Usar `tail -r | tail -n +3` para omitir los N últimos en orden inverso.
+
+### R3 — Claude Code vosea por defecto
+Incluir la regla de tuteo explícitamente en el mensaje de apertura de cada sesión Claude Code.
 
 ---
 
 ## 6. Decisiones de diseño
 
-### D1 — 6 niveles tipográficos en lugar de 11
-Alternativas consideradas: (a) subir body a 15px con ajustes proporcionales — descartado por riesgo de colapso en celdas de la matriz; (b) escala propuesta de 6 niveles — adoptada. Tensión resuelta: legibilidad vs. densidad de información en la matriz. La celda en 11.5px mantiene la información visible sin fragmentar la grilla.
+### D1 — 6 niveles tipográficos
+body 14px base; celdas 11.5px; ficha-title 18px; page-title 23px. Tensión legibilidad/densidad resuelta manteniendo celdas en 11.5px.
 
 ### D2 — content-width 860px
-Alternativas: 800px (conservador) vs. 900px (más amplio). Adoptado 860px como punto medio que aprovecha pantallas medianas sin crear líneas demasiado largas en texto corrido.
+Punto medio entre 800px (conservador) y 900px (líneas muy largas).
 
 ### D3 — CLAUDE.md unificado en raíz
-El `30_documentacion/activa/CLAUDE.md` fue eliminado en lugar de mantenerlo como alias. Razón: dos fuentes de verdad crean confusión sobre cuál está actualizado. La raíz es el lugar canónico que Claude Code lee automáticamente.
+`30_documentacion/activa/CLAUDE.md` eliminado para evitar dos fuentes de verdad.
+
+### D4 — Escáner con retención 2 sellos
+Suficiente para comparar estado anterior vs. actual. Los traspasos son la fuente histórica real; los snapshots de estructura son desechables.
 
 ---
 
@@ -120,62 +121,49 @@ El `30_documentacion/activa/CLAUDE.md` fue eliminado en lugar de mantenerlo como
 
 | Constante | Valor | Archivo | Nota |
 |---|---|---|---|
-| `--content-width` | 860px | styles.css | Ampliado en esta sesión (era 700px) |
-| Panel ficha | 420px | styles.css | Ampliado en esta sesión (era 380px) |
-| `body font-size` | 14px | styles.css | Subido en esta sesión (era 13px) |
-| Corpus bib | 255 entradas | bibliografia.json | Sin cambios esta sesión |
-| Claims totales | 240 | claims.json | Sin cambios esta sesión |
-| no_ref activos | 14 | claims.json / CLAUDE.md | Sin cambios esta sesión |
-| Commit HEAD | a11b717 | origin/main | Al cierre |
+| `--content-width` | 860px | styles.css | Ampliado esta sesión |
+| Panel ficha | 420px | styles.css | Ampliado esta sesión |
+| `body font-size` | 14px | styles.css | Subido esta sesión |
+| `RETENER_SNAPSHOTS` | 2 | 00_escanear_proyecto.R | Nuevo esta sesión |
+| Corpus bib | 255 | bibliografia.json | Sin cambios |
+| Claims totales | 240 | claims.json | Sin cambios |
+| no_ref activos | 14 | claims.json / CLAUDE.md | Sin cambios |
+| Commit HEAD | baa2d84 | origin/main | Al cierre |
 
 ---
 
 ## 8. Arquitectura de archivos
 
-Referencia: escáner `20260626_172418_estructura.md`. Sin cambios estructurales respecto a v19. Adiciones:
-- `10_fuentes/styles.css.bak` — backup local, no versionado, puede borrarse.
+Referencia: escáner `20260626_173825_estructura.md`. Sin cambios estructurales respecto a v19. Cambios de contenido: `00_escanear_proyecto.R` reemplazado; `30_documentacion/activa/CLAUDE.md` eliminado.
 
 ---
 
 ## 9. Pendientes y ruta sugerida
 
 ### P1 — Ejecutar 4 búsquedas bibliográficas no_ref (Media)
-- **Qué:** Correr los 4 prompts generados en esta sesión en chats dedicados y traer resultados.
-- **Prompts:** `busqueda_covisionado_preescolar.md`, `busqueda_tecnedu_ninez_media.md`, `busqueda_videojuegos_atencion.md`, `busqueda_redes_creatividad_preadolescencia.md`.
+- **Qué:** Correr los 4 prompts en chats dedicados y traer resultados.
+- **Targets:** `cognicion-preescolar[2]`, `cognicion-ninez-media[1]`, `comportamiento-ninez-media[2]`, `creatividad-preadolescencia[1]`.
 - **Tipo:** Bibliografía / editorial
-- **Impacto:** Hasta 4 claims podrían pasar de `no_ref: true` a referenciados, o ser reformulados.
-- **Dependencias:** Ninguna técnica; requiere tiempo de búsqueda en chats externos.
-- **Complejidad:** Media (búsqueda) + Baja (integración si hay resultados claros).
-- **Precauciones:** Aplicar assert de integridad antes de cualquier commit con cambios en bib/claims. Verificar collision de IDs antes de insertar entradas nuevas.
-- **Criterio de éxito:** Cada claim tiene veredicto documentado (mantener no_ref / referenciar / reformular).
+- **Precauciones:** Assert de integridad antes de commit. Verificar colisión de IDs antes de insertar entradas nuevas.
+- **Criterio de éxito:** Cada claim tiene veredicto (mantener no_ref / referenciar / reformular).
 
-### P2 — Integrar resultados de búsquedas (Baja-Media, depende de P1)
-- **Qué:** Según veredictos de P1, actualizar claims.json y/o bibliografia.json.
-- **Tipo:** Bibliografía
-- **Precauciones:** Si `comportamiento-ninez-media[2]` debe reformularse (comparación sin soporte), redactar nuevo texto antes de commitear.
+### P2 — Integrar resultados de búsquedas (depende de P1)
+- **Qué:** Actualizar claims.json y/o bibliografia.json según veredictos.
+- **Precauciones:** Si `comportamiento-ninez-media[2]` debe reformularse, redactar nuevo texto antes de commitear.
 
 ### P3 — CNTV2023 huérfana (Baja)
-- **Qué:** Decidir si integrar a algún claim de contexto Chile o eliminar del corpus.
-- **Tipo:** Editorial
-- **Complejidad:** Baja.
+- **Qué:** Decidir integración a algún claim de contexto Chile o eliminar del corpus.
 
 ### P4 — Spot-check bib grupos restantes (Baja)
-- **Qué:** Revisión manual sistemática de grupos `school`, `chile`, `intl`.
-- **Tipo:** Calidad bibliográfica
-- **Diferido desde:** v19.
-
-### P5 — Borrar styles.css.bak (Trivial)
-- **Qué:** `rm /Users/tomgc/Projects/crianza_y_pantallas/10_fuentes/styles.css.bak`
-- **Tipo:** Limpieza
-- **Criterio:** Confirmar que el sitio se ve bien en producción antes de borrar.
+- **Qué:** Revisión manual de grupos `school`, `chile`, `intl`. Diferido desde v19.
 
 ---
 
 ## 10. Instrucciones específicas para la próxima sesión
 
-⚠️ NO editar `metadata.json` con `json.dump` — siempre str_replace quirúrgico sobre texto crudo.
+⚠️ NO editar `metadata.json` con `json.dump` — siempre str_replace quirúrgico.
 ⚠️ NO usar campo `flags` en claims — las advertencias van en el texto.
-⚠️ NO agregar entradas bib sin verificar `type` en `biblioTypes` y `group` en `biblioGroups`. El campo `year` no existe en el esquema.
+⚠️ NO agregar entradas bib sin verificar `type` en `biblioTypes` y `group` en `biblioGroups`. El campo `year` no existe.
 ⚠️ NO citar cuantitativo de `Chen2024`/`Xiao2025` sin texto completo.
 ⚠️ NO usar umbral de "86 min" en claims COT20s.
 ⚠️ NO editar `index.html` directamente. Shell HTML va en `template.html`.
@@ -185,7 +173,8 @@ Referencia: escáner `20260626_172418_estructura.md`. Sin cambios estructurales 
 ✅ ANTES de pushear, mostrar `git status` y esperar confirmación explícita.
 🔒 Commits directos a `main` (sin ramas de feature).
 🔒 Build (`./00_build.sh`) obligatorio antes de cualquier commit que toque `10_fuentes/`.
-🔒 Claude Code: responder en español latinoamericano con tuteo. Si vosea, recordarle la regla.
+🔒 Claude Code: responder en español latinoamericano con tuteo. Incluir la regla en el mensaje de apertura.
+🔒 Tomás reemplaza archivos manualmente — no generar comandos `cp ~/Downloads/...`.
 
 ---
 
@@ -201,13 +190,14 @@ Un "cambio" es una solicitud distinguible del usuario, no las acciones técnicas
 
 | Categoría | N° | % | Descripción |
 |---|---|---|---|
-| Bibliografía | 72 | 28% | Integración, corrección y gestión del corpus de referencias |
-| UI/UX | 48 | 19% | Diseño visual, layout, interacciones, responsive |
+| Bibliografía | 72 | 27% | Integración, corrección y gestión del corpus de referencias |
+| UI/UX | 49 | 19% | Diseño visual, layout, interacciones, responsive |
 | Claims / contenido | 42 | 16% | Redacción, reformulación y auditoría de claims |
-| Infraestructura JS | 35 | 14% | app.js, glosario, funcionalidades del sitio |
-| Documentación | 28 | 11% | Traspasos, CLAUDE.md, prompts, flujos |
+| Infraestructura JS | 35 | 13% | app.js, glosario, funcionalidades del sitio |
+| Documentación | 30 | 11% | Traspasos, CLAUDE.md, prompts, flujos, escáner |
 | Build / deploy | 18 | 7% | Pipeline de build, GitHub Pages, og-image |
 | Datos / esquema | 12 | 5% | metadata.json, estructura de JSON, esquema |
+| Infraestructura R | 2 | 1% | Escáner, herramientas del repo |
 
 ### Resumen estadístico por sesión
 
@@ -219,22 +209,25 @@ Un "cambio" es una solicitud distinguible del usuario, no las acciones técnicas
 | 17 | v17 | 7 | Opus 4.8 | Spot-check bib, P7, escáner, 15×5 en docs |
 | 18 | v18 | 8 | Opus 4.8 | Baumgartner2014, typeLabels fix, og-image update |
 | 19 | v19 | 6 | Opus 4.8 | Spot-check journals, papers/, Hysing2015, CNTV2023 |
-| 20 | v20 | 4 | Sonnet 4.6 | CLAUDE.md, residuos v18, prompts no_ref, tipografía |
-| **Total** | | **~241** | | |
+| 20 | v20 | 5 | Sonnet 4.6 | CLAUDE.md, residuos v18, prompts no_ref, tipografía, escáner |
+| **Total** | | **~242** | | |
 
 ### Detalle cronológico — Sesión 20
 
 **C238 — Corrección residuos stale traspaso v18**
-Dos str_replace quirúrgicos: typeLabels marcado como resuelto; delta vs v17 completado con Baumgartner2014 y typeLabels. Commit `7573363`.
+Dos str_replace: typeLabels marcado resuelto; delta completado con Baumgartner2014. Commit `7573363`.
 
 **C239 — Consolidación CLAUDE.md en raíz**
-Stub de otro proyecto reemplazado por CLAUDE.md unificado para Crianza y Pantallas. `30_documentacion/activa/CLAUDE.md` eliminado. Commit `7573363`.
+Stub reemplazado por CLAUDE.md unificado. `30_documentacion/activa/CLAUDE.md` eliminado. Commit `7573363`.
 
 **C240 — Auditoría no_ref + 4 prompts de búsqueda**
-14 claims auditados: 10 confirmados, 4 con búsqueda pendiente. Prompts generados para `cognicion-preescolar[2]`, `cognicion-ninez-media[1]`, `comportamiento-ninez-media[2]`, `creatividad-preadolescencia[1]`. No genera commit (archivos temporales).
+14 claims auditados: 10 confirmados, 4 con búsqueda pendiente. Prompts generados para los 4 claims. No genera commit.
 
 **C241 — Escala tipográfica y responsividad**
-11 tamaños → 6 niveles (+1–1.5px). `--content-width` 700→860px, ficha 380→420px, breakpoint 1100px. Build + commit `a11b717` + push.
+11 tamaños → 6 niveles (+1–1.5px). `--content-width` 700→860px, ficha 380→420px. Commit `a11b717`.
+
+**C242 — Escáner actualizado + limpieza de snapshots**
+Escáner reemplazado (escritura atómica, poda 2 sellos, marcadores adaptados). ~30 pares históricos limpiados. Commit `baa2d84`.
 
 ---
 
@@ -264,4 +257,4 @@ Stub de otro proyecto reemplazado por CLAUDE.md unificado para Crianza y Pantall
 3. *Específicos (adjuntar):*
    - `traspaso-cierre-v20.md` (este archivo)
    - `30_documentacion/estructura/estructura_actual.md` (escáner al cierre)
-   - Si hay resultados de búsquedas: los archivos de resultados correspondientes.
+   - Si hay resultados de búsquedas no_ref: los archivos de resultados correspondientes.
