@@ -1,178 +1,241 @@
 # =============================================================================
 # 00_escanear_proyecto.R
 # -----------------------------------------------------------------------------
-# Propósito: Generar snapshot de la estructura del proyecto.
-#            Output dual: .txt para histórico local, .md para adjuntar a chat.
-# Disparadores:
-#   1. Al abrir sesión nueva.
-#   2. Después de reorganizar estructura.
-#   3. Antes de cerrar sesión.
-#   4. Cuando un agente pierde referencia de dónde están los archivos.
-# Output:
-#   - 30_documentacion/estructura/YYYYMMDD_HHMMSS_estructura.txt
-#   - 30_documentacion/estructura/YYYYMMDD_HHMMSS_estructura.md
-#   - 30_documentacion/estructura/estructura_actual.txt   (alias al más reciente)
-#   - 30_documentacion/estructura/estructura_actual.md    (alias al más reciente)
-# Nota: Este proyecto usa 30_documentacion/ (no 50_documentacion/ como dice
-#       POLITICA_PROYECTO.md). Ver Bug 4 del traspaso v04.
+# Proyecto : crianza_y_pantallas
+# Autor    : Tomas
+# Proposito: Generar un snapshot navegable de la estructura actual del repo,
+#            conforme a la seccion 7 de POLITICA_PROYECTO.md.
+#            Emite un snapshot con sello de fecha (.txt y .md) y mantiene los
+#            aliases estructura_actual.{txt,md} apuntando al mas reciente.
+# Fecha    : 2026-06-26
 # =============================================================================
 
-# ---- Auto-instalación -------------------------------------------------------
-paquetes_requeridos <- c("fs", "rprojroot")
+# --- Verificacion e instalacion de paquetes ---------------------------------
+paquetes_requeridos <- c("here", "fs")
+
 paquetes_faltantes <- paquetes_requeridos[
   !sapply(paquetes_requeridos, requireNamespace, quietly = TRUE)
 ]
-if (length(paquetes_faltantes) > 0) install.packages(paquetes_faltantes)
 
-library(fs)
-
-# ---- Anclaje del root -------------------------------------------------------
-ROOT <- rprojroot::find_root(
-  criterion = rprojroot::is_git_root
-)
-
-# ---- Configuración ----------------------------------------------------------
-EXCLUIR        <- c(".git", ".claude", "node_modules", ".Rproj.user", ".quarto")
-# Snapshots timestamped del propio escáner: no contarlos ni listarlos (se conservan los alias estructura_actual.*).
-PATRON_ESCANER <- "[0-9]{8}_[0-9]{6}_estructura\\.(md|txt)$"
-INCLUIR_ARCHIVO <- FALSE  # Cambiar a TRUE para incluir _archivo/ en el escaneo.
-
-# ---- Función: formatear tamaño legible --------------------------------------
-formato_tamano <- function(bytes) {
-  if (is.na(bytes) || bytes == 0) return("0B")
-  unidades <- c("B", "K", "M", "G")
-  exp <- min(floor(log(bytes, 1024)), length(unidades) - 1)
-  sprintf("%.2f%s", bytes / (1024 ^ exp), unidades[exp + 1])
+if (length(paquetes_faltantes) > 0) {
+  install.packages(paquetes_faltantes)
 }
 
-# ---- Función: construir árbol recursivo -------------------------------------
-construir_arbol <- function(ruta_base, prefijo = "") {
-  items <- dir_ls(ruta_base, all = FALSE)
-  items <- items[!basename(items) %in% EXCLUIR]
-  items <- items[!grepl(PATRON_ESCANER, basename(items))]
-  if (!INCLUIR_ARCHIVO) items <- items[basename(items) != "_archivo"]
+# --- Carga de paquetes ------------------------------------------------------
+library(here)
+library(fs)
 
-  # Carpetas primero, luego archivos; alfabéticamente dentro de cada grupo.
-  es_dir <- is_dir(items)
-  items  <- c(sort(items[es_dir]), sort(items[!es_dir]))
+# --- Rutas ------------------------------------------------------------------
+ruta_raiz        <- here::here()
+ruta_estructura  <- here::here("30_documentacion", "estructura")
 
-  lineas <- character()
-  for (item in items) {
-    es_carpeta <- is_dir(item)
-    nombre     <- basename(item)
-    if (es_carpeta) nombre <- paste0(nombre, "/")
+# --- Constantes y parametros ------------------------------------------------
+# Excluir _archivo/ del arbol (opcional segun POLITICA 7.4). TRUE = excluir.
+EXCLUIR_ARCHIVO <- TRUE
 
-    if (es_carpeta) {
-      lineas <- c(lineas, paste0(prefijo, "├── ", nombre))
-      sub_lineas <- construir_arbol(item, paste0(prefijo, "│   "))
-      lineas <- c(lineas, sub_lineas)
+# Retencion de snapshots con sello de fecha. Tras generar el snapshot nuevo,
+# se conservan los N mas recientes (por nombre, que ordena cronologicamente) y
+# se borra el resto. Los aliases estructura_actual.{txt,md} nunca se podan
+# (no llevan sello). Un snapshot de estructura es una foto reemplazable; no
+# tiene valor historico acumulativo como los traspasos.
+RETENER_SNAPSHOTS <- 2L
+
+DIRS_EXCLUIR <- c(".git", "renv", ".Rproj.user")
+if (EXCLUIR_ARCHIVO) DIRS_EXCLUIR <- c(DIRS_EXCLUIR, "_archivo")
+
+# --- Funciones --------------------------------------------------------------
+
+# Recolecta recursivamente todas las rutas (carpetas y archivos) bajo `dir`,
+# podando los subarboles excluidos. Devuelve un vector de rutas absolutas.
+recolectar_rutas <- function(dir) {
+  entradas <- fs::dir_ls(dir, recurse = FALSE, all = TRUE, fail = FALSE)
+  if (length(entradas) == 0) return(character(0))
+
+  entradas <- entradas[!fs::path_file(entradas) %in% DIRS_EXCLUIR]
+  if (length(entradas) == 0) return(character(0))
+
+  subdirs <- entradas[fs::is_dir(entradas)]
+  hijos <- if (length(subdirs) > 0) {
+    unlist(lapply(subdirs, recolectar_rutas), use.names = FALSE)
+  } else {
+    character(0)
+  }
+  c(entradas, hijos)
+}
+
+# Dibuja el arbol estilo `tree` (conectores box-drawing) desde `dir`.
+# `prefijo` acumula las guias verticales de los niveles ancestros.
+construir_arbol <- function(dir, prefijo = "") {
+  entradas <- fs::dir_ls(dir, recurse = FALSE, all = TRUE, fail = FALSE)
+  if (length(entradas) == 0) return(character(0))
+
+  entradas <- entradas[!fs::path_file(entradas) %in% DIRS_EXCLUIR]
+  if (length(entradas) == 0) return(character(0))
+
+  # Carpetas primero, luego archivos; alfabetico (case-insensitive) en cada grupo.
+  es_dir <- fs::is_dir(entradas)
+  orden  <- order(!es_dir, tolower(fs::path_file(entradas)))
+  entradas <- entradas[orden]
+  es_dir   <- es_dir[orden]
+
+  n <- length(entradas)
+  lineas <- character(0)
+
+  for (i in seq_len(n)) {
+    ultimo   <- i == n
+    conector <- if (ultimo) "\u2514\u2500\u2500 " else "\u251c\u2500\u2500 "
+    nombre   <- fs::path_file(entradas[i])
+
+    if (es_dir[i]) {
+      lineas <- c(lineas, paste0(prefijo, conector, nombre, "/"))
+      prefijo_hijo <- paste0(prefijo, if (ultimo) "    " else "\u2502   ")
+      lineas <- c(lineas, construir_arbol(entradas[i], prefijo_hijo))
     } else {
-      tamano <- formato_tamano(file_info(item)$size)
-      lineas <- c(lineas, sprintf("%s├── %s    [%s]", prefijo, nombre, tamano))
+      tam <- as.character(fs::file_size(entradas[i]))
+      lineas <- c(lineas, paste0(prefijo, conector, nombre, "  (", tam, ")"))
     }
   }
   lineas
 }
 
-# ---- Función: conteo por extensión ------------------------------------------
-conteo_extensiones <- function(ruta_base) {
-  todos <- dir_ls(ruta_base, recurse = TRUE, type = "file", all = FALSE)
-  todos <- todos[!grepl(paste(EXCLUIR, collapse = "|"), todos)]
-  todos <- todos[!grepl(PATRON_ESCANER, todos)]
-  if (!INCLUIR_ARCHIVO) todos <- todos[!grepl("_archivo/", todos)]
-
-  exts            <- tools::file_ext(todos)
-  exts[exts == ""] <- "(sin extension)"
-  sort(table(exts), decreasing = TRUE)
+# Tabula archivos por extension (minuscula), orden descendente por conteo.
+contar_extensiones <- function(rutas_archivos) {
+  ext <- tolower(fs::path_ext(rutas_archivos))
+  ext[ext == ""] <- "(sin extension)"
+  tabla <- sort(table(ext), decreasing = TRUE)
+  tabla
 }
 
-# ---- Función: generar contenido en formato dado -----------------------------
-generar_contenido <- function(ruta_base, formato = "txt") {
-  fecha      <- format(Sys.time(), "%Y-%m-%d %H:%M:%S")
-  arbol      <- construir_arbol(ruta_base)
-  extensiones <- conteo_extensiones(ruta_base)
+# Escritura atomica: escribe a un temporal en la misma carpeta y renombra.
+# El rename es atomico en sistemas POSIX (macOS) y sobrescribe el destino.
+escribir_atomico <- function(lineas, ruta_final) {
+  dir_destino <- fs::path_dir(ruta_final)
+  tmp <- fs::path(
+    dir_destino,
+    paste0(".tmp_", fs::path_file(ruta_final), "_", Sys.getpid())
+  )
+  on.exit(if (file.exists(tmp)) unlink(tmp), add = TRUE)
 
-  todos_archivos  <- dir_ls(ruta_base, recurse = TRUE, type = "file",      all = FALSE)
-  todas_carpetas  <- dir_ls(ruta_base, recurse = TRUE, type = "directory", all = FALSE)
-  todos_archivos  <- todos_archivos[!grepl(paste(EXCLUIR, collapse = "|"), todos_archivos)]
-  todos_archivos  <- todos_archivos[!grepl(PATRON_ESCANER, todos_archivos)]
-  todas_carpetas  <- todas_carpetas[!grepl(paste(EXCLUIR, collapse = "|"), todas_carpetas)]
-  if (!INCLUIR_ARCHIVO) {
-    todos_archivos <- todos_archivos[!grepl("_archivo/", todos_archivos)]
-    todas_carpetas <- todas_carpetas[!grepl("_archivo",  todas_carpetas)]
-  }
+  con <- file(tmp, open = "wb")
+  writeLines(enc2utf8(lineas), con, useBytes = TRUE)
+  close(con)
 
-  if (formato == "md") {
-    out <- c(
-      "# Estructura del proyecto",
-      "",
-      paste0("- **Raiz:** `", ruta_base, "`"),
-      paste0("- **Fecha:** ", fecha),
-      paste0("- **Total:** ", length(todas_carpetas), " carpetas, ",
-             length(todos_archivos), " archivos"),
-      "",
-      "## Arbol",
-      "",
-      "```",
-      arbol,
-      "```",
-      "",
-      "## Conteo por extension",
-      "",
-      "| Extension | Cantidad |",
-      "|-----------|----------|"
-    )
-    for (i in seq_along(extensiones)) {
-      out <- c(out, sprintf("| `.%s` | %d |", names(extensiones)[i], extensiones[i]))
-    }
-  } else {
-    out <- c(
-      strrep("=", 60),
-      " ESTRUCTURA DEL PROYECTO",
-      paste0(" Raiz: ", ruta_base),
-      paste0(" Fecha: ", fecha),
-      paste0(" Total: ", length(todas_carpetas), " carpetas, ",
-             length(todos_archivos), " archivos"),
-      strrep("=", 60),
-      "",
-      arbol,
-      "",
-      strrep("=", 60),
-      " CONTEO POR EXTENSION",
-      strrep("=", 60),
-      ""
-    )
-    for (i in seq_along(extensiones)) {
-      out <- c(out, sprintf("  .%-15s %3d", names(extensiones)[i], extensiones[i]))
-    }
-  }
-  out
+  ok <- file.rename(tmp, ruta_final)
+  if (!isTRUE(ok)) stop("Fallo la escritura atomica de: ", ruta_final)
+  invisible(ruta_final)
 }
 
-# ---- Ejecución principal ----------------------------------------------------
-ejecutar_escaneo <- function() {
-  carpeta_destino <- path(ROOT, "30_documentacion", "estructura")
-  dir_create(carpeta_destino)
+# Poda snapshots con sello de fecha, conservando los `retener` mas recientes.
+# Empareja .txt y .md por su sello; los aliases estructura_actual.* quedan
+# fuera del patron (no llevan sello), asi que nunca se tocan. Devuelve el
+# numero de archivos borrados.
+podar_snapshots <- function(dir_estructura, retener) {
+  patron <- "^[0-9]{8}_[0-9]{6}_estructura\\.(txt|md)$"
+  todos  <- fs::dir_ls(dir_estructura, recurse = FALSE, fail = FALSE)
+  sellados <- todos[grepl(patron, fs::path_file(todos))]
+  if (length(sellados) == 0) return(0L)
 
-  ts <- format(Sys.time(), "%Y%m%d_%H%M%S")
+  # Sello = los 15 primeros caracteres del nombre (YYYYMMDD_HHMMSS).
+  sellos <- substr(fs::path_file(sellados), 1L, 15L)
+  sellos_unicos <- sort(unique(sellos), decreasing = TRUE)
 
-  for (fmt in c("txt", "md")) {
-    contenido <- generar_contenido(ROOT, formato = fmt)
+  if (length(sellos_unicos) <= retener) return(0L)
 
-    archivo_snapshot <- path(carpeta_destino,
-                             sprintf("%s_estructura.%s", ts, fmt))
-    writeLines(contenido, archivo_snapshot, useBytes = TRUE)
-
-    archivo_actual <- path(carpeta_destino,
-                           sprintf("estructura_actual.%s", fmt))
-    writeLines(contenido, archivo_actual, useBytes = TRUE)
-
-    cat(sprintf("  Generado: %s\n", archivo_snapshot))
-    cat(sprintf("  Generado: %s\n", archivo_actual))
-  }
-
-  invisible(TRUE)
+  sellos_a_borrar <- sellos_unicos[-seq_len(retener)]
+  a_borrar <- sellados[sellos %in% sellos_a_borrar]
+  fs::file_delete(a_borrar)
+  length(a_borrar)
 }
 
-# Ejecutar al hacer source().
-ejecutar_escaneo()
+# --- Flujo principal --------------------------------------------------------
+
+# Validacion temprana: la raiz debe existir Y ser realmente el proyecto.
+# here() puede resolver al HOME si se invoca el script por ruta absoluta sin
+# cd previo. Comprobar solo dir.exists() no basta. Por eso exigimos un
+# marcador inequivoco del proyecto en la raiz.
+if (!dir.exists(ruta_raiz)) {
+  stop("No existe la raiz del proyecto resuelta por here::here(): ", ruta_raiz)
+}
+MARCADORES_RAIZ <- c("00_build.sh", "index.html")
+if (!any(file.exists(file.path(ruta_raiz, MARCADORES_RAIZ)))) {
+  stop(
+    "La raiz resuelta por here::here() no parece ser el proyecto:\n  ", ruta_raiz,
+    "\nNo se encontro ninguno de los marcadores esperados (",
+    paste(MARCADORES_RAIZ, collapse = ", "), ").\n",
+    "Ejecuta el escaner con el directorio de trabajo en la raiz del repo:\n",
+    "  cd /ruta/al/repo && Rscript 00_escanear_proyecto.R"
+  )
+}
+
+# Asegurar carpeta de salida.
+if (!dir.exists(ruta_estructura)) {
+  dir.create(ruta_estructura, recursive = TRUE)
+}
+
+# Inventario para totales y extensiones.
+rutas_todas    <- recolectar_rutas(ruta_raiz)
+es_dir_todas   <- if (length(rutas_todas) > 0) fs::is_dir(rutas_todas) else logical(0)
+n_carpetas     <- sum(es_dir_todas)
+n_archivos     <- sum(!es_dir_todas)
+rutas_archivos <- rutas_todas[!es_dir_todas]
+
+# Arbol y metadatos.
+nombre_proyecto <- fs::path_file(ruta_raiz)
+sello           <- format(Sys.time(), "%Y%m%d_%H%M%S")
+fecha_legible   <- format(Sys.time(), "%Y-%m-%d %H:%M:%S")
+arbol           <- c(paste0(nombre_proyecto, "/"), construir_arbol(ruta_raiz))
+tabla_ext       <- contar_extensiones(rutas_archivos)
+lineas_ext      <- sprintf("  %-18s %d", names(tabla_ext), as.integer(tabla_ext))
+
+# Contenido .txt (plano, historico navegable).
+contenido_txt <- c(
+  paste0("ESCANEO DE ESTRUCTURA \u2014 ", nombre_proyecto),
+  paste0("Raiz   : ", ruta_raiz),
+  paste0("Fecha  : ", fecha_legible),
+  paste0("Totales: ", n_carpetas, " carpetas, ", n_archivos, " archivos"),
+  "",
+  arbol,
+  "",
+  "Conteo por extension:",
+  lineas_ext
+)
+
+# Contenido .md (optimizado para adjuntar a sesiones de chat).
+contenido_md <- c(
+  paste0("# Estructura del proyecto"),
+  "",
+  paste0("- **Raiz:** `", ruta_raiz, "`"),
+  paste0("- **Fecha:** ", fecha_legible),
+  paste0("- **Total:** ", n_carpetas, " carpetas, ", n_archivos, " archivos"),
+  "",
+  "## Arbol",
+  "",
+  "```",
+  arbol,
+  "```",
+  "",
+  "## Conteo por extension",
+  "",
+  "| Extension | Cantidad |",
+  "|-----------|----------|",
+  sprintf("| `%s` | %d |", names(tabla_ext), as.integer(tabla_ext))
+)
+
+# Escritura: snapshot con sello + aliases al mas reciente.
+escribir_atomico(contenido_txt, fs::path(ruta_estructura, paste0(sello, "_estructura.txt")))
+escribir_atomico(contenido_md,  fs::path(ruta_estructura, paste0(sello, "_estructura.md")))
+escribir_atomico(contenido_txt, fs::path(ruta_estructura, "estructura_actual.txt"))
+escribir_atomico(contenido_md,  fs::path(ruta_estructura, "estructura_actual.md"))
+
+# Poda: conservar solo los RETENER_SNAPSHOTS sellos mas recientes (el recien
+# generado entra en el conteo). Los aliases estructura_actual.* no se tocan.
+n_borrados <- podar_snapshots(ruta_estructura, RETENER_SNAPSHOTS)
+
+message("  Generado: ", fs::path(ruta_estructura, paste0(sello, "_estructura.txt")))
+message("  Generado: ", fs::path(ruta_estructura, "estructura_actual.txt"))
+message("  Generado: ", fs::path(ruta_estructura, paste0(sello, "_estructura.md")))
+message("  Generado: ", fs::path(ruta_estructura, "estructura_actual.md"))
+if (n_borrados > 0) {
+  message("  Poda    : ", n_borrados, " snapshot(s) antiguo(s) eliminado(s) (retencion: ",
+          RETENER_SNAPSHOTS, " sellos).")
+}
